@@ -1,4 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
 <style>
 :root{
   --bg-color-dark: #313247;
@@ -24,10 +24,19 @@ body{
   
 }
 </style>
+
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-$( document ).ready(function() {
-document.getElementsbyClass("age")[0].innerHTML="Penis Music";
-});
-</script>
-<head></head>
-<body><img class="banner-one" src="assets/banner1.png"><div class="banner-one-text">Information</div></img><br><a>Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me</a><a class=age></a></body>
+setInterval(function(){
+  try{
+    now = new Date();
+    birth = new Date("2007/02/12");
+    diff = Date.daysBetween(now,birth);
+  document.getElementsByClassName("age")[0].innerHTML = diff;
+  }
+  catch(e){
+    console.log("error");
+  }
+},500);
+</script></head>
+<body><img class="banner-one" src="assets/banner1.png"></img><br><a>Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age">$temp$</a></body>
