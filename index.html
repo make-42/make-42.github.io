@@ -1,19 +1,33 @@
-<!-- Insert JQuery import here... -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 <style>
 :root{
   --bg-color-dark: #313247;
   --bg-color-mid: #393152;
   --bg-color-light: #353C54;
+  --text-color-light: #FFFFFF;
 }
 
 body{
-
+  background: var(--bg-color-dark);
 }
 
 .banner-one{
   width:100%;
+  text-align: center;
+}
+.banner-one-text{
+  position: absolute;
+  top:30vw;
+  left:27vw;
+  font-size:10vw;
+  color:var(--text-color-light);
+  
 }
 </style>
-<script></script>
+<script>
+$( document ).ready(function() {
+document.getElementsbyClass("age")[0].innerHTML="Penis Music";
+});
+</script>
 <head></head>
-<body><img class="banner-one" src="assets/banner1.png"></img></body>
+<body><img class="banner-one" src="assets/banner1.png"><div class="banner-one-text">Information</div></img><br><a>Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me</a><a class=age></a></body>
