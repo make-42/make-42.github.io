@@ -31,7 +31,7 @@ setInterval(function(){
   try{
     now = new Date();
     birth = new Date("2007/02/12");
-    diff = Math.round((now-birth) / (1000 * 3600 * 24));
+    diff = Math.floor((now-birth) / (1000 * 3600 * 24));
   document.getElementsByClassName("age")[0].innerHTML = diff.toString()+" days old.";
   }
   catch(e){
