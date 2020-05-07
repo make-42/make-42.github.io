@@ -38,8 +38,8 @@
         text-align: center;
     }
 
-    .credits{
-      padding: 5vw;
+    .credits {
+        padding: 5vw;
     }
 
     /* grid */
@@ -47,7 +47,7 @@
     .grid-container {
         font-family: monospace;
         font-size: 5vw;
-        color:var(--text-color-light);
+        color: var(--text-color-light);
         padding: 5vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -56,11 +56,9 @@
         grid-template-areas: "project-one project-one project-two project-two" "project-one project-one project-three project-three" ". . . .";
     }
 
-
-
     .project-one {
-      color: inherit;
-      text-decoration: none;
+        color: inherit;
+        text-decoration: none;
         grid-area: project-one;
         background: url("assets/images/opennotes.jpg");
         width: 100%;
@@ -68,12 +66,12 @@
         background-position: center;
         animation-name: unselectproject;
         animation-duration: 1s;
-        position:relative;
+        position: relative;
     }
 
     .project-two {
-      color: inherit;
-      text-decoration: none;
+        color: inherit;
+        text-decoration: none;
         grid-area: project-two;
         background: url("assets/images/animeplayer.jpg");
         width: 100%;
@@ -81,7 +79,7 @@
         background-position: bottom;
         animation-name: unselectproject;
         animation-duration: 1s;
-        position:relative;
+        position: relative;
     }
 
     .project-three {
@@ -94,40 +92,49 @@
         background-position: top;
         animation-name: unselectproject;
         animation-duration: 1s;
-        position:relative;
+        position: relative;
     }
 
-    .project-one:hover{
-      opacity: 50%;
-      animation-name: selectproject;
-      animation-duration: 1s;
-      background-size: 150%;
+    .project-one:hover {
+        opacity: 50%;
+        animation-name: selectproject;
+        animation-duration: 1s;
+        background-size: 150%;
     }
-    .project-two:hover{
-      opacity: 50%;
-      animation-name: selectproject;
-      animation-duration: 1s;
-      background-size: 150%;
+    .project-two:hover {
+        opacity: 50%;
+        animation-name: selectproject;
+        animation-duration: 1s;
+        background-size: 150%;
     }
-    .project-three:hover{
-      opacity: 50%;
-      animation-name: selectproject;
-      animation-duration: 1s;
-      background-size: 150%;
+    .project-three:hover {
+        opacity: 50%;
+        animation-name: selectproject;
+        animation-duration: 1s;
+        background-size: 150%;
     }
-
 
     /* Animation */
     @keyframes selectproject {
-      from {opacity:100%;background-size: 100%;}
-      to {opacity:50%;background-size: 150%;}
+        from {
+            opacity: 100%;
+            background-size: 100%;
+        }
+        to {
+            opacity: 50%;
+            background-size: 150%;
+        }
     }
-    @keyframes unselectproject{
-      from {opacity:50%;background-size: 150%;}
-      to {opacity:100%;background-size: 100%;}
+    @keyframes unselectproject {
+        from {
+            opacity: 50%;
+            background-size: 150%;
+        }
+        to {
+            opacity: 100%;
+            background-size: 100%;
+        }
     }
-
-
 </style>
 
 <head>
@@ -150,21 +157,21 @@
             for (i = 0; i < document.getElementsByClassName("project").length; i++) {
                 var projectelement = document.getElementsByClassName("project")[i];
                 var projectname = projectelement.getAttribute("project-name");
-                projectelement.setAttribute("href","https://github.com/TechAdvancedCyborg/"+projectname);
+                projectelement.setAttribute("href", "https://github.com/TechAdvancedCyborg/" + projectname);
                 /* Add language badge */
-                var languagebadge = document.createElement("img")
-                languagebadge.setAttribute("src","https://img.shields.io/github/languages/top/TechAdvancedCyborg/"+projectname);
+                var languagebadge = document.createElement("img");
+                languagebadge.setAttribute("src", "https://img.shields.io/github/languages/top/TechAdvancedCyborg/" + projectname);
                 languagebadge.style.position = "absolute";
                 languagebadge.style.bottom = 0;
                 languagebadge.style.left = 0;
-                projectelement.appendChild(languagebadge)
+                projectelement.appendChild(languagebadge);
                 /* Add repo size badge */
-                var lastcommitbadge = document.createElement("img")
-                lastcommitbadge.setAttribute("src","https://img.shields.io/github/last-commit/TechAdvancedCyborg/"+projectname);
+                var lastcommitbadge = document.createElement("img");
+                lastcommitbadge.setAttribute("src", "https://img.shields.io/github/last-commit/TechAdvancedCyborg/" + projectname);
                 lastcommitbadge.style.position = "absolute";
                 lastcommitbadge.style.bottom = 0;
                 lastcommitbadge.style.right = 0;
-                projectelement.appendChild(lastcommitbadge)
+                projectelement.appendChild(lastcommitbadge);
             }
         });
     </script>
@@ -182,7 +189,5 @@
         <a class="project-two project" project-name="TTACT-s-Anime-Player-Revamped">TTACT's Anime Player</a>
         <a class="project-three project" project-name="osu-RankCurves">osu! Rank Curves</a>
     </div>
-    <div class="credits">
-
-    </div>
+    <div class="credits"></div>
 </body>
