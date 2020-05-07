@@ -1,59 +1,98 @@
 <!DOCTYPE html>
 <style>
-:root{
-  --bg-color-dark: #313247;
-  --bg-color-mid: #393152;
-  --bg-color-light: #353C54;
-  --text-color-light: #FFFFFF;
-  --banner-one-scroll-pos: center;
-}
-body{
-  background: var(--bg-color-dark);
-  border: radial-gradient(to right, orange , yellow, green, cyan, blue, violet) solid 5px;
+    :root {
+        --bg-color-dark: #313247;
+        --bg-color-mid: #393152;
+        --bg-color-light: #353c54;
+        --text-color-light: #ffffff;
+        --banner-one-scroll-pos: center;
+    }
+    body {
+        background: var(--bg-color-dark);
+        border: radial-gradient(to right, orange, yellow, green, cyan, blue, violet) solid 5px;
+    }
+
+    .banner-one {
+        width: 100%;
+        text-align: center;
+    }
+    .banner-one-text {
+        position: absolute;
+        top: 30vw;
+        left: 27vw;
+        font-size: 10vw;
+        color: var(--text-color-light);
+    }
+    .text {
+        color: var(--text-color-light);
+        font-family: monospace;
+        font-size: 3vw;
+    }
+    .text-container-one {
+        padding: 5vw;
+    }
+    h1 {
+        color: var(--text-color-light);
+        font-family: monospace;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+
+    /* grid */
+
+    .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "project-one project-one project-two project-two" "project-one project-one project-three project-three" ". . . .";
 }
 
-.banner-one{
-  width:100%;
-  text-align: center;
-}
-.banner-one-text{
-  position: absolute;
-  top:30vw;
-  left:27vw;
-  font-size:10vw;
-  color:var(--text-color-light);
-}
-.text{
-  color:var(--text-color-light);
-  font-family:monospace;
-  font-size:3vw;
-}
-.text-container-one{
-  padding:5vw;
-}
-h1{
-  color:var(--text-color-light);
-  font-family:monospace;
-  font-size:3vw;
-  text-align: center;
-}
+.project-two { grid-area: project-two; }
+
+.project-one { grid-area: project-one; }
+
+.project-three { grid-area: project-three; }
 </style>
 
-<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setInterval(function () {
+            try {
+                now = new Date();
+                birth = new Date("2007/02/12");
+                diffsecs = Math.floor((now - birth) / 1000);
+                diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
+                document.getElementsByClassName("age")[0].innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
+            } catch (e) {
+                console.log("error");
+            }
+        }, 1000);
+        $(document).ready(function () {
+            var md = window.markdownit();
 
-setInterval(function(){
-  try{
-    now = new Date();
-    birth = new Date("2007/02/12");
-    diffsecs = Math.floor((now-birth) / 1000);
-    diffdays = Math.floor((now-birth) / (1000 * 3600 * 24));
-  document.getElementsByClassName("age")[0].innerHTML = diffdays.toString()+" days or "+diffsecs.toString()+" seconds old.";
-  }
-  catch(e){
-    console.log("error");
-  }
-},1000);
-</script></head>
+            var i;
+            for (i = 0; i < document.getElementsByClassName("language").length; i++) {
+                var projectname = document.getElementsByClassName("language")[0].getAttribute("project-name");
+                var result = md.render("# markdown-it rulezz!");
+            }
+        });
+    </script>
+</head>
 
-<body><h1>techadvancedcyborg.github.io</h1><br><h1>Information</h1><div class="text-container-one"><a class="text">Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age text">XXXX days or XXXXXXXXX seconds old.</a></div></body>
+<body>
+    <h1>techadvancedcyborg.github.io</h1>
+    <br />
+    <h1>Information</h1>
+    <div class="text-container-one"><a class="text">Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age text">XXXX days or XXXXXXXXX seconds old.</a></div>
+    <br />
+    <h1>Projects</h1>
+    <div class="grid-container">
+  <div class="project-two"></div>
+  <div class="project-one"></div>
+  <div class="project-three"></div>
+</div>
+</body>
