@@ -46,8 +46,9 @@ setInterval(function(){
   try{
     now = new Date();
     birth = new Date("2007/02/12");
-    diff = Math.floor((now-birth) / (1000 * 3600 * 24));
-  document.getElementsByClassName("age")[0].innerHTML = diff.toString()+" days old.";
+    diffsecs = Math.floor((now-birth) / 1000);
+    diffdays = Math.floor((now-birth) / (1000 * 3600 * 24));
+  document.getElementsByClassName("age")[0].innerHTML = diffdays.toString()+" days or "+diffsecs.toString()+" seconds old.";
   }
   catch(e){
     console.log("error");
@@ -55,4 +56,4 @@ setInterval(function(){
 },1000);
 </script></head>
 
-<body><div class="parallax-window"></div><br><div class="text-container-one"><a class="text">Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age text">XXXX days old.</a></div></body>
+<body><div class="parallax-window"></div><br><div class="text-container-one"><a class="text">Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age text">XXXX days or XXXXXXXXX seconds old.</a></div></body>
