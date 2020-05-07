@@ -1,255 +1,244 @@
 <!DOCTYPE html>
 <style>
     :root {
-        --bg-color-dark: #313247;
-        --bg-color-mid: #393152;
-        --bg-color-light: #353c54;
-        --text-color-light: #ffffff;
-        --text-color-dark: grey;
-        --banner-one-scroll-pos: center;
+    --bg-color-dark: #313247;
+    --bg-color-mid: #393152;
+    --bg-color-light: #353c54;
+    --text-color-light: #ffffff;
+    --text-color-dark: grey;
+    --banner-one-scroll-pos: center;
     }
     body {
-        background: var(--bg-color-dark);
+    background: var(--bg-color-dark);
     }
-
     .banner-one {
-        width: 100%;
-        text-align: center;
+    width: 100%;
+    text-align: center;
     }
     .banner-one-text {
-        position: absolute;
-        top: 30vw;
-        left: 27vw;
-        font-size: 10vw;
-        color: var(--text-color-light);
+    position: absolute;
+    top: 30vw;
+    left: 27vw;
+    font-size: 10vw;
+    color: var(--text-color-light);
     }
     .text {
-        color: var(--text-color-light);
-        font-family: monospace;
-        font-size: 3vw;
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
     }
     .text-container-one {
-        padding: 5vw;
+    padding: 5vw;
     }
     .text-container-two {
-        padding: 5vw;
+    padding: 5vw;
     }
     h1 {
-        color: var(--text-color-light);
-        font-family: monospace;
-        font-size: 3vw;
-        text-align: center;
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+    text-align: center;
     }
-
     .credits {
-        padding: 5vw;
-        color: var(--text-color-dark);
-        font-family: monospace;
-        font-size: 2vw;
+    padding: 5vw;
+    color: var(--text-color-dark);
+    font-family: monospace;
+    font-size: 2vw;
     }
     .typing-text{
-      padding-top: 1.3vw;
-      text-align: left;
-      background: var(--bg-color-light);
-      height:4.5vw;
+    padding-top: 1.3vw;
+    text-align: left;
+    background: var(--bg-color-light);
+    height:4.5vw;
     }
     .download-div{
-      margin:0vw;
-      position:relative;
-      background: var(--bg-color-light);
-      padding: 0.5vw;
+    margin:0vw;
+    position:relative;
+    background: var(--bg-color-light);
+    padding: 0.5vw;
     }
     .download-div-text{
-      padding:4.5vw;
+    padding:4.5vw;
     }
     .download-button{
-      position:absolute;
-      margin-top: auto;
-      margin-bottom: auto;
-      padding:0.3vw;
-      border-radius: 1vw;
-      right:2vw;
-    	background-color:var(--bg-color-dark);
-	    display:inline-block;
-
+    position:absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding:0.3vw;
+    border-radius: 1vw;
+    right:2vw;
+    background-color:var(--bg-color-dark);
+    display:inline-block;
     }
     .download-icon{
-      height:2.6vw;
+    height:2.6vw;
     }
     /* grid */
-
     .grid-container {
-        font-family: monospace;
-        font-size: 5vw;
-        color: var(--text-color-light);
-        padding: 5vw;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "project-one project-one project-two project-two" "project-one project-one project-three project-three" ". . . .";
+    font-family: monospace;
+    font-size: 5vw;
+    color: var(--text-color-light);
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "project-one project-one project-two project-two" "project-one project-one project-three project-three" ". . . .";
     }
-
     .project-one {
-        color: inherit;
-        text-decoration: none;
-        grid-area: project-one;
-        background: url("assets/images/opennotes.jpg");
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        animation-name: unselectproject;
-        animation-duration: 1s;
-        position: relative;
+    color: inherit;
+    text-decoration: none;
+    grid-area: project-one;
+    background: url("assets/images/opennotes.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: unselectproject;
+    animation-duration: 1s;
+    position: relative;
     }
-
     .project-two {
-        color: inherit;
-        text-decoration: none;
-        grid-area: project-two;
-        background: url("assets/images/animeplayer.jpg");
-        width: 100%;
-        background-size: cover;
-        background-position: bottom;
-        animation-name: unselectproject;
-        animation-duration: 1s;
-        position: relative;
-        padding-bottom: 10%;
+    color: inherit;
+    text-decoration: none;
+    grid-area: project-two;
+    background: url("assets/images/animeplayer.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    animation-name: unselectproject;
+    animation-duration: 1s;
+    position: relative;
+    padding-bottom: 10%;
     }
-
     .project-three {
-        color: inherit;
-        text-decoration: none;
-        grid-area: project-three;
-        background: url("assets/images/rankcurves.jpg");
-        width: 100%;
-        background-size: cover;
-        background-position: top;
-        animation-name: unselectproject;
-        animation-duration: 1s;
-        position: relative;
-        padding-bottom: 10%;
+    color: inherit;
+    text-decoration: none;
+    grid-area: project-three;
+    background: url("assets/images/rankcurves.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    animation-name: unselectproject;
+    animation-duration: 1s;
+    position: relative;
+    padding-bottom: 10%;
     }
-
     .project-one:hover {
-        opacity: 50%;
-        animation-name: selectproject;
-        animation-duration: 1s;
-        background-size: 150%;
+    opacity: 50%;
+    animation-name: selectproject;
+    animation-duration: 1s;
+    background-size: 150%;
     }
     .project-two:hover {
-        opacity: 50%;
-        animation-name: selectproject;
-        animation-duration: 1s;
-        background-size: 150%;
+    opacity: 50%;
+    animation-name: selectproject;
+    animation-duration: 1s;
+    background-size: 150%;
     }
     .project-three:hover {
-        opacity: 50%;
-        animation-name: selectproject;
-        animation-duration: 1s;
-        background-size: 150%;
+    opacity: 50%;
+    animation-name: selectproject;
+    animation-duration: 1s;
+    background-size: 150%;
     }
-
     /* Animation */
     @keyframes selectproject {
-        from {
-            opacity: 100%;
-            background-size: 100%;
-        }
-        to {
-            opacity: 50%;
-            background-size: 150%;
-        }
+    from {
+    opacity: 100%;
+    background-size: 100%;
+    }
+    to {
+    opacity: 50%;
+    background-size: 150%;
+    }
     }
     @keyframes unselectproject {
-        from {
-            opacity: 50%;
-            background-size: 150%;
-        }
-        to {
-            opacity: 100%;
-            background-size: 100%;
-        }
+    from {
+    opacity: 50%;
+    background-size: 150%;
+    }
+    to {
+    opacity: 100%;
+    background-size: 100%;
+    }
     }
 </style>
-
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-    var fpstext = 10;
-    var fpscursor = 1;
-    var slice = 0;
-    var typing = true;
-    var sitetitles = ["Louis Dalibard's website","cd ~/Apps/OpenNotes","techadvancedcyborg.github.io","Work in progress...","cd ~/Apps/TTACT-s-Anime-Player-Revamped","Why did the chicken cross the road?"]
-    var sitetitle = "techadvancedcyborg.github.io"
-    var cursorstate = true;
-    setInterval(function(){
-      cursor=" ";
-      if (cursorstate){
-        cursor="_";
-      }
-      if (typing){
-        document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
-        slice++;
-      }
-      else{
-        document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
-        slice+=0-1;
-      }
-      if (slice>sitetitle.length){
-        typing=false;
-      }
-      if (slice<1){
-        typing=true;
-        sitetitle=sitetitles[Math.floor(Math.random() * sitetitles.length)]
-      }
-    },1000/fpstext);
-    setInterval(function(){
-      if (cursorstate){
-        cursorstate=false;
-      }
-      else{
-        cursorstate=true;
+        var fpstext = 10;
+        var fpscursor = 1;
+        var slice = 0;
+        var typing = true;
+        var sitetitles = ["Louis Dalibard's website","cd ~/Apps/OpenNotes","techadvancedcyborg.github.io","Work in progress...","cd ~/Apps/TTACT-s-Anime-Player-Revamped","Why did the chicken cross the road?"]
+        var sitetitle = "techadvancedcyborg.github.io"
+        var cursorstate = true;
+        setInterval(function(){
+          cursor=" ";
+          if (cursorstate){
+            cursor="_";
+          }
+          if (typing){
+            document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
+            slice++;
+          }
+          else{
+            document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
+            slice+=0-1;
+          }
+          if (slice>sitetitle.length){
+            typing=false;
+          }
+          if (slice<1){
+            typing=true;
+            sitetitle=sitetitles[Math.floor(Math.random() * sitetitles.length)]
+          }
+        },1000/fpstext);
+        setInterval(function(){
+          if (cursorstate){
+            cursorstate=false;
+          }
+          else{
+            cursorstate=true;
 
-      }
-    },1000/fpscursor);
-        setInterval(function () {
-            try {
-                now = new Date();
-                birth = new Date("2007/02/12");
-                diffsecs = Math.floor((now - birth) / 1000);
-                diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
-                document.getElementsByClassName("age")[0].innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
-            } catch (e) {
-                console.log("error");
-            }
-        }, 1000);
-        $(document).ready(function () {
-            var i;
-            for (i = 0; i < document.getElementsByClassName("project").length; i++) {
-                var projectelement = document.getElementsByClassName("project")[i];
-                var projectname = projectelement.getAttribute("project-name");
-                projectelement.setAttribute("href", "https://github.com/TechAdvancedCyborg/" + projectname);
-                /* Add language badge */
-                var languagebadge = document.createElement("img");
-                languagebadge.setAttribute("src", "https://img.shields.io/github/languages/top/TechAdvancedCyborg/" + projectname);
-                languagebadge.style.position = "absolute";
-                languagebadge.style.bottom = 0;
-                languagebadge.style.left = 0;
-                projectelement.appendChild(languagebadge);
-                /* Add repo size badge */
-                var lastcommitbadge = document.createElement("img");
-                lastcommitbadge.setAttribute("src", "https://img.shields.io/github/last-commit/TechAdvancedCyborg/" + projectname);
-                lastcommitbadge.style.position = "absolute";
-                lastcommitbadge.style.bottom = 0;
-                lastcommitbadge.style.right = 0;
-                projectelement.appendChild(lastcommitbadge);
-            }
-        });
+          }
+        },1000/fpscursor);
+            setInterval(function () {
+                try {
+                    now = new Date();
+                    birth = new Date("2007/02/12");
+                    diffsecs = Math.floor((now - birth) / 1000);
+                    diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
+                    document.getElementsByClassName("age")[0].innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
+                } catch (e) {
+                    console.log("error");
+                }
+            }, 1000);
+            $(document).ready(function () {
+                var i;
+                for (i = 0; i < document.getElementsByClassName("project").length; i++) {
+                    var projectelement = document.getElementsByClassName("project")[i];
+                    var projectname = projectelement.getAttribute("project-name");
+                    projectelement.setAttribute("href", "https://github.com/TechAdvancedCyborg/" + projectname);
+                    /* Add language badge */
+                    var languagebadge = document.createElement("img");
+                    languagebadge.setAttribute("src", "https://img.shields.io/github/languages/top/TechAdvancedCyborg/" + projectname);
+                    languagebadge.style.position = "absolute";
+                    languagebadge.style.bottom = 0;
+                    languagebadge.style.left = 0;
+                    projectelement.appendChild(languagebadge);
+                    /* Add repo size badge */
+                    var lastcommitbadge = document.createElement("img");
+                    lastcommitbadge.setAttribute("src", "https://img.shields.io/github/last-commit/TechAdvancedCyborg/" + projectname);
+                    lastcommitbadge.style.position = "absolute";
+                    lastcommitbadge.style.bottom = 0;
+                    lastcommitbadge.style.right = 0;
+                    projectelement.appendChild(lastcommitbadge);
+                }
+            });
     </script>
 </head>
-
 <body>
     <h1 class="typing-text">techadvancedcyborg.github.io</h1>
     <br />
@@ -265,27 +254,27 @@
     <br>
     <h1>Downloads</h1>
     <div class="download-div">
-    <!-- Open Notes Download -->
-    <a class="text download-div-text">Open Notes</a>
-    <a class="download-button" href="https://github.com/TechAdvancedCyborg/OpenNotes/releases"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
-    <br>
-    <!-- TTACT's Anime Player Download -->
-    <a class="text download-div-text">TTACT's Anime Player</a>
-    <a class="download-button" href="https://github.com/TechAdvancedCyborg/TTACT-s-Anime-Player-Revamped/releases"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
-    <br>
-    <!-- osu! Rank Curves Download -->
-    <a class="text download-div-text">osu! Rank Curves</a>
-    <a class="download-button" href="https://github.com/TechAdvancedCyborg/osu-RankCurves"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
-    <br>
+        <!-- Open Notes Download -->
+        <a class="text download-div-text">Open Notes</a>
+        <a class="download-button" href="https://github.com/TechAdvancedCyborg/OpenNotes/releases"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
+        <br>
+        <!-- TTACT's Anime Player Download -->
+        <a class="text download-div-text">TTACT's Anime Player</a>
+        <a class="download-button" href="https://github.com/TechAdvancedCyborg/TTACT-s-Anime-Player-Revamped/releases"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
+        <br>
+        <!-- osu! Rank Curves Download -->
+        <a class="text download-div-text">osu! Rank Curves</a>
+        <a class="download-button" href="https://github.com/TechAdvancedCyborg/osu-RankCurves"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
+        <br>
     </div>
     <br>
     <h1>Contact me</h1>
     <div class="text-container-two">
-    <a class="text">Email address: <a class="text" href="mailto:louis.dalibad@gmail.com">louis.dalibard@gmail.com</a></a>
-    <br>
-    <a class="text">Discord: <a class="text" href="https://discord.gg">OnTake#5344</a></a>
-    <br>
-    <a class="text">Github: <a class="text" href="https://github.com/TechAdvancedCyborg">TechAdvancedCyborg</a></a>
+        <a class="text">Email address: <a class="text" href="mailto:louis.dalibad@gmail.com">louis.dalibard@gmail.com</a></a>
+        <br>
+        <a class="text">Discord: <a class="text" href="https://discord.gg">OnTake#5344</a></a>
+        <br>
+        <a class="text">Github: <a class="text" href="https://github.com/TechAdvancedCyborg">TechAdvancedCyborg</a></a>
     </div>
     <br>
     <div class="credits">Credits<br>• Photo by Ryan Pearson on Unsplash.<br>• Download icon made by Pixel perfect from www.flaticon.com<br>• TechAdvancedCyborg, 2020.</div>
