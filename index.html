@@ -5,11 +5,11 @@
         --bg-color-mid: #393152;
         --bg-color-light: #353c54;
         --text-color-light: #ffffff;
+        --text-color-dark: grey;
         --banner-one-scroll-pos: center;
     }
     body {
         background: var(--bg-color-dark);
-        border: radial-gradient(to right, orange, yellow, green, cyan, blue, violet) solid 5px;
     }
 
     .banner-one {
@@ -43,14 +43,39 @@
 
     .credits {
         padding: 5vw;
+        color: var(--text-color-dark);
+        font-family: monospace;
+        font-size: 2vw;
     }
     .typing-text{
-      padding-top: 2rem;
+      padding-top: 1.3vw;
       text-align: left;
       background: var(--bg-color-light);
       height:4.5vw;
     }
+    .download-div{
+      margin:0vw;
+      position:relative;
+      background: var(--bg-color-light);
+      padding: 0.5vw;
+    }
+    .download-div-text{
+      padding:4.5vw;
+    }
+    .download-button{
+      position:absolute;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding:0.3vw;
+      border-radius: 1vw;
+      right:2vw;
+    	background-color:var(--bg-color-dark);
+	    display:inline-block;
 
+    }
+    .download-icon{
+      height:2.6vw;
+    }
     /* grid */
 
     .grid-container {
@@ -239,14 +264,29 @@
     </div>
     <br>
     <h1>Downloads</h1>
-    <a class="text"></a>
+    <div class="download-div">
+    <!-- Open Notes Download -->
+    <a class="text download-div-text">Open Notes</a>
+    <a class="download-button" href="https://github.com/TechAdvancedCyborg/OpenNotes/releases"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
+    <br>
+    <!-- TTACT's Anime Player Download -->
+    <a class="text download-div-text">TTACT's Anime Player</a>
+    <a class="download-button" href="https://github.com/TechAdvancedCyborg/TTACT-s-Anime-Player-Revamped/releases"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
+    <br>
+    <!-- osu! Rank Curves Download -->
+    <a class="text download-div-text">osu! Rank Curves</a>
+    <a class="download-button" href="https://github.com/TechAdvancedCyborg/osu-RankCurves"><img class="download-icon" src="assets/images/download-icon.png"></img></a>
+    <br>
+    </div>
     <br>
     <h1>Contact me</h1>
     <div class="text-container-two">
     <a class="text">Email address: <a class="text" href="mailto:louis.dalibad@gmail.com">louis.dalibard@gmail.com</a></a>
     <br>
     <a class="text">Discord: <a class="text" href="https://discord.gg">OnTake#5344</a></a>
+    <br>
+    <a class="text">Github: <a class="text" href="https://github.com/TechAdvancedCyborg">TechAdvancedCyborg</a></a>
     </div>
     <br>
-    <div class="credits"></div>
+    <div class="credits">Credits<br>• Photo by Ryan Pearson on Unsplash.<br>• Download icon made by Pixel perfect from www.flaticon.com<br>• TechAdvancedCyborg, 2020.</div>
 </body>
