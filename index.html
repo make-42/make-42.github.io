@@ -1,10 +1,11 @@
-
+<!DOCTYPE html>
 <style>
 :root{
   --bg-color-dark: #313247;
   --bg-color-mid: #393152;
   --bg-color-light: #353C54;
   --text-color-light: #FFFFFF;
+  --banner-one-scroll-pos: center;
 }
 body{
   background: var(--bg-color-dark);
@@ -21,12 +22,25 @@ body{
   left:27vw;
   font-size:10vw;
   color:var(--text-color-light);
-  
+}
+.text{
+  color:var(--text-color-light);
+  font-family:monospace;
+  font-size:3vw;
+}
+.text-container-one{
+  padding:5vw;
+}
+.parallax-window {
+    min-height: 400px;
+    background: url(assets/images/banner1.png);
+    background-position-y:var(--banner-one-scroll-pos);
 }
 </style>
 
 <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+
 setInterval(function(){
   try{
     now = new Date();
@@ -40,4 +54,4 @@ setInterval(function(){
 },1000);
 </script></head>
 
-<body><img class="banner-one" src="assets/banner1.png"></img><br><a>Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age">$temp$</a></body>
+<body><div class="parallax-window"></div><br><div class="text-container-one"><a class="text">Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age text">XXXX days old.</a></div></body>
