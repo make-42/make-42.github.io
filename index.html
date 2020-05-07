@@ -41,6 +41,12 @@
     .credits {
         padding: 5vw;
     }
+    .typing-text{
+      padding-top: 2rem;
+      text-align: left;
+      background: var(--bg-color-light);
+      height:2.5rem;
+    }
 
     /* grid */
 
@@ -141,6 +147,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+    var fpstext = 10;
+    var fpscursor = 1;
+    var slice = 0;
+    var typing = true;
+    var sitetitles = ["Louis Dalibard's website","Get good kid..."]
+    var sitetitle = "techadvancedcyborg.github.io"
+    var cursorstate = true;
+    setInterval(function(){
+      cursor=" ";
+      if (cursorstate){
+        cursor="_";
+      }
+      if (typing){
+        document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
+        slice++;
+      }
+      else{
+        document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
+        slice+=0-1;
+      }
+      if (slice>sitetitle.length){
+        typing=false;
+      }
+      if (slice<1){
+        typing=true;
+        sitetitle=sitetitles[Math.floor(Math.random() * sitetitles.length)]
+      }
+    },1000/fpstext);
+    setInterval(function(){
+      if (cursorstate){
+        cursorstate=false;
+      }
+      else{
+        cursorstate=true;
+
+      }
+    },1000/fpscursor);
         setInterval(function () {
             try {
                 now = new Date();
@@ -178,7 +221,7 @@
 </head>
 
 <body>
-    <h1>techadvancedcyborg.github.io</h1>
+    <h1 class="typing-text">techadvancedcyborg.github.io</h1>
     <br />
     <h1>Information</h1>
     <div class="text-container-one"><a class="text">Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age text">XXXX days or XXXXXXXXX seconds old.</a></div>
