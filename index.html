@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<!--
+Why are you looking at my code!
+-->
 <style>
+    /* Setting Variables */
     :root {
     --bg-color-dark: #313247;
     --bg-color-mid: #393152;
@@ -8,20 +12,11 @@
     --text-color-dark: grey;
     --banner-one-scroll-pos: center;
     }
+    /* Setting Background */
     body {
     background: var(--bg-color-dark);
     }
-    .banner-one {
-    width: 100%;
-    text-align: center;
-    }
-    .banner-one-text {
-    position: absolute;
-    top: 30vw;
-    left: 27vw;
-    font-size: 10vw;
-    color: var(--text-color-light);
-    }
+    /* Setting Text Styling */
     .text {
     color: var(--text-color-light);
     font-family: monospace;
@@ -45,12 +40,14 @@
     font-family: monospace;
     font-size: 15px;
     }
+    /* Set Typing Text Effect Styling */
     .typing-text{
     padding-top: 1.3vw;
     text-align: left;
     background: var(--bg-color-light);
     height:4.5vw;
     }
+    /*Download Section Styling*/
     .download-div{
     margin:0vw;
     position:relative;
@@ -73,7 +70,7 @@
     .download-icon{
     height:2.6vw;
     }
-    /* grid */
+    /* Project Grid Styling */
     .grid-container {
     font-family: monospace;
     font-size: 5vw;
@@ -164,38 +161,50 @@
     }
 </style>
 <head>
+    <!-- Imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Main Script Handling All Effects -->
     <script>
+        // Set Variables For Typing Effect
         var fpstext = 10;
         var fpscursor = 1;
+        var sitetitles = ["Louis Dalibard's website","cd ~/Apps/OpenNotes","techadvancedcyborg.github.io","Work in progress...","cd ~/Apps/TTACT-s-Anime-Player-Revamped","Why did the chicken cross the road?"]
+        //System Variables
         var slice = 0;
         var typing = true;
-        var sitetitles = ["Louis Dalibard's website","cd ~/Apps/OpenNotes","techadvancedcyborg.github.io","Work in progress...","cd ~/Apps/TTACT-s-Anime-Player-Revamped","Why did the chicken cross the road?"]
         var sitetitle = "techadvancedcyborg.github.io"
         var cursorstate = true;
+        //Text Rendering Loop
         setInterval(function(){
+          //Set Cursor String Accordingly
           cursor=" ";
           if (cursorstate){
             cursor="_";
           }
+          //Type
           if (typing){
             document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
             slice++;
           }
+          //Delete
           else{
             document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
             slice+=0-1;
           }
+          //Reverse When At End of String
           if (slice>sitetitle.length){
             typing=false;
           }
+          //Reverse When At Start of String
           if (slice<1){
             typing=true;
             sitetitle=sitetitles[Math.floor(Math.random() * sitetitles.length)]
           }
         },1000/fpstext);
+        //Cursor State Loop
         setInterval(function(){
+          //Reverse cursorstate variable
           if (cursorstate){
             cursorstate=false;
           }
@@ -204,22 +213,34 @@
 
           }
         },1000/fpscursor);
+        // Days and Seconds Since DOB Render Loop
             setInterval(function () {
                 try {
+                    //Set Dates
                     now = new Date();
                     birth = new Date("2007/02/12");
+                    //Calculate Differences
                     diffsecs = Math.floor((now - birth) / 1000);
                     diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
+                    //Render Text
                     document.getElementsByClassName("age")[0].innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
                 } catch (e) {
+                    //Catch Error (if element is not loaded yet)
                     console.log("error");
+                    console.log(e.toString());
                 }
             }, 1000);
+            //Add badges to projects and make the images clickable
+            //On Page Finish Loading
             $(document).ready(function () {
                 var i;
+                //Loop Through Every Element With "project" Class
                 for (i = 0; i < document.getElementsByClassName("project").length; i++) {
+                    //Get Current Element
                     var projectelement = document.getElementsByClassName("project")[i];
+                    //Get Github Project Name
                     var projectname = projectelement.getAttribute("project-name");
+                    //Make clickable
                     projectelement.setAttribute("href", "https://github.com/TechAdvancedCyborg/" + projectname);
                     /* Add language badge */
                     var languagebadge = document.createElement("img");
@@ -240,11 +261,14 @@
     </script>
 </head>
 <body>
+    <!-- Typing text effect -->
     <h1 class="typing-text">techadvancedcyborg.github.io</h1>
     <br />
+    <!-- Information Header-->
     <h1>Information</h1>
     <div class="text-container-one"><a class="text">Hi ! My name is Louis Dalibard and I like to code. I was born on February 12th 2007, that makes me </a><a class="age text">XXXX days or XXXXXXXXX seconds old.</a></div>
     <br />
+    <!-- Projects Header -->
     <h1>Projects</h1>
     <div class="grid-container">
         <a class="project-one project" project-name="OpenNotes">Open Notes</a>
@@ -252,6 +276,7 @@
         <a class="project-three project" project-name="osu-RankCurves">osu! Rank Curves</a>
     </div>
     <br>
+    <!-- Downloads Header -->
     <h1>Downloads</h1>
     <div class="download-div">
         <!-- Open Notes Download -->
@@ -268,6 +293,7 @@
         <br>
     </div>
     <br>
+    <!-- Contact Header-->
     <h1>Contact me</h1>
     <div class="text-container-two">
         <a class="text">Email address: <a class="text" href="mailto:louis.dalibad@gmail.com">louis.dalibard@gmail.com</a></a>
@@ -277,5 +303,6 @@
         <a class="text">Github: <a class="text" href="https://github.com/TechAdvancedCyborg">TechAdvancedCyborg</a></a>
     </div>
     <br>
+    <!-- Credits -->
     <div class="credits">Credits<br>• Photo by Ryan Pearson on Unsplash.<br>• Download icon made by Pixel perfect from www.flaticon.com<br>• TechAdvancedCyborg, 2020.</div>
 </body>
