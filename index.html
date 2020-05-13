@@ -62,6 +62,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     font-size: 15px;
     }
     /* Stats */
+    /* PC */
+    @media (hover : hover) and (pointer : fine){
     .stats {
       position:fixed;
       bottom:0;
@@ -72,6 +74,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       font-size: 0.5vw;
       width:20%
     }
+  }
+
+    /* Mobile */
+    @media (hover: none){
+    .stats {
+      position:fixed;
+      bottom:0;
+      left:0;
+      background: var(--bg-color-light);
+      color: var(--text-color-light);
+      font-family: monospace;
+      font-size: 4vw;
+      width:50%
+    }
+  }
     /* Set Typing Text Effect Styling */
     .typing-text{
     padding-top: 1.3vw;
