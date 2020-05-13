@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     --text-color-light: #ffffff;
     --text-color-dark: grey;
     --banner-one-scroll-pos: center;
-    
+
     /* Scrollbar Styling */
     /* Firefox */
     scrollbar-color: var(--text-color-light) var(--bg-color-dark);
@@ -60,6 +60,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     color: var(--text-color-dark);
     font-family: monospace;
     font-size: 15px;
+    }
+    /* Stats */
+    .stats {
+      position:fixed;
+      bottom:0;
+      left:0;
+      background: var(--bg-color-light);
+      color: var(--text-color-light);
+      font-family: monospace;
+      font-size: 0.5vw;
+      width:20%
     }
     /* Set Typing Text Effect Styling */
     .typing-text{
@@ -251,9 +262,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     console.log(e.toString());
                 }
             }, 1000);
-            //Add badges to projects and make the images clickable
+
             //On Page Finish Loading
             $(document).ready(function () {
+                //Add badges to projects and make the images clickable
                 var i;
                 //Loop Through Every Element With "project" Class
                 for (i = 0; i < document.getElementsByClassName("project").length; i++) {
@@ -278,10 +290,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     lastcommitbadge.style.right = 0;
                     projectelement.appendChild(lastcommitbadge);
                 }
+                //Set Stats Text
+                statselement=document.getElementsByClassName("stats")[0]
+                statselement.innerHTML = navigator.userAgent+"<br>"
+                statselement.innerHTML = statselement.innerHTML+navigator.hardwareConcurrency+" cores <br>";
+                statselement.innerHTML = statselement.innerHTML+navigator.language+"<br>";
             });
     </script>
 </head>
 <body>
+    <!-- Stats -->
+    <div class="stats">user-agent: </div>
     <!-- Typing text effect -->
     <h1 class="typing-text">techadvancedcyborg.github.io</h1>
     <br />
