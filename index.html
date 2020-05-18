@@ -72,7 +72,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       color: var(--text-color-light);
       font-family: monospace;
       font-size: 0.5vw;
-      width:20%
+      width:20%;
+      opacity:0%;
+      animation-name: unhoveroverstats;
+      animation-duration: 1s;
     }
   }
 
@@ -86,8 +89,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       color: var(--text-color-light);
       font-family: monospace;
       font-size: 4vw;
-      width:50%
+      width:50%;
+      opacity:0%;
+      animation-name: unhoveroverstats;
+      animation-duration: 1s;
     }
+  }
+  /* Make stats visible on hover*/
+  .stats:hover{
+    opacity: 100%;
+    animation-name: hoveroverstats;
+    animation-duration: 1s;
   }
     /* Set Typing Text Effect Styling */
     .typing-text{
@@ -207,6 +219,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 100%;
     background-size: 100%;
     }
+    }
+    @keyframes hoveroverstats{
+      from{opacity:0%;}
+      to{opacity:100%;}
+    }
+    @keyframes unhoveroverstats{
+      from{opacity:100%;}
+      to{opacity:0%;}
     }
 </style>
 <head>
