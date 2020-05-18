@@ -213,6 +213,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <!-- Imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Title Element -->
+    <title>Loading...</title>
     <!-- Main Script Handling All Effects -->
     <script>
         // Set Variables For Typing Effect
@@ -233,12 +235,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           }
           //Type
           if (typing){
-            document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
+            //Set text in page
+            document.getElementsByClassName("typing-text")[0].innerHTML = "> "+sitetitle.slice(0,slice)+cursor;
+            //Set title text
+            document.getElementsByTagName('title')[0].innerHTML = "> "+sitetitle.slice(0,slice)+cursor;
             slice++;
           }
           //Delete
           else{
-            document.getElementsByClassName("typing-text")[0].innerHTML = sitetitle.slice(0,slice)+cursor;
+            //Set text in page
+            document.getElementsByClassName("typing-text")[0].innerHTML = "> "+sitetitle.slice(0,slice)+cursor;
+            //Set title text
+            document.getElementsByTagName('title')[0].innerHTML = "> "+sitetitle.slice(0,slice)+cursor;
             slice+=0-1;
           }
           //Reverse When At End of String
