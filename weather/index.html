@@ -123,6 +123,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         let lat = "48.837985";
         let lon = "2.395997";
         let appid = "3ee4c5cdcac622727b68312127512f9a";
+        let xgridpoints = 4;
         /* Variables */
         let sunicon = "assets/png/004-sun.png";
         let moonicon = "assets/png/027-moon phase.png";
@@ -243,16 +244,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 ctx.stroke();
                 ctx.closePath();
                 /*Grid*/
-                /*
                 i=0;
-                while (i<hourly.length+1){
+                while (i<xgridpoints+1){
                   ctx.beginPath();
-                  ctx.moveTo((canvasresx/1000)*800/48*i,0);
-                  ctx.lineTo((canvasresx/1000)*800/48*i,canvasresy);
+                  ctx.moveTo((canvasresx/1000)*800/xgridpoints*i,0);
+                  ctx.lineTo((canvasresx/1000)*800/xgridpoints*i,canvasresy);
                   ctx.closePath();
                   ctx.stroke();
                   i++;
                 }
+                /*
                 i=0;
                 while (i<Math.round(maxtemp-mintemp)){
                   ctx.beginPath();
