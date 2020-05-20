@@ -94,6 +94,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     .state {}
 
+    .tempplot {
+        padding-top: 2vw;
+        width: 100vw;
+        height: 8vw;
+    }
+
     .icon {
         filter: invert(100%);
         width: 10vw;
@@ -114,6 +120,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <script>
         /* User Variables */
         let cityname = "Paris,fr";
+        let lat = "48.837985";
+        let lon = "2.395997";
         let appid = "3ee4c5cdcac622727b68312127512f9a";
         /* Variables */
         let sunicon = "assets/png/004-sun.png";
@@ -132,6 +140,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         let fognighticon = "assets/png/023-fog.png";
         /* System Variables */
         let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&appid=" + appid;
+        let urlonecall = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + appid;
+        console.log(urlonecall);
         /* Update Function */
         function updateweather() {
             $.get(url,
@@ -190,8 +200,73 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     /* Set Icon*/
                     document.getElementsByClassName("icon")[0].setAttribute("src", iconsrc);
                 });
+            /* Draw Plot*/
+            /* Get Hourly Forecast */
+            $.get(urlonecall, function(data, textStatus, jqXHR) {
+                /* Get min and max for values */
+                hourly = data.hourly;
+                minhourlydt = hourly[0].dt;
+                i = 0;
+                maxtemp = hourly[0].temp;
+                mintemp = hourly[0].temp;
+                while (i < hourly.length) {
+                    if (maxtemp < hourly[i].temp) {
+                        maxtemp = hourly[i].temp;
+                    }
+                    if (mintemp > hourly[i].temp) {
+                        mintemp = hourly[i].temp;
+                    }
+                    i++;
+                }
+                /* Get Canvas Res */
+                let canvasresx = document.getElementById("canvas").width;
+                let canvasresy = document.getElementById("canvas").height;
+                /* Set scale accordingly */
+                scalex = (1692 / 8) * (1000 / canvasresx);
+                scaley = 4 / (maxtemp - mintemp) * (55 / canvasresy);
+                /* Draw Plot */
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContext('2d');
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(0, (mintemp + (maxtemp - hourly[0].temp) / scaley) - 273.15);
+                i = 0;
+                while (i < hourly.length) {
+                    x = ((hourly[i].dt - minhourlydt) / scalex);
+                    y = (mintemp + (maxtemp - hourly[i].temp) / scaley) - 273.15;
+                    ctx.lineTo(x, y);
+                    console.log(x);
+                    console.log(y);
+                    i++;
+                }
+                ctx.stroke();
+                ctx.closePath();
+                /*Grid*/
+                /*
+                i=0;
+                while (i<hourly.length+1){
+                  ctx.beginPath();
+                  ctx.moveTo((canvasresx/1000)*800/48*i,0);
+                  ctx.lineTo((canvasresx/1000)*800/48*i,canvasresy);
+                  ctx.closePath();
+                  ctx.stroke();
+                  i++;
+                }
+                i=0;
+                while (i<Math.round(maxtemp-mintemp)){
+                  ctx.beginPath();
+                  ctx.moveTo(0,i/scaley*1.435);
+                  ctx.lineTo(canvasresx/1.25,i/scaley*1.435);
+                  ctx.closePath();
+                  ctx.stroke();
+                  i++;
+                }
+                */
+            });
+
         }
-        updateweather();
+        $(document).ready(updateweather);
     </script>
 </head>
 
@@ -208,6 +283,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <div class="city"></div>
         <div class="temp"></div>
         <div class="state"></div>
+        <canvas class="tempplot" id="canvas" width=2000 height=160></canvas>
         <div class="icondiv"><img class="icon" src=""></img></div>
     </div>
     <br>
