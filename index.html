@@ -68,6 +68,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         font-size: 15px;
     }
 
+    /* Menubar */
+    .menubar{
+      color: var(--text-color-light);
+      font-family: monospace;
+      font-size: 3vw;
+      display:flex;
+      text-align:center;
+    }
+    .menubutton{
+    color: inherit;
+    text-decoration: none;
+    padding: 0% 20% 0% 20%;
+    border: var(--text-color-light) solid 1px;
+
+    }
     /* Stats */
     /* PC */
     @media (hover : hover) and (pointer : fine) {
@@ -422,6 +437,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <body>
     <!-- Stats -->
     <div class="stats">user-agent: </div>
+    <!-- Menubar -->
+    <div class="menubar">
+        <a class="menubutton" href="/">Home</a>
+        <a class="menubutton" href="/weather">Weather</a>
+    </div>
+
     <!-- Typing text effect -->
     <h1 class="typing-text">techadvancedcyborg.github.io</h1>
     <br />
