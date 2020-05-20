@@ -69,20 +69,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 
     /* Menubar */
-    .menubar{
-      color: var(--text-color-light);
-      font-family: monospace;
-      font-size: 3vw;
-      display:flex;
-      text-align:center;
+    .menubar {
+        color: var(--text-color-light);
+        font-family: monospace;
+        font-size: 3vw;
+        display: flex;
+        text-align: center;
     }
-    .menubutton{
-    color: inherit;
-    text-decoration: none;
-    padding: 0% 20% 0% 20%;
-    border: var(--text-color-light) solid 1px;
+
+    .menubutton {
+        color: inherit;
+        text-decoration: none;
+        padding: 0% 20% 0% 20%;
+        border: var(--text-color-light) solid 1px;
 
     }
+
     /* Stats */
     /* PC */
     @media (hover : hover) and (pointer : fine) {
@@ -139,13 +141,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         position: relative;
         background: var(--bg-color-light);
         padding: 0.5vw;
-        animation-name:downloadunselect;
+        animation-name: downloadunselect;
         animation-duration: 1s;
     }
-    .download-div:hover{
-      box-shadow: 0px 0px 20px 5px #0005;
-      animation-name:downloadselect;
-      animation-duration: 1s;
+
+    .download-div:hover {
+        box-shadow: 0px 0px 20px 5px #0005;
+        animation-name: downloadselect;
+        animation-duration: 1s;
     }
 
     .download-div-text {
@@ -161,13 +164,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         right: 2vw;
         background-color: var(--bg-color-dark);
         display: inline-block;
-        animation-name:downloadunselect;
+        animation-name: downloadunselect;
         animation-duration: 1s;
     }
 
-    .download-button:hover{
+    .download-button:hover {
         box-shadow: 0px 0px 20px 5px #0005;
-        animation-name:downloadselect;
+        animation-name: downloadselect;
         animation-duration: 1s;
     }
 
@@ -231,7 +234,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     .project-one:hover {
         opacity: 50%;
-        filter:blur(5px);
+        filter: blur(5px);
         animation-name: selectproject;
         animation-duration: 1s;
         background-size: 150%;
@@ -239,7 +242,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     .project-two:hover {
         opacity: 50%;
-        filter:blur(5px);
+        filter: blur(5px);
         animation-name: selectproject;
         animation-duration: 1s;
         background-size: 150%;
@@ -247,7 +250,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     .project-three:hover {
         opacity: 50%;
-        filter:blur(5px);
+        filter: blur(5px);
         animation-name: selectproject;
         animation-duration: 1s;
         background-size: 150%;
@@ -258,13 +261,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         from {
             opacity: 100%;
             background-size: 100%;
-            filter:blur(0px);
+            filter: blur(0px);
         }
 
         to {
             opacity: 50%;
             background-size: 150%;
-            filter:blur(5px);
+            filter: blur(5px);
         }
     }
 
@@ -272,13 +275,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         from {
             opacity: 50%;
             background-size: 150%;
-            filter:blur(5px);
+            filter: blur(5px);
         }
 
         to {
             opacity: 100%;
             background-size: 100%;
-            filter:blur(0px);
+            filter: blur(0px);
         }
     }
 
@@ -303,20 +306,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 
     @keyframes downloadselect {
-      from {
-        box-shadow: 0px 0px 0px 0px #0005;
-      }
-      to{
-        box-shadow: 0px 0px 20px 5px #0005;
-      }
+        from {
+            box-shadow: 0px 0px 0px 0px #0005;
+        }
+
+        to {
+            box-shadow: 0px 0px 20px 5px #0005;
+        }
     }
+
     @keyframes downloadunselect {
-      from {
-        box-shadow: 0px 0px 20px 5px #0005;
-      }
-      to{
-        box-shadow: 0px 0px 0px 0px #0005;
-      }
+        from {
+            box-shadow: 0px 0px 20px 5px #0005;
+        }
+
+        to {
+            box-shadow: 0px 0px 0px 0px #0005;
+        }
     }
 </style>
 
