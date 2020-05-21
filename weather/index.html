@@ -144,6 +144,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         /* System Variables */
         let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&appid=" + appid;
         let urlonecall = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + appid;
+        var canvas;
+        var ctx;
         console.log(urlonecall);
         /* Update Function */
         function updateweather() {
@@ -227,9 +229,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 /* Set scale accordingly */
                 scalex = canvasresx / 174300;
                 scaley = canvasresy / (maxtemp - mintemp);
+                /* Clear Canvas */
+                ctx.clearRect(0, 0, canvasresx, canvasresy);
                 /* Draw Plot */
-                var canvas = document.getElementById('canvas');
-                var ctx = canvas.getContext('2d');
                 ctx.strokeStyle = '#ffffff';
                 ctx.fillStyle = '#ffffff';
                 ctx.lineWidth = Math.round(canvasresx / 1000);
@@ -271,17 +273,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         ctx.lineWidth = Math.round(canvasresx / 1000);
                         ctx.strokeStyle = '#ffffff';
                     }
-                    console.log(x);
-                    console.log(y);
                     i++;
                 }
                 ctx.stroke();
                 ctx.closePath();
 
             });
-
+            console.log("updated");
         }
-        $(document).ready(updateweather);
+        $(document).ready(function(){canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');updateweather();});
+        setInterval(updateweather,60000);
     </script>
 </head>
 
