@@ -96,7 +96,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     .tempplot {
         padding-top: 2vw;
-        width: 100vw;
+        width: 97vw;
         height: 8vw;
     }
 
@@ -124,6 +124,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         let lon = "2.395997";
         let appid = "3ee4c5cdcac622727b68312127512f9a";
         let xgridpoints = 4;
+        let ygridmultiplier = 4;
+        let ytextmultiplier = 4;
         /* Variables */
         let sunicon = "assets/png/004-sun.png";
         let moonicon = "assets/png/027-moon phase.png";
@@ -223,20 +225,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 let canvasresx = document.getElementById("canvas").width;
                 let canvasresy = document.getElementById("canvas").height;
                 /* Set scale accordingly */
-                scalex = (1692 / 8) * (1000 / canvasresx);
-                scaley = 4 / (maxtemp - mintemp) * (55 / canvasresy);
+                scalex =  canvasresx/174300;
+                scaley = canvasresy/(maxtemp - mintemp);
                 /* Draw Plot */
                 var canvas = document.getElementById('canvas');
                 var ctx = canvas.getContext('2d');
                 ctx.strokeStyle = '#ffffff';
-                ctx.lineWidth = 2;
+                ctx.fillStyle = '#ffffff';
+                ctx.lineWidth = Math.round(canvasresx/1000);
+                ctx.font = (canvasresx/150).toString()+"px Consolas";
                 ctx.beginPath();
                 ctx.moveTo(0, (mintemp + (maxtemp - hourly[0].temp) / scaley) - 273.15);
                 i = 0;
                 while (i < hourly.length) {
-                    x = ((hourly[i].dt - minhourlydt) / scalex);
-                    y = (mintemp + (maxtemp - hourly[i].temp) / scaley) - 273.15;
+                    /* Find X,Y coordinates */
+                    x = ((hourly[i].dt - minhourlydt)*scalex);
+                    y = (maxtemp-hourly[i].temp) * scaley ;
+                    /* Draw Line */
                     ctx.lineTo(x, y);
+                    /* Draw Text */
+                    /*if(Number.isInteger(i/ytextmultiplier)){
+                    tempdisplay = (Math.round((hourly[i].temp-273.15)*10)/10).toString();
+                    ctx.fillText(tempdisplay, x-((tempdisplay.length)*(canvasresx/200)), y-(canvasresx/150));
+                    }*/
                     console.log(x);
                     console.log(y);
                     i++;
@@ -247,18 +258,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 i=0;
                 while (i<xgridpoints+1){
                   ctx.beginPath();
-                  ctx.moveTo((canvasresx/1000)*800/xgridpoints*i,0);
-                  ctx.lineTo((canvasresx/1000)*800/xgridpoints*i,canvasresy);
+                  ctx.moveTo(canvasresx*0.9705/xgridpoints*i,0);
+                  ctx.lineTo(canvasresx*0.9705/xgridpoints*i,canvasresy);
                   ctx.closePath();
                   ctx.stroke();
                   i++;
                 }
                 /*
                 i=0;
-                while (i<Math.round(maxtemp-mintemp)){
+                while (i<Math.round((maxtemp-mintemp)/ygridmultiplier)+1){
                   ctx.beginPath();
-                  ctx.moveTo(0,i/scaley*1.435);
-                  ctx.lineTo(canvasresx/1.25,i/scaley*1.435);
+                  ctx.moveTo(0,i*scaley*ygridmultiplier);
+                  ctx.lineTo(canvasresx/1.25,i*scaley*ygridmultiplier);
                   ctx.closePath();
                   ctx.stroke();
                   i++;
@@ -284,7 +295,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <div class="city"></div>
         <div class="temp"></div>
         <div class="state"></div>
-        <canvas class="tempplot" id="canvas" width=2000 height=160></canvas>
+        <canvas class="tempplot" id="canvas" width=4000 height=320></canvas>
         <div class="icondiv"><img class="icon" src=""></img></div>
     </div>
     <br>
