@@ -233,27 +233,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 ctx.strokeStyle = '#ffffff';
                 ctx.fillStyle = '#ffffff';
                 ctx.lineWidth = Math.round(canvasresx/1000);
-                ctx.font = (canvasresx/150).toString()+"px Consolas";
-                ctx.beginPath();
-                ctx.moveTo(0, (mintemp + (maxtemp - hourly[0].temp) / scaley) - 273.15);
-                i = 0;
-                while (i < hourly.length) {
-                    /* Find X,Y coordinates */
-                    x = ((hourly[i].dt - minhourlydt)*scalex);
-                    y = (maxtemp-hourly[i].temp) * scaley ;
-                    /* Draw Line */
-                    ctx.lineTo(x, y);
-                    /* Draw Text */
-                    /*if(Number.isInteger(i/ytextmultiplier)){
-                    tempdisplay = (Math.round((hourly[i].temp-273.15)*10)/10).toString();
-                    ctx.fillText(tempdisplay, x-((tempdisplay.length)*(canvasresx/200)), y-(canvasresx/150));
-                    }*/
-                    console.log(x);
-                    console.log(y);
-                    i++;
-                }
-                ctx.stroke();
-                ctx.closePath();
+                ctx.font = (canvasresx/100).toString()+"px Consolas";
+
                 /*Grid*/
                 i=0;
                 while (i<xgridpoints+1){
@@ -264,17 +245,40 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                   ctx.stroke();
                   i++;
                 }
-                /*
-                i=0;
-                while (i<Math.round((maxtemp-mintemp)/ygridmultiplier)+1){
-                  ctx.beginPath();
-                  ctx.moveTo(0,i*scaley*ygridmultiplier);
-                  ctx.lineTo(canvasresx/1.25,i*scaley*ygridmultiplier);
-                  ctx.closePath();
-                  ctx.stroke();
-                  i++;
+                /* Draw Curve */
+                ctx.beginPath();
+                ctx.moveTo(0, (mintemp + (maxtemp - hourly[0].temp) / scaley) - 273.15);
+                i = 0;
+                while (i < hourly.length) {
+                    /* Find X,Y coordinates */
+                    x = ((hourly[i].dt - minhourlydt)*scalex);
+                    y = (maxtemp-hourly[i].temp) * scaley ;
+                    /* Draw Line */
+                    ctx.lineTo(x, y);
+                    /* Draw Text */
+                    if(Number.isInteger(i/ytextmultiplier)){
+                      tempdisplay = (Math.round((hourly[i].temp-273.15)*10)/10).toString();
+                      textx = x-((tempdisplay.length)*(canvasresx/200));
+                      if (y<(canvasresx/50)){
+                        texty=y+(canvasresx/150);
+                      }
+                      else{
+                        texty=y-(canvasresx/150);
+                      }
+                    ctx.fillText(tempdisplay, textx, texty);
+                    ctx.strokeStyle = '#000000';
+                    ctx.lineWidth = Math.round(canvasresx/4000);
+                    ctx.strokeText(tempdisplay, textx, texty);
+                    ctx.lineWidth = Math.round(canvasresx/1000);
+                    ctx.strokeStyle = '#ffffff';
+                    }
+                    console.log(x);
+                    console.log(y);
+                    i++;
                 }
-                */
+                ctx.stroke();
+                ctx.closePath();
+
             });
 
         }
