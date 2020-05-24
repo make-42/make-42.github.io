@@ -162,7 +162,7 @@
         font-family: monospace;
         font-size: 5vw;
         color: var(--text-color-light);
-        text-shadow: 1px 1px 2px black; 
+        text-shadow: 1px 1px 2px black;
         padding: 5vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -213,55 +213,61 @@
     }
 
     .project-one:hover {
-        opacity: 50%;
-        filter: blur(5px);
         animation-name: selectproject;
         animation-duration: 1s;
         background-size: 150%;
     }
 
     .project-two:hover {
-        opacity: 50%;
-        filter: blur(5px);
         animation-name: selectproject;
         animation-duration: 1s;
         background-size: 150%;
     }
 
     .project-three:hover {
-        opacity: 50%;
-        filter: blur(5px);
         animation-name: selectproject;
         animation-duration: 1s;
         background-size: 150%;
     }
 
+    .project-description{
+      position: absolute;
+      width:100%;
+      height:50%;
+      left: 0;
+      right: 0;
+      font-size:2vw;
+      text-align: center;
+      opacity: 0%;
+      filter: blur(0);
+      background: var(--bg-color-mid);
+      animation-name: unhoveroverstats;
+      animation-duration: 1s;
+    }
+    .project-description:hover{
+      opacity: 100%;
+      animation-name: hoveroverstats;
+      animation-duration: 1s;
+    }
+
     /* Animation */
     @keyframes selectproject {
         from {
-            opacity: 100%;
             background-size: 100%;
-            filter: blur(0px);
         }
 
         to {
-            opacity: 50%;
             background-size: 150%;
-            filter: blur(5px);
         }
     }
 
     @keyframes unselectproject {
         from {
-            opacity: 50%;
             background-size: 150%;
-            filter: blur(5px);
         }
 
         to {
-            opacity: 100%;
             background-size: 100%;
-            filter: blur(0px);
         }
     }
 
