@@ -1,312 +1,313 @@
 /* Setting Variables */
-    :root {
-        --bg-color-dark: #313247;
-        --bg-color-mid: #393152;
-        --bg-color-light: #353c54;
-        --text-color-light: #ffffff;
-        --text-color-dark: grey;
-        --banner-one-scroll-pos: center;
+:root {
+    --bg-color-dark: #313247;
+    --bg-color-mid: #393152;
+    --bg-color-light: #353c54;
+    --text-color-light: #ffffff;
+    --text-color-dark: grey;
+    --banner-one-scroll-pos: center;
 
-        /* Scrollbar Styling */
-        /* Firefox */
-        scrollbar-color: var(--text-color-light) var(--bg-color-dark);
-        scrollbar-width: thin;
-    }
+    /* Scrollbar Styling */
+    /* Firefox */
+    scrollbar-color: var(--text-color-light) var(--bg-color-dark);
+    scrollbar-width: thin;
+}
 
-    /* Setting Background */
-    body {
-        background: var(--bg-color-dark);
-    }
+/* Setting Background */
+body {
+    background: var(--bg-color-dark);
+}
 
-    /* Setting Text Styling */
-    .text {
+/* Setting Text Styling */
+.text {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+}
+
+.text-container-one {
+    padding: 5vw;
+}
+
+.text-container-two {
+    padding: 5vw;
+}
+
+h1 {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.credits {
+    padding: 5vw;
+    color: var(--text-color-dark);
+    font-family: monospace;
+    font-size: 15px;
+}
+
+/* Menubar */
+.menubar {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+    display: flex;
+    text-align: center;
+}
+
+.menubutton {
+    color: inherit;
+    text-decoration: none;
+    padding: 0% 20% 0% 20%;
+    border: var(--text-color-light) solid 1px;
+
+}
+
+/* Stats */
+/* PC */
+@media (hover : hover) and (pointer : fine) {
+    .stats {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: var(--bg-color-light);
         color: var(--text-color-light);
         font-family: monospace;
-        font-size: 3vw;
+        font-size: 0.5vw;
+        width: 20%;
+        opacity: 0%;
+        animation-name: unhoveroverstats;
+        animation-duration: 1s;
     }
+}
 
-    .text-container-one {
-        padding: 5vw;
-    }
-
-    .text-container-two {
-        padding: 5vw;
-    }
-
-    h1 {
+/* Mobile */
+@media (hover: none) {
+    .stats {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: var(--bg-color-light);
         color: var(--text-color-light);
         font-family: monospace;
-        font-size: 3vw;
-        text-align: center;
+        font-size: 4vw;
+        width: 50%;
+        opacity: 0%;
+        animation-name: unhoveroverstats;
+        animation-duration: 1s;
+    }
+}
+
+/* Make stats visible on hover*/
+.stats:hover {
+    opacity: 100%;
+    animation-name: hoveroverstats;
+    animation-duration: 1s;
+}
+
+/* Set Typing Text Effect Styling */
+.typing-text {
+    padding-top: 1.3vw;
+    text-align: left;
+    background: var(--bg-color-light);
+    height: 4.5vw;
+}
+
+/*Download Section Styling*/
+.download-div {
+    margin: 0vw;
+    position: relative;
+    background: var(--bg-color-light);
+    padding: 0.5vw;
+    animation-name: downloadunselect;
+    animation-duration: 1s;
+}
+
+.download-div:hover {
+    box-shadow: 0px 0px 20px 5px #0005;
+    animation-name: downloadselect;
+    animation-duration: 1s;
+}
+
+.download-div-text {
+    padding: 4.5vw;
+}
+
+.download-button {
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0.3vw;
+    border-radius: 1vw;
+    right: 2vw;
+    background-color: var(--bg-color-dark);
+    display: inline-block;
+    animation-name: downloadunselect;
+    animation-duration: 1s;
+}
+
+.download-button:hover {
+    box-shadow: 0px 0px 20px 5px #0005;
+    animation-name: downloadselect;
+    animation-duration: 1s;
+}
+
+.download-icon {
+    height: 2.6vw;
+}
+
+/* Project Grid Styling */
+.grid-container {
+    font-family: monospace;
+    font-size: 5vw;
+    color: var(--text-color-light);
+    text-shadow: 1px 1px 2px black;
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "project-one project-one project-two project-two""project-one project-one project-three project-three"". . . .";
+}
+
+.project-one {
+    color: inherit;
+    text-decoration: none;
+    grid-area: project-one;
+    background: url("assets/images/opennotes.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: unselectproject;
+    animation-duration: 1s;
+    position: relative;
+}
+
+.project-two {
+    color: inherit;
+    text-decoration: none;
+    grid-area: project-two;
+    background: url("assets/images/animeplayer.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    animation-name: unselectproject;
+    animation-duration: 1s;
+    position: relative;
+    padding-bottom: 10%;
+}
+
+.project-three {
+    color: inherit;
+    text-decoration: none;
+    grid-area: project-three;
+    background: url("assets/images/rankcurves.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    animation-name: unselectproject;
+    animation-duration: 1s;
+    position: relative;
+    padding-bottom: 10%;
+}
+
+.project-one:hover {
+    animation-name: selectproject;
+    animation-duration: 1s;
+    background-size: 150%;
+}
+
+.project-two:hover {
+    animation-name: selectproject;
+    animation-duration: 1s;
+    background-size: 150%;
+}
+
+.project-three:hover {
+    animation-name: selectproject;
+    animation-duration: 1s;
+    background-size: 150%;
+}
+
+.project-description {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    font-size: 2vw;
+    text-align: center;
+    opacity: 0%;
+    filter: blur(0);
+    background: var(--bg-color-mid);
+    animation-name: unhoveroverstats;
+    animation-duration: 1s;
+}
+
+.project-description:hover {
+    opacity: 100%;
+    animation-name: hoveroverstats;
+    animation-duration: 1s;
+}
+
+/* Animation */
+@keyframes selectproject {
+    from {
+        background-size: 100%;
     }
 
-    .credits {
-        padding: 5vw;
-        color: var(--text-color-dark);
-        font-family: monospace;
-        font-size: 15px;
+    to {
+        background-size: 150%;
+    }
+}
+
+@keyframes unselectproject {
+    from {
+        background-size: 150%;
     }
 
-    /* Menubar */
-    .menubar {
-        color: var(--text-color-light);
-        font-family: monospace;
-        font-size: 3vw;
-        display: flex;
-        text-align: center;
+    to {
+        background-size: 100%;
+    }
+}
+
+@keyframes hoveroverstats {
+    from {
+        opacity: 0%;
     }
 
-    .menubutton {
-        color: inherit;
-        text-decoration: none;
-        padding: 0% 20% 0% 20%;
-        border: var(--text-color-light) solid 1px;
-
-    }
-
-    /* Stats */
-    /* PC */
-    @media (hover : hover) and (pointer : fine) {
-        .stats {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            background: var(--bg-color-light);
-            color: var(--text-color-light);
-            font-family: monospace;
-            font-size: 0.5vw;
-            width: 20%;
-            opacity: 0%;
-            animation-name: unhoveroverstats;
-            animation-duration: 1s;
-        }
-    }
-
-    /* Mobile */
-    @media (hover: none) {
-        .stats {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            background: var(--bg-color-light);
-            color: var(--text-color-light);
-            font-family: monospace;
-            font-size: 4vw;
-            width: 50%;
-            opacity: 0%;
-            animation-name: unhoveroverstats;
-            animation-duration: 1s;
-        }
-    }
-
-    /* Make stats visible on hover*/
-    .stats:hover {
+    to {
         opacity: 100%;
-        animation-name: hoveroverstats;
-        animation-duration: 1s;
+    }
+}
+
+@keyframes unhoveroverstats {
+    from {
+        opacity: 100%;
     }
 
-    /* Set Typing Text Effect Styling */
-    .typing-text {
-        padding-top: 1.3vw;
-        text-align: left;
-        background: var(--bg-color-light);
-        height: 4.5vw;
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes downloadselect {
+    from {
+        box-shadow: 0px 0px 0px 0px #0005;
     }
 
-    /*Download Section Styling*/
-    .download-div {
-        margin: 0vw;
-        position: relative;
-        background: var(--bg-color-light);
-        padding: 0.5vw;
-        animation-name: downloadunselect;
-        animation-duration: 1s;
-    }
-
-    .download-div:hover {
+    to {
         box-shadow: 0px 0px 20px 5px #0005;
-        animation-name: downloadselect;
-        animation-duration: 1s;
     }
+}
 
-    .download-div-text {
-        padding: 4.5vw;
-    }
-
-    .download-button {
-        position: absolute;
-        margin-top: auto;
-        margin-bottom: auto;
-        padding: 0.3vw;
-        border-radius: 1vw;
-        right: 2vw;
-        background-color: var(--bg-color-dark);
-        display: inline-block;
-        animation-name: downloadunselect;
-        animation-duration: 1s;
-    }
-
-    .download-button:hover {
+@keyframes downloadunselect {
+    from {
         box-shadow: 0px 0px 20px 5px #0005;
-        animation-name: downloadselect;
-        animation-duration: 1s;
     }
 
-    .download-icon {
-        height: 2.6vw;
+    to {
+        box-shadow: 0px 0px 0px 0px #0005;
     }
-
-    /* Project Grid Styling */
-    .grid-container {
-        font-family: monospace;
-        font-size: 5vw;
-        color: var(--text-color-light);
-        text-shadow: 1px 1px 2px black;
-        padding: 5vw;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "project-one project-one project-two project-two""project-one project-one project-three project-three"". . . .";
-    }
-
-    .project-one {
-        color: inherit;
-        text-decoration: none;
-        grid-area: project-one;
-        background: url("assets/images/opennotes.jpg");
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        animation-name: unselectproject;
-        animation-duration: 1s;
-        position: relative;
-    }
-
-    .project-two {
-        color: inherit;
-        text-decoration: none;
-        grid-area: project-two;
-        background: url("assets/images/animeplayer.jpg");
-        width: 100%;
-        background-size: cover;
-        background-position: bottom;
-        animation-name: unselectproject;
-        animation-duration: 1s;
-        position: relative;
-        padding-bottom: 10%;
-    }
-
-    .project-three {
-        color: inherit;
-        text-decoration: none;
-        grid-area: project-three;
-        background: url("assets/images/rankcurves.jpg");
-        width: 100%;
-        background-size: cover;
-        background-position: top;
-        animation-name: unselectproject;
-        animation-duration: 1s;
-        position: relative;
-        padding-bottom: 10%;
-    }
-
-    .project-one:hover {
-        animation-name: selectproject;
-        animation-duration: 1s;
-        background-size: 150%;
-    }
-
-    .project-two:hover {
-        animation-name: selectproject;
-        animation-duration: 1s;
-        background-size: 150%;
-    }
-
-    .project-three:hover {
-        animation-name: selectproject;
-        animation-duration: 1s;
-        background-size: 150%;
-    }
-
-    .project-description{
-      position: absolute;
-      width:100%;
-      height:50%;
-      left: 0;
-      right: 0;
-      font-size:2vw;
-      text-align: center;
-      opacity: 0%;
-      filter: blur(0);
-      background: var(--bg-color-mid);
-      animation-name: unhoveroverstats;
-      animation-duration: 1s;
-    }
-    .project-description:hover{
-      opacity: 100%;
-      animation-name: hoveroverstats;
-      animation-duration: 1s;
-    }
-
-    /* Animation */
-    @keyframes selectproject {
-        from {
-            background-size: 100%;
-        }
-
-        to {
-            background-size: 150%;
-        }
-    }
-
-    @keyframes unselectproject {
-        from {
-            background-size: 150%;
-        }
-
-        to {
-            background-size: 100%;
-        }
-    }
-
-    @keyframes hoveroverstats {
-        from {
-            opacity: 0%;
-        }
-
-        to {
-            opacity: 100%;
-        }
-    }
-
-    @keyframes unhoveroverstats {
-        from {
-            opacity: 100%;
-        }
-
-        to {
-            opacity: 0%;
-        }
-    }
-
-    @keyframes downloadselect {
-        from {
-            box-shadow: 0px 0px 0px 0px #0005;
-        }
-
-        to {
-            box-shadow: 0px 0px 20px 5px #0005;
-        }
-    }
-
-    @keyframes downloadunselect {
-        from {
-            box-shadow: 0px 0px 20px 5px #0005;
-        }
-
-        to {
-            box-shadow: 0px 0px 0px 0px #0005;
-        }
-    }
+}
