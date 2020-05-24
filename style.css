@@ -232,8 +232,8 @@ h1 {
 
 .project-description {
     position: absolute;
-    width: 100%;
-    height: 50%;
+    width: auto;
+    height: auto;
     left: 0;
     right: 0;
     font-size: 2vw;
