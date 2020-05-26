@@ -1,6 +1,6 @@
 /* Variables */
-var issurl = "//api.open-notify.org/iss-now.json";
-var peopleinspaceurl = "//api.open-notify.org/astros.json";
+var issurl = "http://api.open-notify.org/iss-now.json";
+var peopleinspaceurl = "http://api.open-notify.org/astros.json";
 var shipicon = "assets/png/spring-swing-rocket.png";
 var personicon = "assets/png/kitty.png";
 
