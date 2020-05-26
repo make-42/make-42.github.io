@@ -39,6 +39,14 @@ h2 {
     font-size: 2vw;
     text-align: center;
 }
+.textcontainer{
+  padding:5vw;
+}
+.text{
+  color: var(--text-color-light);
+  font-family: monospace;
+  font-size: 3vw;
+}
 
 .credits {
     padding: 5vw;
