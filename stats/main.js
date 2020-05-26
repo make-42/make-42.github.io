@@ -3,18 +3,42 @@ var issurl = "http://api.open-notify.org/iss-now.json";
 var peopleinspaceurl = "http://api.open-notify.org/astros.json";
 var shipicon = "assets/png/spring-swing-rocket.png";
 var personicon = "assets/png/kitty.png";
+
+/* Get Request Function */
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true);
+    xmlHttp.send(null);
+}
+
+
+
+
+
+
+
+
 /* Update Population Function */
 function updateissloc() {
     /* Get Request For Data */
-    $.get(issurl,
-        function(data, textStatus, jqXHR) {
+    httpGetAsync(issurl,
+        function(dataraw) {
+          /* Parse JSON */
+          data=JSON.parse(dataraw);
           /* Update HTML */
           document.getElementsByClassName("issposition")[0].innerHTML = "<h2>ISS Position</h2>Latitude: "+data.iss_position.latitude+"\n<br>\nLongitude: "+data.iss_position.longitude;
     });
 }
 function updatepeopleinspace(){
-  $.get(peopleinspaceurl,
-      function(data, textStatus, jqXHR) {
+  httpGetAsync(peopleinspaceurl,
+      function(dataraw) {
+        /* Parse JSON */
+        data=JSON.parse(dataraw);
         peoplearray = data.people;
         htmlend = "";
         /* Make containers for each person */
@@ -35,6 +59,6 @@ $(document).ready(function() {
     updateissloc();
     updatepeopleinspace();
     /* Set Correct Intervals */
-    setInterval(updateissloc, 2000);
+    setInterval(updateissloc, 1000);
     setInterval(updatepeopleinspace, 60000);
 });
