@@ -1,6 +1,6 @@
 /* Variables */
 var issurl = "http://api.open-notify.org/iss-now.json";
-var peopleinspaceurl = "http://api.open-notify.org/astros.json";
+var peopleinspaceurl = "https://cors-anywhere.herokuapp.com/www.howmanypeopleareinspacerightnow.com/peopleinspace.json";
 var shipicon = "assets/png/spring-swing-rocket.png";
 var personicon = "assets/png/kitty.png";
 
@@ -18,7 +18,6 @@ function httpGetAsync(theUrl, callback) {
 
 
 
-/* Update Population Function */
 function updateissloc() {
     /* Get Request For Data */
     httpGetAsync(issurl,
@@ -31,10 +30,8 @@ function updateissloc() {
 }
 
 function updatepeopleinspace() {
-    httpGetAsync(peopleinspaceurl,
-        function(dataraw) {
-            /* Parse JSON */
-            data = JSON.parse(dataraw);
+  $.get(peopleinspaceurl,  // url
+    function (data, textStatus, jqXHR) {
             peoplearray = data.people;
             htmlend = "";
             /* Make containers for each person */
@@ -42,7 +39,7 @@ function updatepeopleinspace() {
                 htmlend += "<div class=\"person\">";
                 htmlend += "<img src=\"" + personicon + "\" class=\"personicon\"></img>"
                 htmlend += "<div class=\"personname\">" + person.name + "</div>";
-                htmlend += "<div class=\"craft\">" + person.craft;
+                htmlend += "<div class=\"craft\">" + person.location;
                 htmlend += "<img src=\"" + shipicon + "\" class=\"crafticon\"></img>";
                 htmlend += "</div></div><br>";
             }
@@ -52,9 +49,9 @@ function updatepeopleinspace() {
 }
 $(document).ready(function() {
     /* Update All Values On Document Ready */
-    updateissloc();
+    // updateissloc();
     updatepeopleinspace();
     /* Set Correct Intervals */
-    setInterval(updateissloc, 1000);
+    // setInterval(updateissloc, 1000);
     setInterval(updatepeopleinspace, 60000);
 });
