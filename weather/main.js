@@ -115,7 +115,7 @@ function updateweather() {
         ctx.strokeStyle = '#ffffff';
         ctx.fillStyle = '#ffffff';
         ctx.lineWidth = Math.round(canvasresx / 1000);
-        ctx.font = (canvasresx / 100).toString() + "px Consolas";
+        ctx.font = (canvasresx / 100).toString() + "px Open Sans";
 
         /*Grid*/
         i = 0;
