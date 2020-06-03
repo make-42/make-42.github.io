@@ -1,0 +1,82 @@
+/* Setting Variables */
+:root {
+    --bg-color-dark: #313247;
+    --bg-color-mid: #393152;
+    --bg-color-light: #353c54;
+    --text-color-light: #ffffff;
+    --text-color-dark: grey;
+    --banner-one-scroll-pos: center;
+
+    /* Scrollbar Styling */
+    /* Firefox */
+    scrollbar-color: var(--text-color-light) var(--bg-color-dark);
+    scrollbar-width: thin;
+}
+
+/* Setting Background */
+body {
+    background: var(--bg-color-dark);
+}
+
+/* Setting Text Styling */
+.text {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+}
+
+/* Headers */
+h1 {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+    text-align: center;
+}
+
+h2 {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.textcontainer {
+    padding: 5vw;
+}
+
+.text {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+}
+
+.credits {
+    padding: 5vw;
+    color: var(--text-color-dark);
+    font-family: monospace;
+    font-size: 15px;
+}
+
+/* Menubar */
+.menubar {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+    display: flex;
+    text-align: center;
+}
+
+.menubutton {
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    border: var(--text-color-light) solid 1px;
+    border-radius: 100px;
+}
+
+
+    position: absolute;
+    left: 7vw;
+    top: 1.3vw;
+}
+
