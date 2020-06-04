@@ -1,4 +1,4 @@
-/* Impoer fonts */
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /* Setting Variables */
@@ -76,42 +76,229 @@ h2 {
     border: var(--text-color-light) solid 1px;
     border-radius: 100px;
 }
+
 /* Resume Widget */
 .resume {
-  position:relative;
-  background:white;
-  color:black;
-  font-family:'Open Sans';
-  width:90%;
-  height: 63.6%;
-  margin-left:5%;
-  font-size: 2vw;
-  text-align:left;
+    position: relative;
+    background: white;
+    color: black;
+    font-family: 'Open Sans';
+    width: 90%;
+    height: 63.6%;
+    margin-left: 5%;
+    font-size: 2vw;
+    text-align: left;
 }
-.resume-title-div{
-  background: #282736;
-  color:white;
-  padding:1vw 1vw 1vw 1vw;
+
+.resume-title-div {
+    background: #282736;
+    color: white;
+    padding: 1vw 1vw 1vw 1vw;
 }
-.resume-title{
-  text-align:left;
-  font-size: 4vw;
+
+.resume-title {
+    text-align: left;
+    font-size: 4vw;
 }
-.resume-subtitle{
-  text-align:left;
-  font-size:2vw;
-  color:gray;
+
+.resume-subtitle {
+    text-align: left;
+    font-size: 2vw;
+    color: gray;
 }
-.resume-description{
-  margin:1vw;
+
+.resume-contact-link {
+    color: black;
 }
-.resume-description-title{
-  font-size:3vw;
-  margin:1.5vw 0vw 0vw 0vw;
+
+.resume-description {
+    margin: 1vw;
 }
-.resume-seperator{
-  background:grey;
-  margin: 1vw 0vw 1vw 0vw;
-  padding: 0.1vw 40% 0.1vw 40%;
-  border-radius:1vw;
+
+.resume-description-title {
+    font-size: 3vw;
+    margin: 1.5vw 0vw 0vw 0vw;
+}
+
+.resume-seperator {
+    background: grey;
+    margin: 1vw 0vw 1vw 0vw;
+    padding: 0.1vw 40% 0.1vw 40%;
+    border-radius: 1vw;
+}
+
+.resume-skills {
+    background: #EEEEEE;
+    padding: 1vw;
+}
+
+/* Skill Rating */
+.resume-skill-rating {
+    background: linear-gradient(56deg, rgba(215, 0, 144, 1) 0%, rgba(62, 73, 255, 1) 100%);
+    padding: 1vw 20% 1vw 20%;
+    border-radius: 1vw;
+}
+
+#skill-python {
+    animation-name: loadbarspython;
+    animation-duration: 3s;
+    width: 60%;
+}
+
+#skill-javascript {
+    animation-name: loadbarsjavascript;
+    animation-duration: 3s;
+    width: 60%;
+}
+
+#skill-html {
+    animation-name: loadbarshtml;
+    animation-duration: 3s;
+    width: 55%;
+}
+
+#skill-csharp {
+    animation-name: loadbarscsharp;
+    animation-duration: 3s;
+    width: 35%;
+}
+
+#skill-css {
+    animation-name: loadbarscss;
+    animation-duration: 3s;
+    width: 35%;
+}
+
+#skill-golang {
+    animation-name: loadbarsgolang;
+    animation-duration: 3s;
+    width: 25%;
+}
+
+#skill-english {
+    animation-name: loadbarsenglish;
+    animation-duration: 3s;
+    width: 60%;
+}
+
+#skill-french {
+    animation-name: loadbarsfrench;
+    animation-duration: 3s;
+    width: 60%;
+}
+
+#skill-spanish {
+    animation-name: loadbarsspanish;
+    animation-duration: 3s;
+    width: 20%;
+}
+
+
+/* Animations */
+@keyframes loadbarspython {
+    from {
+        width: 40%;
+        opacity: 40%;
+    }
+
+    to {
+        width: 60%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarsjavascript {
+    from {
+        width: 35%;
+        opacity: 35%;
+    }
+
+    to {
+        width: 60%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarshtml {
+    from {
+        width: 30%;
+        opacity: 30%;
+    }
+
+    to {
+        width: 55%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarscsharp {
+    from {
+        width: 25%;
+        opacity: 25%;
+    }
+
+    to {
+        width: 35%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarscss {
+    from {
+        width: 20%;
+        opacity: 20%;
+    }
+
+    to {
+        width: 35%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarsgolang {
+    from {
+        width: 15%;
+        opacity: 15%;
+    }
+
+    to {
+        width: 25%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarsenglish {
+    from {
+        width: 10%;
+        opacity: 10%;
+    }
+
+    to {
+        width: 60%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarsfrench {
+    from {
+        width: 5%;
+        opacity: 5%;
+    }
+
+    to {
+        width: 60%;
+        opacity: 100%;
+    }
+}
+
+@keyframes loadbarsspanish {
+    from {
+        width: 0%;
+        opacity: 0%;
+    }
+
+    to {
+        width: 20%;
+        opacity: 100%;
+    }
 }
