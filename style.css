@@ -184,7 +184,7 @@ h1 {
     animation-name: unselectproject;
     animation-duration: 1s;
     position: relative;
-    border-radius:2vw;
+    border-radius: 2vw 0vw 0vw 2vw;
 }
 
 .project-two {
@@ -199,7 +199,7 @@ h1 {
     animation-duration: 1s;
     position: relative;
     padding-bottom: 10%;
-    border-radius:2vw;
+    border-radius: 0vw 2vw 0vw 0vw;
 }
 
 .project-three {
@@ -214,7 +214,7 @@ h1 {
     animation-duration: 1s;
     position: relative;
     padding-bottom: 10%;
-    border-radius:2vw;
+    border-radius: 0vw 0vw 2vw 0vw;;
 }
 
 .project-one:hover {
