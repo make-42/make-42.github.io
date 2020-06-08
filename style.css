@@ -61,6 +61,7 @@ h1 {
     text-decoration: none;
     width: 100%;
     border: var(--text-color-light) solid 1px;
+    border-radius: 2vw;
 }
 
 /* Stats */
@@ -111,6 +112,7 @@ h1 {
     text-align: left;
     background: var(--bg-color-light);
     height: 4.5vw;
+    border-radius: 2vw;
 }
 
 /*Download Section Styling*/
@@ -119,6 +121,7 @@ h1 {
     position: relative;
     background: var(--bg-color-light);
     padding: 0.5vw;
+    border-radius:2vw;
     animation-name: downloadunselect;
     animation-duration: 1s;
 }
@@ -167,6 +170,7 @@ h1 {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px 1px;
     grid-template-areas: "project-one project-one project-two project-two""project-one project-one project-three project-three"". . . .";
+    border-radius:2vw;
 }
 
 .project-one {
@@ -180,6 +184,7 @@ h1 {
     animation-name: unselectproject;
     animation-duration: 1s;
     position: relative;
+    border-radius:2vw;
 }
 
 .project-two {
@@ -194,6 +199,7 @@ h1 {
     animation-duration: 1s;
     position: relative;
     padding-bottom: 10%;
+    border-radius:2vw;
 }
 
 .project-three {
@@ -208,6 +214,7 @@ h1 {
     animation-duration: 1s;
     position: relative;
     padding-bottom: 10%;
+    border-radius:2vw;
 }
 
 .project-one:hover {

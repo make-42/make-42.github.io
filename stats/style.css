@@ -71,6 +71,7 @@ h2 {
     text-decoration: none;
     width: 100%;
     border: var(--text-color-light) solid 1px;
+    border-radius: 2vw;
 }
 
 /* Weather Widget */

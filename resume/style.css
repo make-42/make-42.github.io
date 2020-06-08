@@ -74,6 +74,7 @@ h2 {
     text-decoration: none;
     width: 100%;
     border: var(--text-color-light) solid 1px;
+    border-radius:2vw;
 }
 
 /* Resume Widget */
@@ -86,12 +87,14 @@ h2 {
     margin-left: 5%;
     font-size: 2vw;
     text-align: left;
+    border-radius: 2vw;
 }
 
 .resume-title-div {
     background: #282736;
     color: white;
     padding: 1vw 1vw 1vw 1vw;
+    border-radius: 1.6vw 1.6vw 0vw 0vw;
 }
 
 .resume-title {
