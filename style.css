@@ -121,12 +121,11 @@ h1 {
 
 /*Download Section Styling*/
 .download-div {
-    margin: 0vw;
+    margin: 5vw;
     position: relative;
     background: var(--bg-color-light);
     padding: 0.5vw;
     border-radius: 2vw;
-    width: 99.4%;
     animation-name: downloadunselect;
     animation-duration: 1s;
 }
@@ -168,6 +167,7 @@ h1 {
 .grid-container {
     font-family: monospace;
     font-size: 5vw;
+    margin: 5vw;
     color: var(--text-color-light);
     text-shadow: 1px 1px 2px black;
     display: grid;
