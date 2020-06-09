@@ -126,6 +126,7 @@ h1 {
     background: var(--bg-color-light);
     padding: 0.5vw;
     border-radius: 2vw;
+    width: 99.4%;
     animation-name: downloadunselect;
     animation-duration: 1s;
 }
