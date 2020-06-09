@@ -125,7 +125,7 @@ h1 {
     position: relative;
     background: var(--bg-color-light);
     padding: 0.5vw;
-    border-radius:2vw;
+    border-radius: 2vw;
     animation-name: downloadunselect;
     animation-duration: 1s;
 }
@@ -174,7 +174,7 @@ h1 {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px 1px;
     grid-template-areas: "project-one project-one project-two project-two""project-one project-one project-three project-three"". . . .";
-    border-radius:2vw;
+    border-radius: 2vw;
     animation-name: contentload;
     animation-duration: 1s;
 }
@@ -220,7 +220,8 @@ h1 {
     animation-duration: 1s;
     position: relative;
     padding-bottom: 10%;
-    border-radius: 0vw 0vw 2vw 0vw;;
+    border-radius: 0vw 0vw 2vw 0vw;
+    ;
 }
 
 .project-one:hover {
@@ -324,18 +325,21 @@ h1 {
 }
 
 @keyframes typingload {
-  from {
-    width:0%;
-  }
-  to {
-    width:100%;
-  }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
 }
-@keyframes contentload{
-  from{
-    opacity: 0%;
-  }
-  to{
-    opacity: 100%;
-  }
+
+@keyframes contentload {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }

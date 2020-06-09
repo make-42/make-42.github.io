@@ -30,8 +30,8 @@ function updateissloc() {
 }
 
 function updatepeopleinspace() {
-  $.get(peopleinspaceurl,  // url
-    function (data, textStatus, jqXHR) {
+    $.get(peopleinspaceurl, // url
+        function(data, textStatus, jqXHR) {
             peoplearray = data.people;
             htmlend = "";
             /* Make containers for each person */

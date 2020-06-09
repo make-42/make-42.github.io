@@ -74,7 +74,7 @@ h2 {
     text-decoration: none;
     width: 100%;
     border: var(--text-color-light) solid 1px;
-    border-radius:2vw;
+    border-radius: 2vw;
 }
 
 /* Resume Widget */
@@ -308,9 +308,10 @@ h2 {
 
 @keyframes resumeload {
     from {
-      opacity:0%;
+        opacity: 0%;
     }
-    to{
-      opacity:100%;
+
+    to {
+        opacity: 100%;
     }
 }

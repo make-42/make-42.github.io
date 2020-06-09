@@ -86,7 +86,7 @@ $(document).ready(function() {
         languagebadge.style.position = "absolute";
         languagebadge.style.bottom = "1vw";
         languagebadge.style.left = 0;
-	languagebadge.style.borderRadius = "2vw";
+        languagebadge.style.borderRadius = "2vw";
         projectelement.appendChild(languagebadge);
         /* Add repo size badge */
         var lastcommitbadge = document.createElement("img");
@@ -94,7 +94,7 @@ $(document).ready(function() {
         lastcommitbadge.style.position = "absolute";
         lastcommitbadge.style.bottom = "1vw";
         lastcommitbadge.style.right = 0;
-	lastcommitbadge.style.borderRadius = "2vw";
+        lastcommitbadge.style.borderRadius = "2vw";
         projectelement.appendChild(lastcommitbadge);
     }
     //Set Stats Text

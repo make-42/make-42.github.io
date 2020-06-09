@@ -153,30 +153,35 @@ h2 {
 /* Animation */
 
 @keyframes peopleinspaceload {
-  from{
-    padding:0vw;
-  }
-  to{
-    padding:2vw;
-  }
+    from {
+        padding: 0vw;
+    }
+
+    to {
+        padding: 2vw;
+    }
 }
 
 @keyframes personload {
-  from{
-    width:0%;
-  }
-  to{
-    width:100%;
-  }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
 }
-@keyframes contentload{
-  0%{
-    opacity:0%;
-  }
-  70%{
-    opacity:0%;
-  }
-  100%{
-    opacity:100%;
-  }
+
+@keyframes contentload {
+    0% {
+        opacity: 0%;
+    }
+
+    70% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
