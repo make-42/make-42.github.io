@@ -115,7 +115,7 @@ h2 {
 .personname {
     position: absolute;
     left: 7vw;
-    top: 1.3vw;
+    top: 1.7vw;
     animation-name: contentload;
     animation-duration: 1s;
 }
@@ -123,7 +123,7 @@ h2 {
 .craft {
     position: absolute;
     right: 7vw;
-    top: 1.3vw;
+    top: 1.7vw;
     animation-name: contentload;
     animation-duration: 1s;
 }
@@ -134,7 +134,7 @@ h2 {
     height: 5vw;
     position: absolute;
     right: -6vw;
-    bottom: -0.75vw;
+    bottom: -1vw;
     animation-name: contentload;
     animation-duration: 1s;
 }
