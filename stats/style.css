@@ -78,7 +78,7 @@ h2 {
 .stats {
     color: var(--text-color-light);
     font-family: monospace;
-    font-size: 3vw;
+    font-size: 2.5vw;
     position: relative;
     border-radius: 5vw;
     border: var(--text-color-light) solid 1px;
@@ -97,6 +97,8 @@ h2 {
     border-radius: 5vw;
     border: var(--text-color-light) solid 1px;
     padding: 2vw;
+    animation-name: peopleinspaceload;
+    animation-duration: 1s;
 }
 
 .person {
@@ -106,18 +108,24 @@ h2 {
     width: 100%;
     height: 6vw;
     position: relative;
+    animation-name: personload;
+    animation-duration: 1s;
 }
 
 .personname {
     position: absolute;
     left: 7vw;
     top: 1.3vw;
+    animation-name: contentload;
+    animation-duration: 1s;
 }
 
 .craft {
     position: absolute;
     right: 7vw;
     top: 1.3vw;
+    animation-name: contentload;
+    animation-duration: 1s;
 }
 
 .crafticon {
@@ -127,6 +135,8 @@ h2 {
     position: absolute;
     right: -6vw;
     bottom: -0.75vw;
+    animation-name: contentload;
+    animation-duration: 1s;
 }
 
 .personicon {
@@ -136,4 +146,37 @@ h2 {
     position: absolute;
     left: 1vw;
     bottom: 0.5vw;
+    animation-name: contentload;
+    animation-duration: 1s;
+}
+
+/* Animation */
+
+@keyframes peopleinspaceload {
+  from{
+    padding:0vw;
+  }
+  to{
+    padding:2vw;
+  }
+}
+
+@keyframes personload {
+  from{
+    width:0%;
+  }
+  to{
+    width:100%;
+  }
+}
+@keyframes contentload{
+  0%{
+    opacity:0%;
+  }
+  70%{
+    opacity:0%;
+  }
+  100%{
+    opacity:100%;
+  }
 }
