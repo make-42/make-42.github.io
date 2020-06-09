@@ -65,7 +65,7 @@ h1 {
     position: relative;
     border-radius: 5vw;
     border: var(--text-color-light) solid 1px;
-    padding: 2vw;
+    padding: 2vw 2vw 10vw 2vw;
 }
 
 .city {
@@ -84,8 +84,10 @@ h1 {
 }
 
 .tempplot {
-    padding-top: 2vw;
-    width: 97vw;
+    position:absolute;
+    left:3vw;
+    bottom:1vw;
+    width: 96vw;
     height: 8vw;
     animation-name: plotload;
     animation-duration: 1s;
@@ -138,7 +140,7 @@ h1 {
 
     to {
         opacity: 100%;
-        width: 97vw;
+        width: 96vw;
         height: 8vw;
     }
 }
