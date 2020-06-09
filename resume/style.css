@@ -16,6 +16,15 @@
     scrollbar-width: thin;
 }
 
+/* Chrome */
+body::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
 /* Setting Background */
 body {
     background: var(--bg-color-dark);

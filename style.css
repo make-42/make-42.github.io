@@ -12,6 +12,14 @@
     scrollbar-color: var(--text-color-light) var(--bg-color-dark);
     scrollbar-width: thin;
 }
+/* Chrome */
+body::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+}
 
 /* Setting Background */
 body {
