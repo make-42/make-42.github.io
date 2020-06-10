@@ -15,11 +15,11 @@
 
 /* Chrome */
 body::-webkit-scrollbar {
-  width: 0.5vw;
+    width: 0.5vw;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: white;
+    background-color: white;
 }
 
 /* Setting Background */
@@ -96,9 +96,9 @@ h1 {
 }
 
 .tempplot {
-    position:absolute;
-    left:3vw;
-    bottom:1vw;
+    position: absolute;
+    left: 3vw;
+    bottom: 1vw;
     width: 96vw;
     height: 8vw;
     animation-name: contentload;
@@ -114,6 +114,8 @@ h1 {
     top: 2vw;
     animation-name: contentload;
     animation-duration: 1s;
+    animation-name: iconload;
+    animation-duration: 1s;
 }
 
 /* Animations */
@@ -122,21 +124,41 @@ h1 {
         opacity: 0%;
         font-size: 0vw;
     }
+
     90% {
         opacity: 0%;
         font-size: 0vw;
     }
+
     100% {
         opacity: 100%;
         font-size: 3vw;
     }
 }
 
-@keyframes weatherload{
-    from{
-        width:0%;
+@keyframes iconload {
+    0% {
+        width: 0vw;
+        height: 0vw;
     }
-    to{
+
+    90% {
+        width: 0vw;
+        height: 0vw;
+    }
+
+    100% {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+@keyframes weatherload {
+    from {
+        width: 0%;
+    }
+
+    to {
         width: 96%;
     }
 }
