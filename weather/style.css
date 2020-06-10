@@ -75,20 +75,23 @@ h1 {
     border-radius: 5vw;
     border: var(--text-color-light) solid 1px;
     padding: 2vw 2vw 10vw 2vw;
+    width: 96%;
+    animation-name: weatherload;
+    animation-duration: 1s;
 }
 
 .city {
-    animation-name: textload;
+    animation-name: contentload;
     animation-duration: 1s;
 }
 
 .temp {
-    animation-name: textload;
+    animation-name: contentload;
     animation-duration: 1s;
 }
 
 .state {
-    animation-name: textload;
+    animation-name: contentload;
     animation-duration: 1s;
 }
 
@@ -98,7 +101,7 @@ h1 {
     bottom:1vw;
     width: 96vw;
     height: 8vw;
-    animation-name: plotload;
+    animation-name: contentload;
     animation-duration: 1s;
 }
 
@@ -109,47 +112,31 @@ h1 {
     position: absolute;
     right: 2vw;
     top: 2vw;
-    animation-name: iconload;
+    animation-name: contentload;
     animation-duration: 1s;
 }
 
 /* Animations */
-@keyframes textload {
-    from {
+@keyframes contentload {
+    0% {
+        opacity: 0%;
         font-size: 0vw;
-        opacity: 0%;
     }
-
-    to {
+    90% {
+        opacity: 0%;
+        font-size: 0vw;
+    }
+    100% {
+        opacity: 100%;
         font-size: 3vw;
-        opacity: 100%;
     }
 }
 
-@keyframes iconload {
-    from {
-        opacity: 0%;
-        width: 0vw;
-        height: 0vw;
+@keyframes weatherload{
+    from{
+        width:0%;
     }
-
-    to {
-        opacity: 100%;
-        width: 10vw;
-        height: 10vw;
-    }
-}
-
-@keyframes plotload {
-    from {
-        width: 0vw;
-        height: 0vw;
-        opacity: 0%;
-    }
-
-    to {
-        opacity: 100%;
-        width: 96vw;
-        height: 8vw;
+    to{
+        width: 96%;
     }
 }
