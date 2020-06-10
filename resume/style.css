@@ -316,11 +316,18 @@ h2 {
 }
 
 @keyframes resumeload {
-    from {
-        opacity: 0%;
+    0% {
+      opacity: 0%;
+      width:0;
+      margin-left: 50%;
+    }
+    50% {
+      opacity: 0%;
     }
 
-    to {
+    100% {
         opacity: 100%;
+        margin-left: 5%;
+        width:90%;
     }
 }
