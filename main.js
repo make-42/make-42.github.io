@@ -5,7 +5,7 @@ var sitetitles = ["Louis Dalibard's website", "cd ~/Apps/OpenNotes", "techadvanc
 //System Variables
 var slice = 0;
 var typing = true;
-var sitetitle = "techadvancedcyborg.github.io"
+var sitetitle = sitetitles[Math.round(Math.random() * (sitetitles.length - 1))]
 var cursorstate = true;
 //Text Rendering Loop
 setInterval(function() {
