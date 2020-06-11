@@ -103,6 +103,8 @@ h1 {
     height: 8vw;
     animation-name: contentload;
     animation-duration: 1s;
+    animation-name: plotload;
+    animation-duration: 1s;
 }
 
 .icon {
@@ -125,7 +127,7 @@ h1 {
         font-size: 0vw;
     }
 
-    90% {
+    60% {
         opacity: 0%;
         font-size: 0vw;
     }
@@ -160,5 +162,29 @@ h1 {
 
     to {
         width: 96%;
+    }
+}
+
+@keyframes plotload {
+    0% {
+        opacity: 0%;
+        font-size: 0vw;
+        width: 0%;
+        height: 0%;
+    }
+
+    60% {
+        opacity: 0%;
+        font-size: 0vw;
+    }
+
+    100% {
+        opacity: 100%;
+        font-size: 3vw;
+    }
+
+    100% {
+        width: 96vw;
+        height: 8vw;
     }
 }
