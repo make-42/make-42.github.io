@@ -200,7 +200,7 @@ h1 {
     grid-area: project-one;
     background: url("assets/images/opennotes.jpg");
     width: 100%;
-    background-size: 44vw;
+    background-size: 44.5vw;
     background-position: center;
     position: relative;
     border-radius: 2vw 0vw 0vw 2vw;
