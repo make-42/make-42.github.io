@@ -180,10 +180,11 @@ h2 {
 }
 */
 @keyframes personload {
-  0% {
-      width: 0%;
-      border: var(--text-color-light) solid 0px;
-  }
+    0% {
+        width: 0%;
+        border: var(--text-color-light) solid 0px;
+    }
+
     50% {
         width: 0%;
         border: var(--text-color-light) solid 0px;

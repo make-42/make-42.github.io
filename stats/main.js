@@ -34,7 +34,7 @@ function updatepeopleinspace() {
         function(data, textStatus, jqXHR) {
             peoplearray = data.people;
             htmlend = "";
-              document.getElementsByClassName("peopleinspace")[0].style.height = "51vw";
+            document.getElementsByClassName("peopleinspace")[0].style.height = "51vw";
             /* Make containers for each person */
             for (person of peoplearray) {
                 /* Calculate days spent in space in current mission */
