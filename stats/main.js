@@ -40,15 +40,16 @@ function updatepeopleinspace() {
                 /* Get Dates */
                 now = new Date();
                 launch = new Date(person.launchdate);
-                //Calculate Differences
-                diffdays = " ("+Math.floor((now - launch) / (1000 * 3600 * 24)).toString()+" Days)";
-
+                /* Calculate Differences */
+                diffdays = " (" + Math.floor((now - launch) / (1000 * 3600 * 24)).toString() + " Days)";
+                /* Set HTML */
                 htmlend += "<div class=\"person\">";
-                htmlend += "<img src=\"" + personicon + "\" class=\"personicon\" alt=\""+person.bio+"\" title=\""+person.bio+"\"></img>"
-                htmlend += "<div class=\"personname\">" + person.name +diffdays +"</div>";
+                htmlend += "<img src=\"" + personicon + "\" class=\"personicon\" alt=\"" + person.bio + "\" title=\"" + person.bio + "\"></img>"
+                htmlend += "<div class=\"personname\">" + person.name + diffdays + "</div>";
                 htmlend += "<div class=\"craft\">" + person.location;
                 htmlend += "<img src=\"" + shipicon + "\" class=\"crafticon\"></img>";
                 htmlend += "</div></div><br>";
+
             }
             /* Update HTML */
             document.getElementsByClassName("peopleinspace")[0].innerHTML = "<h2>People in Space</h2>" + htmlend;
