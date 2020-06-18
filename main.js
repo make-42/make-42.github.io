@@ -102,4 +102,12 @@ $(document).ready(function() {
     statselement.innerHTML = navigator.userAgent + "<br>"
     statselement.innerHTML = statselement.innerHTML + navigator.hardwareConcurrency + " cores <br>";
     statselement.innerHTML = statselement.innerHTML + navigator.language + "<br>";
+    //Start Animation
+    setTimeout(function(){
+    document.getElementsByClassName("typing-text")[0].style.width = "100%";
+    }, 1000);
+    setTimeout(function(){
+    document.getElementsByClassName("typing-text")[0].style.color = "var(--text-color-light)";
+    }, 2000);
+    
 });

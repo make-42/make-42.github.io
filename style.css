@@ -128,8 +128,9 @@ h1 {
     background: var(--bg-color-light);
     height: 4.5vw;
     border-radius: 2vw;
-    animation-name: typingload;
-    animation-duration: 1s;
+    width: 0vw;
+    color: transparent;
+    transition: width 1s ease, color 1s ease;
 }
 
 /*Download Section Styling*/
