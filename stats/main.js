@@ -36,9 +36,16 @@ function updatepeopleinspace() {
             htmlend = "";
             /* Make containers for each person */
             for (person of peoplearray) {
+                /* Calculate days spent in space in current mission */
+                /* Get Dates */
+                now = new Date();
+                launch = new Date(person.launchdate);
+                //Calculate Differences
+                diffdays = " ("+Math.floor((now - launch) / (1000 * 3600 * 24)).toString()+" Days)";
+
                 htmlend += "<div class=\"person\">";
-                htmlend += "<img src=\"" + personicon + "\" class=\"personicon\"></img>"
-                htmlend += "<div class=\"personname\">" + person.name + "</div>";
+                htmlend += "<img src=\"" + personicon + "\" class=\"personicon\" alt=\""+person.bio+"\" title=\""+person.bio+"\"></img>"
+                htmlend += "<div class=\"personname\">" + person.name +diffdays +"</div>";
                 htmlend += "<div class=\"craft\">" + person.location;
                 htmlend += "<img src=\"" + shipicon + "\" class=\"crafticon\"></img>";
                 htmlend += "</div></div><br>";
