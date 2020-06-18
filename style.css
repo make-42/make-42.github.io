@@ -88,6 +88,10 @@ h1 {
         font-size: 0.5vw;
         width: 20%;
         opacity: 0%;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
         animation-name: unhoveroverstats;
         animation-duration: 1s;
     }
@@ -105,16 +109,16 @@ h1 {
         font-size: 4vw;
         width: 50%;
         opacity: 0%;
-        animation-name: unhoveroverstats;
-        animation-duration: 1s;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
     }
 }
 
 /* Make stats visible on hover*/
 .stats:hover {
     opacity: 100%;
-    animation-name: hoveroverstats;
-    animation-duration: 1s;
 }
 
 /* Set Typing Text Effect Styling */
@@ -195,12 +199,14 @@ h1 {
     grid-area: project-one;
     background: url("assets/images/opennotes.jpg");
     width: 100%;
-    background-size: cover;
+    background-size: 44vw;
     background-position: center;
-    animation-name: unselectproject;
-    animation-duration: 1s;
     position: relative;
     border-radius: 2vw 0vw 0vw 2vw;
+    -webkit-transition: background-size 1s ease;
+    -moz-transition: background-size 1s ease;
+    -o-transition: background-size 1s ease;
+    transition: background-size 1s ease;
 }
 
 .project-two {
@@ -209,13 +215,15 @@ h1 {
     grid-area: project-two;
     background: url("assets/images/animeplayer.jpg");
     width: 100%;
-    background-size: cover;
+    background-size: 50vw;
     background-position: bottom;
-    animation-name: unselectproject;
-    animation-duration: 1s;
     position: relative;
     padding-bottom: 10%;
     border-radius: 0vw 2vw 0vw 0vw;
+    -webkit-transition: background-size 1s ease;
+    -moz-transition: background-size 1s ease;
+    -o-transition: background-size 1s ease;
+    transition: background-size 1s ease;
 }
 
 .project-three {
@@ -224,31 +232,26 @@ h1 {
     grid-area: project-three;
     background: url("assets/images/rankcurves.jpg");
     width: 100%;
-    background-size: cover;
+    background-size: 50vw;
     background-position: top;
-    animation-name: unselectproject;
-    animation-duration: 1s;
     position: relative;
     padding-bottom: 10%;
     border-radius: 0vw 0vw 2vw 0vw;
-    ;
+    -webkit-transition: background-size 1s ease;
+    -moz-transition: background-size 1s ease;
+    -o-transition: background-size 1s ease;
+    transition: background-size 1s ease;
 }
 
 .project-one:hover {
-    animation-name: selectproject;
-    animation-duration: 1s;
     background-size: 150%;
 }
 
 .project-two:hover {
-    animation-name: selectproject;
-    animation-duration: 1s;
     background-size: 150%;
 }
 
 .project-three:hover {
-    animation-name: selectproject;
-    animation-duration: 1s;
     background-size: 150%;
 }
 
@@ -263,14 +266,14 @@ h1 {
     opacity: 0%;
     filter: blur(0);
     background: var(--bg-color-mid);
-    animation-name: unhoveroverstats;
-    animation-duration: 1s;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 
 .project-description:hover {
     opacity: 100%;
-    animation-name: hoveroverstats;
-    animation-duration: 1s;
 }
 
 /* Animation */
@@ -304,15 +307,6 @@ h1 {
     }
 }
 
-@keyframes unhoveroverstats {
-    from {
-        opacity: 100%;
-    }
-
-    to {
-        opacity: 0%;
-    }
-}
 
 @keyframes downloadselect {
     from {
