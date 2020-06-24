@@ -1,5 +1,5 @@
 // Skill Score List
-scores = ["60%","55%","35%","35%","25%","60%","60%","20%","0%"]
+scores = ["100%","95%","92%","78%","76%","74%","100%","100%","60%"]
 
 $(document).ready(function() {
   setTimeout(function(){document.getElementsByClassName("resume-skill-rating")[0].style.width = scores[0];},0);
