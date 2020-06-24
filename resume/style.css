@@ -147,9 +147,10 @@ h2 {
     background: linear-gradient(56deg, rgba(215, 0, 144, 1) 0%, rgba(62, 73, 255, 1) 100%);
     padding: 1vw 0% 1vw 0%;
     border-radius: 1vw;
+    filter: hue-rotate(90deg);
     -webkit-transition: width 1.5s ease;
     -moz-transition: width 1.5s ease;
     -o-transition: width 1.5s ease;
-    transition: width 1.5s ease;
+    transition: width 1.5s ease, filter 1.5s ease;
     width: 0%;
 }
