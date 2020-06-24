@@ -43,63 +43,63 @@ function updateweather() {
             document.getElementsByClassName("state")[0].innerHTML = state;
             /* Get Appropriate Icon */
             iconsrc = "";
-            switch (iconcode){
-            case "01d":
-                iconsrc = sunicon;
-	              break;
-            case "01n":
-                iconsrc = moonicon;
-	              break;
-            case "02d":
-                iconsrc = cloudsandsunicon;
-	            	break;
-            case "02n":
-                iconsrc = cloudynighticon;
-	            	break;
-            case "03d":
-                iconsrc = cloudyicon;
-	             	break;
-            case "03n":
-                iconsrc = cloudyicon;
-                break;
-            case "04d":
-                iconsrc = cloudyicon;
-                break;
-            case "04n":
-                iconsrc = cloudyicon;
-                break;
-            case "09d":
-                iconsrc = rainicon;
-                break;
-            case "09n":
-                iconsrc = rainicon;
-                break;
-            case "10d":
-                iconsrc = rainandsunicon;
-                break;
-            case "10n":
-                iconsrc = rainnighticon;
-                break;
-            case "11d":
-                iconsrc = thunderstormicon;
-                break;
-            case "11n":
-                iconsrc = thunderstormicon;
-                break;
-            case "13d":
-                iconsrc = snowicon;
-                break;
-            case "13n":
-                iconsrc = snowicon;
-                break;
-            case "50d":
-                iconsrc = fogicon;
-                break;
-            case "50n":
-                iconsrc = fognighticon
-                break;
-            default:
-                iconsrc = "error";
+            switch (iconcode) {
+                case "01d":
+                    iconsrc = sunicon;
+                    break;
+                case "01n":
+                    iconsrc = moonicon;
+                    break;
+                case "02d":
+                    iconsrc = cloudsandsunicon;
+                    break;
+                case "02n":
+                    iconsrc = cloudynighticon;
+                    break;
+                case "03d":
+                    iconsrc = cloudyicon;
+                    break;
+                case "03n":
+                    iconsrc = cloudyicon;
+                    break;
+                case "04d":
+                    iconsrc = cloudyicon;
+                    break;
+                case "04n":
+                    iconsrc = cloudyicon;
+                    break;
+                case "09d":
+                    iconsrc = rainicon;
+                    break;
+                case "09n":
+                    iconsrc = rainicon;
+                    break;
+                case "10d":
+                    iconsrc = rainandsunicon;
+                    break;
+                case "10n":
+                    iconsrc = rainnighticon;
+                    break;
+                case "11d":
+                    iconsrc = thunderstormicon;
+                    break;
+                case "11n":
+                    iconsrc = thunderstormicon;
+                    break;
+                case "13d":
+                    iconsrc = snowicon;
+                    break;
+                case "13n":
+                    iconsrc = snowicon;
+                    break;
+                case "50d":
+                    iconsrc = fogicon;
+                    break;
+                case "50n":
+                    iconsrc = fognighticon
+                    break;
+                default:
+                    iconsrc = "error";
             }
             /* Set Icon*/
             document.getElementsByClassName("icon")[0].setAttribute("src", iconsrc);
