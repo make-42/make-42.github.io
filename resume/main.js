@@ -1,5 +1,5 @@
 // Skill Score List
-var scores = ["100%", "95%", "92%", "78%", "76%", "74%", "100%", "100%", "60%"];
+var scores = ["100%", "95%", "92%", "78%", "77%", "76%", "74%", "100%", "100%", "60%"];
 var filters = "hue-rotate(0deg)";
 $(document).ready(function() {
     setTimeout(function() {
@@ -38,4 +38,8 @@ $(document).ready(function() {
         document.getElementsByClassName("resume-skill-rating")[8].style.width = scores[8];
         document.getElementsByClassName("resume-skill-rating")[8].style.filter = filters;
     }, 400);
+    setTimeout(function() {
+        document.getElementsByClassName("resume-skill-rating")[9].style.width = scores[9];
+        document.getElementsByClassName("resume-skill-rating")[9].style.filter = filters;
+    }, 450);
 });
