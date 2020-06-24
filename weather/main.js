@@ -43,43 +43,62 @@ function updateweather() {
             document.getElementsByClassName("state")[0].innerHTML = state;
             /* Get Appropriate Icon */
             iconsrc = "";
-            if (iconcode == "01d") {
+            switch (iconcode){
+            case "01d":
                 iconsrc = sunicon;
-            } else if (iconcode == "01d") {
+	              break;
+            case "01n":
                 iconsrc = moonicon;
-            } else if (iconcode == "02d") {
+	              break;
+            case "02d":
                 iconsrc = cloudsandsunicon;
-            } else if (iconcode == "02n") {
+	            	break;
+            case "02n":
                 iconsrc = cloudynighticon;
-            } else if (iconcode == "03d") {
+	            	break;
+            case "03d":
                 iconsrc = cloudyicon;
-            } else if (iconcode == "03n") {
+	             	break;
+            case "03n":
                 iconsrc = cloudyicon;
-            } else if (iconcode == "04d") {
+                break;
+            case "04d":
                 iconsrc = cloudyicon;
-            } else if (iconcode == "04n") {
+                break;
+            case "04n":
                 iconsrc = cloudyicon;
-            } else if (iconcode == "09d") {
+                break;
+            case "09d":
                 iconsrc = rainicon;
-            } else if (iconcode == "09n") {
+                break;
+            case "09n":
                 iconsrc = rainicon;
-            } else if (iconcode == "10d") {
+                break;
+            case "10d":
                 iconsrc = rainandsunicon;
-            } else if (iconcode == "10n") {
+                break;
+            case "10n":
                 iconsrc = rainnighticon;
-            } else if (iconcode == "11d") {
+                break;
+            case "11d":
                 iconsrc = thunderstormicon;
-            } else if (iconcode == "11n") {
+                break;
+            case "11n":
                 iconsrc = thunderstormicon;
-            } else if (iconcode == "13d") {
+                break;
+            case "13d":
                 iconsrc = snowicon;
-            } else if (iconcode == "13n") {
+                break;
+            case "13n":
                 iconsrc = snowicon;
-            } else if (iconcode = "50d") {
-                iconsrc = fogicon
-            } else if (iconcode = "50n") {
+                break;
+            case "50d":
+                iconsrc = fogicon;
+                break;
+            case "50n":
                 iconsrc = fognighticon
-            } else {
+                break;
+            default:
                 iconsrc = "error";
             }
             /* Set Icon*/
