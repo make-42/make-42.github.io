@@ -6,6 +6,8 @@ let appid = "3ee4c5cdcac622727b68312127512f9a";
 let xgridpoints = 4;
 let ygridmultiplier = 4;
 let ytextmultiplier = 2;
+let smoothing = 10;
+
 /* Variables */
 let sunicon = "assets/png/004-sun.png";
 let moonicon = "assets/png/027-moon phase.png";
@@ -154,8 +156,18 @@ function updateweather() {
             /* Find X,Y coordinates */
             x = ((hourly[i].dt - minhourlydt) * scalex);
             y = (maxtemp - hourly[i].temp) * scaley;
+            cp1x= x;
+            cp1y= y;
+            cp2x= x;
+            cp2y= y;
+            try{
+            cp1x= (x*smoothing+((hourly[i+1].dt - minhourlydt) * scalex))/(smoothing+1);
+            cp1y= (y*smoothing+(maxtemp - hourly[i+1].temp) * scaley)/(smoothing+1);
+            cp2x= (x*smoothing+((hourly[i-1].dt - minhourlydt) * scalex))/(smoothing+1);
+            cp2y= (y*smoothing+(maxtemp - hourly[i-1].temp) * scaley)/(smoothing+1);
+          }catch(e){}
             /* Draw Line */
-            ctx.lineTo(x, y);
+            ctx.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x, y);
             /* Draw Text */
             if (Number.isInteger(i / ytextmultiplier)) {
                 tempdisplay = (Math.round((hourly[i].temp - 273.15) * 10) / 10).toString();
