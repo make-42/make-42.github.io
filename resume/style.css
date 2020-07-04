@@ -145,6 +145,7 @@ h2 {
 /* Skill Rating */
 .resume-skill-rating {
     background: linear-gradient(56deg, rgba(215, 0, 144, 1) 0%, rgba(62, 73, 255, 1) 100%);
+    background-attachment: fixed;
     padding: 1vw 0% 1vw 0%;
     border-radius: 1vw;
     filter: hue-rotate(90deg);
