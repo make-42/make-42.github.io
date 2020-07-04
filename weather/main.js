@@ -6,7 +6,7 @@ let appid = "3ee4c5cdcac622727b68312127512f9a";
 let xgridpoints = 4;
 let ygridmultiplier = 4;
 let ytextmultiplier = 2;
-let smoothing = 2;
+let smoothing = 3;
 
 /* Variables */
 let sunicon = "assets/png/004-sun.png";
