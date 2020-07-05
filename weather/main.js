@@ -31,6 +31,8 @@ var ctx;
 console.log(urlonecall);
 /* Update Function */
 function updateweather() {
+  /* Widget Animations */
+  document.getElementsByClassName("weather")[0].style.transform="rotate(0deg)";
     $.get(url,
         function(data, textStatus, jqXHR) {
             /* Parse Data */

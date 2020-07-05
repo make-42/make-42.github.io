@@ -78,6 +78,8 @@ h1 {
     width: 96%;
     animation-name: weatherload;
     animation-duration: 1s;
+    transform: rotate(-5deg);
+    transition: transform 1s ease;
 }
 
 .city {
