@@ -1,4 +1,5 @@
 // Skill Score List
+/*
 var scores = ["100%", "95%", "92%", "78%", "77%", "76%", "74%", "100%", "100%", "60%"];
 var filters = ["hue-rotate(0deg)","hue-rotate(5deg)","hue-rotate(10deg)","hue-rotate(15deg)","hue-rotate(20deg)","hue-rotate(25deg)","hue-rotate(30deg)","hue-rotate(35deg)","hue-rotate(40deg)","hue-rotate(45deg)"];
 var transform = "rotate(0deg)"
@@ -53,4 +54,5 @@ $(document).ready(function() {
         document.getElementsByClassName("resume-skill-rating")[9].style.filter = filters[9];
         document.getElementsByClassName("resume-skill-rating")[9].style.transform = transform;
     }, 450);
+    */
 });
