@@ -84,19 +84,22 @@ h1 {
 
 /* Menubar */
 .menubar {
-    color: var(--text-color-light);
     font-family: monospace;
     font-size: 3vw;
+	color: var(--text-color-light);
     display: flex;
     text-align: center;
 }
-
+.menubutton:hover{
+	width: 100%;
+}
 .menubutton {
     color: inherit;
     text-decoration: none;
-    width: 100%;
+    width: 30%;
     border: var(--text-color-light) solid 1px;
     border-radius: 2vw;
+	transition:width 1s ease;
 }
 /* Resume Widget */
 .resume {
