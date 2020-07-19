@@ -14,7 +14,7 @@
 
     /* Scrollbar Styling */
     /* Firefox */
-    scrollbar-color: var(--text-color-light) var(--bg-color-dark);
+    scrollbar-color: var(--text-color-dark) var(--bg-color-light);
     scrollbar-width: thin;
 }
 
@@ -24,13 +24,15 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: var(--text-color-light);
+	border-radius: 1vw;
 }
 
 /* Setting Background */
 body { margin: 0; }
 .page {
     background: var(--bg-color-dark);
+	padding:0.5vw;
 }
 
 /* Setting Text Styling */
