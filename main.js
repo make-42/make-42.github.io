@@ -102,7 +102,7 @@ $(document).ready(function() {
     document.getElementsByClassName("typing-text")[0].style.width = "100%";
     }, 1000);
     setTimeout(function(){
-    document.getElementsByClassName("typing-text")[0].style.color = "var(--text-color-light)";
+    document.getElementsByClassName("typing-text")[0].style.color = "#000000";
     }, 2000);
     
 });
