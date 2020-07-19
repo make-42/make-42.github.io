@@ -135,8 +135,8 @@ function updateweather() {
         /* Clear Canvas */
         ctx.clearRect(0, 0, canvasresx, canvasresy);
         /* Draw Plot */
-        ctx.strokeStyle = '#ffffff';
-        ctx.fillStyle = '#ffffff';
+        ctx.strokeStyle = '#000000';
+        ctx.fillStyle = '#000000';
         ctx.lineWidth = Math.round(canvasresx / 1000);
         ctx.font = (canvasresx / 100).toString() + "px Open Sans";
 
@@ -176,11 +176,11 @@ function updateweather() {
                     texty = y - (canvasresx / 150);
                 }
                 ctx.fillText(tempdisplay, textx, texty);
-                ctx.strokeStyle = '#000000';
+                ctx.strokeStyle = '#ffffff';
                 ctx.lineWidth = Math.round(canvasresx / 4000);
                 ctx.strokeText(tempdisplay, textx, texty);
                 ctx.lineWidth = Math.round(canvasresx / 1000);
-                ctx.strokeStyle = '#ffffff';
+                ctx.strokeStyle = '#000000';
             }
             i++;
         }

@@ -97,11 +97,6 @@ $(document).ready(function() {
         lastcommitbadge.style.borderRadius = "2vw";
         projectelement.appendChild(lastcommitbadge);
     }
-    //Set Stats Text
-    statselement = document.getElementsByClassName("stats")[0]
-    statselement.innerHTML = navigator.userAgent + "<br>"
-    statselement.innerHTML = statselement.innerHTML + navigator.hardwareConcurrency + " cores <br>";
-    statselement.innerHTML = statselement.innerHTML + navigator.language + "<br>";
     //Start Animation
     setTimeout(function(){
     document.getElementsByClassName("typing-text")[0].style.width = "100%";

@@ -1,10 +1,15 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 /* Setting Variables */
 :root {
-    --bg-color-dark: #313247;
-    --bg-color-mid: #393152;
-    --bg-color-light: #353c54;
-    --text-color-light: #ffffff;
-    --text-color-dark: grey;
+    /* --bg-color-dark: #313247; */
+	--bg-color-dark: url(./assets/images/grid.png);
+    --bg-color-mid: #66666650;
+    --bg-color-light: #AAAAAA50;
+    --text-color-light: #000000;
+    --text-color-mid: grey;
+	--text-color-dark: #ffffff;
     --banner-one-scroll-pos: center;
 
     /* Scrollbar Styling */
@@ -23,7 +28,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Setting Background */
-body {
+body { margin: 0; }
+.page {
     background: var(--bg-color-dark);
 }
 
@@ -34,6 +40,24 @@ body {
     font-size: 3vw;
     animation-name: contentload;
     animation-duration: 1s;
+}
+/* Headers */
+h1 {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+    text-align: center;
+}
+
+h2 {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.textcontainer {
+    padding: 5vw;
 }
 
 .text-container-one {
@@ -74,51 +98,185 @@ h1 {
     border: var(--text-color-light) solid 1px;
     border-radius: 2vw;
 }
-
-/* Stats */
-/* PC */
-@media (hover : hover) and (pointer : fine) {
-    .stats {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        background: var(--bg-color-light);
-        color: var(--text-color-light);
-        font-family: monospace;
-        font-size: 0.5vw;
-        width: 20%;
-        opacity: 0%;
-        -webkit-transition: opacity 0.5s ease;
-        -moz-transition: opacity 0.5s ease;
-        -o-transition: opacity 0.5s ease;
-        transition: opacity 0.5s ease;
-        animation-name: unhoveroverstats;
-        animation-duration: 1s;
-    }
+/* Resume Widget */
+.resume {
+    position: relative;
+    background: white;
+    color: black;
+    font-family: 'Open Sans';
+    width: 90%;
+    margin-left: 5%;
+    font-size: 2vw;
+    text-align: left;
+    border-radius: 2vw;
+	box-shadow: 0px 0px 5px black;
 }
 
-/* Mobile */
-@media (hover: none) {
-    .stats {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        background: var(--bg-color-light);
-        color: var(--text-color-light);
-        font-family: monospace;
-        font-size: 4vw;
-        width: 50%;
-        opacity: 0%;
-        -webkit-transition: opacity 0.5s ease;
-        -moz-transition: opacity 0.5s ease;
-        -o-transition: opacity 0.5s ease;
-        transition: opacity 0.5s ease;
-    }
+.resume-title-div {
+    background: #282736;
+    color: white;
+    padding: 1vw 1vw 1vw 1vw;
+    border-radius: 1.6vw 1.6vw 0vw 0vw;
 }
 
-/* Make stats visible on hover*/
-.stats:hover {
-    opacity: 100%;
+.resume-title {
+    text-align: left;
+    font-size: 4vw;
+}
+
+.resume-subtitle {
+    text-align: left;
+    font-size: 2vw;
+    color: gray;
+}
+
+.resume-contact-link {
+    color: black;
+}
+
+.resume-description {
+    margin: 1vw;
+}
+
+.resume-description-title {
+    font-size: 3vw;
+    margin: 1.5vw 0vw 0vw 0vw;
+}
+
+.resume-seperator {
+    background: grey;
+    margin: 1vw 0vw 1vw 0vw;
+    padding: 0.1vw 40% 0.1vw 40%;
+    border-radius: 1vw;
+}
+/* Stats Widget */
+.stats {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 2.5vw;
+    position: relative;
+    border-radius: 5vw;
+    border: var(--text-color-light) solid 1px;
+    padding: 0vw;
+}
+
+.peopleinspace {
+    background: var(--bg-color-mid);
+    border-radius: 5vw;
+    border: var(--text-color-light) solid 1px;
+    padding: 2vw;
+    height: 0vw;
+    animation-name: peopleinspaceload;
+    animation-duration: 1s;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    transition: height 0.5s ease;
+}
+
+.person {
+    background: var(--bg-color-light);
+    border-radius: 5vw;
+    border: var(--text-color-light) solid 1px;
+    width: 100%;
+    height: 6vw;
+    position: relative;
+    animation-name: personload;
+    animation-duration: 1s;
+}
+
+.personname {
+    position: absolute;
+    left: 7vw;
+    top: 1.7vw;
+    animation-name: contentloadstats;
+    animation-duration: 1s;
+}
+
+.craft {
+    position: absolute;
+    right: 7vw;
+    top: 1.7vw;
+    animation-name: contentloadstats;
+    animation-duration: 1s;
+}
+
+.crafticon {
+    filter: invert(100%);
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    right: -6vw;
+    bottom: -1vw;
+    animation-name: contentloadstats;
+    animation-duration: 1s;
+}
+
+.personicon {
+    filter: invert(100%);
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: 1vw;
+    bottom: 0.5vw;
+    animation-name: contentloadstats;
+    animation-duration: 1s;
+}
+
+/* Weather Widget */
+.weather {
+    color: var(--text-color-light);
+    font-family: monospace;
+    font-size: 3vw;
+    position: relative;
+    border-radius: 5vw;
+    border: var(--text-color-light) solid 1px;
+    padding: 2vw 2vw 10vw 2vw;
+    width: 96%;
+    animation-name: weatherload;
+    animation-duration: 1s;
+    transform: rotate(-5deg);
+    transition: transform 1s ease;
+}
+
+.city {
+    animation-name: contentloadweather;
+    animation-duration: 1s;
+}
+
+.temp {
+    animation-name: contentloadweather;
+    animation-duration: 1s;
+}
+
+.state {
+    animation-name: contentloadweather;
+    animation-duration: 1s;
+}
+
+.tempplot {
+    position: absolute;
+    left: 3vw;
+    bottom: 1vw;
+    width: 96vw;
+    height: 8vw;
+    animation-name: contentloadweather;
+    animation-duration: 1s;
+    animation-name: plotload;
+    animation-duration: 1s;
+}
+
+.icon {
+    filter: invert(100%);
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    right: 2vw;
+    top: 2vw;
+    animation-name: contentloadweather;
+    animation-duration: 1s;
+    animation-name: iconload;
+    animation-duration: 1s;
 }
 
 /* Set Typing Text Effect Styling */
@@ -182,7 +340,7 @@ h1 {
     font-family: monospace;
     font-size: 5vw;
     margin: 5vw;
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
     text-shadow: 1px 1px 2px black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -353,5 +511,115 @@ h1 {
 
     to {
         opacity: 100%;
+    }
+}
+/*
+@keyframes peopleinspaceload {
+    0% {
+        height: 0vw;
+    }
+    60% {
+        height: 51vw;
+    100% {
+        height: 51vw;
+}
+}
+*/
+@keyframes personload {
+    0% {
+        width: 0%;
+        border: var(--text-color-light) solid 0px;
+    }
+
+    50% {
+        width: 0%;
+        border: var(--text-color-light) solid 0px;
+    }
+
+    100% {
+        width: 100%;
+        border: var(--text-color-light) solid 1px;
+    }
+}
+
+@keyframes contentloadstats {
+    0% {
+        opacity: 0%;
+    }
+
+    70% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes contentloadweather {
+    0% {
+        opacity: 0%;
+        font-size: 0vw;
+    }
+
+    60% {
+        opacity: 0%;
+        font-size: 0vw;
+    }
+
+    100% {
+        opacity: 100%;
+        font-size: 3vw;
+    }
+}
+
+@keyframes iconload {
+    0% {
+        width: 0vw;
+        height: 0vw;
+    }
+
+    60% {
+        width: 0vw;
+        height: 0vw;
+    }
+
+    100% {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+@keyframes weatherload {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 96%;
+    }
+}
+
+@keyframes plotload {
+    0% {
+        opacity: 0%;
+        font-size: 0vw;
+        width: 0%;
+        height: 0%;
+    }
+
+    60% {
+        opacity: 0%;
+        font-size: 0vw;
+    }
+
+    100% {
+        opacity: 100%;
+        font-size: 3vw;
+    }
+
+    100% {
+        width: 96vw;
+        height: 8vw;
     }
 }
