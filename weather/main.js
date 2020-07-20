@@ -209,4 +209,4 @@ function checkdarkreader(){
 	}
 }
 setInterval(updateweather, 60000);
-setInterval(checkdarkreader, 5000);
+setInterval(checkdarkreader, 1000);
