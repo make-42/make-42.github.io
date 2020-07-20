@@ -72,7 +72,9 @@ setInterval(function() {
         console.log(e.toString());
     }
 }, 1000);
-
+setInterval(function() {
+  document.body.style.backgroundPositionX=window.scrollY+"px";
+},250);
 //On Page Finish Loading
 $(document).ready(function() {
     //Add badges to projects and make the images clickable
