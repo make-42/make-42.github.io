@@ -74,7 +74,7 @@ setInterval(function() {
 }, 1000);
 setInterval(function() {
   document.body.style.backgroundPositionX=window.scrollY+"px";
-},1000);
+},100);
 //On Page Finish Loading
 $(document).ready(function() {
     //Add badges to projects and make the images clickable
