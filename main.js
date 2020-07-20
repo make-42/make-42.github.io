@@ -60,7 +60,12 @@ setInterval(function() {
         diffsecs = Math.floor((now - birth) / 1000);
         diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
         //Render Text
-        document.getElementsByClassName("age")[0].innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
+        let informationelement = document.getElementById("information");
+        let ageelement = document.getElementsByClassName("age")[0];
+        ageelement.innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
+        ageelement.style.color="#000000FF";
+        informationelement.style.transform="none";
+        informationelement.style.color="#000000FF";
     } catch (e) {
         //Catch Error (if element is not loaded yet)
         console.log("error");
@@ -104,5 +109,5 @@ $(document).ready(function() {
     setTimeout(function(){
     document.getElementsByClassName("typing-text")[0].style.color = "#000";
     }, 2000);
-    
+
 });

@@ -4,12 +4,12 @@
 /* Setting Variables */
 :root {
     /* --bg-color-dark: #313247; */
-	--bg-color-dark: url(./assets/images/grid.png);
+    --bg-color-dark: url(./assets/images/grid.png);
     --bg-color-mid: #66666650;
     --bg-color-light: #AAAAAA50;
     --text-color-light: #000000;
     --text-color-mid: grey;
-	--text-color-dark: #ffffff;
+    --text-color-dark: #ffffff;
     --banner-one-scroll-pos: center;
 
     /* Scrollbar Styling */
@@ -25,14 +25,17 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--text-color-light);
-	border-radius: 1vw;
+    border-radius: 1vw;
 }
 
 /* Setting Background */
-body { margin: 0; }
+body {
+    margin: 0;
+}
+
 .page {
     background: var(--bg-color-dark);
-	padding:0.5vw;
+    padding: 0.5vw;
 }
 
 /* Setting Text Styling */
@@ -43,6 +46,7 @@ body { margin: 0; }
     animation-name: contentload;
     animation-duration: 1s;
 }
+
 /* Headers */
 h1 {
     color: var(--text-color-light);
@@ -84,25 +88,39 @@ h1 {
     font-size: 15px;
 }
 
+#information {
+    transform: translate(-20px, 0px) skew(10deg, 0deg);
+    color: #00000000;
+    transition: transform 1s ease, color 1s ease;
+}
+
+.age {
+    color: #00000000;
+    transition: color 1s ease;
+}
+
 /* Menubar */
 .menubar {
     font-family: monospace;
     font-size: 3vw;
-	color: var(--text-color-light);
+    color: var(--text-color-light);
     display: flex;
     text-align: center;
 }
-.menubutton:hover{
-	width: 100%;
+
+.menubutton:hover {
+    width: 100%;
 }
+
 .menubutton {
     color: inherit;
     text-decoration: none;
     width: 30%;
     border: var(--text-color-light) solid 1px;
     border-radius: 2vw;
-	transition:width 1s ease;
+    transition: width 1s ease;
 }
+
 /* Resume Widget */
 .resume {
     position: relative;
@@ -114,7 +132,7 @@ h1 {
     font-size: 2vw;
     text-align: left;
     border-radius: 2vw;
-	box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 5px black;
 }
 
 .resume-title-div {
@@ -154,6 +172,7 @@ h1 {
     padding: 0.1vw 40% 0.1vw 40%;
     border-radius: 1vw;
 }
+
 /* Stats Widget */
 .stats {
     color: var(--text-color-light);
@@ -518,6 +537,7 @@ h1 {
         opacity: 100%;
     }
 }
+
 /*
 @keyframes peopleinspaceload {
     0% {
