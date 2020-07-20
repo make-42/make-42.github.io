@@ -34,7 +34,7 @@ body {
     background: url(/assets/images/output.png);
     background-attachment: fixed;
     background-size: cover;
-    transition: background-position 0.1s linear;
+    transition: background-position 0.05s linear;
 }
 
 .page {
