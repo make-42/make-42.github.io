@@ -134,6 +134,9 @@ function updateweather() {
         scaley = canvasresy / (maxtemp - mintemp);
         /* Clear Canvas */
         ctx.clearRect(0, 0, canvasresx, canvasresy);
+		/* Fill Canvas Background */
+		ctx.fillStyle = "#FFFFFF";
+        ctx.fillRect(0, 0, canvasresx, canvasresy);
         /* Draw Plot */
         ctx.strokeStyle = '#000000';
         ctx.fillStyle = '#000000';
