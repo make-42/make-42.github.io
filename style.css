@@ -4,7 +4,7 @@
 /* Setting Variables */
 :root {
     /* --bg-color-dark: #313247; */
-    --bg-color-dark: url(./assets/images/grid.png);
+    --bg-color-dark: url(./assets/images/background.png);
     --bg-color-mid: #66666650;
     --bg-color-light: #AAAAAA50;
     --text-color-light: #000000;
