@@ -5,7 +5,7 @@ size = (1920*2,1080*2)
 scale = 3
 pointrange = (3,6)
 rotationrange = (180,180)
-im = Image.new('RGBA', size,"white")
+im = Image.new('RGBA', size)
 
 draw = ImageDraw.Draw(im)
 
