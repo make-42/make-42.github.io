@@ -64,22 +64,21 @@ $(document).ready(function() {
     /* Set Correct Intervals */
     // setInterval(updateissloc, 1000);
     setInterval(updatepeopleinspace, 60000);
-	setInterval(checkdarkreader, 1000);
+    setInterval(checkdarkreader, 1000);
 });
 /* Check if dark reader is enabled */
-function checkdarkreader(){
-	if (!!document.getElementsByClassName("darkreader")[0]){
-		/* Invert */
-		for (var personicon in document.getElementsByClassName("personicon")){
-		personicon.style.filter="invert(1)";}
-		for (var crafticon in document.getElementsByClassName("crafticon")){
-		crafticon.style.filter="invert(1)";}
-	}
-	else{
-		/* Revert */
-		for (var personicon in document.getElementsByClassName("personicon")){
-		personicon.style.filter="invert(0)";}
-		for (var crafticon in document.getElementsByClassName("crafticon")){
-		crafticon.style.filter="invert(0)";}
-	}
+function checkdarkreader() {
+    if (!!document.getElementsByClassName("darkreader")[0]) {
+        /* Invert */
+        for (var iconindex in [...Array(document.getElementsByClassName("personicon").length).keys()]) {
+            document.getElementsByClassName("personicon")[iconindex].style.filter = "invert(1)";
+            document.getElementsByClassName("crafticon")[iconindex].style.filter = "invert(1)";
+        }
+    } else {
+        /* Revert */
+        for (var iconindex in [...Array(document.getElementsByClassName("personicon").length).keys()]) {
+            document.getElementsByClassName("personicon")[iconindex].style.filter = "invert(0)";
+            document.getElementsByClassName("crafticon")[iconindex].style.filter = "invert(0)";
+        }
+    }
 }
