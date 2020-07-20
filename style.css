@@ -244,7 +244,6 @@ h1 {
 }
 
 .crafticon {
-    filter: invert(100%);
     width: 5vw;
     height: 5vw;
     position: absolute;
@@ -255,7 +254,6 @@ h1 {
 }
 
 .personicon {
-    filter: invert(100%);
     width: 5vw;
     height: 5vw;
     position: absolute;
