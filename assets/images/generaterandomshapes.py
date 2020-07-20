@@ -6,11 +6,11 @@ im = Image.new('RGBA', size,"white")
 
 draw = ImageDraw.Draw(im)
 
-for x in range(100):
-    color = (random.randint(80,255),random.randint(0,50),random.randint(80,255))
+for x in range(150):
+    color = (random.randint(150,255),random.randint(150,150),random.randint(150,255))
     center= (random.randint(1,size[0]),random.randint(1,size[1]))
     angle = random.randint(0,360)
-    scale = random.randint(0,100)
+    scale = random.randint(0,75)
     points = random.randint(3,6)
     pointlist = []
     for y in range(points):
