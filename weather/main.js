@@ -136,7 +136,7 @@ function updateweather() {
         ctx.clearRect(0, 0, canvasresx, canvasresy);
 		/* Fill Canvas Background */
 		ctx.fillStyle = "#FFFFFF";
-        ctx.fillRect(0, 0, canvasresx, canvasresy);
+        ctx.fillRect(0, 0, canvasresx-canvasresx*0.03, canvasresy);
         /* Draw Plot */
         ctx.strokeStyle = '#000000';
         ctx.fillStyle = '#000000';
