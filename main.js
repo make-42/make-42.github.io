@@ -88,17 +88,17 @@ $(document).ready(function() {
         var languagebadge = document.createElement("img");
         languagebadge.setAttribute("src", "https://img.shields.io/github/languages/top/TechAdvancedCyborg/" + projectname);
         languagebadge.style.position = "absolute";
-        languagebadge.style.bottom = "1vw";
-        languagebadge.style.left = 0;
-        languagebadge.style.borderRadius = "2vw";
+        languagebadge.style.bottom = "0.1vw";
+        languagebadge.style.left = "0.1vw";
+        languagebadge.style.borderRadius = "0vw";
         projectelement.appendChild(languagebadge);
         /* Add repo size badge */
         var lastcommitbadge = document.createElement("img");
         lastcommitbadge.setAttribute("src", "https://img.shields.io/github/last-commit/TechAdvancedCyborg/" + projectname);
         lastcommitbadge.style.position = "absolute";
-        lastcommitbadge.style.bottom = "1vw";
-        lastcommitbadge.style.right = 0;
-        lastcommitbadge.style.borderRadius = "2vw";
+        lastcommitbadge.style.bottom = "0.1vw";
+        lastcommitbadge.style.right = "0.1vw";
+        lastcommitbadge.style.borderRadius = "0vw";
         projectelement.appendChild(lastcommitbadge);
     }
     //Start Animation

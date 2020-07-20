@@ -389,7 +389,7 @@ h1 {
     background-size: 44.5vw;
     background-position: center;
     position: relative;
-    border-radius: 2vw 0vw 0vw 2vw;
+    border-radius: 2vw 0vw 0vw 0vw;
     -webkit-transition: background-size 1s ease;
     -moz-transition: background-size 1s ease;
     -o-transition: background-size 1s ease;
@@ -423,7 +423,6 @@ h1 {
     background-position: top;
     position: relative;
     padding-bottom: 10%;
-    border-radius: 0vw 0vw 2vw 0vw;
     -webkit-transition: background-size 1s ease;
     -moz-transition: background-size 1s ease;
     -o-transition: background-size 1s ease;
