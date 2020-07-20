@@ -194,6 +194,8 @@ $(document).ready(function() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     updateweather();
+	setInterval(updateweather, 60000);
+    setInterval(checkdarkreader, 1000);
 });
 /* Check if dark reader is enabled */
 function checkdarkreader(){
@@ -208,5 +210,3 @@ function checkdarkreader(){
 		document.getElementsByClassName("tempplot")[0].style.filter="invert(0)";
 	}
 }
-setInterval(updateweather, 60000);
-setInterval(checkdarkreader, 1000);

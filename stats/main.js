@@ -64,4 +64,18 @@ $(document).ready(function() {
     /* Set Correct Intervals */
     // setInterval(updateissloc, 1000);
     setInterval(updatepeopleinspace, 60000);
+	setInterval(checkdarkreader, 1000);
 });
+/* Check if dark reader is enabled */
+function checkdarkreader(){
+	if (!!document.getElementsByClassName("darkreader")[0]){
+		/* Invert */
+		document.getElementsByClassName("personicon")[0].style.filter="invert(1)";
+		document.getElementsByClassName("crafticon")[0].style.filter="invert(1)";
+	}
+	else{
+		/* Revert */
+		document.getElementsByClassName("personicon")[0].style.filter="invert(0)";
+		document.getElementsByClassName("crafticon")[0].style.filter="invert(0)";
+	}
+}
