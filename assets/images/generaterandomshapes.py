@@ -13,9 +13,28 @@ for x in range(150):
     scale = random.randint(0,75)
     points = random.randint(3,6)
     pointlist = []
+    isoutofbounds=False
     for y in range(points):
-        pointlist.append((center[0]+math.sin(math.radians(angle+360/points*y))*scale,center[1]+math.sin(math.radians(angle+90+360/points*y))*scale))
-    draw.polygon(pointlist, fill = color)
+        pointx=center[0]+math.sin(math.radians(angle+360/points*y))*scale
+        pointy=center[1]+math.sin(math.radians(angle+90+360/points*y))*scale
+
+        if pointx < size[0]:
+            if pointx < 0:
+                isoutofbounds=True
+                break
+        else:
+            isoutofbounds=True
+            break
+        if pointy < size[1]:
+            if pointy < 0:
+                isoutofbounds=True
+                break
+        else:
+            isoutofbounds=True
+            break
+        pointlist.append((pointx,pointy))
+    if isoutofbounds != True:
+        draw.polygon(pointlist, fill = color)
 
 
 im.save("output.png")
