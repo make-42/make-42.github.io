@@ -70,12 +70,16 @@ $(document).ready(function() {
 function checkdarkreader(){
 	if (!!document.getElementsByClassName("darkreader")[0]){
 		/* Invert */
-		document.getElementsByClassName("personicon")[0].style.filter="invert(1)";
-		document.getElementsByClassName("crafticon")[0].style.filter="invert(1)";
+		for (var personicon in document.getElementsByClassName("personicon")){
+		personicon.style.filter="invert(1)";}
+		for (var crafticon in document.getElementsByClassName("crafticon")){
+		crafticon.style.filter="invert(1)";}
 	}
 	else{
 		/* Revert */
-		document.getElementsByClassName("personicon")[0].style.filter="invert(0)";
-		document.getElementsByClassName("crafticon")[0].style.filter="invert(0)";
+		for (var personicon in document.getElementsByClassName("personicon")){
+		personicon.style.filter="invert(0)";}
+		for (var crafticon in document.getElementsByClassName("crafticon")){
+		crafticon.style.filter="invert(0)";}
 	}
 }
