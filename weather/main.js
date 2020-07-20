@@ -134,9 +134,6 @@ function updateweather() {
         scaley = canvasresy / (maxtemp - mintemp);
         /* Clear Canvas */
         ctx.clearRect(0, 0, canvasresx, canvasresy);
-		/* Fill Canvas Background */
-		ctx.fillStyle = "#FFFFFF";
-        ctx.fillRect(0, 0, canvasresx-canvasresx*0.03, canvasresy);
         /* Draw Plot */
         ctx.strokeStyle = '#000000';
         ctx.fillStyle = '#000000';
@@ -198,4 +195,18 @@ $(document).ready(function() {
     ctx = canvas.getContext('2d');
     updateweather();
 });
+/* Check if dark reader is enabled */
+function checkdarkreader(){
+	if (!!document.getElementsByClassName("darkreader")[0]){
+		/* Invert */
+		document.getElementsByClassName("icon")[0].style.filter="invert(1)";
+		document.getElementsByClassName("tempplot")[0].style.filter="invert(1)";
+	}
+	else{
+		/* Revert */
+		document.getElementsByClassName("icon")[0].style.filter="invert(0)";
+		document.getElementsByClassName("tempplot")[0].style.filter="invert(0)";
+	}
+}
 setInterval(updateweather, 60000);
+setInterval(checkdarkreader, 5000);
