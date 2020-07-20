@@ -31,7 +31,21 @@ body::-webkit-scrollbar-thumb {
 /* Setting Background */
 body {
     margin: 0;
-    background: url(/assets/images/output.png);
+}
+.layer1{
+    background: url(/assets/images/layer1.png);
+    background-attachment: fixed;
+    background-size: cover;
+    transition: background-position 0.05s linear;
+}
+.layer2{
+    background: url(/assets/images/layer2.png);
+    background-attachment: fixed;
+    background-size: cover;
+    transition: background-position 0.05s linear;
+}
+.layer3{
+    background: url(/assets/images/layer3.png);
     background-attachment: fixed;
     background-size: cover;
     transition: background-position 0.05s linear;

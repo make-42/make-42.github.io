@@ -2,6 +2,9 @@ from PIL import Image,ImageDraw
 import math
 import random
 size = (1920*2,1080*2)
+scale = 3
+pointrange = (3,6)
+rotationrange = (180,180)
 im = Image.new('RGBA', size,"white")
 
 draw = ImageDraw.Draw(im)
@@ -9,14 +12,14 @@ draw = ImageDraw.Draw(im)
 for x in range(150):
     color = (random.randint(150,255),random.randint(150,150),random.randint(150,255))
     center= (random.randint(1,size[0]),random.randint(1,size[1]))
-    angle = random.randint(0,360)
-    scale = random.randint(0,75)
-    points = random.randint(3,6)
+    angle = random.randint(rotationrange[0],rotationrange[1])
+    scalerand = random.randint(0,1000)
+    points = random.randint(pointrange[0],pointrange[1])
     pointlist = []
     isoutofbounds=False
     for y in range(points):
-        pointx=center[0]+math.sin(math.radians(angle+360/points*y))*scale
-        pointy=center[1]+math.sin(math.radians(angle+90+360/points*y))*scale
+        pointx=center[0]+math.sin(math.radians(angle+360/points*y))*scalerand*scale*size[1]/50000
+        pointy=center[1]+math.sin(math.radians(angle+90+360/points*y))*scalerand*scale*size[1]/50000
 
         if pointx < size[0]:
             if pointx < 0:
