@@ -3,13 +3,14 @@ import math
 import random
 size = (1920*2,1080*2)
 scale = 3
+shapes = 50
 pointrange = (3,6)
 rotationrange = (180,180)
 im = Image.new('RGBA', size)
 
 draw = ImageDraw.Draw(im)
 
-for x in range(150):
+for x in range(shapes):
     color = (random.randint(150,255),random.randint(150,150),random.randint(150,255))
     center= (random.randint(1,size[0]),random.randint(1,size[1]))
     angle = random.randint(rotationrange[0],rotationrange[1])
