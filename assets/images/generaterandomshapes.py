@@ -2,8 +2,8 @@ from PIL import Image,ImageDraw
 import math
 import random
 size = (1920*2,1080*2)
-scale = 3
-shapes = 50
+scale = 1
+shapes = 100
 pointrange = (3,6)
 rotationrange = (180,180)
 im = Image.new('RGBA', size)
