@@ -63,9 +63,9 @@ setInterval(function() {
         let informationelement = document.getElementById("information");
         let ageelement = document.getElementsByClassName("age")[0];
         ageelement.innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
-        ageelement.style.color="#000000FF";
-        informationelement.style.transform="none";
-        informationelement.style.color="#000000FF";
+        ageelement.style.color = "#000000FF";
+        informationelement.style.transform = "none";
+        informationelement.style.color = "#000000FF";
     } catch (e) {
         //Catch Error (if element is not loaded yet)
         console.log("error");
@@ -103,11 +103,11 @@ $(document).ready(function() {
         projectelement.appendChild(lastcommitbadge);
     }
     //Start Animation
-    setTimeout(function(){
-    document.getElementsByClassName("typing-text")[0].style.width = "100%";
+    setTimeout(function() {
+        document.getElementsByClassName("typing-text")[0].style.width = "100%";
     }, 1000);
-    setTimeout(function(){
-    document.getElementsByClassName("typing-text")[0].style.color = "#000";
+    setTimeout(function() {
+        document.getElementsByClassName("typing-text")[0].style.color = "#000";
     }, 2000);
 
 });
