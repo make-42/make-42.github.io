@@ -51,6 +51,13 @@ body {
     transition: background-position 0.05s linear;
 }
 
+.layer4{
+    background: url(/assets/images/layer4.png);
+    background-attachment: fixed;
+    background-size: cover;
+    transition: background-position 0.05s linear;
+}
+
 .page {
     background: var(--bg-color-dark);
     padding: 0.5vw;
