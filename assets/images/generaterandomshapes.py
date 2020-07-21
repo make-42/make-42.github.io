@@ -1,6 +1,43 @@
 from PIL import Image,ImageDraw
 import math
 import random
+# Layer 1 Settings
+# size = (1920*2,1080*2)
+# scale = 3
+# shapes = 50
+# pointrange = (3,6)
+# rotationrange = (180,180)
+# opacityrange = (0,255)
+# brightnessrange = (0,10)
+# redrange = (255,255)
+# greenrange = (179,179)
+# bluerange = (246,246)
+
+# Layer 2 Settings
+# size = (1920*2,1080*2)
+# scale = 2
+# shapes = 75
+# pointrange = (3,6)
+# rotationrange = (180,180)
+# opacityrange = (0,255)
+# brightnessrange = (0,10)
+# redrange = (255,255)
+# greenrange = (179,179)
+# bluerange = (246,246)
+
+# Layer 3 Settings
+# size = (1920*2,1080*2)
+# scale = 1
+# shapes = 100
+# pointrange = (3,6)
+# rotationrange = (180,180)
+# opacityrange = (0,255)
+# brightnessrange = (0,10)
+# redrange = (255,255)
+# greenrange = (179,179)
+# bluerange = (246,246)
+
+
 size = (1920*2,1080*2)
 scale = 3
 shapes = 50
