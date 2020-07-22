@@ -40,7 +40,7 @@ import random
 
 size = (1920*2,1080*2)
 scale = 3
-shapes = 50
+shapes = 500
 pointrange = (3,6)
 rotationrange = (180,180)
 opacityrange = (0,255)
@@ -51,8 +51,10 @@ bluerange = (246,246)
 im = Image.new('RGBA', size)
 
 draw = ImageDraw.Draw(im)
-
-for x in range(shapes):
+drawnshapes = 0
+drawnpoints = []
+drawnscales = []
+while drawnshapes < shapes:
 	brightness = random.randint(brightnessrange[0],brightnessrange[1])
 	color = (random.randint(redrange[0],redrange[1])+brightness,random.randint(greenrange[0],greenrange[1])+brightness,random.randint(bluerange[0],bluerange[1])+brightness,random.randint(opacityrange[0],opacityrange[1]))
 	r = color[0]
@@ -89,9 +91,18 @@ for x in range(shapes):
 		else:
 			isoutofbounds=True
 			break
+		for centerindex in range(len(center)):
+			if drawnpoints[centerindex][centerindex][0]-scalerand[centerindex] > pointx:
+				if drawnpoints[centerindex][centerindex][0]+scalerand[centerindex] < pointx:
+					isoutofbounds=True
+			if drawnpoints[centerindex][centerindex][1]-scalerand[centerindex] > pointy:
+				if drawnpoints[centerindex][centerindex][1]+scalerand[centerindex] < pointy:
+					isoutofbounds=True
 		pointlist.append((pointx,pointy))
 	if isoutofbounds != True:
 		draw.polygon(pointlist, fill = color)
-
+		drawnpoints.append(center)
+		drawnscales.append(scalerand)
+		drawnshapes=drawnshapes+1
 
 im.save("output.png")
