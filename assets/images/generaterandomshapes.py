@@ -4,7 +4,7 @@ import random
 # Layer 1 Settings
 # size = (1920*2,1080*2)
 # scale = 3
-# shapes = 50
+# shapes = 75
 # pointrange = (3,6)
 # rotationrange = (180,180)
 # opacityrange = (0,255)
@@ -16,7 +16,7 @@ import random
 # Layer 2 Settings
 # size = (1920*2,1080*2)
 # scale = 2
-# shapes = 75
+# shapes = 125
 # pointrange = (3,6)
 # rotationrange = (180,180)
 # opacityrange = (0,255)
@@ -28,7 +28,7 @@ import random
 # Layer 3 Settings
 # size = (1920*2,1080*2)
 # scale = 1
-# shapes = 100
+# shapes = 175
 # pointrange = (3,6)
 # rotationrange = (180,180)
 # opacityrange = (0,255)
@@ -40,7 +40,7 @@ import random
 
 size = (1920*2,1080*2)
 scale = 3
-shapes = 500
+shapes = 75
 pointrange = (3,6)
 rotationrange = (180,180)
 opacityrange = (0,255)
@@ -48,13 +48,18 @@ brightnessrange = (0,10)
 redrange = (255,255)
 greenrange = (179,179)
 bluerange = (246,246)
-im = Image.new('RGBA', size)
 
-draw = ImageDraw.Draw(im)
+
+
+
+
+
+im = Image.new('RGBA', size)
+draw = ImageDraw.Draw(im,'RGBA')
 drawnshapes = 0
-drawnpoints = []
-drawnscales = []
 while drawnshapes < shapes:
+	layer = Image.new('RGBA', size)
+	draw = ImageDraw.Draw(layer)
 	brightness = random.randint(brightnessrange[0],brightnessrange[1])
 	color = (random.randint(redrange[0],redrange[1])+brightness,random.randint(greenrange[0],greenrange[1])+brightness,random.randint(bluerange[0],bluerange[1])+brightness,random.randint(opacityrange[0],opacityrange[1]))
 	r = color[0]
@@ -90,19 +95,16 @@ while drawnshapes < shapes:
 				break
 		else:
 			isoutofbounds=True
-			break
-		for centerindex in range(len(center)):
-			if drawnpoints[centerindex][centerindex][0]-scalerand[centerindex] > pointx:
-				if drawnpoints[centerindex][centerindex][0]+scalerand[centerindex] < pointx:
-					isoutofbounds=True
-			if drawnpoints[centerindex][centerindex][1]-scalerand[centerindex] > pointy:
-				if drawnpoints[centerindex][centerindex][1]+scalerand[centerindex] < pointy:
-					isoutofbounds=True
+			break	
 		pointlist.append((pointx,pointy))
+		
 	if isoutofbounds != True:
 		draw.polygon(pointlist, fill = color)
-		drawnpoints.append(center)
-		drawnscales.append(scalerand)
 		drawnshapes=drawnshapes+1
+		
+		# boundingboxpointx = (center[0]-scalerand*scale*size[1]/50000,center[1]-scalerand*scale*size[1]/50000)
+		# boundingboxpointy = (center[0]+scalerand*scale*size[1]/50000,center[1]+scalerand*scale*size[1]/50000)
+		# draw.rectangle((boundingboxpointx,boundingboxpointy), outline="white",width=10)
+		im = Image.alpha_composite(im, layer)
 
 im.save("output.png")
