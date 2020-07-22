@@ -8,7 +8,7 @@ var typing = true;
 var sitetitle = sitetitles[Math.round((window.crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * (sitetitles.length - 1))]
 var cursorstate = true;
 //Text Rendering Loop
-function updatetypingeffect(){
+function updatetypingeffect() {
     //Set Cursor String Accordingly
     cursor = " ";
     if (cursorstate) {
