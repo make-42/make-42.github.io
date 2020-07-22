@@ -31,8 +31,8 @@ var ctx;
 console.log(urlonecall);
 /* Update Function */
 function updateweather() {
-  /* Widget Animations */
-  document.getElementsByClassName("weather")[0].style.transform="rotate(0deg)";
+    /* Widget Animations */
+    document.getElementsByClassName("weather")[0].style.transform = "rotate(0deg)";
     $.get(url,
         function(data, textStatus, jqXHR) {
             /* Parse Data */
@@ -160,12 +160,12 @@ function updateweather() {
             y = (maxtemp - hourly[i].temp) * scaley;
             xc = x;
             yc = y;
-            try{
-            xc = (x*smoothing+((hourly[i+1].dt - minhourlydt) * scalex))/(smoothing+1);
-            yc = (y*smoothing+(maxtemp - hourly[i+1].temp) * scaley)/(smoothing+1);
-          }catch(e){}
+            try {
+                xc = (x * smoothing + ((hourly[i + 1].dt - minhourlydt) * scalex)) / (smoothing + 1);
+                yc = (y * smoothing + (maxtemp - hourly[i + 1].temp) * scaley) / (smoothing + 1);
+            } catch (e) {}
             /* Draw Line */
-            ctx.quadraticCurveTo(x, y,xc,yc);
+            ctx.quadraticCurveTo(x, y, xc, yc);
             /* Draw Text */
             if (Number.isInteger(i / ytextmultiplier)) {
                 tempdisplay = (Math.round((hourly[i].temp - 273.15) * 10) / 10).toString();
@@ -194,19 +194,18 @@ $(document).ready(function() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     updateweather();
-	setInterval(updateweather, 60000);
+    setInterval(updateweather, 60000);
     setInterval(checkdarkreader, 1000);
 });
 /* Check if dark reader is enabled */
-function checkdarkreader(){
-	if (!!document.getElementsByClassName("darkreader")[0]){
-		/* Invert */
-		document.getElementsByClassName("icon")[0].style.filter="invert(1)";
-		document.getElementsByClassName("tempplot")[0].style.filter="invert(1)";
-	}
-	else{
-		/* Revert */
-		document.getElementsByClassName("icon")[0].style.filter="invert(0)";
-		document.getElementsByClassName("tempplot")[0].style.filter="invert(0)";
-	}
+function checkdarkreader() {
+    if (!!document.getElementsByClassName("darkreader")[0]) {
+        /* Invert */
+        document.getElementsByClassName("icon")[0].style.filter = "invert(1)";
+        document.getElementsByClassName("tempplot")[0].style.filter = "invert(1)";
+    } else {
+        /* Revert */
+        document.getElementsByClassName("icon")[0].style.filter = "invert(0)";
+        document.getElementsByClassName("tempplot")[0].style.filter = "invert(0)";
+    }
 }
