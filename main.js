@@ -1,5 +1,5 @@
 // Set Variables For Typing Effect
-var fpstext = 15;
+var fpstext = 20;
 var fpscursor = 1;
 var sitetitles = ["Louis Dalibard's website", "cd ~/Apps/OpenNotes", "techadvancedcyborg.github.io", "Work in progress...", "cd ~/Apps/TTACT-s-Anime-Player-Revamped", "Why did the chicken cross the road?", "Beans!", "\“Fix the cause, not the symptom.\” – Steve Maguire", "\“Talk is cheap. Show me the code.\” ― Linus Torvalds", "Justice for George Floyd.", "\“I can\'t breathe...\” ― George Floyd"]
 //System Variables
@@ -8,7 +8,7 @@ var typing = true;
 var sitetitle = sitetitles[Math.round((window.crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * (sitetitles.length - 1))]
 var cursorstate = true;
 //Text Rendering Loop
-setInterval(function() {
+function updatetypingeffect(){
     //Set Cursor String Accordingly
     cursor = " ";
     if (cursorstate) {
@@ -39,7 +39,8 @@ setInterval(function() {
         typing = true;
         sitetitle = sitetitles[Math.round((window.crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * (sitetitles.length - 1))]
     }
-}, 1000 / fpstext);
+}
+setInterval(updatetypingeffect, 1000 / fpstext);
 //Cursor State Loop
 setInterval(function() {
     //Reverse cursorstate variable
