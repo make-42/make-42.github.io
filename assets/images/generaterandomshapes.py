@@ -5,7 +5,7 @@ import random
 # size = (1920*2,1080*2)
 # scale = 3
 # shapes = 75
-# pointrange = (6,6)
+# pointrange = (3,6)
 # rotationrange = (180,180)
 # opacityrange = (0,255)
 # brightnessrange = (0,10)
@@ -17,7 +17,7 @@ import random
 # size = (1920*2,1080*2)
 # scale = 2
 # shapes = 125
-# pointrange = (6,6)
+# pointrange = (3,6)
 # rotationrange = (180,180)
 # opacityrange = (0,255)
 # brightnessrange = (0,10)
@@ -29,7 +29,7 @@ import random
 # size = (1920*2,1080*2)
 # scale = 1
 # shapes = 175
-# pointrange = (6,6)
+# pointrange = (3,6)
 # rotationrange = (180,180)
 # opacityrange = (0,255)
 # brightnessrange = (0,10)
@@ -39,9 +39,9 @@ import random
 
 
 size = (1920*2,1080*2)
-scale = 1
+scale = 3
 shapes = 75
-pointrange = (6,6)
+pointrange = (3,6)
 rotationrange = (180,180)
 opacityrange = (0,255)
 brightnessrange = (0,10)
