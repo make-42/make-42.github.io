@@ -55,7 +55,6 @@ bluerange = (246,246)
 
 
 im = Image.new('RGBA', size)
-draw = ImageDraw.Draw(im,'RGBA')
 drawnshapes = 0
 while drawnshapes < shapes:
 	layer = Image.new('RGBA', size)
