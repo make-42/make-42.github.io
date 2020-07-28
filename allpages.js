@@ -8,6 +8,8 @@ let position = 0;
 let velocity = 1;
 let oldposition = 0;
 /* BG Effect */
+/* Disabled */
+/*
 setInterval(function() {
     position += velocity;
     velocity = Math.round(velocity / drag) + (window.scrollY - oldposition);
@@ -16,6 +18,7 @@ setInterval(function() {
     document.getElementsByClassName("layer3")[0].style.backgroundPositionY = position * layer3speed + "px";
     oldposition = window.scrollY;
 }, 50);
+*/
 
 /* Load Effect */
 setTimeout(function() {
