@@ -75,33 +75,6 @@ setInterval(function() {
 }, 1000);
 //On Page Finish Loading
 $(document).ready(function() {
-    //Add badges to projects and make the images clickable
-    var i;
-    //Loop Through Every Element With "project" Class
-    for (i = 0; i < document.getElementsByClassName("project").length; i++) {
-        //Get Current Element
-        var projectelement = document.getElementsByClassName("project")[i];
-        //Get Github Project Name
-        var projectname = projectelement.getAttribute("project-name");
-        //Make clickable
-        projectelement.setAttribute("href", "https://github.com/TechAdvancedCyborg/" + projectname);
-        /* Add language badge */
-        var languagebadge = document.createElement("img");
-        languagebadge.setAttribute("src", "https://img.shields.io/github/languages/top/TechAdvancedCyborg/" + projectname);
-        languagebadge.style.position = "absolute";
-        languagebadge.style.bottom = "0.1vw";
-        languagebadge.style.left = "0.1vw";
-        languagebadge.style.borderRadius = "0vw";
-        projectelement.appendChild(languagebadge);
-        /* Add repo size badge */
-        var lastcommitbadge = document.createElement("img");
-        lastcommitbadge.setAttribute("src", "https://img.shields.io/github/last-commit/TechAdvancedCyborg/" + projectname);
-        lastcommitbadge.style.position = "absolute";
-        lastcommitbadge.style.bottom = "0.1vw";
-        lastcommitbadge.style.right = "0.1vw";
-        lastcommitbadge.style.borderRadius = "0vw";
-        projectelement.appendChild(lastcommitbadge);
-    }
     //Start Animation
     setTimeout(function() {
         document.getElementsByClassName("typing-text")[0].style.width = "100%";

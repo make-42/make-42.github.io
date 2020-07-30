@@ -385,103 +385,29 @@ h1 {
     height: 2.6vw;
 }
 
-/* Project Grid Styling */
-.grid-container {
-    font-family: monospace;
-    font-size: 5vw;
-    margin: 5vw;
-    color: var(--text-color-dark);
-    text-shadow: 1px 1px 2px black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas: "project-one project-one project-two project-two""project-one project-one project-three project-three"". . . .";
-    border-radius: 2vw;
-    animation-name: contentload;
-    animation-duration: 1s;
+.img-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.project-one {
-    color: inherit;
-    text-decoration: none;
-    grid-area: project-one;
-    background: url("assets/images/opennotes.jpg");
-    width: 100%;
-    background-size: 44.5vw;
-    background-position: center;
-    position: relative;
-    border-radius: 2vw 0vw 0vw 0vw;
-    -webkit-transition: background-size 1s ease;
-    -moz-transition: background-size 1s ease;
-    -o-transition: background-size 1s ease;
-    transition: background-size 1s ease;
+.text-smaller{
+  font-size: 2vw;
 }
 
-.project-two {
-    color: inherit;
-    text-decoration: none;
-    grid-area: project-two;
-    background: url("assets/images/animeplayer.jpg");
-    width: 100%;
-    background-size: 50vw;
-    background-position: bottom;
-    position: relative;
-    padding-bottom: 10%;
-    border-radius: 0vw 2vw 0vw 0vw;
-    -webkit-transition: background-size 1s ease;
-    -moz-transition: background-size 1s ease;
-    -o-transition: background-size 1s ease;
-    transition: background-size 1s ease;
+.align-center{
+  text-align: center;
+}
+/* Projects */
+.project-title{
+  text-align: center;
 }
 
-.project-three {
-    color: inherit;
-    text-decoration: none;
-    grid-area: project-three;
-    background: url("assets/images/rankcurves.jpg");
-    width: 100%;
-    background-size: 50vw;
-    background-position: top;
-    position: relative;
-    padding-bottom: 10%;
-    -webkit-transition: background-size 1s ease;
-    -moz-transition: background-size 1s ease;
-    -o-transition: background-size 1s ease;
-    transition: background-size 1s ease;
-}
-
-.project-one:hover {
-    background-size: 150%;
-}
-
-.project-two:hover {
-    background-size: 150%;
-}
-
-.project-three:hover {
-    background-size: 150%;
-}
-
-.project-description {
-    position: absolute;
-    width: auto;
-    height: auto;
-    left: 0;
-    right: 0;
-    font-size: 2vw;
-    text-align: center;
-    opacity: 0%;
-    filter: blur(0);
-    background: var(--bg-color-mid);
-    -webkit-transition: opacity 1s ease;
-    -moz-transition: opacity 1s ease;
-    -o-transition: opacity 1s ease;
-    transition: opacity 1s ease;
-}
-
-.project-description:hover {
-    opacity: 100%;
+#project-one{
+  background: #00000020;
+  padding:2vw;
+  border-radius: 3vw;
 }
 
 /* Animation */
