@@ -31,7 +31,7 @@ body::-webkit-scrollbar-thumb {
 /* Setting Background */
 body {
     margin: 0;
-    opacity: 100%;
+    opacity: 1;
     transition: opacity 1s ease;
 }
 .layer1{
@@ -124,6 +124,10 @@ h1 {
 .age {
     color: #00000000;
     transition: color 1s ease;
+}
+
+.agestring{
+  transition: padding 0.2s ease;
 }
 
 /* Menubar */

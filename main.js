@@ -63,7 +63,24 @@ setInterval(function() {
         //Render Text
         let informationelement = document.getElementById("information");
         let ageelement = document.getElementsByClassName("age")[0];
-        ageelement.innerHTML = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
+
+        stringage = diffdays.toString() + " days or " + diffsecs.toString() + " seconds old.";
+        if (ageelement.innerHTML == ""){
+        for (var i = 0; i < stringage.length; i++) {
+  ageelement.innerHTML += "<span class=\"agestring\">"+stringage.charAt(i)+"</span>";
+}
+}else{
+  for (var i = 0; i < stringage.length; i++) {
+  if (ageelement.getElementsByClassName("agestring")[i].innerHTML != stringage[i]){
+    document.getElementsByClassName("age")[0].children[i].innerHTML = stringage[i];
+    document.getElementsByClassName("age")[0].children[i].style.padding="1vw";
+  }
+  else{
+    document.getElementsByClassName("age")[0].children[i].style.padding="0%";
+  }
+
+}}
+
         ageelement.style.color = "#000000FF";
         informationelement.style.transform = "none";
         informationelement.style.color = "#000000FF";
@@ -72,7 +89,7 @@ setInterval(function() {
         console.log("error");
         console.log(e.toString());
     }
-}, 1000);
+}, 200);
 //On Page Finish Loading
 $(document).ready(function() {
     //Start Animation
