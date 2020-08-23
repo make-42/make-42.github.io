@@ -31,6 +31,8 @@ var ctx;
 console.log(urlonecall);
 /* Update Function */
 function updateweather() {
+    /* Get stylesheet */
+    var style = getComputedStyle(document.body);
     /* Widget Animations */
     document.getElementsByClassName("weather")[0].style.transform = "rotate(0deg)";
     $.get(url,
@@ -135,10 +137,10 @@ function updateweather() {
         /* Clear Canvas */
         ctx.clearRect(0, 0, canvasresx, canvasresy);
         /* Draw Plot */
-        ctx.strokeStyle = '#000000';
-        ctx.fillStyle = '#000000';
+        ctx.strokeStyle = style.getPropertyValue('--text-color-light');
+        ctx.fillStyle = style.getPropertyValue('--text-color-light');
         ctx.lineWidth = Math.round(canvasresx / 1000);
-        ctx.font = (canvasresx / 100).toString() + "px Open Sans";
+        ctx.font = (canvasresx / 100).toString() + "px Source Code Pro";
 
         /*Grid*/
         i = 0;
@@ -175,12 +177,14 @@ function updateweather() {
                 } else {
                     texty = y - (canvasresx / 150);
                 }
+                // ctx.fillText(tempdisplay, textx, texty);
+                // ctx.strokeStyle = '#000000';
+                // ctx.lineWidth = Math.round(canvasresx / 4000);
+                ctx.strokeStyle = style.getPropertyValue('--text-color-light');
+                ctx.fillStyle = style.getPropertyValue('--text-color-light');
                 ctx.fillText(tempdisplay, textx, texty);
-                ctx.strokeStyle = '#ffffff';
-                ctx.lineWidth = Math.round(canvasresx / 4000);
-                ctx.strokeText(tempdisplay, textx, texty);
-                ctx.lineWidth = Math.round(canvasresx / 1000);
-                ctx.strokeStyle = '#000000';
+                ctx.lineWidth = Math.round(canvasresx / 2000);
+
             }
             i++;
         }
@@ -198,14 +202,15 @@ $(document).ready(function() {
     setInterval(checkdarkreader, 1000);
 });
 /* Check if dark reader is enabled */
-function checkdarkreader() {
-    if (!!document.getElementsByClassName("darkreader")[0]) {
-        /* Invert */
-        document.getElementsByClassName("icon")[0].style.filter = "invert(1)";
-        document.getElementsByClassName("tempplot")[0].style.filter = "invert(1)";
-    } else {
-        /* Revert */
-        document.getElementsByClassName("icon")[0].style.filter = "invert(0)";
-        document.getElementsByClassName("tempplot")[0].style.filter = "invert(0)";
-    }
-}
+
+// function checkdarkreader() {
+//     if (!!document.getElementsByClassName("darkreader")[0]) {
+//         /* Invert */
+//         document.getElementsByClassName("icon")[0].style.filter = "invert(1)";
+//         document.getElementsByClassName("tempplot")[0].style.filter = "invert(1)";
+//     } else {
+//         /* Revert */
+//         document.getElementsByClassName("icon")[0].style.filter = "invert(0)";
+//         document.getElementsByClassName("tempplot")[0].style.filter = "invert(0)";
+//     }
+// }

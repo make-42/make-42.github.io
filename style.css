@@ -4,12 +4,13 @@
 /* Setting Variables */
 :root {
     /* --bg-color-dark: #313247; */
-    --bg-color-dark: url(./assets/images/background.png);
+    /* --bg-color-dark: url(./assets/images/background.png); */
+    --bg-color-clear: #00000020;
     --bg-color-mid: #66666650;
     --bg-color-light: #AAAAAA50;
-    --text-color-light: #000000;
+    --text-color-light: #FFFFFFBB;
     --text-color-mid: grey;
-    --text-color-dark: #ffffff;
+    --text-color-dark: #000000;
     --banner-one-scroll-pos: center;
 
     /* Scrollbar Styling */
@@ -34,27 +35,9 @@ body {
     opacity: 1;
     transition: opacity 1s ease;
 }
-.layer1{
-    background: url(/assets/images/layer1.png);
-    background-attachment: fixed;
-    background-size: cover;
-    transition: background-position 0.05s linear;
-}
-.layer2{
-    background: url(/assets/images/layer2.png);
-    background-attachment: fixed;
-    background-size: cover;
-    transition: background-position 0.05s linear;
-}
-.layer3{
-    background: url(/assets/images/layer3.png);
-    background-attachment: fixed;
-    background-size: cover;
-    transition: background-position 0.05s linear;
-}
 
 .layer4{
-    background: url(/assets/images/layer4.png);
+    background: url(./assets/images/886b0b92-d101-4a59-94f7-e76a8809a22d.png);
     background-attachment: fixed;
     background-size: cover;
     transition: background-position 0.05s linear;
@@ -211,14 +194,12 @@ h1 {
     font-size: 2.5vw;
     position: relative;
     border-radius: 5vw;
-    border: var(--text-color-light) solid 1px;
     padding: 0vw;
 }
 
 .peopleinspace {
-    background: var(--bg-color-mid);
+    background: var(--bg-color-clear);
     border-radius: 5vw;
-    border: var(--text-color-light) solid 1px;
     padding: 2vw;
     height: 0vw;
     animation-name: peopleinspaceload;
@@ -230,9 +211,8 @@ h1 {
 }
 
 .person {
-    background: var(--bg-color-light);
+    background: var(--bg-color-clear);
     border-radius: 5vw;
-    border: var(--text-color-light) solid 1px;
     width: 100%;
     height: 6vw;
     position: relative;
@@ -279,13 +259,11 @@ h1 {
 /* Weather Widget */
 .weather {
     color: var(--text-color-light);
-	background:white;
-	box-shadow: 0px 0px 5px black;
+	background:var(--bg-color-clear);
     font-family: monospace;
     font-size: 3vw;
     position: relative;
     border-radius: 5vw;
-    border: var(--text-color-light) solid 1px;
     padding: 2vw 2vw 10vw 2vw;
     width: 96%;
     animation-name: weatherload;
@@ -349,7 +327,7 @@ h1 {
 .download-div {
     margin: 5vw;
     position: relative;
-    background: var(--bg-color-light);
+    background: #00000020;;
     padding: 0.5vw;
     border-radius: 2vw;
     animation-name: downloadunselect;
@@ -410,7 +388,8 @@ h1 {
 
 #project-one{
   background: #00000020;
-  padding:2vw;
+  padding:0.5vw;
+  margin: 5vw;
   border-radius: 3vw;
 }
 
@@ -508,17 +487,14 @@ h1 {
 @keyframes personload {
     0% {
         width: 0%;
-        border: var(--text-color-light) solid 0px;
     }
 
     50% {
         width: 0%;
-        border: var(--text-color-light) solid 0px;
     }
 
     100% {
         width: 100%;
-        border: var(--text-color-light) solid 1px;
     }
 }
 

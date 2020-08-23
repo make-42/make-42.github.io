@@ -80,10 +80,11 @@ setInterval(function() {
   }
 
 }}
+        var style = getComputedStyle(document.body);
 
-        ageelement.style.color = "#000000FF";
+        ageelement.style.color = style.getPropertyValue('--text-color-light');
         informationelement.style.transform = "none";
-        informationelement.style.color = "#000000FF";
+        informationelement.style.color = style.getPropertyValue('--text-color-light');
     } catch (e) {
         //Catch Error (if element is not loaded yet)
         console.log("error");
@@ -97,7 +98,7 @@ $(document).ready(function() {
         document.getElementsByClassName("typing-text")[0].style.width = "100%";
     }, 1000);
     setTimeout(function() {
-        document.getElementsByClassName("typing-text")[0].style.color = "#000";
+        document.getElementsByClassName("typing-text")[0].style.color = getComputedStyle(document.body).getPropertyValue('--text-color-light');
     }, 2000);
 
 });
