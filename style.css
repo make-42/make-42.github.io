@@ -41,6 +41,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     transition: background-position 0.05s linear;
+    min-height: 100vh;
 }
 
 .page {
