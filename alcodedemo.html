@@ -1,0 +1,73 @@
+<head>
+
+<script>
+  function docReady(fn) {
+      // see if DOM is already available
+      if (document.readyState === "complete" || document.readyState === "interactive") {
+          // call on next available tick
+          setTimeout(fn, 1);
+      } else {
+          document.addEventListener("DOMContentLoaded", fn);
+      }
+  }
+let togglestate = false;
+docReady(function() {
+  document.getElementsByClassName('switch-thumb')[0]
+          .addEventListener('click', function (event) {
+              if (togglestate){
+              document.getElementsByClassName("switch-thumb")[0].style.left="1vw";
+              document.getElementsByClassName("switch")[0].style.background="grey";
+              togglestate = !togglestate;
+              //style changes
+              document.body.style.background="white";
+              document.getElementsByClassName("text")[0].style.color="black";
+
+          } else{
+            document.getElementsByClassName("switch-thumb")[0].style.left="25vw";
+            document.getElementsByClassName("switch")[0].style.background="green";
+            togglestate = !togglestate;
+            //style changes
+            document.body.style.background="#2a2f38";
+            document.getElementsByClassName("text")[0].style.color="white";
+          }
+        });
+          });
+</script>
+
+<style>
+.switch{
+  position: relative;
+  width: 40vw;
+  height: 16vw;
+  border-radius:100vw;
+  padding:0;
+  background: grey;
+  transition: background 0.6s ease, width 0.3s ease;
+}
+.switch-thumb{
+  position: absolute;
+  width: 14vw;
+  height: 14vw;
+  top: 1vw;
+  left: 1vw;
+  background: white;
+  border-radius:100vw;
+  transition: left 0.6s ease;
+}
+body{
+  width:100vw;
+  height:100vh;
+  background:white;
+  transition:background 1s ease;
+}
+.text{
+  color:black;
+  transition:color 1s ease;
+  text-align:center;
+}
+</style>
+
+</head>
+<body>
+  <div class="switch"><div class="switch-thumb"></div></div><div class="text">AlCode Theme</div>
+</body>
