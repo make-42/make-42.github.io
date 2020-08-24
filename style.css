@@ -98,6 +98,10 @@ h1 {
     font-size: 15px;
 }
 
+.creditslink {
+	color: var(--text-color-mid);
+}
+
 #information {
     transform: translate(-20px, 0px) skew(10deg, 0deg);
     color: #00000000;
@@ -315,7 +319,7 @@ h1 {
 .typing-text {
     padding-top: 1.3vw;
     text-align: left;
-    background: var(--bg-color-light);
+    background: var(--bg-color-clear);
     height: 4.5vw;
     border-radius: 2vw;
     width: 0vw;
