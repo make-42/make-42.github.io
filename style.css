@@ -36,6 +36,14 @@ body {
     transition: opacity 1s ease;
 }
 
+.layer3{
+    background: url(./assets/images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    transition: background-position 0.05s linear;
+    min-height: 100vh;
+}
+
 .layer4{
     background: url(./assets/images/886b0b92-d101-4a59-94f7-e76a8809a22d.png);
     background-attachment: fixed;
