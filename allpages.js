@@ -23,7 +23,8 @@ setInterval(function() {
 /* Load Effect */
 setTimeout(function() {
 	if (localStorage.getItem("theme") == "alcode"){
-    document.getElementsByClassName("layer4").style.opacity = "0%";
-	} else{document.getElementsByClassName("layer3").style.opacity = "0%";
+    document.getElementsByClassName("layer4")[0].style.opacity = "0%";
+	} else{
+		document.getElementsByClassName("layer3")[0].style.opacity = "0%";
 	}
 }, 100);
