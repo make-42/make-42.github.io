@@ -22,5 +22,8 @@ setInterval(function() {
 
 /* Load Effect */
 setTimeout(function() {
-    document.body.style.opacity = "100%";
+	if (localStorage.getItem("theme") == "alcode"){
+    document.getElementsByClassName("layer4").style.opacity = "0%";
+	} else{document.getElementsByClassName("layer3").style.opacity = "0%";
+	}
 }, 100);
