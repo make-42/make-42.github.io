@@ -21,6 +21,7 @@ setInterval(function() {
 */
 
 /* Load Effect */
+/*
 setTimeout(function() {
 	if (localStorage.getItem("theme") == "alcode"){
     document.getElementsByClassName("layer4")[0].style.background = "transparent";
@@ -28,3 +29,4 @@ setTimeout(function() {
 		document.getElementsByClassName("layer3")[0].style.background = "transparent";
 	}
 }, 100);
+*/
