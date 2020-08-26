@@ -1,3 +1,8 @@
+$(document).ready(function() {
+document.getElementsByClassName("resume")[0].style.transform = "scale(1)";
+});
+
+
 // Skill Score List
 /*
 var scores = ["100%", "95%", "92%", "78%", "77%", "76%", "74%", "100%", "100%", "60%"];
