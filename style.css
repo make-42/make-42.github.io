@@ -427,14 +427,14 @@ h1 {
   color: var(--text-color-light);
   font-family: monospace;
   text-align:center;
-  font-size: 2vw;
+  font-size: 37px;
   
 }
 
 .blog-post-date{
   position: absolute;
   color:var(--text-color-mid);
-  font-size: 1vw;
+  font-size: 16px;
   font-family: monospace;
   top:1vw;
   right: 2vw;
