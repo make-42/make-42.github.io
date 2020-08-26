@@ -421,6 +421,7 @@ h1 {
   padding:37px;
   margin: 5vw;
   border-radius: 3vw;
+  transition: margin 0.5s ease;
 }
 
 .blog-post-title{
@@ -438,6 +439,7 @@ h1 {
   font-family: monospace;
   top:1vw;
   right: 2vw;
+  transition: top 0.5s ease, right 0.5s ease;
 }
 
 .blog-post-text{
@@ -453,6 +455,7 @@ h1 {
     margin: 1vw 0vw 1vw 0vw;
     padding: 0.1vw 40% 0.1vw 40%;
     border-radius: 1vw;
+	transition: margin 0.5s ease, padding 0.5s ease;
 }
 /* Glitch Love */
 .love-container{
