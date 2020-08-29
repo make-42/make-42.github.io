@@ -1,5 +1,10 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+ font-family: "JetBrains Mono";
+ src: url("./assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"),
+      url("./assets/fonts/JetBrainsMono-Regular.woff") format("woff");
+}
 
 /* Setting Variables */
 :root {
@@ -60,7 +65,7 @@ body {
 /* Setting Text Styling */
 .text {
     color: var(--text-color-light);
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 3vw;
     animation-name: contentload;
     animation-duration: 1s;
@@ -69,14 +74,14 @@ body {
 /* Headers */
 h1 {
     color: var(--text-color-light);
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 3vw;
     text-align: center;
 }
 
 h2 {
     color: var(--text-color-light);
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 2vw;
     text-align: center;
 }
@@ -95,7 +100,7 @@ h2 {
 
 h1 {
     color: var(--text-color-light);
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 3vw;
     text-align: center;
 }
@@ -103,7 +108,7 @@ h1 {
 .credits {
     padding: 5vw;
     color: var(--text-color-mid);
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 15px;
 }
 
@@ -128,7 +133,7 @@ h1 {
 
 /* Menubar */
 .menubar {
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 3vw;
     color: var(--text-color-light);
     display: flex;
@@ -205,7 +210,7 @@ h1 {
 /* Stats Widget */
 .stats {
     color: var(--text-color-light);
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 2.5vw;
     position: relative;
     border-radius: 5vw;
@@ -275,7 +280,7 @@ h1 {
 .weather {
     color: var(--text-color-light);
 	background:var(--bg-color-clear);
-    font-family: monospace;
+    font-family: "JetBrains Mono";
     font-size: 3vw;
     position: relative;
     border-radius: 5vw;
@@ -430,7 +435,7 @@ h1 {
 
 .blog-post-title{
   color: var(--text-color-light);
-  font-family: monospace;
+  font-family: "JetBrains Mono";
   text-align:center;
   font-size: 37px;
   
@@ -440,7 +445,7 @@ h1 {
   position: absolute;
   color:var(--text-color-mid);
   font-size: 16px;
-  font-family: monospace;
+  font-family: "JetBrains Mono";
   top:1vw;
   right: 2vw;
   transition: top 0.5s ease, right 0.5s ease;
@@ -448,7 +453,7 @@ h1 {
 
 .blog-post-text{
   color: var(--text-color-light);
-  font-family: monospace;
+  font-family: "JetBrains Mono";
   text-align:left;
   font-size: 18px;
   

@@ -140,7 +140,7 @@ function updateweather() {
         ctx.strokeStyle = style.getPropertyValue('--text-color-light');
         ctx.fillStyle = style.getPropertyValue('--text-color-light');
         ctx.lineWidth = Math.round(canvasresx / 1000);
-        ctx.font = (canvasresx / 100).toString() + "px Source Code Pro";
+        ctx.font = (canvasresx / 100).toString() + "px \"JetBrains Mono\"";
 
         /*Grid*/
         i = 0;
