@@ -53,6 +53,7 @@ body {
     background: url(./assets/images/886b0b92-d101-4a59-94f7-e76a8809a22d.png);
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     transition: background-position 0.05s linear;
     min-height: 100vh;
 }
