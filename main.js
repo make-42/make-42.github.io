@@ -63,6 +63,7 @@ setInterval(function() {
         diffsecs = Math.floor((now - birth) / 1000);
         diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
 		// Render Different Units Progress Bars
+		/*
 		birthdayprogress = (now-lastbirthday)/(nextbirthday-lastbirthday);
 		birthdaytotaldays = (nextbirthday-lastbirthday)/86400000;
 		birthdaymonthprogress = (birthdayprogress*12)-Math.floor(birthdayprogress*12);
@@ -74,7 +75,7 @@ setInterval(function() {
 		document.getElementsByClassName("time-progress-days")[0].style.width = String(birthdaydayprogress*100)+"%";
 		document.getElementsByClassName("time-progress-months")[0].style.width = String(birthdaymonthprogress*100)+"%";
 		document.getElementsByClassName("time-progress-years")[0].style.width = String(birthdayprogress*100)+"%";
-		
+		*/
 		
         //Render Text
         let informationelement = document.getElementById("information");
