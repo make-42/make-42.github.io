@@ -132,6 +132,27 @@ h1 {
   transition: padding 0.2s ease;
 }
 
+.time-progress-container{
+	background: var(--bg-color-clear);
+	margin: 2vw 0vw 2vw 0vw;
+	padding:2vw 2vw 2vw 2vw;
+	border-radius: 3vw;
+}
+.time-progress-bar-container{
+	position:relative;
+	background: var(--bg-color-clear);
+	margin: 2vw 0vw 2vw 0vw;
+	border-radius: 3vw;
+}
+
+.time-progress-bar{
+	background: #fd55a4;
+	border-radius: 3vw;
+	padding:1vw;
+	margin:0;
+	transition: width 0.5s ease;
+}
+
 /* Menubar */
 .menubar {
     font-family: "JetBrains Mono";

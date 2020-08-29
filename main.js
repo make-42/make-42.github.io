@@ -57,9 +57,25 @@ setInterval(function() {
         //Set Dates
         now = new Date();
         birth = new Date("2007/02/12");
+		lastbirthday = new Date("2020/02/12")
+		nextbirthday = new Date("2021/02/12")
         //Calculate Differences
         diffsecs = Math.floor((now - birth) / 1000);
         diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
+		// Render Different Units Progress Bars
+		birthdayprogress = (now-lastbirthday)/(nextbirthday-lastbirthday);
+		birthdaytotaldays = (nextbirthday-lastbirthday)/86400000;
+		birthdaymonthprogress = (birthdayprogress*12)-Math.floor(birthdayprogress*12);
+		birthdaydayprogress = (birthdayprogress*birthdaytotaldays)-Math.floor(birthdayprogress*birthdaytotaldays);
+		birthdayhourprogress = (birthdayprogress*birthdaytotaldays*24)-Math.floor(birthdayprogress*birthdaytotaldays*24);
+		birthdayminuteprogress = (now.getSeconds()/60)-Math.floor(now.getSeconds()/60);
+		document.getElementsByClassName("time-progress-minutes")[0].style.width = String(birthdayminuteprogress*100)+"%";
+		document.getElementsByClassName("time-progress-hours")[0].style.width = String(birthdayhourprogress*100)+"%";
+		document.getElementsByClassName("time-progress-days")[0].style.width = String(birthdaydayprogress*100)+"%";
+		document.getElementsByClassName("time-progress-months")[0].style.width = String(birthdaymonthprogress*100)+"%";
+		document.getElementsByClassName("time-progress-years")[0].style.width = String(birthdayprogress*100)+"%";
+		
+		
         //Render Text
         let informationelement = document.getElementById("information");
         let ageelement = document.getElementsByClassName("age")[0];
