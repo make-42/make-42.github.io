@@ -76,7 +76,7 @@ setInterval(function() {
 		document.getElementsByClassName("time-progress-months")[0].style.width = String(birthdaymonthprogress*100)+"%";
 		document.getElementsByClassName("time-progress-years")[0].style.width = String(birthdayprogress*100)+"%";
 		*/
-		
+
         //Render Text
         let informationelement = document.getElementById("information");
         let ageelement = document.getElementsByClassName("age")[0];
@@ -118,4 +118,46 @@ $(document).ready(function() {
         document.getElementsByClassName("typing-text")[0].style.color = getComputedStyle(document.body).getPropertyValue('--text-color-light');
     }, 2000);
 
+});
+
+// Gnome Easter Egg
+var state = 0;
+document.addEventListener('keydown', function(event) {
+  if (state == 0){
+    if (event.keyCode == 71){
+      state++;
+    } else{
+      state = 0;
+    }
+  }
+  else if (state == 1){
+    if (event.keyCode == 78){
+      state++;
+    } else{
+      state = 0;
+    }
+  }
+  else if (state == 2){
+    if (event.keyCode == 79){
+      state++;
+    } else{
+      state = 0;
+    }
+  }
+  else if (state == 3){
+    if (event.keyCode == 77){
+      state++;
+    } else{
+      state = 0;
+    }
+  }
+  else if (state == 4){
+    if (event.keyCode == 69){
+      document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(0vw,0vw)";
+      setTimeout(function(){document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(-20vw,-20vw)";},200);
+      state = 0;
+    } else{
+      state = 0;
+    }
+  }
 });

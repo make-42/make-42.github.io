@@ -461,7 +461,7 @@ h1 {
   font-family: "JetBrains Mono";
   text-align:center;
   font-size: 37px;
-  
+
 }
 
 .blog-post-date{
@@ -479,7 +479,7 @@ h1 {
   font-family: "JetBrains Mono";
   text-align:left;
   font-size: 18px;
-  
+
 }
 
 .blog-post-seperator {
@@ -522,6 +522,19 @@ h1 {
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: reverse-alternate;
+}
+
+/* Gnome Easter Egg */
+.gnome-easter-egg{
+  position: absolute;
+  transform: translate(-20vw, -20vw);
+  transition: transform 0.1s ease;
+  top: 0;
+  left: 0;
+}
+
+.gnome-image{
+  width:20vw;
 }
 
 /* Animation */
@@ -842,4 +855,3 @@ h1 {
     clip: rect(17px, 350px, 84px, 30px);
   }
 }
-
