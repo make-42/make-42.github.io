@@ -155,7 +155,7 @@ document.addEventListener('keydown', function(event) {
   case 4:
     if (event.keyCode == 69){
       audio.play();
-      document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(0vw,0vw)";
+      document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(-4vw,-4vw)";
       setTimeout(function(){document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(-20vw,-20vw)";},200);
       state = 0;
     } else{
