@@ -123,35 +123,36 @@ $(document).ready(function() {
 // Gnome Easter Egg
 var state = 0;
 document.addEventListener('keydown', function(event) {
-  if (state == 0){
+  switch (state) {
+  case 0:
     if (event.keyCode == 71){
       state++;
     } else{
       state = 0;
     }
-  }
-  else if (state == 1){
+  break;
+  case 1:
     if (event.keyCode == 78){
       state++;
     } else{
       state = 0;
     }
-  }
-  else if (state == 2){
+  break;
+  case 2:
     if (event.keyCode == 79){
       state++;
     } else{
       state = 0;
     }
-  }
-  else if (state == 3){
+  break;
+  case 3:
     if (event.keyCode == 77){
       state++;
     } else{
       state = 0;
     }
-  }
-  else if (state == 4){
+  break;
+  case 4:
     if (event.keyCode == 69){
       document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(0vw,0vw)";
       setTimeout(function(){document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(-20vw,-20vw)";},200);
@@ -159,5 +160,6 @@ document.addEventListener('keydown', function(event) {
     } else{
       state = 0;
     }
+    break;
   }
 });
