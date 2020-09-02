@@ -117,11 +117,11 @@ $(document).ready(function() {
     setTimeout(function() {
         document.getElementsByClassName("typing-text")[0].style.color = getComputedStyle(document.body).getPropertyValue('--text-color-light');
     }, 2000);
-
 });
 
 // Gnome Easter Egg
 var state = 0;
+var audio = new Audio('./assets/audio/gnome.webm');
 document.addEventListener('keydown', function(event) {
   switch (state) {
   case 0:
@@ -154,6 +154,7 @@ document.addEventListener('keydown', function(event) {
   break;
   case 4:
     if (event.keyCode == 69){
+      audio.play();
       document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(0vw,0vw)";
       setTimeout(function(){document.getElementsByClassName("gnome-easter-egg")[0].style.transform = "translate(-20vw,-20vw)";},200);
       state = 0;
