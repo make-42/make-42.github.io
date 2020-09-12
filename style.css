@@ -537,6 +537,82 @@ h1 {
   width:20vw;
 }
 
+/* Stopwatch */
+.stopwatch-widget{
+	background: var(--bg-color-clear);
+    border-radius: 5vw;
+    padding: 2vw 2vw 2vw 2vw;
+	margin: 2vw 2vw 20vw 2vw;
+	position:relative
+}
+.stopwatch-button{
+	background: var(--bg-color-clear);
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid var(--text-color-light);
+    border-radius: 5vw;
+	color: var(--text-color-light);
+	font-family: "JetBrains Mono";
+	font-size: 2vw;
+    padding: 2vw;
+	margin: 2vw;
+	width: 86vw;
+}
+.stopwatch-time{
+	color: var(--text-color-light);
+	font-family: "JetBrains Mono";
+	font-size: 5vw;
+	padding: 2vw;
+	margin: 2vw;
+	transition: padding 1s ease, width 1s ease, margin 1s ease, font-size 1s ease;
+	text-align:center;
+}
+
+.stopwatch-clock{
+	position: relative;
+	background: var(--bg-color-clear);
+	border-radius:100vw;
+	height: 83vw;
+	width: 83vw;
+	padding: 2vw;
+	margin: 2vw;
+	transition: padding 1s ease, width 1s ease, margin 1s ease, font-size 1s ease;
+	text-align:center;
+}
+
+.stopwatch-seconds{
+	height: 40vw;
+	top: 1.5vw;
+	width: 2vw;
+    left: 42vw;
+	transform: rotate(0deg);
+}
+
+.stopwatch-minutes{
+	height: 30vw;
+	top: 11.5vw;
+	width: 2vw;
+    left: 42vw;
+	transform: rotate(0deg);
+}
+
+.stopwatch-hours{
+	height: 20vw;
+	top: 21.5vw;
+	width: 2vw;
+    left: 42vw;
+	transform: rotate(0deg);
+}
+
+.stopwatch-hands{
+	position: absolute;
+	background:var(--text-color-light);
+	border-radius:100vw;
+	transform-origin: bottom center;
+	transition: transform 0.1s linear;
+}
+
+
 /* Animation */
 @keyframes selectproject {
     from {
