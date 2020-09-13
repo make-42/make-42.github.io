@@ -49,6 +49,10 @@ function clearstopwatch(){
 	document.getElementsByClassName("stopwatch-toggle-button")[0].style = "width: 86vw;";
 	document.getElementsByClassName("stopwatch-clear-button")[0].style = "width: 0vw; opacity: 0%; padding: 0vw;";
 	startdate = Date.now();
+	document.getElementsByClassName("stopwatch-hands")[0].style = "transition: transform 1s ease;"
+	setTimeout(function(){
+		document.getElementsByClassName("stopwatch-hands")[0].style = "transition: transform 0.1s linear;"
+	},1000);
 	updatestopwatch();
 	updatestopwatchclock();
 }
