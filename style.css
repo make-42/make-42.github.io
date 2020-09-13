@@ -545,7 +545,9 @@ h1 {
 	margin: 2vw 2vw 20vw 2vw;
 	position:relative
 }
-.stopwatch-button{
+.stopwatch-buttons-container{
+}
+.stopwatch-toggle-button{
 	background: var(--bg-color-clear);
 	text-decoration: none;
 	cursor: pointer;
@@ -555,8 +557,25 @@ h1 {
 	font-family: "JetBrains Mono";
 	font-size: 2vw;
     padding: 2vw;
-	margin: 2vw;
 	width: 86vw;
+	margin: 2vw 0vw 2vw 2vw;
+	float: left;
+	transition: width 1s ease;
+}
+.stopwatch-clear-button{
+	background: var(--bg-color-clear);
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid var(--text-color-light);
+    border-radius: 5vw;
+	color: var(--text-color-light);
+	font-family: "JetBrains Mono";
+	font-size: 2vw;
+    padding: 0vw;
+    margin: 2vw 2vw 2vw 0vw;
+	width: 0vw;
+	opacity: 0%;
+	transition: opacity 0.5s ease, width 1s ease, padding 1s ease;
 }
 .stopwatch-time{
 	color: var(--text-color-light);

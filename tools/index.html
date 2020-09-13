@@ -26,7 +26,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="../style.min.css">
     <!-- Title Element -->
-    <title>Loading...</title>
+    <title>Tools</title>
     <!-- Icon -->
     <link rel="icon" type="image/png" href="../assets/icons/icon.png" />
     <!-- Main Script Handling All Effects -->
@@ -52,7 +52,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		<!-- Stopwatch -->
         <div class="stopwatch-widget">
 		<h2>Stopwatch</h2>
-		<button class="stopwatch-button"onclick="togglestopwatch();">Start</button>
+		<div class="stopwatch-buttons-container">
+		<button class="stopwatch-toggle-button"onclick="togglestopwatch();">Start</button>
+		<button class="stopwatch-clear-button"onclick="clearstopwatch();">Clear</button>
+		</div>
 		<div class="stopwatch-time">00:00:00.000</div>
 		<div class="stopwatch-clock">
 		<div class="stopwatch-seconds stopwatch-hands"></div>

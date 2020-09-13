@@ -1,5 +1,8 @@
 var state = false;
+var statenotcleared = false;
+var currentdeltatime = 0;
 var promise;
+var promiseclock;
 var startdate = Date.now();
 
 String.prototype.toHHMMSS = function () {
@@ -15,17 +18,37 @@ String.prototype.toHHMMSS = function () {
 
 function togglestopwatch() {
 	if (!state){
-		document.getElementsByClassName("stopwatch-button")[0].innerHTML = "Stop";
+		document.getElementsByClassName("stopwatch-toggle-button")[0].innerHTML = "Stop";
+		document.getElementsByClassName("stopwatch-toggle-button")[0].style = "width: 42vw;";
+		document.getElementsByClassName("stopwatch-clear-button")[0].style = "width: 42vw; opacity: 100%; padding: 2vw;";
 		state=true;
+		if(!statenotcleared){
 		startdate = Date.now();
+		statenotcleared = true;
+		} else{
+			startdate = Date.now()-currentdeltatime;
+		}
 		promise = setInterval(updatestopwatch,1000/60);
 		promiseclock = setInterval(updatestopwatchclock,1000/10);
 	} else{
 		clearInterval(promise)
 		clearInterval(promiseclock)
-		document.getElementsByClassName("stopwatch-button")[0].innerHTML = "Start";
+		document.getElementsByClassName("stopwatch-toggle-button")[0].innerHTML = "Start";
 		state=false;
 	}
+}
+
+function clearstopwatch(){
+	clearInterval(promise)
+	clearInterval(promiseclock)
+	document.getElementsByClassName("stopwatch-toggle-button")[0].innerHTML = "Start";
+	state=false;
+	statenotcleared = false;
+	document.getElementsByClassName("stopwatch-toggle-button")[0].style = "width: 86vw;";
+	document.getElementsByClassName("stopwatch-clear-button")[0].style = "width: 0vw; opacity: 0%; padding: 0vw;";
+	startdate = Date.now();
+	updatestopwatch();
+	updatestopwatchclock();
 }
 
 function updatestopwatchclock() {
@@ -38,6 +61,7 @@ function updatestopwatchclock() {
 };
 
 function updatestopwatch() {
+	currentdeltatime = Date.now()-startdate
 	var secondssincestart = String((Date.now()-startdate)/1000)
 	var paddedseconds = String(((Date.now()-startdate)/1000).toFixed(5))
 	document.getElementsByClassName("stopwatch-time")[0].innerHTML = secondssincestart.toHHMMSS()+paddedseconds.slice(paddedseconds.length-6, paddedseconds.length-2);
