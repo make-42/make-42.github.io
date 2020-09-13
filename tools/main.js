@@ -31,6 +31,8 @@ function togglestopwatch() {
 		promise = setInterval(updatestopwatch,1000/60);
 		promiseclock = setInterval(updatestopwatchclock,1000/10);
 	} else{
+		updatestopwatch()
+		updatestopwatchclock()
 		clearInterval(promise)
 		clearInterval(promiseclock)
 		document.getElementsByClassName("stopwatch-toggle-button")[0].innerHTML = "Start";
