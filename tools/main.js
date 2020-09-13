@@ -54,9 +54,9 @@ function clearstopwatch(){
 }
 
 function updatestopwatchclock() {
-	var seconds = (Date.now()-startdate)/1000*360
-	var minutes = (Date.now()-startdate)/1000/60*360
-	var hours = (Date.now()-startdate)/1000/60/60*360
+	var seconds = (Date.now()-startdate)/1000*360/60
+	var minutes = (Date.now()-startdate)/1000/60/60*360
+	var hours = (Date.now()-startdate)/1000/60/60/12*360
 	document.getElementsByClassName("stopwatch-seconds")[0].style.transform = "rotate("+String(seconds)+"deg)";
 	document.getElementsByClassName("stopwatch-minutes")[0].style.transform = "rotate("+String(minutes)+"deg)";
 	document.getElementsByClassName("stopwatch-hours")[0].style.transform = "rotate("+String(hours)+"deg)";
