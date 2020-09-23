@@ -86,7 +86,7 @@ $(document)
         if(localStorage.getItem("schedule-data") == undefined){
           loaddefault();
         }
-        tabBar.activateTab(0);
+        tabBar.activateTab(new Date().getDay()-1);
         topappbar = new mdc.topAppBar.MDCTopAppBar(document.getElementsByClassName("mdc-top-app-bar")[0])
         $(".add-button")
             .on("click", function() {
