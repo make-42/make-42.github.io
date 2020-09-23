@@ -39,8 +39,6 @@ function loadcalendar(selectedtab) {
         var textelementdiv = document.createElement("div");
         textelementdiv.className = "text-element";
         scheduleelementdiv.className = "schedule-element";
-        scheduleelementdiv.style.top = scheduleelement["start"]-mintime+20 + "px"
-        scheduleelementdiv.style.height = (scheduleelement["end"] - scheduleelement["start"]).toString() + "px"
         scheduleelementdiv.style.background = scheduleelement["color"]
         textelementdiv.innerHTML = scheduleelement["name"]
         scheduleelementdiv.appendChild(textelementdiv)

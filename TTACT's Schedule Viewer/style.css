@@ -1,6 +1,10 @@
+::-webkit-scrollbar {
+    display: none;
+}
 body{
   margin:0px;
   position:relative;
+  scrollbar-width: none;
 }
 .upload {
     top: -100px;
@@ -8,14 +12,16 @@ body{
 }
 .schedule-content{
   position:relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 .text-element{
   margin-left: 30px;
 }
 .schedule-element{
-  position:absolute;
   background: var(--mdc-theme-primary);
-  width: 100%;
+  width: 25vw;
+  height: 25vw;
   color: rgba(0,0,0,.6);
   box-shadow: 1px 1px 10px black;
 }
