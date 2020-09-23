@@ -16,6 +16,12 @@ function onReaderLoad(event) {
     localStorage.setItem('schedule-data', event.target.result);
 }
 
+function loaddefault(){
+  $.get( "306%20-%202020-2021.tschdl", function( data ) {
+  localStorage.setItem('schedule-data', data);
+}
+}
+
 function formattimestamps(timestamp){
   hours = Math.floor(timestamp/60)
   minutes = Math.round((timestamp/60-hours)*60)
@@ -77,7 +83,9 @@ $(document)
             let tab = tabs[event.detail.index];
             loadcalendar(tab)
         });
-
+        if(localStorage.getItem("schedule-data") == undefined){
+          loaddefault();
+        }
         tabBar.activateTab(0);
         topappbar = new mdc.topAppBar.MDCTopAppBar(document.getElementsByClassName("mdc-top-app-bar")[0])
         $(".add-button")
