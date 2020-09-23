@@ -16,6 +16,12 @@ function onReaderLoad(event) {
     localStorage.setItem('schedule-data', event.target.result);
 }
 
+function formattimestamps(timestamp){
+  hours = Math.floor(timestamp/60)
+  minutes = Math.round((timestamp/60-hours)*60)
+  return hours+":"+minutes
+}
+
 function loadcalendar(selectedtab) {
     scheduledata = JSON.parse(localStorage.getItem("schedule-data"))
     week = scheduledata["weeks"][(new Date()
@@ -45,7 +51,7 @@ function loadcalendar(selectedtab) {
         scheduleelementdiv.className = "schedule-element";
         scheduleelementdiv.style.background = scheduleelement["color"]
         nameelementdiv.innerHTML = scheduleelement["name"]
-        timeelementdiv.innerHTML = scheduleelement["start"]+"&nbsp;-&nbsp;"+scheduleelement["end"]
+        timeelementdiv.innerHTML = formattimestamps(scheduleelement["start"])+"&nbsp;-&nbsp;"+formattimestamps(scheduleelement["end"])
         placeelementdiv.innerHTML = scheduleelement["place"]
         scheduleelementdiv.appendChild(nameelementdiv)
         scheduleelementdiv.appendChild(timeelementdiv)
