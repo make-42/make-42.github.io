@@ -17,5 +17,5 @@ body{
   background: var(--mdc-theme-primary);
   width: 100%;
   color: rgba(0,0,0,.6);
-  border-radius: 20px 0px 20px 0px;
+  box-shadow: 1px 1px 10px black;
 }
