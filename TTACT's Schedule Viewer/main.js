@@ -19,7 +19,7 @@ function onReaderLoad(event) {
 function loaddefault(){
   $.get( "306%20-%202020-2021.tschdl", function( data ) {
   localStorage.setItem('schedule-data', data);
-}
+})
 }
 
 function formattimestamps(timestamp){
