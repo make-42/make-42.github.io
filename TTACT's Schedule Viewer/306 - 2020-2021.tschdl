@@ -1,0 +1,214 @@
+{
+  "weeks": {
+    "2020": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCABABABACCBABABABCC",
+    "2021": "CABABABCCABABABACCBABABABABACCCCCCCCCCCCCCCCCCCCCCCC"
+  },
+  "schedule": {
+    "A": {
+      "0": [
+        {
+          "start": "510",
+          "end": "565",
+          "name": "History & Geography",
+          "place": "324",
+          "color": "#D5FFB3"
+        },
+        {
+          "start": "565",
+          "end": "620",
+          "name": "Spanish",
+          "place": "324",
+          "color": "#80B4FF"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "Mathematics",
+          "place": "324",
+          "color": "#FFD4AE"
+        },
+        {
+          "start": "690",
+          "end": "745",
+          "name": "Physics-Chemistry",
+          "place": "LAB C",
+          "color": "#B48FFF"
+        },
+        {
+          "start": "820",
+          "end": "875",
+          "name": "Technology",
+          "place": "Tech Room",
+          "color": "#AEFFA3"
+        },
+        {
+          "start": "875",
+          "end": "930",
+          "name": "Mathematics",
+          "place": "324",
+          "color": "#FFD4AE"
+        },
+        {
+          "start": "945",
+          "end": "1000",
+          "name": "Spanish",
+          "place": "324",
+          "color": "#80B4FF"
+        }
+      ],
+      "1": [
+        {
+          "start": "510",
+          "end": "565",
+          "name": "Class Reunion",
+          "place": "324",
+          "color": "#C7FFF7"
+        },
+        {
+          "start": "565",
+          "end": "620",
+          "name": "English",
+          "place": "324",
+          "color":"#C4FF8F"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "French",
+          "place": "324",
+          "color":"#8AFFC6"
+        },
+        {
+          "start": "820",
+          "end": "875",
+          "name": "Arts",
+          "place": "111",
+          "color": "#FF9A8F"
+        },
+        {
+          "start": "875",
+          "end": "1000",
+          "name": "History & Geography",
+          "place": "324",
+          "color": "#D5FFB3"
+        }
+        ],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": []
+    },
+    "B": {
+    "0": [
+      {
+        "start": "510",
+        "end": "565",
+        "name": "History & Geography",
+        "place": "324",
+        "color": "#D5FFB3"
+      },
+      {
+        "start": "565",
+        "end": "620",
+        "name": "Spanish",
+        "place": "324",
+        "color": "#80B4FF"
+      },
+      {
+        "start": "635",
+        "end": "690",
+        "name": "Mathematics",
+        "place": "324",
+        "color": "#FFD4AE"
+      },
+      {
+        "start": "690",
+        "end": "745",
+        "name": "Physics-Chemistry",
+        "place": "LAB C",
+        "color": "#B48FFF"
+      },
+      {
+        "start": "820",
+        "end": "875",
+        "name": "Technology",
+        "place": "Tech Room",
+        "color": "#AEFFA3"
+      },
+      {
+        "start": "875",
+        "end": "930",
+        "name": "Mathematics",
+        "place": "324",
+        "color": "#FFD4AE"
+      },
+      {
+        "start": "945",
+        "end": "1000",
+        "name": "Spanish",
+        "place": "324",
+        "color": "#80B4FF"
+      }
+    ],
+    "1": [
+      {
+        "start": "510",
+        "end": "565",
+        "name": "ACCPP3",
+        "place": "324",
+        "color": "#C7FFF7"
+      },
+      {
+        "start": "565",
+        "end": "620",
+        "name": "English",
+        "place": "324",
+        "color":"#C4FF8F"
+      },
+      {
+        "start": "635",
+        "end": "690",
+        "name": "French",
+        "place": "324",
+        "color": "#8AFFC6"
+      },
+      {
+        "start": "690",
+        "end": "745",
+        "name": "Spanish",
+        "place": "324",
+        "color": "#80B4FF"
+      },
+      {
+        "start": "820",
+        "end": "875",
+        "name": "Arts",
+        "place": "111",
+        "color": "#FF9A8F"
+      },
+      {
+        "start": "875",
+        "end": "1000",
+        "name": "History & Geography",
+        "place": "324",
+        "color": "#D5FFB3"
+      }
+      ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": []
+    },
+    "C": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": []
+    }
+  }
+}
