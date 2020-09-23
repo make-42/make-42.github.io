@@ -36,12 +36,20 @@ function loadcalendar(selectedtab) {
     day.forEach(function(scheduleelement) {
         document.getElementsByClassName("schedule-content")[0].innerHTML;
         var scheduleelementdiv = document.createElement("div");
-        var textelementdiv = document.createElement("div");
-        textelementdiv.className = "text-element";
+        var nameelementdiv = document.createElement("div");
+        var timeelementdiv = document.createElement("div");
+        var placeelementdiv = document.createElement("div");
+        nameelementdiv.className = "name-element";
+        timeelementdiv.className = "time-element";
+        placeelementdiv.className = "place-element";
         scheduleelementdiv.className = "schedule-element";
         scheduleelementdiv.style.background = scheduleelement["color"]
-        textelementdiv.innerHTML = scheduleelement["name"]
-        scheduleelementdiv.appendChild(textelementdiv)
+        nameelementdiv.innerHTML = scheduleelement["name"]
+        timeelementdiv.innerHTML = scheduleelement["start"]+"&nbsp;-&nbsp;"+scheduleelement["end"]
+        placeelementdiv.innerHTML = scheduleelement["place"]
+        scheduleelementdiv.appendChild(nameelementdiv)
+        scheduleelementdiv.appendChild(timeelementdiv)
+        scheduleelementdiv.appendChild(placeelementdiv)
         document.getElementsByClassName("schedule-content")[0].appendChild(scheduleelementdiv);
     })
 }
