@@ -69,14 +69,14 @@
           "end": "620",
           "name": "English",
           "place": "324",
-          "color":"#C4FF8F"
+          "color": "#C4FF8F"
         },
         {
           "start": "635",
           "end": "690",
           "name": "French",
           "place": "324",
-          "color":"#8AFFC6"
+          "color": "#8AFFC6"
         },
         {
           "start": "820",
@@ -92,123 +92,346 @@
           "place": "324",
           "color": "#D5FFB3"
         }
-        ],
+      ],
+      "2": [
+        {
+          "start": "490",
+          "end": "545",
+          "name": "Mathematics",
+          "place": "324",
+          "color": "#C7FFF7"
+        },
+        {
+          "start": "545",
+          "end": "600",
+          "name": "French",
+          "place": "324",
+          "color": "#8AFFC6"
+        },
+        {
+          "start": "635",
+          "end": "745",
+          "name": "DS",
+          "place": "324",
+          "color": "#C7FFF7"
+        }
+      ],
+      "3": [
+        {
+          "start": "510",
+          "end": "565",
+          "name": "History & Geography",
+          "place": "324",
+          "color": "#D5FFB3"
+        },
+        {
+          "start": "565",
+          "end": "620",
+          "name": "English",
+          "place": "324",
+          "color": "#C4FF8F"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "Religious Culture",
+          "place": "324",
+          "color": "#C7FFF7"
+        },
+        {
+          "start": "690",
+          "end": "745",
+          "name": "LCCA",
+          "place": "324",
+          "color": "#FFF4A3"
+        },
+        {
+          "start": "820",
+          "end": "875",
+          "name": "Physics-Chemistry",
+          "place": "LAB C",
+          "color": "#B48FFF"
+        },
+        {
+          "start": "875",
+          "end": "930",
+          "name": "Science & Biology",
+          "place": "LAB SVT",
+          "color": "#FFCCD9"
+        },
+        {
+          "start": "945",
+          "end": "1000",
+          "name": "French",
+          "place": "324",
+          "color": "#8AFFC6"
+        },
+        {
+          "start": "1000",
+          "end": "1055",
+          "name": "Music",
+          "place": "033",
+          "color": "#FFCF80"
+        }
+      ],
+      "4": [
+        {
+          "start": "510",
+          "end": "565",
+          "name": "LCCA",
+          "place": "324",
+          "color": "#FFF4A3"
+        },
+        {
+          "start": "565",
+          "end": "620",
+          "name": "French",
+          "place": "324",
+          "color": "#8AFFC6"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "English",
+          "place": "324",
+          "color": "#C4FF8F"
+        },
+        {
+          "start": "690",
+          "end": "745",
+          "name": "Science & Biology",
+          "place": "LAB C",
+          "color": "#FFCCD9"
+        },
+        {
+          "start": "820",
+          "end": "1000",
+          "name": "Sports",
+          "place": "EPS",
+          "color": "#B8F0FF"
+        }
+      ],
+      "5": [],
+      "6": []
+    },
+    "B": {
+      "0": [
+        {
+          "start": "510",
+          "end": "565",
+          "name": "History & Geography",
+          "place": "324",
+          "color": "#D5FFB3"
+        },
+        {
+          "start": "565",
+          "end": "620",
+          "name": "Spanish",
+          "place": "324",
+          "color": "#80B4FF"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "Mathematics",
+          "place": "324",
+          "color": "#FFD4AE"
+        },
+        {
+          "start": "690",
+          "end": "745",
+          "name": "Physics-Chemistry",
+          "place": "LAB C",
+          "color": "#B48FFF"
+        },
+        {
+          "start": "820",
+          "end": "875",
+          "name": "Technology",
+          "place": "Tech Room",
+          "color": "#AEFFA3"
+        },
+        {
+          "start": "875",
+          "end": "930",
+          "name": "Mathematics",
+          "place": "324",
+          "color": "#FFD4AE"
+        },
+        {
+          "start": "945",
+          "end": "1000",
+          "name": "Spanish",
+          "place": "324",
+          "color": "#80B4FF"
+        }
+      ],
+      "1": [
+        {
+          "start": "510",
+          "end": "565",
+          "name": "ACCPP3",
+          "place": "324",
+          "color": "#C7FFF7"
+        },
+        {
+          "start": "565",
+          "end": "620",
+          "name": "English",
+          "place": "324",
+          "color": "#C4FF8F"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "French",
+          "place": "324",
+          "color": "#8AFFC6"
+        },
+        {
+          "start": "690",
+          "end": "745",
+          "name": "Spanish",
+          "place": "324",
+          "color": "#80B4FF"
+        },
+        {
+          "start": "820",
+          "end": "875",
+          "name": "Arts",
+          "place": "111",
+          "color": "#FF9A8F"
+        },
+        {
+          "start": "875",
+          "end": "1000",
+          "name": "History & Geography",
+          "place": "324",
+          "color": "#D5FFB3"
+        }
+      ],
+      "2": [
+        {
+          "start": "490",
+          "end": "545",
+          "name": "Mathematics",
+          "place": "324",
+          "color": "#FFD4AE"
+        },
+        {
+          "start": "545",
+          "end": "600",
+          "name": "French",
+          "place": "324",
+          "color": "#8AFFC6"
+        },
+        {
+          "start": "635",
+          "end": "745",
+          "name": "DS",
+          "place": "324",
+          "color": "#C7FFF7"
+        }
+      ],
+      "3": [
+        {
+          "start": "565",
+          "end": "620",
+          "name": "English",
+          "place": "324",
+          "color": "#C4FF8F"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "Religious Culture",
+          "place": "324",
+          "color": "#C7FFF7"
+        },
+        {
+          "start": "690",
+          "end": "745",
+          "name": "LCCA",
+          "place": "324",
+          "color": "#FFF4A3"
+        },
+        {
+          "start": "820",
+          "end": "875",
+          "name": "Mathematics",
+          "place": "324",
+          "color": "#FFD4AE"
+        },
+        {
+          "start": "875",
+          "end": "930",
+          "name": "French",
+          "place": "324",
+          "color": "#8AFFC6"
+        },
+        {
+          "start": "945",
+          "end": "1000",
+          "name": "Mathematics",
+          "place": "220",
+          "color": "#FFD4AE"
+        },
+        {
+          "start": "1000",
+          "end": "1055",
+          "name": "Music",
+          "place": "033",
+          "color": "#FFCF80"
+        }
+      ],
+      "4": [
+        {
+          "start": "510",
+          "end": "565",
+          "name": "LCCA",
+          "place": "324",
+          "color": "#FFF4A3"
+        },
+        {
+          "start": "565",
+          "end": "620",
+          "name": "French",
+          "place": "324",
+          "color": "#8AFFC6"
+        },
+        {
+          "start": "635",
+          "end": "690",
+          "name": "English",
+          "place": "324",
+          "color": "#C4FF8F"
+        },
+        {
+          "start": "690",
+          "end": "745",
+          "name": "Science & Biology",
+          "place": "LAB C",
+          "color": "#FFCCD9"
+        },
+        {
+          "start": "820",
+          "end": "1000",
+          "name": "Sports",
+          "place": "EPS",
+          "color": "#B8F0FF"
+        }
+      ],
+      "5": [],
+      "6": []
+    },
+    "C": {
+      "1": [],
+      "2": [],
       "3": [],
       "4": [],
       "5": [],
       "6": [],
       "7": []
-    },
-    "B": {
-    "0": [
-      {
-        "start": "510",
-        "end": "565",
-        "name": "History & Geography",
-        "place": "324",
-        "color": "#D5FFB3"
-      },
-      {
-        "start": "565",
-        "end": "620",
-        "name": "Spanish",
-        "place": "324",
-        "color": "#80B4FF"
-      },
-      {
-        "start": "635",
-        "end": "690",
-        "name": "Mathematics",
-        "place": "324",
-        "color": "#FFD4AE"
-      },
-      {
-        "start": "690",
-        "end": "745",
-        "name": "Physics-Chemistry",
-        "place": "LAB C",
-        "color": "#B48FFF"
-      },
-      {
-        "start": "820",
-        "end": "875",
-        "name": "Technology",
-        "place": "Tech Room",
-        "color": "#AEFFA3"
-      },
-      {
-        "start": "875",
-        "end": "930",
-        "name": "Mathematics",
-        "place": "324",
-        "color": "#FFD4AE"
-      },
-      {
-        "start": "945",
-        "end": "1000",
-        "name": "Spanish",
-        "place": "324",
-        "color": "#80B4FF"
-      }
-    ],
-    "1": [
-      {
-        "start": "510",
-        "end": "565",
-        "name": "ACCPP3",
-        "place": "324",
-        "color": "#C7FFF7"
-      },
-      {
-        "start": "565",
-        "end": "620",
-        "name": "English",
-        "place": "324",
-        "color":"#C4FF8F"
-      },
-      {
-        "start": "635",
-        "end": "690",
-        "name": "French",
-        "place": "324",
-        "color": "#8AFFC6"
-      },
-      {
-        "start": "690",
-        "end": "745",
-        "name": "Spanish",
-        "place": "324",
-        "color": "#80B4FF"
-      },
-      {
-        "start": "820",
-        "end": "875",
-        "name": "Arts",
-        "place": "111",
-        "color": "#FF9A8F"
-      },
-      {
-        "start": "875",
-        "end": "1000",
-        "name": "History & Geography",
-        "place": "324",
-        "color": "#D5FFB3"
-      }
-      ],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": []
-    },
-    "C": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": []
     }
   }
 }

@@ -19,6 +19,9 @@ function onReaderLoad(event) {
 function formattimestamps(timestamp){
   hours = Math.floor(timestamp/60)
   minutes = Math.round((timestamp/60-hours)*60)
+  if (minutes<10){
+    minutes="0"+minutes;
+  }
   return hours+":"+minutes
 }
 
@@ -32,6 +35,7 @@ function loadcalendar(selectedtab) {
         .toString()
     ]
     day = scheduledata["schedule"][week][selectedtab.id[selectedtab.id.length - 1] - 1]
+    if (day.length != 0){
     mintime = 10000;
     day.forEach(function(scheduleelement) {
       if (mintime > scheduleelement["start"]){
@@ -59,6 +63,9 @@ function loadcalendar(selectedtab) {
         scheduleelementdiv.appendChild(placeelementdiv)
         document.getElementsByClassName("schedule-content")[0].appendChild(scheduleelementdiv);
     })
+} else{
+  document.getElementsByClassName("schedule-content")[0].innerHTML = "";
+}
 }
 $(document)
     .ready(function() {
