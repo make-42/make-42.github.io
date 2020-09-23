@@ -50,6 +50,7 @@ function loadcalendar(selectedtab) {
         placeelementdiv.className = "place-element";
         scheduleelementdiv.className = "schedule-element";
         scheduleelementdiv.style.background = scheduleelement["color"]
+        scheduleelementdiv.style.boxShadow = "1px 1px 10px "+scheduleelement["color"];
         nameelementdiv.innerHTML = scheduleelement["name"]
         timeelementdiv.innerHTML = formattimestamps(scheduleelement["start"])+"&nbsp;-&nbsp;"+formattimestamps(scheduleelement["end"])
         placeelementdiv.innerHTML = scheduleelement["place"]
