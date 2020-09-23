@@ -1,3 +1,21 @@
 body{
   margin:0px;
+  position:relative;
+}
+.upload {
+    top: -100px;
+    position: absolute;
+}
+.schedule-content{
+  position:relative;
+}
+.text-element{
+  margin-left: 30px;
+}
+.schedule-element{
+  position:absolute;
+  background: var(--mdc-theme-primary);
+  width: 100%;
+  color: rgba(0,0,0,.6);
+  border-radius: 20px 0px 20px 0px;
 }
