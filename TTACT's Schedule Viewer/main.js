@@ -16,19 +16,19 @@ function onReaderLoad(event) {
     localStorage.setItem('schedule-data', event.target.result);
 }
 
-function loaddefault(){
-  $.get( "306%20-%202020-2021.tschdl", function( data ) {
-  localStorage.setItem('schedule-data', data);
-})
+function loaddefault() {
+    $.get("306%20-%202020-2021.tschdl", function(data) {
+        localStorage.setItem('schedule-data', data);
+    })
 }
 
-function formattimestamps(timestamp){
-  hours = Math.floor(timestamp/60)
-  minutes = Math.round((timestamp/60-hours)*60)
-  if (minutes<10){
-    minutes="0"+minutes;
-  }
-  return hours+":"+minutes
+function formattimestamps(timestamp) {
+    hours = Math.floor(timestamp / 60)
+    minutes = Math.round((timestamp / 60 - hours) * 60)
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    return hours + ":" + minutes
 }
 
 function loadcalendar(selectedtab) {
@@ -41,37 +41,37 @@ function loadcalendar(selectedtab) {
         .toString()
     ]
     day = scheduledata["schedule"][week][selectedtab.id[selectedtab.id.length - 1] - 1]
-    if (day.length != 0){
-    mintime = 10000;
-    day.forEach(function(scheduleelement) {
-      if (mintime > scheduleelement["start"]){
-        mintime = scheduleelement["start"]
-      }
-    });
-    document.getElementsByClassName("schedule-content")[0].innerHTML = "";
-    day.forEach(function(scheduleelement) {
-        document.getElementsByClassName("schedule-content")[0].innerHTML;
-        var scheduleelementdiv = document.createElement("div");
-        var nameelementdiv = document.createElement("div");
-        var timeelementdiv = document.createElement("div");
-        var placeelementdiv = document.createElement("div");
-        nameelementdiv.className = "name-element";
-        timeelementdiv.className = "time-element";
-        placeelementdiv.className = "place-element";
-        scheduleelementdiv.className = "schedule-element";
-        scheduleelementdiv.style.background = scheduleelement["color"]
-        scheduleelementdiv.style.boxShadow = "1px 1px 10px "+scheduleelement["color"];
-        nameelementdiv.innerHTML = scheduleelement["name"]
-        timeelementdiv.innerHTML = formattimestamps(scheduleelement["start"])+"&nbsp;-&nbsp;"+formattimestamps(scheduleelement["end"])
-        placeelementdiv.innerHTML = scheduleelement["place"]
-        scheduleelementdiv.appendChild(nameelementdiv)
-        scheduleelementdiv.appendChild(timeelementdiv)
-        scheduleelementdiv.appendChild(placeelementdiv)
-        document.getElementsByClassName("schedule-content")[0].appendChild(scheduleelementdiv);
-    })
-} else{
-  document.getElementsByClassName("schedule-content")[0].innerHTML = "";
-}
+    if (day.length != 0) {
+        mintime = 10000;
+        day.forEach(function(scheduleelement) {
+            if (mintime > scheduleelement["start"]) {
+                mintime = scheduleelement["start"]
+            }
+        });
+        document.getElementsByClassName("schedule-content")[0].innerHTML = "";
+        day.forEach(function(scheduleelement) {
+            document.getElementsByClassName("schedule-content")[0].innerHTML;
+            var scheduleelementdiv = document.createElement("div");
+            var nameelementdiv = document.createElement("div");
+            var timeelementdiv = document.createElement("div");
+            var placeelementdiv = document.createElement("div");
+            nameelementdiv.className = "name-element";
+            timeelementdiv.className = "time-element";
+            placeelementdiv.className = "place-element";
+            scheduleelementdiv.className = "schedule-element";
+            scheduleelementdiv.style.background = scheduleelement["color"]
+            scheduleelementdiv.style.boxShadow = "1px 1px 10px " + scheduleelement["color"];
+            nameelementdiv.innerHTML = scheduleelement["name"]
+            timeelementdiv.innerHTML = formattimestamps(scheduleelement["start"]) + "&nbsp;-&nbsp;" + formattimestamps(scheduleelement["end"])
+            placeelementdiv.innerHTML = scheduleelement["place"]
+            scheduleelementdiv.appendChild(nameelementdiv)
+            scheduleelementdiv.appendChild(timeelementdiv)
+            scheduleelementdiv.appendChild(placeelementdiv)
+            document.getElementsByClassName("schedule-content")[0].appendChild(scheduleelementdiv);
+        })
+    } else {
+        document.getElementsByClassName("schedule-content")[0].innerHTML = "";
+    }
 }
 $(document)
     .ready(function() {
@@ -83,10 +83,11 @@ $(document)
             let tab = tabs[event.detail.index];
             loadcalendar(tab)
         });
-        if(localStorage.getItem("schedule-data") == undefined){
-          loaddefault();
+        if (localStorage.getItem("schedule-data") == undefined) {
+            loaddefault();
         }
-        tabBar.activateTab(new Date().getDay()-1);
+        tabBar.activateTab(new Date()
+            .getDay() - 1);
         topappbar = new mdc.topAppBar.MDCTopAppBar(document.getElementsByClassName("mdc-top-app-bar")[0])
         $(".add-button")
             .on("click", function() {
