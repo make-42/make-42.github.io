@@ -1,49 +1,57 @@
 ::-webkit-scrollbar {
     display: none;
 }
-body{
-  margin:0px;
-  position:relative;
-  scrollbar-width: none;
+
+body {
+    margin: 0px;
+    position: relative;
+    scrollbar-width: none;
 }
+
 .upload {
     top: -100px;
     position: absolute;
 }
-.schedule-content{
-  position:relative;
-  display: flex;
-  flex-wrap: wrap;
+
+.schedule-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
-.mdc-tab-bar{
-  padding-top: 56px;
+
+.mdc-tab-bar {
+    padding-top: 56px;
 }
-.name-element{
-  position:absolute;
-top: 10px;
-left: 10px;
-font-size: 15px;
-font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+
+.name-element {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 15px;
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
 }
-.time-element{
-  position:absolute;
-bottom: 10px;
-left: 10px;
-font-size: 15px;
-font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+
+.time-element {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 15px;
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
 }
-.place-element{
-  position:absolute;
-bottom: 10px;
-right: 10px;
-font-size: 15px;
-font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+
+.place-element {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 15px;
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
 }
-.schedule-element{
-  position: relative;
-  background: var(--mdc-theme-primary);
-  width: 25vw;
-  height: 25vw;
-  color: rgba(0,0,0,.6);
-  box-shadow: 1px 1px 10px black;
+
+.schedule-element {
+    position: relative;
+    background: var(--mdc-theme-primary);
+    width: 25vw;
+    height: 25vw;
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 1px 1px 10px black;
 }
