@@ -31,6 +31,11 @@ function formattimestamps(timestamp) {
     return hours + ":" + minutes
 }
 
+function updateclock() {
+    document.getElementsByClassName("clock")[0].innerHTML = (new Date())
+        .toLocaleString()
+}
+
 function loadcalendar(selectedtab) {
     scheduledata = JSON.parse(localStorage.getItem("schedule-data"))
     week = scheduledata["weeks"][(new Date()
@@ -96,4 +101,5 @@ $(document)
             });
         document.getElementById("FileAttachment")
             .addEventListener('change', onChange);
+        setInterval(updateclock, 500);
     });

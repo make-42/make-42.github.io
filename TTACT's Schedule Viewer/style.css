@@ -65,24 +65,27 @@ body {
 }
 
 @keyframes opacity-appear {
-  from{
-    opacity: 0%;
-  }
-  to{
-    opacity:100%;
-  }
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
+
 @keyframes schedule-element-appear {
-  from{
-    height:0vw;
-    width:0vw;
-    margin-right:25vw;
-    margin-bottom:25vw;
-  }
-  to{
-    height:25vw;
-    width:25vw;
-    margin-right:0vw;
-    margin-bottom:0vw;
-  }
+    from {
+        height: 0vw;
+        width: 0vw;
+        margin-right: 25vw;
+        margin-bottom: 25vw;
+    }
+
+    to {
+        height: 25vw;
+        width: 25vw;
+        margin-right: 0vw;
+        margin-bottom: 0vw;
+    }
 }
