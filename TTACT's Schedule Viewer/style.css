@@ -29,6 +29,8 @@ body {
     left: 10px;
     font-size: 15px;
     font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    animation-name: opacity-appear;
+    animation-duration: 0.2s;
 }
 
 .time-element {
@@ -37,6 +39,8 @@ body {
     left: 10px;
     font-size: 15px;
     font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    animation-name: opacity-appear;
+    animation-duration: 0.2s;
 }
 
 .place-element {
@@ -45,6 +49,8 @@ body {
     right: 10px;
     font-size: 15px;
     font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    animation-name: opacity-appear;
+    animation-duration: 0.2s;
 }
 
 .schedule-element {
@@ -54,4 +60,29 @@ body {
     height: 25vw;
     color: rgba(0, 0, 0, .6);
     box-shadow: 1px 1px 10px black;
+    animation-name: schedule-element-appear;
+    animation-duration: 0.2s;
+}
+
+@keyframes opacity-appear {
+  from{
+    opacity: 0%;
+  }
+  to{
+    opacity:100%;
+  }
+}
+@keyframes schedule-element-appear {
+  from{
+    height:0vw;
+    width:0vw;
+    margin-right:25vw;
+    margin-bottom:25vw;
+  }
+  to{
+    height:25vw;
+    width:25vw;
+    margin-right:0vw;
+    margin-bottom:0vw;
+  }
 }
