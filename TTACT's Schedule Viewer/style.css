@@ -63,7 +63,7 @@ body {
     animation-duration: 0.2s;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px), handheld{
 .schedule-element {
     position: relative;
     background: var(--mdc-theme-primary);
