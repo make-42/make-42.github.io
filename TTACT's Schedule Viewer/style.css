@@ -52,7 +52,6 @@ body {
     animation-name: opacity-appear;
     animation-duration: 0.2s;
 }
-
 .schedule-element {
     position: relative;
     background: var(--mdc-theme-primary);
@@ -60,8 +59,21 @@ body {
     height: 25vw;
     color: rgba(0, 0, 0, .6);
     box-shadow: 1px 1px 10px black;
-    animation-name: schedule-element-appear;
+    animation-name: schedule-element-appear-big;
     animation-duration: 0.2s;
+}
+
+@media (max-width: 600px){
+.schedule-element {
+    position: relative;
+    background: var(--mdc-theme-primary);
+    width: 50vw;
+    height: 50vw;
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 1px 1px 10px black;
+    animation-name: schedule-element-appear-small;
+    animation-duration: 0.2s;
+}
 }
 
 @keyframes opacity-appear {
@@ -74,7 +86,7 @@ body {
     }
 }
 
-@keyframes schedule-element-appear {
+@keyframes schedule-element-appear-big {
     from {
         height: 0vw;
         width: 0vw;
@@ -85,6 +97,22 @@ body {
     to {
         height: 25vw;
         width: 25vw;
+        margin-right: 0vw;
+        margin-bottom: 0vw;
+    }
+}
+
+@keyframes schedule-element-appear-small {
+    from {
+        height: 0vw;
+        width: 0vw;
+        margin-right: 50vw;
+        margin-bottom: 50vw;
+    }
+
+    to {
+        height: 50vw;
+        width: 50vw;
         margin-right: 0vw;
         margin-bottom: 0vw;
     }
