@@ -3,7 +3,7 @@ from jsmin import jsmin
 from rcssmin import cssmin
 import os
 
-dirs = ["./","./resume/","./stats/","./weather/","./blog/", "./tools/"]
+dirs = ["./","./resume/","./stats/","./weather/","./blog/", "./tools/", "./typing/"]
 
 def minifydir(dir):
 	for file in glob.glob(dir+"*.min.js"):
