@@ -16,6 +16,8 @@
     --text-color-light: #FFFFFFBB;
     --text-color-mid: grey;
     --text-color-dark: #000000;
+    --text-color-confirmed: #00FF00BB;
+    --text-color-error: #FF0000BB;
     --banner-one-scroll-pos: center;
 
     /* Scrollbar Styling */
@@ -543,7 +545,7 @@ h1 {
     border-radius: 5vw;
     padding: 2vw 2vw 2vw 2vw;
 	margin: 2vw 2vw 20vw 2vw;
-	position:relative
+	position:relative;
 }
 .stopwatch-buttons-container{
 }
@@ -629,6 +631,50 @@ h1 {
 	border-radius:100vw;
 	transform-origin: bottom center;
 	transition: transform 0.1s linear;
+}
+
+/* Typing-Test */
+.typing-test-widget{
+	background: var(--bg-color-clear);
+  border-radius: 5vw;
+  padding: 2vw 2vw 2vw 2vw;
+	margin: 2vw 2vw 2vw 2vw;
+	position:relative;
+}
+
+.typing-words{
+	background: var(--bg-color-clear);
+  border-radius: 5vw;
+  padding: 2vw 2vw 2vw 2vw;
+	margin: 2vw 2vw 2vw 2vw;
+}
+
+.typing-results{
+  color: var(--text-color-light);
+  font-family: "JetBrains Mono";
+  font-size: 3vw;
+	background: var(--bg-color-clear);
+  border-radius: 5vw;
+  padding: 2vw 2vw 2vw 2vw;
+	margin: 2vw 2vw 2vw 2vw;
+}
+
+.typing-letter-unconfirmed{
+  color: var(--text-color-light);
+  font-family: "JetBrains Mono";
+  font-size: 2vw;
+}
+
+.typing-letter-confirmed{
+  color: var(--text-color-confirmed);
+	font-family: "JetBrains Mono";
+	font-size: 2vw;
+}
+
+.typing-letter-error{
+  color: var(--text-color-error);
+	font-family: "JetBrains Mono";
+	font-size: 2vw;
 }
 
 
