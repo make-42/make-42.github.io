@@ -82,6 +82,9 @@ document.addEventListener('keydown', function(event) {
     testposition++;
   } else if (event.keyCode == 8){
     if(testposition != 0){
+    if (typingwords.children[testposition-1].className == "typing-letter-error"){
+      testerrors--;
+    }
     typingwords.children[testposition-1].className = "typing-letter-unconfirmed";
     testposition--;
   }
