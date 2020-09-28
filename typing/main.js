@@ -34,6 +34,10 @@ function updateunderscoreposition(){
   var typingletterindicator = document.getElementsByClassName("typing-letter-indicator")[0]
   typingletterindicator.style.top=typingwords.children[testposition].offsetTop+"px"
   typingletterindicator.style.left=typingwords.children[testposition].offsetLeft+"px"
+  if(testposition==testlength){
+    typingletterindicator.style.top=typingwords.children[0].offsetTop+"px"
+    typingletterindicator.style.left=typingwords.children[0].offsetLeft+"px"
+  }
 }
 
 function setuptypingtest(){
