@@ -643,8 +643,10 @@ h1 {
 }
 
 .typing-words{
+  position:relative;
 	background: var(--bg-color-clear);
   border-radius: 5vw;
+  word-wrap: break-word;
   padding: 2vw 2vw 2vw 2vw;
 	margin: 2vw 2vw 2vw 2vw;
 }
@@ -675,6 +677,17 @@ h1 {
   color: var(--text-color-error);
 	font-family: "JetBrains Mono";
 	font-size: 2vw;
+}
+
+.typing-letter-indicator{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: var(--text-color-light);
+  font-family: "JetBrains Mono";
+	font-size: 2vw;
+  text-decoration: underline;
+  transition: top 0.05s ease, left 0.05s ease;
 }
 
 
