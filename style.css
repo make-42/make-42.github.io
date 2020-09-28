@@ -687,7 +687,7 @@ h1 {
   font-family: "JetBrains Mono";
 	font-size: 2vw;
   text-decoration: underline;
-  transition: top 0.05s ease, left 0.05s ease;
+  transition: top 0.05s ease, left 0.05s ease, transform 0.05s ease;
 }
 
 
