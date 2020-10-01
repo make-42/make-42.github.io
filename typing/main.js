@@ -6,6 +6,7 @@ var lastposition = 0;
 var testlength = 0;
 var teststartdate = 0;
 var testerrors = 0;
+var timecompleted = 0;
 
 Array.prototype.sample = function(){
   return this[Math.floor(Math.random()*this.length)];
@@ -67,6 +68,10 @@ typingwords.innerHTML+="<span class=\"typing-letter-indicator\">&nbsp;</span>";
 testlength = testtarget.length;
 }
 
+function displayhash(){
+  alert(sha256(timecompleted+";"+testtarget+";"+testposition+";"+lastposition+";"+testlength+";"+teststartdate+";"+testerrors))
+  console.log(timecompleted+";"+testtarget+";"+testposition+";"+lastposition+";"+testlength+";"+teststartdate+";"+testerrors)
+}
 
 $(document).ready(function(){
 setuptypingtest();
@@ -78,6 +83,9 @@ document.addEventListener('keydown', function(event) {
     console.log("test end")
     if (event.keyCode == 27){
       setuptypingtest();
+    }
+    else if (event.keyCode == 118){
+      displayhash();
     }
   } else{
   var typingwords = document.getElementsByClassName("typing-words")[0]
@@ -102,5 +110,6 @@ document.addEventListener('keydown', function(event) {
     testerrors++;
   }
   displayresults()
+  timecompleted = Date.now();
   }
 })
