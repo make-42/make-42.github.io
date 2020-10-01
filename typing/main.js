@@ -38,8 +38,7 @@ function updateunderscoreposition(){
   typingletterindicator.style.left=typingwords.children[testposition].offsetLeft+((testposition-lastposition)*window.innerWidth/1000)+"px"
   typingletterindicator.style.transform="scaleX("+(1+(testposition-lastposition)/4)+")";
   if(testposition==testlength){
-    typingletterindicator.style.top=typingwords.children[0].offsetTop+"px"
-    typingletterindicator.style.left=typingwords.children[0].offsetLeft+"px"
+    typingletterindicator.style.transform="scaleX(0)";
   }
   lastposition = testposition
 }
