@@ -707,11 +707,11 @@ h1 {
 
 @keyframes loadpage {
     from {
-        clip-path: circle(0%);
+        clip-path: circle(0% at 50% 0%);
     }
 
     to {
-        clip-path: circle(100%);
+        clip-path: circle(200% at 50% 0%);
     }
 }
 
