@@ -64,7 +64,7 @@ body {
 .page {
     background: var(--bg-color-dark);
     padding: 0.5vw;
-    animation: loadpage 0.5s ease;
+    animation: loadpage 2s ease;
 }
 
 /* Setting Text Styling */
