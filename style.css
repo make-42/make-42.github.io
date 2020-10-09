@@ -364,6 +364,7 @@ h1 {
 .typing-text {
     padding-top: 1.3vw;
     text-align: left;
+    font-size: 2.5vw;
     background: var(--bg-color-clear);
     height: 4.5vw;
     border-radius: 2vw;
