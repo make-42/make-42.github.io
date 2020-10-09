@@ -139,7 +139,7 @@ h1 {
 .time-progress-container {
     background: var(--bg-color-clear);
     margin: 2vw 0vw 2vw 0vw;
-    padding: 2vw 2vw 2vw 2vw;
+    padding: 2vw;
     border-radius: 3vw;
 }
 
@@ -554,7 +554,7 @@ h1 {
 .stopwatch-widget {
     background: var(--bg-color-clear);
     border-radius: 5vw;
-    padding: 2vw 2vw 2vw 2vw;
+    padding: 2vw;
     margin: 2vw 2vw 20vw 2vw;
     position: relative;
 }
@@ -651,8 +651,8 @@ h1 {
 .typing-test-widget {
     background: var(--bg-color-clear);
     border-radius: 5vw;
-    padding: 2vw 2vw 2vw 2vw;
-    margin: 2vw 2vw 2vw 2vw;
+    padding: 2vw;
+    margin: 2vw;
     position: relative;
 }
 
@@ -661,8 +661,8 @@ h1 {
     background: var(--bg-color-clear);
     border-radius: 5vw;
     word-wrap: break-word;
-    padding: 2vw 2vw 2vw 2vw;
-    margin: 2vw 2vw 2vw 2vw;
+    padding: 2vw;
+    margin: 2vw;
 }
 
 .typing-results {
@@ -671,8 +671,8 @@ h1 {
     font-size: 3vw;
     background: var(--bg-color-clear);
     border-radius: 5vw;
-    padding: 2vw 2vw 2vw 2vw;
-    margin: 2vw 2vw 2vw 2vw;
+    padding: 2vw;
+    margin: 2vw;
 }
 
 .typing-letter-unconfirmed {
@@ -703,9 +703,37 @@ h1 {
     text-decoration: underline;
     transition: top 0.05s ease, left 0.05s ease, transform 0.05s ease;
 }
-
+.matrix-widget {
+    background: var(--bg-color-clear);
+    border-radius: 5vw;
+    width:99vw;
+    height:99vh;
+    position: relative;
+}
+.matrix-letters{
+  color: var(--text-color-light);
+  font-family: "JetBrains Mono";
+  font-size: 2vw;
+  position:absolute;
+  animation: scrollletters 1s linear;
+}
 
 /* Animation */
+
+@keyframes scrollletters {
+    0% {
+        opacity:0%;
+        top:0px;
+    }
+    10%{
+      opacity:100%;
+    }
+
+    100%{
+        top:100vh;
+        opacity:0%;
+    }
+}
 
 @keyframes loadpage {
     from {
