@@ -1,9 +1,10 @@
 import glob
 from jsmin import jsmin
 from rcssmin import cssmin
+import sass
 import os
 
-dirs = ["./","./resume/","./stats/","./weather/","./blog/", "./tools/", "./typing/"]
+dirs = ["./","./resume/","./stats/","./weather/","./blog/", "./tools/", "./typing/","./matrix/"]
 
 def minifydir(dir):
 	for file in glob.glob(dir+"*.min.js"):
@@ -20,12 +21,12 @@ def minifydir(dir):
 		fileopen.write(jsmin(text))
 		fileopen.close()
 
-	for file in glob.glob(dir+"*.css"):
+	for file in glob.glob(dir+"*.scss"):
 		fileopen = open(file,"r+", encoding="utf8")
 		text = fileopen.read()
 		fileopen.close()
-		fileopen = open(file[:-4]+".min.css","w", encoding="utf8")
-		fileopen.write(cssmin(text))
+		fileopen = open(file[:-5]+".min.css","w", encoding="utf8")
+		fileopen.write(cssmin(sass.compile(string=text)))
 		fileopen.close()
 
 
