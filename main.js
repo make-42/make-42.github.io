@@ -1,7 +1,7 @@
 // Set Variables For Typing Effect
 var fpstext = 20;
 var fpscursor = 1;
-var sitetitles = ["Louis Dalibard's website", "cd ~/Apps/NekoVault", "techadvancedcyborg.github.io", "Converting caffeine to code...", "cd ~/Apps/TTACT-s-Anime-Player-Revamped", "Why did the chicken cross the road?", "Beans!", "\“Fix the cause, not the symptom.\” – Steve Maguire", "\“Talk is cheap. Show me the code.\” ― Linus Torvalds", "Justice for George Floyd.", "\“I can\'t breathe...\” ― George Floyd", "ping 1.1.1.1"]
+var sitetitles = ["cd ~/Apps/NekoVault", "firefox techadvancedcyborg.github.io", "echo Converting caffeine to code...", "cd ~/Apps/TTACT-s-Anime-Player-Revamped", "echo Why did the chicken cross the road?", "echo \“Fix the cause, not the symptom.\” – Steve Maguire", "echo \“Talk is cheap. Show me the code.\” ― Linus Torvalds", "echo Justice for George Floyd.", "echo \“I can\'t breathe...\” ― George Floyd", "ping 1.1.1.1"]
 //System Variables
 var slice = 0;
 var typing = true;

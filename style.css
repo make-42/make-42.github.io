@@ -170,6 +170,7 @@ h1 {
 
 .menubutton:hover {
     width: 100%;
+    border-radius:1vw;
 }
 
 .menubutton {
@@ -178,7 +179,7 @@ h1 {
     width: 35%;
     border: var(--text-color-light) solid 1px;
     border-radius: 2vw;
-    transition: width 1s ease;
+    transition: width 1s ease, border-radius 1s ease;
 }
 
 /* Resume Widget */
