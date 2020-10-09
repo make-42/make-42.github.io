@@ -3,6 +3,7 @@ from jsmin import jsmin
 from rcssmin import cssmin
 import sass
 import os
+import subprocess
 
 dirs = ["./","./resume/","./stats/","./weather/","./blog/", "./tools/", "./typing/","./matrix/"]
 
@@ -20,6 +21,13 @@ def minifydir(dir):
 		fileopen = open(file[:-3]+".min.js","w", encoding="utf8")
 		fileopen.write(jsmin(text))
 		fileopen.close()
+		some_command = "js2coffee "+file
+		p = subprocess.Popen(some_command, stdout=subprocess.PIPE, shell=True)
+		(output, err) = p.communicate()
+		p_status = p.wait()
+		fileopen = open(file[:-3]+".coffee","w", encoding="utf8")
+		fileopen.write(output.decode("utf-8"))
+		fileopen.close()
 
 	for file in glob.glob(dir+"*.scss"):
 		fileopen = open(file,"r+", encoding="utf8")
@@ -32,6 +40,3 @@ def minifydir(dir):
 
 for loopdir in dirs:
 	minifydir(loopdir)
-
-
-	
