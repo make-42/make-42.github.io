@@ -170,15 +170,28 @@ h1 {
 
 .menubutton:hover {
     width: 100%;
-    border-radius:1vw;
+    border-radius:0vw;
 }
-
+.menubutton-bottom-left{
+  border-radius: 0vw 0vw 0vw 2vw;
+}
+.menubutton-top-left{
+  border-radius: 2vw 0vw 0vw 0vw;
+}
+.menubutton-mid{
+  border-radius: 0vw 0vw 0vw 0vw;
+}
+.menubutton-top-right{
+  border-radius: 0vw 2vw 0vw 0vw;
+}
+.menubutton-bottom-right{
+  border-radius: 0vw 0vw 2vw 0vw;
+}
 .menubutton {
     color: inherit;
     text-decoration: none;
     width: 35%;
     border: var(--text-color-light) solid 1px;
-    border-radius: 2vw;
     transition: width 1s ease, border-radius 1s ease;
 }
 
