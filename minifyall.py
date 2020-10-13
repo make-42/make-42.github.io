@@ -40,3 +40,4 @@ def minifydir(dir):
 
 for loopdir in dirs:
 	minifydir(loopdir)
+os.system("node compile.js")
