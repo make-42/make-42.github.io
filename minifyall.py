@@ -38,6 +38,6 @@ def minifydir(dir):
 		fileopen.close()
 
 
+os.system("node compile.js")
 for loopdir in dirs:
 	minifydir(loopdir)
-os.system("node compile.js")
