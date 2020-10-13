@@ -1,100 +1,80 @@
 <!DOCTYPE html>
-<!--
-Why are you looking at my code!
-
-Copyright 2020 TechAdvancedCyborg
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-
-
-
-
-
--->
-<style>
-
-</style>
-
-<head>
-    <!-- Imports -->
+<html>
+  <!--
+  Why are you looking at my code!
+  Copyright 2020 TechAdvancedCyborg
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+  <style></style>
+  <head>
+    <!-- Imports-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Title Element -->
+    <!-- Title Element-->
     <title>Blog</title>
-    <!-- Icon -->
-    <link rel="icon" type="image/png" href="../assets/icons/icon.png" />
-    <!-- Stylesheet -->
+    <!-- Icon-->
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <!-- Stylesheet-->
     <link rel="stylesheet" type="text/css" href="../style.min.css">
-    <!-- Main Script Handling All Effects -->
+    <!-- Main Script Handling All Effects-->
     <script src="main.min.js"></script>
-    <!-- Script for all pages -->
+    <!-- Script for all pages-->
     <script src="../allpages.min.js"></script>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="layer4">
-        <div class="page">
-          <!-- Menubar -->
-          <div class="menubar">
-              <a class="menubutton menubutton-top-left" href="../">Home</a>
-              <a class="menubutton menubutton-mid" href="../blog/">Blog</a>
-              <a class="menubutton menubutton-mid" href="../resume/">Resume</a>
-              <a class="menubutton menubutton-top-right" href="../weather/">Weather</a>
-          </div>
-          <div class="menubar">
-              <a class="menubutton menubutton-bottom-left" href="../stats/">Stats</a>
-              <a class="menubutton menubutton-mid" href="../tools/">Tools</a>
-              <a class="menubutton menubutton-mid" href="../typing/">Typing</a>
-              <a class="menubutton menubutton-bottom-right" href="../matrix/">Matrix</a>
-          </div>
-            <!-- Title Header-->
-            <h1>Blog</h1>
-            <!-- Blog Widget-->
-            <div class="blog-widget">
-                <!--Blog Post-->
-                <div class="blog-post">
-                    <div class="blog-post-title">Goker: Go + Poker</div>
-                    <div class="blog-post-date">05:40:55 PM 9/12/2020</div>
-                    <div class="blog-post-seperator"></div>
-                    <div class="blog-post-text">Goker is a project for my Technology class (3ème, France) (Equivalent of 9th grade in the USA), written in Go, it incorporates the <a style="color: var(--text-color-light)" href="https://github.com/chehsunliu/poker">chehsunliu/poker</a> library for solving combinations fast. Goker is also a challenge for me, I love to learn new things and this project will consolidate my Go knowledge. Go is one of my favorite languages because it is clean, fast, and relatively mature. Goker's interface is very simple and clean, it is modular and compartmentalized. There are some useful features, like auto-reconnect, and all clients are identified by IP addresses to prevent multiple browsers being used to have multiple accounts. As a whole, I am very proud of Goker and I hope you will enjoy it.<br><br>Check it out here: <a style="color: var(--text-color-light)" href="https://github.com/TechAdvancedCyborg/Goker">Goker</a><br><br>
-                        <div class="love-container">
-                            <div class="love">With <3 </div>
-                            </div> - Tech
-                        </div>
-                    </div>
-                    <!--Blog Post-->
-                    <div class="blog-post">
-                        <div class="blog-post-title">The idealogy behind all my programs.</div>
-                        <div class="blog-post-date">04:22:47 PM 8/26/2020</div>
-                        <div class="blog-post-seperator"></div>
-                        <div class="blog-post-text">My programs are designed to be simple, clean, responsive, powerful and most importantly beautiful. I aim and will aim to furfill those goals with every program I write.<br><br>
-                            <div class="love-container">
-                                <div class="love">With <3 </div>
-                                </div> - Tech
-                            </div>
-                        </div>
-                        <!--Blog Post-->
-                        <div class="blog-post">
-                            <div class="blog-post-title">Hey!</div>
-                            <div class="blog-post-date">04:07:38 PM 8/26/2020</div>
-                            <div class="blog-post-seperator"></div>
-                            <div class="blog-post-text">This is my first blog post! Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br>
-                                <div class="love-container">
-                                    <div class="love">With <3 </div>
-                                    </div> - Tech
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <!-- Credits -->
-                    <div class="credits">Credits<br>• Background image by <a class="creditslink" href="https://www.linux-apps.com/u/eliverlara/">ELIVERLARA</a>, <a class="creditslink" href="https://www.linux-apps.com/p/1309907/">Sweet wallpaper</a>.<br>• TechAdvancedCyborg, 2020.</div>
-                </div>
+      <div class="page">
+        <!-- Menubar-->
+        <div class="menubar"><a class="menubutton menubutton-top-left" href="../">Home</a>              <a class="menubutton menubutton-mid" href="../blog/">Blog</a>              <a class="menubutton menubutton-mid" href="../resume/">Resume</a>              <a class="menubutton menubutton-top-right" href="../weather/">Weather</a></div>          
+        <div class="menubar"><a class="menubutton menubutton-bottom-left" href="../stats/">Stats</a>              <a class="menubutton menubutton-mid" href="../tools/">Tools</a>              <a class="menubutton menubutton-mid" href="../typing/">Typing</a>              <a class="menubutton menubutton-bottom-right" href="../matrix/">Matrix</a></div>
+        <!-- Title Header-->
+        <h1>Blog</h1>
+        <!-- Blog Widget-->
+        <div class="blog-widget">
+          <!-- Blog Post-->
+          <div class="blog-post">
+            <div class="blog-post-title">Goker: Go + Poker</div>                    
+            <div class="blog-post-date">05:40:55 PM 9/12/2020</div>                    
+            <div class="blog-post-seperator"></div>                    
+            <div class="blog-post-text">Goker is a project for my Technology class (3&egrave;me, France) (Equivalent of 9th grade in the USA), written in Go, it incorporates the <a style="color: var(--text-color-light)" href="https://github.com/chehsunliu/poker">chehsunliu/poker</a> library for solving combinations fast. Goker is also a challenge for me, I love to learn new things and this project will consolidate my Go knowledge. Go is one of my favorite languages because it is clean, fast, and relatively mature. Goker&apos;s interface is very simple and clean, it is modular and compartmentalized. There are some useful features, like auto-reconnect, and all clients are identified by IP addresses to prevent multiple browsers being used to have multiple accounts. As a whole, I am very proud of Goker and I hope you will enjoy it.<br><br>Check it out here: <a style="color: var(--text-color-light)" href="https://github.com/TechAdvancedCyborg/Goker">Goker</a><br><br>                        
+              <div class="love-container">
+                <div class="love">With 
+                  <3 <="" div=""></3>
+                </div> - Tech
+              </div>
             </div>
-</body>
+            <!-- Blog Post-->
+            <div class="blog-post">
+              <div class="blog-post-title">The idealogy behind all my programs.</div>                        
+              <div class="blog-post-date">04:22:47 PM 8/26/2020</div>                        
+              <div class="blog-post-seperator"></div>                        
+              <div class="blog-post-text">My programs are designed to be simple, clean, responsive, powerful and most importantly beautiful. I aim and will aim to furfill those goals with every program I write.<br><br>                            
+                <div class="love-container">
+                  <div class="love">With 
+                    <3 <="" div=""></3>
+                  </div> - Tech
+                </div>
+              </div>
+              <!-- Blog Post-->
+              <div class="blog-post">
+                <div class="blog-post-title">Hey!</div>                            
+                <div class="blog-post-date">04:07:38 PM 8/26/2020</div>                            
+                <div class="blog-post-seperator"></div>                            
+                <div class="blog-post-text">This is my first blog post! Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br>                                
+                  <div class="love-container">
+                    <div class="love">With 
+                      <3 <="" div=""></3>
+                    </div> - Tech
+                  </div>
+                </div>
+              </div>
+            </div>                    <br>
+            <!-- Credits-->
+            <div class="credits">Credits<br>&bull; Background image by <a class="creditslink" href="https://www.linux-apps.com/u/eliverlara/">ELIVERLARA</a>, <a class="creditslink" href="https://www.linux-apps.com/p/1309907/">Sweet wallpaper</a>.<br>&bull; TechAdvancedCyborg, 2020.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
