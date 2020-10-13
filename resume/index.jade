@@ -1,0 +1,131 @@
+doctype html
+html
+  //
+    Why are you looking at my code!
+    Copyright 2020 TechAdvancedCyborg
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  style.
+  head
+    // Imports
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    // Title Element
+    title My Resume
+    // Icon
+    link(rel='icon', type='image/png', href='../assets/icons/icon.png')
+    // Stylesheet
+    link(rel='stylesheet', type='text/css', href='../style.min.css')
+    // Main Script Handling All Effects
+    script(src='main.min.js')
+    // Script for all pages
+    script(src='../allpages.min.js')
+  body
+    .layer4
+      .page
+        // Menubar
+        .menubar
+          a.menubutton.menubutton-top-left(href='../') Home
+          |         
+          a.menubutton.menubutton-mid(href='../blog/') Blog
+          |         
+          a.menubutton.menubutton-mid(href='../resume/') Resume
+          |         
+          a.menubutton.menubutton-top-right(href='../weather/') Weather
+        |     
+        .menubar
+          a.menubutton.menubutton-bottom-left(href='../stats/') Stats
+          |         
+          a.menubutton.menubutton-mid(href='../tools/') Tools
+          |         
+          a.menubutton.menubutton-mid(href='../typing/') Typing
+          |         
+          a.menubutton.menubutton-bottom-right(href='../matrix/') Matrix
+        // Title Header
+        h1 Resume
+        // Resume Widget
+        .resume
+          .resume-title-div
+            h4.resume-title Louis Dalibard
+            |             
+            .resume-subtitle Web and Software Programmer
+          |         
+          .resume-description
+            | Multi-Skilled Python, Javascript, HTML, C# and Go programmer with 2+ years of experience in making daily tasks easier, with style.
+            br
+            | Has designed and developped multiple personal solutions (most of which are on 
+            a(href='https://github.com/TechAdvancedCyborg', target='_blank') GitHub
+            | ).
+            |             
+            h5.resume-description-title Projects
+            |             
+            .resume-seperator
+            |             
+            .resume-subtitle
+              | - Open Notes (August 2019): A simple sticky notes application with efficient autosaving.
+            |             
+            br
+            |             
+            .resume-subtitle
+              | - techadvancedcyborg.github.io (May 2020): A portfolio, I also host experiments there.
+            |             
+            br
+            |             
+            .resume-subtitle
+              | - TTACT&apos;s Anime Player Revamped (May 2020): A revamped version of my command line application for playing anime with a GUI (uses mpv and ffmpeg).
+            |             
+            br
+            |             
+            .resume-subtitle
+              | - osu! Rank Curves (October 2019): A basic implementation of a database for keeping track of your rank in osu! (a rythmn game) and plotting that information with Matplotlib.
+            |             
+            h5.resume-description-title Experience
+            |             
+            .resume-seperator
+            |             
+            .resume-subtitle
+            |             
+            br
+            |             
+            .resume-subtitle
+            |             
+            h5.resume-description-title Education
+            |             
+            .resume-seperator
+            |             
+            .resume-subtitle
+            |             
+            br
+            |             
+            .resume-subtitle
+            |             
+            h5.resume-description-title Contact
+            |             
+            .resume-seperator
+            |             
+            .resume-subtitle.resume-contact-link
+              | Email: 
+              a.resume-contact-link(href='mailto:louis.dalibard@gmail.com', target='_blank') louis.dalibard@gmail.com
+            |             
+            .resume-subtitle.resume-contact-link
+              | GitHub: 
+              a.resume-contact-link(href='https://github.com/TechAdvancedCyborg', target='_blank') TechAdvancedCyborg
+            |             
+            .resume-subtitle.resume-contact-link
+              | Discord: 
+              a.resume-contact-link(href='https://discord.com/', target='_blank') OnTake#5344
+            |             
+            br
+        |     
+        br
+        // Credits
+        .credits
+          | Credits
+          br
+          | &bull; Background image by 
+          a.creditslink(href='https://www.linux-apps.com/u/eliverlara/') ELIVERLARA
+          | , 
+          a.creditslink(href='https://www.linux-apps.com/p/1309907/') Sweet wallpaper
+          | .
+          br
+          | &bull; TechAdvancedCyborg, 2020.
