@@ -59,12 +59,14 @@ body {
     background-position: center;
     transition: background-position 0.05s linear;
     min-height: 100vh;
+    position:relative;
 }
 
 .page {
     background: var(--bg-color-dark);
     padding: 0.5vw;
     animation: loadpage 2s ease;
+    position: relative;
 }
 
 /* Setting Text Styling */
