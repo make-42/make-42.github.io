@@ -3,7 +3,6 @@ npm i html2jade
 npm i pug
 npm i sha1
 npm i coffeescript
-npm i emojic
 pip install jsmin
 pip install rcssmin
 pip install libsass
