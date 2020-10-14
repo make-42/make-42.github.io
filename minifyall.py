@@ -22,12 +22,11 @@ def minifydir(dir):
 		fileopen.write(jsmin(text))
 		fileopen.close()
 		some_command = "js2coffee "+file
-		p = subprocess.Popen(some_command, stdout=subprocess.PIPE, shell=True)
-		(output, err) = p.communicate()
-		p_status = p.wait()
+		output = subprocess.run(some_command,capture_output=True, shell=True).stdout
 		fileopen = open(file[:-3]+".coffee","w", encoding="utf8")
 		fileopen.write(output.decode("utf-8"))
 		fileopen.close()
+		print("☕",file,"compiled.")
 
 	for file in glob.glob(dir+"*.scss"):
 		fileopen = open(file,"r+", encoding="utf8")
@@ -36,6 +35,7 @@ def minifydir(dir):
 		fileopen = open(file[:-5]+".min.css","w", encoding="utf8")
 		fileopen.write(cssmin(sass.compile(string=text)))
 		fileopen.close()
+		print("📝",file,"compiled.")
 
 
 os.system("node compile.js")

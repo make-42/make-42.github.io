@@ -13,6 +13,7 @@ compile = (file, locals) ->
   fs.writeFile file + 'index.html', html, (err) ->
     if err
       return console.log(err)
+    process.stdout.write '✅ '
     console.log file + 'index.jade compiled.'
     return
   return

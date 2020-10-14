@@ -14,6 +14,7 @@ fs.writeFile(file+"index.html", html, function(err) {
     if(err) {
         return console.log(err);
     }
+    process.stdout.write("✅ ")
     console.log(file+"index.jade compiled.");
 });
 }
