@@ -42,6 +42,10 @@ setTimeout(function() {
 }, 100);
 ###
 
+# Blur Easter Egg
+blurstate = 0
+audio = new Audio('./assets/audio/gnome.webm')
+
 changepage = (targeturl) ->
   window.history.pushState '', 'TechAdvancedCyborg\'s Website', targeturl
   $.get targeturl, (data) ->
@@ -58,4 +62,31 @@ processAjaxData = (response, urlPath) ->
     'html': response.html
     'pageTitle': response.pageTitle
   }, '', urlPath
+  return
+
+document.addEventListener 'keydown', (event) ->
+  switch blurstate
+    when 0
+      if event.keyCode == 66
+        blurstate++
+      else
+        blurstate = 0
+    when 1
+      if event.keyCode == 76
+        blurstate++
+      else
+        blurstate = 0
+    when 2
+      if event.keyCode == 85
+        blurstate++
+      else
+        blurstate = 0
+    when 3
+      if event.keyCode == 82
+        csselement = document.createElement('style')
+        csselement.innerHTML = '.menubar,.peopleinspace,.person,.weather,.typing-text,.download-div,#project-one,.blog-widget,.blog-post,.stopwatch-widget,.stopwatch-toggle-button,.stopwatch-clear-button,.stopwatch-clock,.stopwatch-hands,.typing-test-widget,.typing-words,.typing-results,.matrix-widget {backdrop-filter: blur(1vw);}'
+        document.body.appendChild csselement
+        blurstate = 0
+      else
+        blurstate = 0
   return

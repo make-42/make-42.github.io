@@ -51,3 +51,42 @@ setTimeout(function() {
 	}
 }, 100);
 */
+
+// Blur Easter Egg
+var blurstate = 0;
+var audio = new Audio('./assets/audio/gnome.webm');
+document.addEventListener('keydown', function(event) {
+  switch (blurstate) {
+  case 0:
+    if (event.keyCode == 66){
+      blurstate++;
+    } else{
+      blurstate = 0;
+    }
+  break;
+  case 1:
+    if (event.keyCode == 76){
+      blurstate++;
+    } else{
+      blurstate = 0;
+    }
+  break;
+  case 2:
+    if (event.keyCode == 85){
+      blurstate++;
+    } else{
+      blurstate = 0;
+    }
+  break;
+  case 3:
+    if (event.keyCode == 82){
+			var csselement = document.createElement("style");
+			csselement.innerHTML = ".menubar,.peopleinspace,.person,.weather,.typing-text,.download-div,#project-one,.blog-widget,.blog-post,.stopwatch-widget,.stopwatch-toggle-button,.stopwatch-clear-button,.stopwatch-clock,.stopwatch-hands,.typing-test-widget,.typing-words,.typing-results,.matrix-widget {backdrop-filter: blur(1vw);}";
+			document.body.appendChild(csselement);
+      blurstate = 0;
+    } else{
+      blurstate = 0;
+    }
+    break;
+  }
+});
