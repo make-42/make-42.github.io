@@ -44,7 +44,6 @@ setTimeout(function() {
 
 # Blur Easter Egg
 blurstate = 0
-audio = new Audio('./assets/audio/gnome.webm')
 
 changepage = (targeturl) ->
   window.history.pushState '', 'TechAdvancedCyborg\'s Website', targeturl

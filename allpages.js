@@ -54,7 +54,6 @@ setTimeout(function() {
 
 // Blur Easter Egg
 var blurstate = 0;
-var audio = new Audio('./assets/audio/gnome.webm');
 document.addEventListener('keydown', function(event) {
   switch (blurstate) {
   case 0:
