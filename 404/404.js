@@ -40,38 +40,51 @@ $(document)
 
     // Suki Easter Egg
     var chrstate = 0;
+    var chrdiscovered = false;
     document.addEventListener('keydown', function(event) {
       switch (chrstate) {
       case 0:
+	if(!chrdiscovered){
         if (event.keyCode == 83){
           chrstate++;
+          chrname="[S???]";
         } else{
           chrstate = 0;
-        }
+chrname="[????]";
+        }}
       break;
       case 1:
+if(!chrdiscovered){
         if (event.keyCode == 85){
           chrstate++;
+          chrname="[Su??]";
         } else{
           chrstate = 0;
-        }
+chrname="[????]";
+        }}
       break;
       case 2:
+if(!chrdiscovered){
         if (event.keyCode == 75){
           chrstate++;
+	  chrname="[Suk?]";
         } else{
           chrstate = 0;
-        }
+chrname="[????]";
+        }}
       break;
       case 3:
+	if(!chrdiscovered){
         if (event.keyCode == 73){
-    			chrname="[Suki]";
+    	  chrname="[Suki]";
           console.log("Ehh! How do you know my name? Weirdo...")
           codelines.push("Ehh! How do you know my name? Weirdo...")
           chrstate = 0;
+	  chrdiscovered = true;
         } else{
           chrstate = 0;
-        }
+chrname="[????]";
+        }}
         break;
       }
     });
