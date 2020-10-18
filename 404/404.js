@@ -1,4 +1,4 @@
-codelines = ["Eeeeekkk!", "What are you doing here?", "Oh!", "Hi!", "Welcome to the void!", "Let's chill here together for a while..."];
+codelines = ["Eeeeekkk!", "What are you doing here?", "Oh!", "Hi!", "Welcome to the void!", "Let's chill here together for a while... <3"];
 cursor = "";
 var chrname = "[????]"
 

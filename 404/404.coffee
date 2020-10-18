@@ -4,7 +4,7 @@ codelines = [
   'Oh!'
   'Hi!'
   'Welcome to the void!'
-  'Let\'s chill here together for a while...'
+  'Let\'s chill here together for a while... <3'
 ]
 cursor = ''
 chrname = '[????]'
