@@ -111,7 +111,7 @@ document.addEventListener 'keydown', (event) ->
     when 3
       if event.keyCode == 78
         csselement = document.createElement('style')
-        csselement.innerHTML = '.layer4{background:url(./assets/images/jj-ying-azCTGObXR14-unsplash.webp);background-attachment: fixed;background-size: cover;background-position: center;}'
+        csselement.innerHTML = '.layer4{background:url(/assets/images/jj-ying-azCTGObXR14-unsplash.webp);background-attachment: fixed;background-size: cover;background-position: center;}'
         document.body.appendChild csselement
         neonstate = 0
       else
