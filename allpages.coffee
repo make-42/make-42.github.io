@@ -89,3 +89,31 @@ document.addEventListener 'keydown', (event) ->
       else
         blurstate = 0
   return
+# Neon Easter Egg
+neonstate = 0
+document.addEventListener 'keydown', (event) ->
+  switch neonstate
+    when 0
+      if event.keyCode == 78
+        neonstate++
+      else
+        neonstate = 0
+    when 1
+      if event.keyCode == 69
+        neonstate++
+      else
+        neonstate = 0
+    when 2
+      if event.keyCode == 79
+        neonstate++
+      else
+        neonstate = 0
+    when 3
+      if event.keyCode == 78
+        csselement = document.createElement('style')
+        csselement.innerHTML = '.layer4{background:url(./assets/images/jj-ying-azCTGObXR14-unsplash.webp);background-attachment: fixed;background-size: cover;background-position: center;}'
+        document.body.appendChild csselement
+        neonstate = 0
+      else
+        neonstate = 0
+  return
