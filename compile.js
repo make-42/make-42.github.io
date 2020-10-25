@@ -28,3 +28,4 @@ compile("tools/",{prefix:"../tools/"});
 compile("typing/",{prefix:"../typing/"});
 compile("weather/",{prefix:"../weather/"});
 compile("404/",{prefix:"../404/"});
+compile("snake/",{prefix:"../snake/"});
