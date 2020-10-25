@@ -87,5 +87,73 @@ chrname="[????]";
         }}
         break;
       }
-    });
   });
+
+  // Konami Easter Egg
+  var konamistate = 0;
+  document.addEventListener('keydown', function(event) {
+    switch (konamistate) {
+    case 0:
+    if (event.keyCode == 38){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 1:
+    if (event.keyCode == 38){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 2:
+    if (event.keyCode == 40){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 3:
+    if (event.keyCode == 40){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 4:
+    if (event.keyCode == 37){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 5:
+    if (event.keyCode == 39){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 6:
+    if (event.keyCode == 37){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 7:
+    if (event.keyCode == 39){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 8:
+    if (event.keyCode == 66){
+      konamistate++;
+    } else{
+      konamistate = 0;}
+    break;
+    case 9:
+    if (event.keyCode == 65){
+      window.location.href = "https://techadvancedcyborg.github.io/snake/";
+    } else{
+      konamistate = 0;}
+    break;
+
+  }
+  });
+});

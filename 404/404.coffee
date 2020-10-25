@@ -80,4 +80,59 @@ $(document).ready ->
             chrstate = 0
             chrname = '[????]'
     return
+  # Konami Easter Egg
+  konamistate = 0
+  document.addEventListener 'keydown', (event) ->
+    switch konamistate
+      when 0
+        if event.keyCode == 38
+          konamistate++
+        else
+          konamistate = 0
+      when 1
+        if event.keyCode == 38
+          konamistate++
+        else
+          konamistate = 0
+      when 2
+        if event.keyCode == 40
+          konamistate++
+        else
+          konamistate = 0
+      when 3
+        if event.keyCode == 40
+          konamistate++
+        else
+          konamistate = 0
+      when 4
+        if event.keyCode == 37
+          konamistate++
+        else
+          konamistate = 0
+      when 5
+        if event.keyCode == 39
+          konamistate++
+        else
+          konamistate = 0
+      when 6
+        if event.keyCode == 37
+          konamistate++
+        else
+          konamistate = 0
+      when 7
+        if event.keyCode == 39
+          konamistate++
+        else
+          konamistate = 0
+      when 8
+        if event.keyCode == 66
+          konamistate++
+        else
+          konamistate = 0
+      when 9
+        if event.keyCode == 65
+          window.location.href = 'https://techadvancedcyborg.github.io/snake/'
+        else
+          konamistate = 0
+    return
   return
