@@ -7,8 +7,8 @@ var positions = [
     [23, 15],
     [24, 15]
 ];
-var snaketailposition = [19,15]
-var fruitposition = [10,10]
+var snaketailposition = [19, 15]
+var fruitposition = [10, 10]
 
 function drawframe() {
     document.getElementById("snake-window").innerHTML = "";
@@ -17,36 +17,36 @@ function drawframe() {
     drawscore();
 }
 
-function drawsnake(){
-  var i;
-  for (i = 0; i < positions.length; i++) {
-      var divelement = document.createElement("div");
-      divelement.className = "snake-pixel"
-      divelement.style.left = (positions[i][0]) + "vw";
-      divelement.style.top = (positions[i][1]) + "vw";
-      document.getElementById("snake-window").appendChild(divelement);
-  }
+function drawsnake() {
+    var i;
+    for (i = 0; i < positions.length; i++) {
+        var divelement = document.createElement("div");
+        divelement.className = "snake-pixel"
+        divelement.style.left = (positions[i][0]) + "vw";
+        divelement.style.top = (positions[i][1]) + "vw";
+        document.getElementById("snake-window").appendChild(divelement);
+    }
 }
 
-function updatefruit(){
-  newfruitposition = [Math.round(Math.random()*39),Math.round(Math.random()*29)]
-  if (newfruitposition != fruitposition){
-    fruitposition = newfruitposition;
-  } else{
-    updatefruit();
-  }
+function updatefruit() {
+    newfruitposition = [Math.round(Math.random() * 39), Math.round(Math.random() * 29)]
+    if (newfruitposition != fruitposition) {
+        fruitposition = newfruitposition;
+    } else {
+        updatefruit();
+    }
 }
 
-function drawfruit(){
-  var divelement = document.createElement("div");
-  divelement.className = "snake-fruit"
-  divelement.style.left = (fruitposition[0]+0.125) + "vw";
-  divelement.style.top = (fruitposition[1]+0.125) + "vw";
-  document.getElementById("snake-window").appendChild(divelement);
+function drawfruit() {
+    var divelement = document.createElement("div");
+    divelement.className = "snake-fruit"
+    divelement.style.left = (fruitposition[0] + 0.125) + "vw";
+    divelement.style.top = (fruitposition[1] + 0.125) + "vw";
+    document.getElementById("snake-window").appendChild(divelement);
 }
 
-function drawscore(){
-  document.getElementById("snake-score").innerHTML = score*100;
+function drawscore() {
+    document.getElementById("snake-score").innerHTML = score * 100;
 }
 
 function gameover() {
@@ -61,11 +61,12 @@ function gameover() {
     score = 0;
 }
 
-function issnake(snakepixel){
-  if (snakepixel[0] == positions[newpositions.length - 1][0]){
-    if (snakepixel[1] == positions[newpositions.length - 1][1]){
-      gameover();
-  }}
+function issnake(snakepixel) {
+    if (snakepixel[0] == positions[newpositions.length - 1][0]) {
+        if (snakepixel[1] == positions[newpositions.length - 1][1]) {
+            gameover();
+        }
+    }
 }
 
 function updatesnake() {
@@ -103,15 +104,15 @@ function updatesnake() {
     if (newpositions[newpositions.length - 1][1] < 0) {
         gameover();
     }
-    if ((positions.slice(0,newpositions.length - 1)).find(issnake) != undefined){
-      gameover();
+    if ((positions.slice(0, newpositions.length - 1)).find(issnake) != undefined) {
+        gameover();
     }
-    if (newpositions[newpositions.length - 1][0] == fruitposition[0]){
-      if (newpositions[newpositions.length - 1][1] == fruitposition[1]){
-          positions.unshift(snaketailposition);
-          score++;
-          updatefruit();
-      }
+    if (newpositions[newpositions.length - 1][0] == fruitposition[0]) {
+        if (newpositions[newpositions.length - 1][1] == fruitposition[1]) {
+            positions.unshift(snaketailposition);
+            score++;
+            updatefruit();
+        }
     }
 }
 $(document)
