@@ -36,6 +36,7 @@ body{
   background-color: white;
   height:1vw;
   width:1vw;
+  box-shadow: 0vw 0vw 4vw white;
 }
 
 .snake-fruit{
@@ -43,6 +44,7 @@ body{
   background-color: white;
   height:0.75vw;
   width:0.75vw;
+  box-shadow: 0vw 0vw 4vw white;
 }
 body::after {
   content: "";

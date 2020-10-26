@@ -24,6 +24,7 @@ function drawsnake() {
         divelement.className = "snake-pixel"
         divelement.style.left = (positions[i][0]) + "vw";
         divelement.style.top = (positions[i][1]) + "vw";
+        //divelement.style.opacity = (150-(Math.abs(0.5-((i/(positions.length-1))))*200))+"%";
         try{
           switch (positions[i+1][0]-positions[i][0]) {
             case 1:
