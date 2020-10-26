@@ -24,6 +24,40 @@ function drawsnake() {
         divelement.className = "snake-pixel"
         divelement.style.left = (positions[i][0]) + "vw";
         divelement.style.top = (positions[i][1]) + "vw";
+        try{
+          switch (positions[i+1][0]-positions[i][0]) {
+            case 1:
+              divelement.className = "snake-pixel snake-pixel-right";
+              break;
+              case 0-1:
+                divelement.className = "snake-pixel snake-pixel-left";
+                break;
+          }
+          switch (positions[i+1][1]-positions[i][1]) {
+            case 1:
+              divelement.className = "snake-pixel snake-pixel-down";
+              break;
+              case 0-1:
+                divelement.className = "snake-pixel snake-pixel-up";
+                break;
+          }
+        }
+        catch{
+          switch (angle) {
+            case 0:
+            divelement.className = "snake-pixel snake-pixel-head snake-pixel-up";
+            break;
+            case 1:
+            divelement.className = "snake-pixel snake-pixel-head snake-pixel-right";
+            break;
+            case 2:
+            divelement.className = "snake-pixel snake-pixel-head snake-pixel-down";
+            break;
+            case 3:
+            divelement.className = "snake-pixel snake-pixel-head snake-pixel-left";
+            break;
+          }
+        }
         document.getElementById("snake-window").appendChild(divelement);
     }
 }
