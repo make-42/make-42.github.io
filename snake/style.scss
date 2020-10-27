@@ -65,10 +65,10 @@ body::after {
 
 @keyframes snake-move-right{
   from{
-    transform: translateX(0vw);
+    transform: translateX(0vw) scaleX(1);
   }
   to{
-    transform: translateX(1vw);
+    transform: translateX(0.5vw) scaleX(2);
   }
 }
 
@@ -80,10 +80,10 @@ body::after {
 
 @keyframes snake-move-left{
   from{
-    transform: translateX(0vw);
+    transform: translateX(0vw) scaleX(1);
   }
   to{
-    transform: translateX(-1vw);
+    transform: translateX(-0.5vw) scaleX(2);
   }
 }
 
@@ -95,10 +95,10 @@ body::after {
 
 @keyframes snake-move-down{
   from{
-    transform: translateY(0vw);
+    transform: translateY(0vw) scaleY(1);
   }
   to{
-    transform: translateY(1vw);
+    transform: translateY(0.5vw) scaleY(2);
   }
 }
 
@@ -114,9 +114,9 @@ body::after {
 
 @keyframes snake-move-up{
   from{
-    transform: translateY(0vw);
+    transform: translateY(0vw) scaleY(1);
   }
   to{
-    transform: translateY(-1vw);
+    transform: translateY(-0.5vw) scaleY(2);
   }
 }
