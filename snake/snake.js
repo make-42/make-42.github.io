@@ -157,7 +157,7 @@ $(document)
         setInterval(function() {
             updatesnake();
             drawframe();
-        }, 200);
+        }, 150);
         document.addEventListener('keydown', function(event) {
             switch (event.keyCode) {
                 case 38:
