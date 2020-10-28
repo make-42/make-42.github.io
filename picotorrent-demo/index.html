@@ -1,106 +1,443 @@
 <!DOCTYPE html>
 <html>
-  <!--
-  Why are you looking at my code!
-  Copyright 2020 TechAdvancedCyborg
+    <!--
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   -->
-  <head>
-    <!-- Imports-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/numbered/1.1.0/index.min.js"></script>
-    <!-- Stylesheet-->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Title Element-->
-    <title>PicoTorrent UI Demo</title>
-    <!-- Main Script -->
-    <script src="main.js"></script>
-  </head>
-  <body>
-    <div id="main-ui">
-      <table id="torrent-table">
-  <tr id="torrent-table-header">
-    <th>Name</th>
-    <th>#</th>
-    <th>Size</th>
-    <th>Status</th>
-    <th>Progress</th>
-    <th>ETA</th>
-    <th>DL</th>
-    <th>UL</th>
-    <th>Availability</th>
-    <th>Ratio</th>
-    <th>Seeds</th>
-    <th>Peers</th>
-    <th>Added on</th>
-    <th>Completed on</th>
-  </tr>
-  <tr class="torrent">
-    <td>archlinux-2020.10.01-x86_64.iso</td>
-    <td>1</td>
-    <td>681 MB</td>
-    <td>Downloading</td>
-    <td><div class="progress-bar-container"><div class="progress-bar-progress" style="width:20%;"></div></div></td>
-    <td>53s</td>
-    <td>9.26 MB/s</td>
-    <td>600 bytes/s</td>
-    <td>98.234</td>
-    <td>0.000</td>
-    <td>6 (of 285)</td>
-    <td>0 (of 500)</td>
-    <td>2020-10-28 15:18:54</td>
-    <td>-</td>
-  </tr>
-</table>
-    </div>
-    <div id="secondary-ui">
-      <div id="secondary-ui-tabbar">
-        <button class="tab-button" onClick="tabOverview();">Overview</button>
-        <button class="tab-button" onClick="tabFiles();">Files</button>
-        <button class="tab-button" onClick="tabPeers();">Peers</button>
-        <button class="tab-button" onClick="tabTrackers();">Trackers</button>
-        <button class="tab-button" id="dark-mode-switch" onClick="toggleDarkMode();">Toggle Dark Mode</button>
-      </div>
-        <div id="tab-page">
-          <div class="overview-line">
-          <div class="overview-header">Name</div><div class="overview-info">archlinux-2020.10.01-x86_64.iso</div>
-          </div>
-          <div class="overview-line">
-          <div class="overview-header">Save path</div><div class="overview-info">C:\Users\OnTake\Downloads</div>
+
+    <head>
+        <!-- Imports-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/numbered/1.1.0/index.min.js"></script>
+        <!-- Stylesheet-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Title Element-->
+        <title>PicoTorrent UI Demo</title>
+        <!-- Main Script -->
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <div id="main-ui">
+            <table id="torrent-table">
+                <tr id="torrent-table-header">
+                    <th>Name</th>
+                    <th>#</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                    <th>Progress</th>
+                    <th>ETA</th>
+                    <th>DL</th>
+                    <th>UL</th>
+                    <th>Availability</th>
+                    <th>Ratio</th>
+                    <th>Seeds</th>
+                    <th>Peers</th>
+                    <th>Added on</th>
+                    <th>Completed on</th>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+                <tr class="torrent">
+                    <td>archlinux-2020.10.01-x86_64.iso</td>
+                    <td>1</td>
+                    <td>681 MB</td>
+                    <td>Downloading</td>
+                    <td>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-progress" style="width:20%;"></div>
+                        </div>
+                    </td>
+                    <td>53s</td>
+                    <td>9.26 MB/s</td>
+                    <td>600 bytes/s</td>
+                    <td>98.234</td>
+                    <td>0.000</td>
+                    <td>6 (of 285)</td>
+                    <td>0 (of 500)</td>
+                    <td>2020-10-28 15:18:54</td>
+                    <td>-</td>
+                </tr>
+            </table>
         </div>
-        <div class="overview-line">
-        <div class="overview-header">Comment</div><div class="overview-info">Arch Linux</div>
-      </div>
-      <div class="overview-line">
-      <div class="overview-header">Private</div><div class="overview-info">No</div>
-    </div>
-    <div class="overview-line">
-    <div class="overview-header">Last download</div><div class="overview-info">just now</div>
-  </div>
-  <div class="overview-line">
-  <div class="overview-header">Total download</div><div class="overview-info">45 MB</div>
-</div>
-<div class="overview-line">
-<div class="overview-header">Info hash</div><div class="overview-info">1d378e95a2319165a82104c2e9f5a1868b61ec09</div>
-</div>
-<div class="overview-line">
-<div class="overview-header">Pieces</div><div class="overview-info">90 (of 1362)</div>
-</div>
-<div class="overview-line">
-<div class="overview-header">Size</div><div class="overview-info">681MB</div>
-</div>
-<div class="overview-line">
-<div class="overview-header">Ratio</div><div class="overview-info">0.000</div>
-</div>
-<div class="overview-line">
-<div class="overview-header">Last upload</div><div class="overview-info"></div>
-</div>
-<div class="overview-line">
-<div class="overview-header">Total upload</div><div class="overview-info">1 MB</div>
-</div>
+        <div id="secondary-ui">
+            <div id="secondary-ui-tabbar">
+                <button class="tab-button" onClick="tabOverview();">Overview</button>
+                <button class="tab-button" onClick="tabFiles();">Files</button>
+                <button class="tab-button" onClick="tabPeers();">Peers</button>
+                <button class="tab-button" onClick="tabTrackers();">Trackers</button>
+                <button class="tab-button" id="dark-mode-switch" onClick="toggleDarkMode();">Toggle Dark Mode</button>
+            </div>
+            <div id="tab-page">
+                <div class="overview-line">
+                    <div class="overview-header">Name</div>
+                    <div class="overview-info">archlinux-2020.10.01-x86_64.iso</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Save path</div>
+                    <div class="overview-info">C:\Users\OnTake\Downloads</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Comment</div>
+                    <div class="overview-info">Arch Linux</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Private</div>
+                    <div class="overview-info">No</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Last download</div>
+                    <div class="overview-info">just now</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Total download</div>
+                    <div class="overview-info">45 MB</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Info hash</div>
+                    <div class="overview-info">1d378e95a2319165a82104c2e9f5a1868b61ec09</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Pieces</div>
+                    <div class="overview-info">90 (of 1362)</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Size</div>
+                    <div class="overview-info">681MB</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Ratio</div>
+                    <div class="overview-info">0.000</div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Last upload</div>
+                    <div class="overview-info"></div>
+                </div>
+                <div class="overview-line">
+                    <div class="overview-header">Total upload</div>
+                    <div class="overview-info">1 MB</div>
+                </div>
+            </div>
         </div>
-    </div>
-  </body>
+    </body>
+
 </html>

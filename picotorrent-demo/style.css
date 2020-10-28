@@ -1,3 +1,4 @@
+/* Global UI */
 html {
   --background-color: #222;
   --text-color-light: white;
@@ -17,18 +18,19 @@ button{
   border-radius: 0.2vw;
 }
 
-.myButton:hover {
-	background-color:#ffffff;
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
 }
-
 
 /* Main UI */
 #main-ui{
   height: 50vh;
+  overflow-y:scroll;
 }
 
 #torrent-table{

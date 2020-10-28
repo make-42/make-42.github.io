@@ -15,6 +15,10 @@ function toggleDarkMode(){
 
 $('document').ready(function(){
   setInterval(function(){
-    document.getElementsByClassName("progress-bar-progress")[0].style.width=Math.random()*100+"%";
+    var i=0;
+    while(i<document.getElementsByClassName("progress-bar-progress").length){
+    document.getElementsByClassName("progress-bar-progress")[i].style.width=Math.random()*100+"%";
+    i++;
+  }
   },500)
 });
