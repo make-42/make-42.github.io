@@ -1,11 +1,17 @@
+html {
+  --background-color: #222;
+  --text-color-light: white;
+  --border-color: grey;
+}
+
 body {
-    color: white;
-    background: #222;
+    color: var(--text-color-light);
+    background: var(--background-color);
 }
 
 button{
-  color: white;
-  background: #222;
+  color: var(--text-color-light);
+  background: var(--background-color);
 }
 
 
@@ -19,21 +25,21 @@ button{
 }
 
 th {
-    border-left: 1px grey solid;
-    border-right: 1px grey solid;
-    border-top: 1px grey solid;
+    border-left: 1px var(--border-color) solid;
+    border-right: 1px var(--border-color) solid;
+    border-top: 1px var(--border-color) solid;
     border-radius: 0.2vw;
 }
 
 td {
-    border-top: 1px grey solid;
-    border-bottom: 1px grey solid;
+    border-top: 1px var(--border-color) solid;
+    border-bottom: 1px var(--border-color) solid;
 }
 
 .progress-bar-container {
     height: 0.5vw;
     margin-top: 1px;
-    border: 1px grey solid;
+    border: 1px var(--border-color) solid;
     border-radius: 100vw;
 }
 
@@ -46,7 +52,7 @@ td {
 /* Secondary UI */
 
 #secondary-ui{
-  border: 1px grey solid;
+  border: 1px var(--border-color) solid;
   border-radius: 0.2vw;
   padding:1vw;
 }
