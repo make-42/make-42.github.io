@@ -64,7 +64,7 @@ table {
 }
 
 .progress-bar-container {
-    height: 0.5vw;
+    height: 9px;
     margin-top: 1px;
     border: 1px var(--border-color) solid;
     border-radius: 100vw;
