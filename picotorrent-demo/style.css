@@ -45,8 +45,11 @@ th {
 }
 
 td {
-    border-top: 1px var(--border-color) solid;
     border-bottom: 1px var(--border-color) solid;
+}
+
+table {
+    border-spacing: 0px;
 }
 
 .progress-bar-container {
