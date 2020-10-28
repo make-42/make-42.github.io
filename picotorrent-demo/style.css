@@ -12,6 +12,17 @@ body {
 button{
   color: var(--text-color-light);
   background: var(--background-color);
+  border: 1px var(--border-color) solid;
+  cursor:pointer;
+  border-radius: 0.2vw;
+}
+
+.myButton:hover {
+	background-color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
 
