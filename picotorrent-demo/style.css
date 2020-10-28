@@ -60,6 +60,12 @@ td {
 
 #secondary-ui-tabbar{
   display: flex;
+  position: relative;
+}
+
+#dark-mode-switch{
+  position: absolute;
+  right:0;
 }
 
 #tab-page{
