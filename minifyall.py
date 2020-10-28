@@ -5,7 +5,7 @@ import sass
 import os
 import subprocess
 
-dirs = ["./","./resume/","./stats/","./weather/","./blog/", "./tools/", "./typing/","./matrix/","./404/"]
+dirs = ["./","./resume/","./stats/","./weather/","./blog/", "./tools/", "./typing/","./matrix/","./404/","./snake/"]
 
 def minifydir(dir):
 	for file in glob.glob(dir+"*.min.js"):
