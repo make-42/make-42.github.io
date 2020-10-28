@@ -1,0 +1,76 @@
+body {
+    color: white;
+    background: #222;
+}
+
+button{
+  color: white;
+  background: #222;
+}
+
+
+/* Main UI */
+#main-ui{
+  height: 50vh;
+}
+
+#torrent-table{
+  width:100%;
+}
+
+th {
+    border-left: 1px grey solid;
+    border-right: 1px grey solid;
+    border-top: 1px grey solid;
+    border-radius: 0.2vw;
+}
+
+td {
+    border-top: 1px grey solid;
+    border-bottom: 1px grey solid;
+}
+
+.progress-bar-container {
+    height: 0.5vw;
+    margin-top: 1px;
+    border: 1px grey solid;
+    border-radius: 100vw;
+}
+
+.progress-bar-progress {
+    height: 100%;
+    background: #35b1e1;
+    border-radius: 100vw;
+}
+
+/* Secondary UI */
+
+#secondary-ui{
+  border: 1px grey solid;
+  border-radius: 0.2vw;
+  padding:1vw;
+}
+
+#secondary-ui-tabbar{
+  display: flex;
+}
+
+#tab-page{
+  padding-top:1vw;
+}
+
+.overview-info{
+  position:absolute;
+  left:10vw;
+}
+
+.overview-header{
+  font-weight:700;
+}
+
+.overview-line{
+  display: flex;
+  position:relative;
+  margin-top: 0.25vw;
+  margin-bottom: 0.25vw;
+}
