@@ -201,7 +201,7 @@ $(document).ready ->
     updatesnake()
     drawframe()
     return
-  ), 100
+  ), 150
   document.addEventListener 'keydown', (event) ->
     switch event.keyCode
       when 38
