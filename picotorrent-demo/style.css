@@ -1,0 +1,115 @@
+/* Global UI */
+html {
+    --background-color: #222;
+    --text-color-light: white;
+    --border-color: grey;
+    --hover-color: #d8d8d8;
+    --select-color: #d0d0d0;
+}
+
+body {
+    color: var(--text-color-light);
+    background: var(--background-color);
+}
+
+button {
+    color: var(--text-color-light);
+    background: var(--background-color);
+    border: 1px var(--border-color) solid;
+    cursor: pointer;
+    border-radius: 0.2vw;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+/* Main UI */
+#main-ui {
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+#torrent-table {
+    width: 100%;
+}
+
+th {
+    border-left: 1px var(--border-color) solid;
+    border-right: 1px var(--border-color) solid;
+    border-top: 1px var(--border-color) solid;
+    border-radius: 0.2vw;
+}
+
+td {
+    border-bottom: 1px var(--border-color) solid;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+.torrent-hover {
+    background: var(--hover-color);
+}
+
+.torrent-selected {
+    background: var(--select-color);
+}
+
+.progress-bar-container {
+    height: 9px;
+    margin-top: 1px;
+    border: 1px var(--border-color) solid;
+    border-radius: 100vw;
+}
+
+.progress-bar-progress {
+    height: 100%;
+    background: #35b1e1;
+    border-radius: 100vw;
+    transition: width 0.5s ease;
+}
+
+/* Secondary UI */
+#secondary-ui {
+    border: 1px var(--border-color) solid;
+    border-radius: 0.2vw;
+    padding: 1vw;
+}
+
+#secondary-ui-tabbar {
+    display: flex;
+    position: relative;
+}
+
+#dark-mode-switch {
+    position: absolute;
+    right: 0;
+}
+
+#tab-page {
+    padding-top: 1vw;
+}
+
+.overview-info {
+    position: absolute;
+    left: 10vw;
+}
+
+.overview-header {
+    font-weight: 700;
+}
+
+.overview-line {
+    display: flex;
+    position: relative;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+}
