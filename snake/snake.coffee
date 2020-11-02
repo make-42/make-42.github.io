@@ -205,12 +205,16 @@ $(document).ready ->
   document.addEventListener 'keydown', (event) ->
     switch event.keyCode
       when 38
-        angle = 0
+        if positions[positions.length - 2][1] - (positions[positions.length - 1][1]) != 0 - 1
+          angle = 0
       when 39
-        angle = 1
+        if positions[positions.length - 2][0] - (positions[positions.length - 1][0]) != 1
+          angle = 1
       when 40
-        angle = 2
+        if positions[positions.length - 2][1] - (positions[positions.length - 1][1]) != 1
+          angle = 2
       when 37
-        angle = 3
+        if positions[positions.length - 2][0] - (positions[positions.length - 1][0]) != 0 - 1
+          angle = 3
     return
   return

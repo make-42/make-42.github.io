@@ -161,16 +161,24 @@ $(document)
         document.addEventListener('keydown', function(event) {
             switch (event.keyCode) {
                 case 38:
+                    if(positions[positions.length-2][1]-positions[positions.length-1][1] != 0-1){
                     angle = 0;
+                    }
                     break;
                 case 39:
-                    angle = 1;
+                if(positions[positions.length-2][0]-positions[positions.length-1][0] != 1){
+                angle = 1;
+                }
                     break;
                 case 40:
-                    angle = 2;
+                if(positions[positions.length-2][1]-positions[positions.length-1][1] != 1){
+                angle = 2;
+                }
                     break;
                 case 37:
-                    angle = 3;
+                if(positions[positions.length-2][0]-positions[positions.length-1][0] != 0-1){
+                angle = 3;
+                }
                     break;
             }
         });
