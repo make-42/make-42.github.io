@@ -55,12 +55,12 @@ table {
     border-spacing: 0px;
 }
 
-.torrent-hover {
-    background: var(--hover-color);
+.torrent-odd {
+    background-color: #55555510;
 }
 
-.torrent-selected {
-    background: var(--select-color);
+.torrent-even {
+    background-color: #55555520;
 }
 
 .progress-bar-container {
@@ -100,7 +100,7 @@ table {
 
 .overview-info {
     position: absolute;
-    left: 10vw;
+    left: 190px;
 }
 
 .overview-header {
