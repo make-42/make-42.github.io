@@ -38,13 +38,19 @@ function updateunderscoreposition(){
   var typingwords = document.getElementsByClassName("typing-words")[0]
   var typingletterindicator = document.getElementsByClassName("typing-letter-indicator")[0]
   typingletterindicator.style.top=typingwords.children[testposition].offsetTop+"px"
-  typingletterindicator.style.left=typingwords.children[testposition].offsetLeft+((0-scaleoffset)*window.innerWidth/100)+"px"
+  var offset = typingwords.children[testposition].offsetLeft
+  typingletterindicator.style.left=offset+"px"
 }
 
 function updateunderscorescale(){
-  var typingletterindicator = document.getElementsByClassName("typing-letter-indicator")[0];
-  typingletterindicator.style.transform="scaleX("+(teststatus+Math.abs(scaleoffset))+")";
-  scaleoffset /= 1.5;
+  //var typingletterindicator = document.getElementsByClassName("typing-letter-indicator")[0];
+  //typingletterindicator.style.transform="scaleX("+(teststatus+Math.abs(scaleoffset))+")";
+  //scaleoffset /= 1.5;
+  //if(scaleoffset>0){
+  //scaleoffset--;
+//} else if(scaleoffset<0){
+//  scaleoffset++;
+//}
 }
 
 function setuptypingtest(){
@@ -86,9 +92,9 @@ setInterval(updateunderscorescale,50);
 document.addEventListener('keydown', function(event) {
   if(testposition+1 == testlength){
     teststatus = 0;
+    document.getElementsByClassName("typing-letter-indicator")[0].style.transform = "skewX(180deg) scaleX(0)";
   }
   if(testposition==testlength){
-    teststatus = 0;
     console.log("test end")
     if (event.keyCode == 27){
       setuptypingtest();
