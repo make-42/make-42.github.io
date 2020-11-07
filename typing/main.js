@@ -43,7 +43,7 @@ function updateunderscoreposition(){
 
 function updateunderscorescale(){
   var typingletterindicator = document.getElementsByClassName("typing-letter-indicator")[0];
-  typingletterindicator.style.transform="scaleX("+(teststatus+scaleoffset)+")";
+  typingletterindicator.style.transform="scaleX("+(teststatus+Math.abs(scaleoffset))+")";
   scaleoffset /= 1.2;
 }
 
