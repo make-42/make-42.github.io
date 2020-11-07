@@ -1,3 +1,5 @@
+testcompleted = 1
+scaleoffset = 0.0
 words = 15
 wordlist = [
   'as'
@@ -1007,6 +1009,7 @@ testlength = 0
 teststartdate = 0
 testerrors = 0
 timecompleted = 0
+teststatus = 0
 
 displayresults = ->
   typingresults = document.getElementsByClassName('typing-results')[0]
@@ -1020,17 +1023,20 @@ updateunderscoreposition = ->
   typingwords = document.getElementsByClassName('typing-words')[0]
   typingletterindicator = document.getElementsByClassName('typing-letter-indicator')[0]
   typingletterindicator.style.top = typingwords.children[testposition].offsetTop + 'px'
-  typingletterindicator.style.left = typingwords.children[testposition].offsetLeft + (testposition - lastposition) * window.innerWidth / 1000 + 'px'
-  typingletterindicator.style.transform = 'scaleX(' + 1 + (testposition - lastposition) / 4 + ')'
-  if testposition == testlength
-    typingletterindicator.style.transform = 'scaleX(0)'
-  lastposition = testposition
+  typingletterindicator.style.left = typingwords.children[testposition].offsetLeft + (0 - scaleoffset) * window.innerWidth / 100 + 'px'
+  return
+
+updateunderscorescale = ->
+  typingletterindicator = document.getElementsByClassName('typing-letter-indicator')[0]
+  typingletterindicator.style.transform = 'scaleX(' + teststatus + scaleoffset + ')'
+  scaleoffset /= 1.2
   return
 
 setuptypingtest = ->
   testtarget = ''
   testposition = 0
   testerrors = 0
+  teststatus = 1
   typingwords = document.getElementsByClassName('typing-words')[0]
   typingwords.innerHTML = ''
   i = undefined
@@ -1077,9 +1083,13 @@ String::toHHMMSS = ->
 $(document).ready ->
   setuptypingtest()
   setInterval updateunderscoreposition, 50
+  setInterval updateunderscorescale, 50
   return
 document.addEventListener 'keydown', (event) ->
+  if testposition + 1 == testlength
+    teststatus = 0
   if testposition == testlength
+    teststatus = 0
     console.log 'test end'
     if event.keyCode == 27
       setuptypingtest()
@@ -1092,16 +1102,20 @@ document.addEventListener 'keydown', (event) ->
     if String.fromCharCode(event.keyCode).toLowerCase() == testtarget[testposition]
       typingwords.children[testposition].className = 'typing-letter-confirmed'
       testposition++
+      scaleoffset++
     else if event.keyCode == 8
       if testposition != 0
         if typingwords.children[testposition - 1].className == 'typing-letter-error'
           testerrors--
+          scaleoffset--
         typingwords.children[testposition - 1].className = 'typing-letter-unconfirmed'
         testposition--
+        scaleoffset--
     else
       typingwords.children[testposition].className = 'typing-letter-error'
       testposition++
       testerrors++
+      scaleoffset++
     displayresults()
     timecompleted = Date.now()
   return
