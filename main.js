@@ -55,13 +55,14 @@ setInterval(function() {
 setInterval(function() {
     try {
         //Set Dates
+        timezoneoffset = new Date().getTimezoneOffset()*60000
         now = new Date();
-        birth = new Date("2007/02/12");
+        birth = new Date("2007/02/13 00:00:00"); //Born within February 13 2007 00:00:00 to February 13 2007 01:00:00 UTC+00:00
 		lastbirthday = new Date("2020/02/12")
 		nextbirthday = new Date("2021/02/12")
         //Calculate Differences
-        diffsecs = Math.floor((now - birth) / 1000);
-        diffdays = Math.floor((now - birth) / (1000 * 3600 * 24));
+        diffsecs = Math.floor((now - birth+timezoneoffset) / 1000);
+        diffdays = Math.floor((now - birth+timezoneoffset) / (1000 * 3600 * 24));
 		// Render Different Units Progress Bars
 		/*
 		birthdayprogress = (now-lastbirthday)/(nextbirthday-lastbirthday);
