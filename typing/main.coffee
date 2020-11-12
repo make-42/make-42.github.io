@@ -1069,6 +1069,12 @@ displayhash = ->
   console.log timecompleted + ';' + testtarget + ';' + testposition + ';' + lastposition + ';' + testlength + ';' + teststartdate + ';' + testerrors
   return
 
+triggerend = ->
+  if testposition == testlength
+    teststatus = 0
+    document.getElementsByClassName('typing-letter-indicator')[0].style.transform = 'translateX(-100vw) scaleX(22)'
+  return
+
 Array::sample = ->
   @[Math.floor(Math.random() * @length)]
 
@@ -1092,9 +1098,6 @@ $(document).ready ->
   setInterval updateunderscorescale, 50
   return
 document.addEventListener 'keydown', (event) ->
-  if testposition + 1 == testlength
-    teststatus = 0
-    document.getElementsByClassName('typing-letter-indicator')[0].style.transform = 'skewX(180deg) scaleX(0)'
   if testposition == testlength
     console.log 'test end'
     if event.keyCode == 27
@@ -1109,6 +1112,8 @@ document.addEventListener 'keydown', (event) ->
       typingwords.children[testposition].className = 'typing-letter-confirmed'
       testposition++
       scaleoffset++
+      if testposition == testlength
+        triggerend()
     else if event.keyCode == 8
       if testposition != 0
         if typingwords.children[testposition - 1].className == 'typing-letter-error'
@@ -1122,6 +1127,8 @@ document.addEventListener 'keydown', (event) ->
       testposition++
       testerrors++
       scaleoffset++
+      if testposition == testlength
+        triggerend()
     displayresults()
     timecompleted = Date.now()
   return

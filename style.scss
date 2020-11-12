@@ -716,6 +716,8 @@ h1 {
     font-size: 2vw;
     text-decoration: underline;
     transition: top 0.2s ease, left 0.2s ease, transform 0.2s ease;
+    animation: loadletterindicator 0.2s ease;
+
 }
 .matrix-widget {
     background: var(--bg-color-clear);
@@ -734,6 +736,15 @@ h1 {
 }
 
 /* Animation */
+
+@keyframes loadletterindicator{
+    0% {
+        transform: translateX(-100vw) scaleX(22);
+    }
+    100% {
+        transform: translateX(0vw) scaleX(1);
+    }
+}
 
 @keyframes scrollletters {
     0% {
