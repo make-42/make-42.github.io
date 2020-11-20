@@ -9,6 +9,7 @@
 
 /* Setting Variables */
 :root {
+    background: #2f0025; // Most common color in background
     /* --bg-color-dark: #313247; */
     /* --bg-color-dark: url(./assets/images/background.png); */
     --bg-color-clear: #00000020;
@@ -20,7 +21,6 @@
     --text-color-confirmed: #00FF00BB;
     --text-color-error: #FF0000BB;
     --banner-one-scroll-pos: center;
-
     /* Scrollbar Styling */
     /* Firefox */
     scrollbar-color: var(--text-color-dark) var(--bg-color-light);
@@ -28,20 +28,19 @@
 }
 
 /* Chrome */
-body::-webkit-scrollbar {
-    width: 0.5vw;
+::-webkit-scrollbar {
+    width: 0px;
 }
 
-body::-webkit-scrollbar-thumb {
-    background-color: var(--text-color-light);
-    border-radius: 1vw;
-}
-
-/* Setting Background */
 body {
     margin: 0;
     opacity: 1;
     transition: opacity 1s ease;
+    background: url(./assets/images/jr-korpa-jy6BJNpEPHI-unsplash.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
 
 .layer3 {
@@ -53,14 +52,10 @@ body {
 }
 
 .layer4 {
-    background: url(./assets/images/jr-korpa-jy6BJNpEPHI-unsplash.webp);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
     transition: background-position 0.05s linear;
-    min-height: 100vh;
     position:relative;
 }
+
 
 .page {
     background: var(--bg-color-dark);
