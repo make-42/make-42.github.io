@@ -1,6 +1,4 @@
-$(document).ready(function() {
-document.getElementsByClassName("resume")[0].style.transform = "scale(1)";
-});
+
 
 
 // Skill Score List
@@ -59,5 +57,5 @@ $(document).ready(function() {
         document.getElementsByClassName("resume-skill-rating")[9].style.filter = filters[9];
         document.getElementsByClassName("resume-skill-rating")[9].style.transform = transform;
     }, 450);
-    
+
 });*/
