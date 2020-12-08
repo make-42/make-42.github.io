@@ -43,7 +43,6 @@ updateweather = ->
 
   ### Widget Animations ###
 
-  document.getElementsByClassName('weather')[0].style.transform = 'rotate(0deg)'
   $.get url, (data, textStatus, jqXHR) ->
 
     ### Parse Data ###
@@ -201,6 +200,7 @@ updateweather = ->
       i++
     ctx.stroke()
     ctx.closePath()
+    document.getElementsByClassName('icon')[0].style.transform = 'scale(1)'
     return
   console.log 'updated'
   return

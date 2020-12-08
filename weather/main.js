@@ -34,7 +34,6 @@ function updateweather() {
     /* Get stylesheet */
     var style = getComputedStyle(document.body);
     /* Widget Animations */
-    document.getElementsByClassName("weather")[0].style.transform = "rotate(0deg)";
     $.get(url,
         function(data, textStatus, jqXHR) {
             /* Parse Data */
@@ -190,7 +189,7 @@ function updateweather() {
         }
         ctx.stroke();
         ctx.closePath();
-
+        document.getElementsByClassName("icon")[0].style.transform = "scale(1)";
     });
     console.log("updated");
 }

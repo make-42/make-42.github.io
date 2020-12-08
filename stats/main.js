@@ -34,7 +34,7 @@ function updatepeopleinspace() {
         function(data, textStatus, jqXHR) {
             peoplearray = data.people;
             htmlend = "";
-            document.getElementsByClassName("peopleinspace")[0].style.height = 5+(9*peoplearray.length)"51vw";
+            document.getElementsByClassName("peopleinspace")[0].style.height = ((9*peoplearray.length)+5)+"vw";
             /* Make containers for each person */
             for (person of peoplearray) {
                 /* Calculate days spent in space in current mission */
@@ -44,11 +44,11 @@ function updatepeopleinspace() {
                 /* Calculate Differences */
                 diffdays = " (" + Math.floor((now - launch) / (1000 * 3600 * 24)).toString() + " Days)";
                 /* Set HTML */
-                htmlend += "<div class=\"person\">";
-                htmlend += "<img src=\"" + personicon + "\" class=\"personicon\" alt=\"" + person.bio + "\" title=\"" + person.bio + "\"></img>"
-                htmlend += "<div class=\"personname\">" + person.name + diffdays + "</div>";
-                htmlend += "<div class=\"craft\">" + person.location;
-                htmlend += "<img src=\"" + shipicon + "\" class=\"crafticon\"></img>";
+                htmlend += "<div class=\"person animonload1\">";
+                htmlend += "<img src=\"" + personicon + "\" class=\"personicon animonload1\" alt=\"" + person.bio + "\" title=\"" + person.bio + "\"></img>"
+                htmlend += "<div class=\"personname animonload1\">" + person.name + diffdays + "</div>";
+                htmlend += "<div class=\"craft animonload1\">" + person.location;
+                htmlend += "<img src=\"" + shipicon + "\" class=\"crafticon animonload1\"></img>";
                 htmlend += "</div></div><br>";
 
             }
