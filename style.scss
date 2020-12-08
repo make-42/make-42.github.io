@@ -952,7 +952,7 @@ h1 {
             transform: translate(0px, -20px);
             opacity: 0;
         }
-        #{$i*$prc} {
+        #{min($i*$prc,99.99%)} {
             transform: translate(0px, -20px);
             opacity: 0;
         }
