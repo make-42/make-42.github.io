@@ -9,7 +9,6 @@ html
   head
     // Imports
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
-    |     
     script(src='https://cdnjs.cloudflare.com/ajax/libs/numbered/1.1.0/index.min.js')
     // Stylesheet
     link(rel='stylesheet', type='text/css', href='style.min.css')
@@ -22,134 +21,58 @@ html
     // Script for all pages
     script(src='allpages.min.js')
     // Metadata
-    meta(property='og:type', content='website')
-    |     
-    meta(property='og:url', content='https://techadvancedcyborg.github.io/')
-    |     
-    meta(property='og:title', content="OnTake/TechAdvancedCyborg's website")
-    |     
+    meta(property='og:type', content='website')    
+    meta(property='og:url', content='https://techadvancedcyborg.github.io/')    
+    meta(property='og:title', content="OnTake/TechAdvancedCyborg's website")   
     meta(property='og:description', content='Whoa! OnTake/TechAdvancedCyborg made a website? Yes, yes he did. And he is very proud of the design that went into it.')
-    |     
     meta(property='og:image', content='https://techadvancedcyborg.github.io/assets/images/886b0b92-d101-4a59-94f7-e76a8809a22d.webp')
   body
     .layer4
       .page
         // Menubar
         .menubar.animonload1
-          a.menubutton.menubutton-top-left.animonload1(href='/') Home
-          | &#x9;&#x9;&#x9;      
-          a.menubutton.menubutton-mid.animonload1(href='/blog/') Blog
-          |             
-          a.menubutton.menubutton-mid.animonload1(href='/resume/') Resume
-          |             
-          a.menubutton.menubutton-top-right.animonload1(href='/weather/') Weather
-        |         
+          a.menubutton.menubutton-top-left.animonload1(href='/') Home   
+          a.menubutton.menubutton-mid.animonload1(href='/blog/') Blog        
+          a.menubutton.menubutton-mid.animonload1(href='/resume/') Resume           
+          a.menubutton.menubutton-top-right.animonload1(href='/weather/') Weather      
         .menubar.animonload1
           a.menubutton.menubutton-bottom-left.animonload1(href='/stats/') Stats
-          | &#x9;&#x9;&#x9;      
-          a.menubutton.menubutton-mid.animonload1(href='/tools/') Tools
-          |             
-          a.menubutton.menubutton-mid.animonload1(href='/typing/') Typing
-          |             
+          a.menubutton.menubutton-mid.animonload1(href='/tools/') Tools        
+          a.menubutton.menubutton-mid.animonload1(href='/typing/') Typing           
           a.menubutton.menubutton-bottom-right.animonload1(href='/matrix/') Matrix
         // Typing text effect
         h1.typing-text.animonload1 techadvancedcyborg.github.io
-        |         
-        br
         // Information Header
         h1.animonload1 Information
-        |         
         .text-container-one.animonload1
           #information.text.animonload1
-            | Hi ! My name is Louis Dalibard and I like to code. I&apos;m 
+            | Hi ! My name is Louis Dalibard and I like to code.       
+            br
+            | I&apos;m 
             span.age.text.animonload1
-            //
-              <div class="time-progress-container">
-              <div class="time-progress-bar-container">
-              <div class="time-progress-minutes time-progress-bar">
-              </div>
-              </div>
-              <div class="time-progress-bar-container">
-              <div class="time-progress-hours time-progress-bar">
-              </div>
-              </div>
-              <div class="time-progress-bar-container">
-              <div class="time-progress-days time-progress-bar">
-              </div>
-              </div>
-              <div class="time-progress-bar-container">
-              <div class="time-progress-months time-progress-bar">
-              </div>
-              </div>
-              <div class="time-progress-bar-container">
-              <div class="time-progress-years time-progress-bar">
-              </div>
-              </div>
-        |         
-        br
+        .page-separator.animonload1
         // Projects Header
         h1.animonload1 Projects
-        |         
-        br
-        |         
         #project-one.animonload1
-          .text.project-title.animonload1 Neko Vault
-          br
-          |           
+          .text.project-title.animonload1 Neko Vault        
           a.animonload1(href='https://github.com/TechAdvancedCyborg/NekoVault')
-            img.img-center.animonload1(src='./assets/images/NekoVault.webp')
-          |           
+            img.img-center.animonload1(src='./assets/images/NekoVault.webp')        
           .text.text-smaller.align-center.animonload1 A minimalistic GTK3 file encryption program writen in Go.
-        |         
-        br
-        // Downloads Header
-        h1.animonload1 Downloads
-        |         
-        .download-div.animonload1
-          // Open Notes Download
-          a.text.download-div-text.animonload1 Open Notes
-          |             
-          a.download-button.animonload1(href='https://github.com/TechAdvancedCyborg/OpenNotes/releases')
-            img.download-icon.animonload1(src='assets/images/download-icon.png')
-          |             
-          br
-          // TTACT's Anime Player Download
-          a.text.download-div-text.animonload1 TTACT&apos;s Anime Player
-          |             
-          a.download-button.animonload1(href='https://github.com/TechAdvancedCyborg/TTACT-s-Anime-Player-Revamped/releases')
-            img.download-icon.animonload1(src='assets/images/download-icon.png')
-          |             
-          br
-          // osu! Rank Curves Download
-          a.text.download-div-text.animonload1 osu! Rank Curves
-          |             
-          a.download-button.animonload1(href='https://github.com/TechAdvancedCyborg/osu-RankCurves')
-            img.download-icon.animonload1(src='assets/images/download-icon.png')
-          |             
-          br
-        |         
-        br
+        .page-separator.animonload1
         // Contact Header
         h1.animonload1 Contact me
-        |         
         .text-container-two.animonload1
           a.text.animonload1
             | Email address: 
-            a.text.animonload1(href='mailto:louis.dalibad@gmail.com') louis.dalibard@gmail.com
-          |             
-          br
-          |             
+            a.text.animonload1(href='mailto:louis.dalibad@gmail.com') louis.dalibard@gmail.com         
+          br          
           a.text.animonload1
             | Discord: 
             a.text.animonload1(href='https://discord.gg') OnTake#5344
-          |             
-          br
-          |             
+          br        
           a.text.animonload1
             | Github: 
             a.text.animonload1(href='https://github.com/TechAdvancedCyborg') TechAdvancedCyborg
-        |         
-        br
         // Credits
         .credits.animonload1
           | Credits
@@ -163,6 +86,5 @@ html
           | &bull; Download icon made by Pixel perfect from www.flaticon.com
           br
           | &bull; TechAdvancedCyborg, 2020. #{hash}
-        |         
         .gnome-easter-egg
           img.gnome-image(src='./assets/images/gnome.png')

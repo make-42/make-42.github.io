@@ -81,16 +81,14 @@ body {
 .text {
     color: var(--text-color-light);
     font-family: "JetBrains Mono";
-    font-size: 3vw;
-    animation-name: contentload;
-    animation-duration: 1s;
+    font-size: 25px;
 }
 
 /* Headers */
 h1 {
     color: var(--text-color-light);
     font-family: "JetBrains Mono";
-    font-size: 3vw;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -106,18 +104,11 @@ h2 {
 }
 
 .text-container-one {
-    padding: 5vw;
+    padding: 20px 5vw 20px 5vw;
 }
 
 .text-container-two {
-    padding: 5vw;
-}
-
-h1 {
-    color: var(--text-color-light);
-    font-family: "JetBrains Mono";
-    font-size: 3vw;
-    text-align: center;
+    text-align:center;
 }
 
 .credits {
@@ -134,6 +125,7 @@ h1 {
 #information {
     transform: translate(-20px, 0px) skew(10deg, 0deg);
     color: #00000000;
+    text-align: center;
     transition: transform 1s ease, color 1s ease;
 }
 
@@ -172,7 +164,7 @@ h1 {
 /* Menubar */
 .menubar {
     font-family: "JetBrains Mono";
-    font-size: 3vw;
+    font-size: 40px;
     color: var(--text-color-light);
     display: flex;
     text-align: center;
@@ -186,13 +178,13 @@ h1 {
   border-radius: 0vw 0vw 0vw 2vw;
 }
 .menubutton-top-left{
-  border-radius: 2vw 0vw 0vw 0vw;
+  //border-radius: 2vw 0vw 0vw 0vw;
 }
 .menubutton-mid{
   border-radius: 0vw 0vw 0vw 0vw;
 }
 .menubutton-top-right{
-  border-radius: 0vw 2vw 0vw 0vw;
+  //border-radius: 0vw 2vw 0vw 0vw;
 }
 .menubutton-bottom-right{
   border-radius: 0vw 0vw 2vw 0vw;
@@ -369,46 +361,6 @@ h1 {
     transition: width 1s ease, color 1s ease;
 }
 
-/*Download Section Styling*/
-.download-div {
-    margin: 5vw;
-    position: relative;
-    background: #00000020;
-    padding: 0.5vw;
-    border-radius: 2vw;
-    transition: box-shadow 1s ease;
-    box-shadow: 0px 0px 0px 0px #0005;
-}
-
-.download-div:hover {
-    box-shadow: 0px 0px 20px 5px #0005;
-}
-
-.download-div-text {
-    padding: 4.5vw;
-}
-
-.download-button {
-    position: absolute;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 0.3vw;
-    border-radius: 1vw;
-    right: 2vw;
-    background-color: var(--bg-color-dark);
-    display: inline-block;
-    transition: box-shadow 1s ease;
-    box-shadow: 0px 0px 0px 0px #0005;
-}
-
-.download-button:hover {
-    box-shadow: 0px 0px 20px 5px #0005;
-}
-
-.download-icon {
-    height: 2.6vw;
-}
-
 .img-center {
     display: block;
     margin-left: auto;
@@ -427,11 +379,12 @@ h1 {
 /* Projects */
 .project-title {
     text-align: center;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 #project-one {
     padding: 0.5vw;
-    margin: 5vw;
     border-radius: 3vw;
 }
 

@@ -91,7 +91,7 @@ setInterval(function() {
   for (var i = 0; i < stringage.length; i++) {
   if (ageelement.getElementsByClassName("agestring")[i].innerHTML != stringage[i]){
     document.getElementsByClassName("age")[0].children[i].innerHTML = stringage[i];
-    document.getElementsByClassName("age")[0].children[i].style.padding="1vw";
+    document.getElementsByClassName("age")[0].children[i].style.padding="0px 10px 0px 10px";
   }
   else{
     document.getElementsByClassName("age")[0].children[i].style.padding="0%";
