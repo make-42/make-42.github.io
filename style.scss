@@ -49,11 +49,10 @@ $dur : 1.5s;
 
 body {
     margin: 0;
-    opacity: 1;
-    transition: opacity 1s ease;
-    background-image:url("https://media.notify.moe/images/elements/noise-strong.png");
+    background-image: url(./assets/images/bgwavestile.png);
     background-position: center;
     min-height: 100vh;
+    background-position-x: 0px;
 }
 
 .layer3 {
