@@ -128,9 +128,10 @@ h2 {
     transition: transform 1s ease, color 1s ease;
 }
 
-.age {
-    color: #00000000;
-    transition: color 1s ease;
+@media (max-width: 900px) {
+    #information {
+        font-size: 2vw;
+    }
 }
 
 .agestring {
