@@ -63,6 +63,18 @@ body {
     animation-duration: 0.2s;
 }
 
+.progressbar{
+  height: 0px;
+  background: #DFDFDF;
+  transition: height 1s ease;
+}
+.progressbar-progress{
+  height: 0px;
+  width: 100vw;
+  background: white;
+  transition: width 1s ease, height 1s ease, background 1s ease;
+}
+
 @media (max-width: 800px), ((hover: none) and (pointer: coarse)) {
 .schedule-element {
     position: relative;

@@ -1,3 +1,5 @@
+var currentevent;
+
 Date.prototype.getWeekNumber = function() {
     var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
     var dayNum = d.getUTCDay() || 7;
@@ -22,6 +24,47 @@ function loaddefault() {
     })
 }
 
+function updatecurrentevent(){
+  foundevent = false;
+  currenttimestamp = (new Date().getHours()*60)+(new Date().getMinutes())
+  scheduledata = JSON.parse(localStorage.getItem("schedule-data"))
+  week = scheduledata["weeks"][(new Date()
+          .getFullYear())
+      .toString()
+  ][(new Date()
+          .getWeekNumber()-1)
+      .toString()
+  ]
+  day = scheduledata["schedule"][week][(new Date().getDay()-1)]
+  day.forEach(function(scheduleelement) {
+    if (currenttimestamp >= parseInt(scheduleelement["start"])){
+      if (currenttimestamp < parseInt(scheduleelement["end"])){
+       currentevent =  scheduleelement;
+       foundevent = true;
+    }}
+  })
+  if (!foundevent){
+      currentevent = {start: "0", end: "0", name:"NULLEVENT", place: "null", color: "#FFFFFF"}
+  }
+
+}
+
+function updateprogressbar(){
+  updatecurrentevent()
+  currenttimestamp = (new Date().getHours()*60)+(new Date().getMinutes())+(new Date().getSeconds()/60)
+  if (currentevent["name"] != "NULLEVENT"){
+    document.getElementsByClassName("progressbar")[0].style.height = "10px";
+    document.getElementsByClassName("progressbar-progress")[0].style.height = "10px";
+    document.getElementsByClassName("progressbar-progress")[0].style.width = ((currenttimestamp-parseInt(currentevent["start"]))/(parseInt(currentevent["end"])-parseInt(currentevent["start"])))*100+"vw";
+    document.getElementsByClassName("progressbar-progress")[0].style.background = currentevent["color"];
+  } else{
+    document.getElementsByClassName("progressbar")[0].style.height = "";
+    document.getElementsByClassName("progressbar-progress")[0].style.height = "";
+    document.getElementsByClassName("progressbar-progress")[0].style.background = "";
+    document.getElementsByClassName("progressbar-progress")[0].style.width = "";
+  }
+}
+
 function formattimestamps(timestamp) {
     hours = Math.floor(timestamp / 60)
     minutes = Math.round((timestamp / 60 - hours) * 60)
@@ -42,8 +85,7 @@ function loadcalendar(selectedtab) {
             .getFullYear())
         .toString()
     ][(new Date()
-            .getWeekNumber())
-        .toString()
+            .getWeekNumber()-1).toString()
     ]
     day = scheduledata["schedule"][week][selectedtab.id[selectedtab.id.length - 1] - 1]
     if (day.length != 0) {
@@ -102,4 +144,5 @@ $(document)
         document.getElementById("FileAttachment")
             .addEventListener('change', onChange);
         setInterval(updateclock, 500);
+        setInterval(updateprogressbar, 1000);
     });
