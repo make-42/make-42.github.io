@@ -57,11 +57,13 @@ function updateprogressbar(){
     document.getElementsByClassName("progressbar-progress")[0].style.height = "10px";
     document.getElementsByClassName("progressbar-progress")[0].style.width = ((currenttimestamp-parseInt(currentevent["start"]))/(parseInt(currentevent["end"])-parseInt(currentevent["start"])))*100+"vw";
     document.getElementsByClassName("progressbar-progress")[0].style.background = currentevent["color"];
+    document.getElementsByClassName("progressbar-progress")[0].style.boxShadow = currentevent["color"] + " 1px 1px 10px";
   } else{
     document.getElementsByClassName("progressbar")[0].style.height = "";
     document.getElementsByClassName("progressbar-progress")[0].style.height = "";
-    document.getElementsByClassName("progressbar-progress")[0].style.background = "";
     document.getElementsByClassName("progressbar-progress")[0].style.width = "";
+    document.getElementsByClassName("progressbar-progress")[0].style.background = "";
+    document.getElementsByClassName("progressbar-progress")[0].style.boxShadow = "white 0px 0px 0px";
   }
 }
 

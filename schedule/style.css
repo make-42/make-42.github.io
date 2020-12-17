@@ -62,7 +62,7 @@ body {
   height: 0px;
   width: 100vw;
   background: white;
-  transition: width 1s ease, height 1s ease, background 1s ease;
+  transition: width 1s ease, height 1s ease, background 1s ease, box-shadow 1s ease;
 }
 .schedule-element {
     position: relative;
