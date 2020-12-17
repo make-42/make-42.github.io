@@ -71,7 +71,7 @@ body {
     height: 25vw;
     color: rgba(0, 0, 0, .6);
     box-shadow: 1px 1px 10px black;
-    animation-name: schedule-element-appear-small;
+    animation-name: schedule-element-appear-big;
     animation-duration: 0.2s;
 }
 
