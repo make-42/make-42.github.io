@@ -52,16 +52,6 @@ body {
     animation-name: opacity-appear;
     animation-duration: 0.2s;
 }
-.schedule-element {
-    position: relative;
-    background: var(--mdc-theme-primary);
-    width: 25vw;
-    height: 25vw;
-    color: rgba(0, 0, 0, .6);
-    box-shadow: 1px 1px 10px black;
-    animation-name: schedule-element-appear-big;
-    animation-duration: 0.2s;
-}
 
 .progressbar{
   height: 0px;
@@ -74,8 +64,18 @@ body {
   background: white;
   transition: width 1s ease, height 1s ease, background 1s ease;
 }
+.schedule-element {
+    position: relative;
+    background: var(--mdc-theme-primary);
+    width: 25vw;
+    height: 25vw;
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 1px 1px 10px black;
+    animation-name: schedule-element-appear-small;
+    animation-duration: 0.2s;
+}
 
-@media (max-width: 800px), ((hover: none) and (pointer: coarse)) {
+@media (max-width: 1200px), ((hover: none) and (pointer: coarse)) {
 .schedule-element {
     position: relative;
     background: var(--mdc-theme-primary);
