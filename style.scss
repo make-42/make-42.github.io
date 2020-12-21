@@ -76,6 +76,31 @@ body {
     position: relative;
 }
 
+.titles {
+  position: absolute;
+width: 1px;
+height: 100%;
+background: var(--text-color-light);
+top: 0px;
+left: 1vw;
+z-index: -10;
+}
+
+.side-title#information-side-title{
+top: -webkit-calc(15% + 50px);
+}
+.side-title {
+  color: var(--text-color-light);
+position: absolute;
+padding: 10px;
+left: -20px;
+background-color: #252030;
+font-family: "JetBrains Mono";
+font-size: 18px;
+writing-mode: vertical-rl;
+text-orientation: mixed;
+}
+
 /* Setting Text Styling */
 .text {
     color: var(--text-color-light);
