@@ -82,15 +82,24 @@ body {
     position: absolute;
     width: 10px;
     border-radius: 10px;
-    height: 16%;
     background: var(--text-color-light);
-    top: 0px;
-    left: 1vw;
     z-index: -10;
 }
-
-.side-title#information-side-title{
-top: 100%;
+#titles-information {
+    top: 0px;
+    height: 16%;
+    left: 21px;
+}
+#titles-projects {
+    top: 0px;
+    height: 50%;
+    left: 7px;
+}
+#information-side-title {
+    top: 100%;
+}
+#projects-side-title{
+    top:100%;
 }
 .side-title {
   color: var(--text-color-light);
