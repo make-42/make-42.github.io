@@ -82,34 +82,40 @@ body {
     position: absolute;
     width: 10px;
     border-radius: 10px;
-    background: var(--text-color-light);
+    background: #c5c3c8;
     z-index: -10;
 }
 #titles-information {
-    top: 0px;
-    height: 16%;
+    top: 15.1%;
+    height: 1%;
     left: 21px;
 }
 #titles-projects {
-    top: 0px;
-    height: 50%;
+    top: 15.1%;
+    height: 21%;
     left: 7px;
 }
-#information-side-title {
-    top: 100%;
+#titles-nekovault {
+    top: 35%;
+    height: 15%;
+    left: 21px;
 }
-#projects-side-title{
-    top:100%;
+#titles-connector-1 {
+    top: -14px;
+    height: 26px;
+    left: -6px;
+    transform: rotate(-45deg);
 }
 .side-title {
-  color: var(--text-color-light);
-position: absolute;
-padding: 10px;
-left: -17px;
-font-family: "JetBrains Mono";
-font-size: 18px;
-writing-mode: vertical-rl;
-text-orientation: mixed;
+    color: var(--text-color-light);
+    position: absolute;
+    padding: 10px;
+    left: -17px;
+    top: 100%;
+    font-family: "JetBrains Mono";
+    font-size: 18px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
 }
 
 /* Setting Text Styling */
