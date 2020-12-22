@@ -77,23 +77,24 @@ body {
 }
 
 .titles {
-  position: absolute;
-width: 1px;
-height: 100%;
-background: var(--text-color-light);
-top: 0px;
-left: 1vw;
-z-index: -10;
+    position: absolute;
+    width: 10px;
+    border-radius: 10px;
+    height: 16%;
+    background: var(--text-color-light);
+    top: 0px;
+    left: 1vw;
+    z-index: -10;
 }
 
 .side-title#information-side-title{
-top: -webkit-calc(15% + 50px);
+top: 100%;
 }
 .side-title {
   color: var(--text-color-light);
 position: absolute;
 padding: 10px;
-left: -20px;
+left: -17px;
 background-color: #252030;
 font-family: "JetBrains Mono";
 font-size: 18px;
