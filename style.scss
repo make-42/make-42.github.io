@@ -75,7 +75,9 @@ body {
     animation: loadpage 2s ease;
     position: relative;
 }
+.titles-container{
 
+}
 .titles {
     position: absolute;
     width: 10px;
@@ -95,7 +97,6 @@ top: 100%;
 position: absolute;
 padding: 10px;
 left: -17px;
-background-color: #252030;
 font-family: "JetBrains Mono";
 font-size: 18px;
 writing-mode: vertical-rl;
