@@ -55,14 +55,6 @@ body {
     background-position-x: 0px;
 }
 
-.layer3 {
-    background: url(./assets/images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    transition: background-position 0.05s linear;
-    min-height: 100vh;
-}
-
 .layer4 {
     transition: background-position 0.05s linear;
     position:relative;
@@ -75,9 +67,6 @@ body {
     animation: loadpage 2s ease;
     position: relative;
 }
-.titles-container{
-
-}
 .titles {
     position: absolute;
     width: 10px;
@@ -88,23 +77,28 @@ body {
 #titles-information {
     top: 15.1%;
     height: 1%;
-    left: 21px;
+    left: 35px;
 }
 #titles-projects {
     top: 15.1%;
     height: 21%;
-    left: 7px;
+    left: 21px;
 }
 #titles-nekovault {
     top: 35%;
     height: 15%;
-    left: 21px;
+    left: 35px;
 }
 #titles-connector-1 {
     top: -14px;
     height: 26px;
     left: -6px;
     transform: rotate(-45deg);
+}
+#titles-contact {
+    top: 15.1%;
+    height: 60%;
+    left: 7px;
 }
 .side-title {
     color: var(--text-color-light);
@@ -150,6 +144,7 @@ h2 {
 
 .text-container-two {
     text-align:center;
+    padding-top:40px
 }
 
 .credits {
