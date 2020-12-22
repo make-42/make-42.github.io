@@ -78,32 +78,32 @@ body {
     top: 15.1%;
     height: 1%;
     left: 35px;
-    animation: titles-load-1 1s ease;
+    animation: titles-load-1 1s linear;
 }
 #titles-projects {
     top: 15.1%;
     height: 21%;
     left: 21px;
-    animation: titles-load-2 1s ease;
+    animation: titles-load-2 1s linear;
 }
 #titles-nekovault {
     top: 35%;
     height: 15%;
     left: 35px;
-    animation: titles-load-4 1s ease;
+    animation: titles-load-4 1s linear;
 }
 #titles-connector-1 {
     top: -14px;
     height: 26px;
     left: -6px;
     transform: rotate(-45deg);
-    animation: titles-load-3 1s ease;
+    animation: titles-load-3 1s linear;
 }
 #titles-contact {
     top: 15.1%;
     height: 60%;
     left: 7px;
-    animation: titles-load-5 1s ease;
+    animation: titles-load-5 1s linear;
 }
 @keyframes titles-load-1{
     0%{
@@ -135,7 +135,7 @@ body {
         height: 0;
     }
 
-    60% {
+    42% {
         height: 26px;
     }
 }
@@ -144,11 +144,11 @@ body {
         height: 0;
     }
 
-    60% {
+    42% {
         height: 0;
     }
 
-    80% {
+    62% {
         height: 15%;
     }
 }
