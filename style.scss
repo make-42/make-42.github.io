@@ -69,7 +69,7 @@ body {
 }
 .titles {
     position: absolute;
-    width: 10px;
+    width: 5px;
     border-radius: 10px;
     background: #c5c3c8;
     z-index: -10;
@@ -93,9 +93,9 @@ body {
     animation: titles-load-4 3s linear;
 }
 #titles-connector-1 {
-    top: -14px;
-    height: 26px;
-    left: -6px;
+  top: -15px;
+  height: 22px;
+  left: -6.5px;
     transform: rotate(-45deg);
     animation: titles-load-3 3s linear;
 }
@@ -136,7 +136,7 @@ body {
     }
 
     42% {
-        height: 26px;
+        height: 22px;
     }
 }
 @keyframes titles-load-4 {
