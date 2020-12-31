@@ -1,9 +1,17 @@
 function getTimeRemaining(endtime){
   const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor( (total/1000) % 60 );
-  const minutes = Math.floor( (total/1000/60) % 60 );
-  const hours = Math.floor( (total/(1000*60*60)) % 24 );
-  const days = Math.floor( total/(1000*60*60*24) );
+  if(total < 0){
+    var seconds = 0;
+    var minutes = 0;
+    var hours = 0;
+    var days = 0;
+  } else {
+    var seconds = Math.floor( (total/1000) % 60 );
+  var minutes = Math.floor( (total/1000/60) % 60 );
+  var hours = Math.floor( (total/(1000*60*60)) % 24 );
+  var days = Math.floor( total/(1000*60*60*24) );
+  }
+  
 
   return {
     total,
@@ -46,7 +54,7 @@ document.getElementsByClassName("days")[0].innerHTML = ('0' +timeremaining.days)
       if (timeremaining.hours == 0){
         if (timeremaining.days == 0){
     a++;
-    document.getElementsByClassName("seconds")[0].style.fontSize=0;
+    document.getElementsByClassName("seconds")[0].style.fontSize=(40*a)+"px";
   }}}} else{
     document.getElementsByClassName("seconds")[0].style.fontSize=(40*a)+"px";
   }
