@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+.e{
+  font-size:40px;
+  color: #e2b714;
+  transition:font-size 1s ease;
+}
+.time{
+  display:flex;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Code Pro";
+}
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:#323437;
+  height:96vh;
+}
