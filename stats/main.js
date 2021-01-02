@@ -1,8 +1,8 @@
 /* Variables */
 var issurl = "http://api.open-notify.org/iss-now.json";
 var peopleinspaceurl = "https://cors-anywhere.herokuapp.com/www.howmanypeopleareinspacerightnow.com/peopleinspace.json";
-var shipicon = "assets/png/spring-swing-rocket.png";
-var personicon = "assets/png/kitty.png";
+var shipicon = "assets/png/spring-swing-rocket.pngY.png";
+var personicon = "assets/png/kitty.pngY.png";
 
 /* Get Request Function */
 function httpGetAsync(theUrl, callback) {

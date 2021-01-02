@@ -9,20 +9,20 @@ let ytextmultiplier = 2;
 let smoothing = 3;
 
 /* Variables */
-let sunicon = "assets/png/004-sun.png";
-let moonicon = "assets/png/027-moon phase.png";
-let cloudyicon = "assets/png/001-cloudy.png";
-let cloudynighticon = "assets/png/002-cloudy night.png";
-let cloudsandsunicon = "assets/png/003-clouds and sun.png";
-let thunderstormicon = "assets/png/006-thunderstorm.png";
-let rainicon = "assets/png/007-rain.png";
-let rainnighticon = "assets/png/014-rain.png";
-let heavyrainicon = "assets/png/008-heavy-rain.png";
-let stormicon = "assets/png/009-storm.png";
-let rainandsunicon = "assets/png/010-rain.png";
-let snowicon = "assets/png/011-snow.png";
-let fogicon = "assets/png/022-fog.png";
-let fognighticon = "assets/png/023-fog.png";
+let sunicon = "assets/png/004-sun.pngY.png";
+let moonicon = "assets/png/027-moon phase.pngY.png";
+let cloudyicon = "assets/png/001-cloudy.pngY.png";
+let cloudynighticon = "assets/png/002-cloudy night.pngY.png";
+let cloudsandsunicon = "assets/png/003-clouds and sun.pngY.png";
+let thunderstormicon = "assets/png/006-thunderstorm.pngY.png";
+let rainicon = "assets/png/007-rain.pngY.png";
+let rainnighticon = "assets/png/014-rain.pngY.png";
+let heavyrainicon = "assets/png/008-heavy-rain.pngY.png";
+let stormicon = "assets/png/009-storm.pngY.png";
+let rainandsunicon = "assets/png/010-rain.pngY.png";
+let snowicon = "assets/png/011-snow.pngY.png";
+let fogicon = "assets/png/022-fog.pngY.png";
+let fognighticon = "assets/png/023-fog.pngY.png";
 /* System Variables */
 let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&appid=" + appid;
 let urlonecall = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + appid;

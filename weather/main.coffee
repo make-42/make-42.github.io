@@ -11,20 +11,20 @@ smoothing = 3
 
 ### Variables ###
 
-sunicon = 'assets/png/004-sun.png'
-moonicon = 'assets/png/027-moon phase.png'
-cloudyicon = 'assets/png/001-cloudy.png'
-cloudynighticon = 'assets/png/002-cloudy night.png'
-cloudsandsunicon = 'assets/png/003-clouds and sun.png'
-thunderstormicon = 'assets/png/006-thunderstorm.png'
-rainicon = 'assets/png/007-rain.png'
-rainnighticon = 'assets/png/014-rain.png'
-heavyrainicon = 'assets/png/008-heavy-rain.png'
-stormicon = 'assets/png/009-storm.png'
-rainandsunicon = 'assets/png/010-rain.png'
-snowicon = 'assets/png/011-snow.png'
-fogicon = 'assets/png/022-fog.png'
-fognighticon = 'assets/png/023-fog.png'
+sunicon = 'assets/png/004-sun.pngY.png'
+moonicon = 'assets/png/027-moon phase.pngY.png'
+cloudyicon = 'assets/png/001-cloudy.pngY.png'
+cloudynighticon = 'assets/png/002-cloudy night.pngY.png'
+cloudsandsunicon = 'assets/png/003-clouds and sun.pngY.png'
+thunderstormicon = 'assets/png/006-thunderstorm.pngY.png'
+rainicon = 'assets/png/007-rain.pngY.png'
+rainnighticon = 'assets/png/014-rain.pngY.png'
+heavyrainicon = 'assets/png/008-heavy-rain.pngY.png'
+stormicon = 'assets/png/009-storm.pngY.png'
+rainandsunicon = 'assets/png/010-rain.pngY.png'
+snowicon = 'assets/png/011-snow.pngY.png'
+fogicon = 'assets/png/022-fog.pngY.png'
+fognighticon = 'assets/png/023-fog.pngY.png'
 
 ### System Variables ###
 

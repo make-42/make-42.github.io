@@ -13,14 +13,14 @@ $prc : 8%;
 $dur : 1.5s;
 
 :root {
-    background: #252030;
+    background: #323437;
     /* --bg-color-dark: #313247; */
     /* --bg-color-dark: url(./assets/images/background.png); */
     --bg-color-clear: #00000020;
     --bg-color-mid: #66666650;
     --bg-color-light: #AAAAAA50;
-    --text-color-light: #FFFFFFBB;
-    --text-color-mid: grey;
+    --text-color-light: #e2b714;
+    --text-color-mid: #e2b714;
     --text-color-dark: #000000;
     --text-color-confirmed: #00FF00BB;
     --text-color-error: #FF0000BB;
@@ -71,7 +71,7 @@ body {
     position: absolute;
     width: 5px;
     border-radius: 10px;
-    background: #c5c3c8;
+    background: var(--text-color-light);
     z-index: -10;
 }
 #titles-information {
@@ -200,7 +200,7 @@ h2 {
 
 .credits {
     padding: 5vw;
-    color: var(--text-color-mid);
+    color: var(--text-color-light);
     font-family: "JetBrains Mono";
     font-size: 1vw;
 }
