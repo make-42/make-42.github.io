@@ -106,24 +106,33 @@ body {
     animation: titles-load-5 3s ease;
 }
 @keyframes titles-load-1{
-    0%{
-        height:0;
+    0% {
+        height: 0;
+        opacity: 0;
     }
     1%{
         height:1%;
+    }
+    50% {
+        opacity: 1;
     }
 }
 @keyframes titles-load-2 {
     0% {
         height: 0;
+        opacity: 0;
     }
     21% {
         height: 21%;
+    }
+    50% {
+        opacity: 1;
     }
 }
 @keyframes titles-load-3 {
     0% {
         height: 0;
+        opacity: 0;
     }
 
     18% {
@@ -133,10 +142,14 @@ body {
     20% {
         height: 22px;
     }
+    50% {
+        opacity: 1;
+    }
 }
 @keyframes titles-load-4 {
     0% {
         height: 0;
+        opacity: 0;
     }
 
     20% {
@@ -146,10 +159,17 @@ body {
     35% {
         height: 15%;
     }
+    50% {
+        opacity: 1;
+    }
 }
 @keyframes titles-load-5 {
     0% {
         height: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
     }
     60% {
         height: 60%;
