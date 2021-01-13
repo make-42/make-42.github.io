@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang="en")
   //
     Why are you looking at my code!
     Copyright 2020 xE0F9
@@ -60,7 +60,7 @@ html
             #nekovault-side-title.side-title.animonload1 Neko&nbsp;Vault
             #titles-connector-1.titles
           #titles-contact.titles
-            #tcontact-side-title.side-title.animonload1 Contact
+            #contact-side-title.side-title.animonload1 Contact
         // Menubar
         .menubar.animonload1
           a.menubutton.menubutton-top-left.animonload1(href='/') Home
@@ -92,8 +92,8 @@ html
         // Projects Header
         #project-one.animonload1
           a.animonload1(href='https://github.com/xE0F9/NekoVault')
-            img.img-center.animonload1(src='./assets/images/NekoVault.webp')
-          .text.text-smaller.align-center.animonload1 A minimalistic GTK3 file encryption program writen in Go.
+            img.img-center.animonload1(alt="NekoVault's User Interface" src='./assets/images/NekoVault.webp')
+            .text.text-smaller.align-center.animonload1(style="text-decoration: underline;") A minimalistic GTK3 file encryption program writen in Go.
         // Contact Header
         .text-container-two.animonload1
           a.text.text-smaller.animonload1
@@ -121,6 +121,6 @@ html
           br
           | &bull; xE0F9, 2021. #{hash}
         .gnome-easter-egg
-          img.gnome-image(src='./assets/images/gnome.png')
+          img.gnome-image(alt="Gnome Easter Egg" src='./assets/images/gnome.png')
         script(src='main.min.js')
         script(src='allpages.min.js')

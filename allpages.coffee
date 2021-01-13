@@ -1,5 +1,3 @@
-el = document.createElement('html')
-
 ### User Variables ###
 
 ###
@@ -44,25 +42,6 @@ setTimeout(function() {
 
 # Blur Easter Egg
 blurstate = 0
-
-changepage = (targeturl) ->
-  window.history.pushState '', 'TechAdvancedCyborg\'s Website', targeturl
-  $.get targeturl, (data) ->
-    el.innerHTML = data
-    return
-  document.getElementsByTagName('body')[0].innerHTML = el.getElementsByTagName('body')[0].innerHTML
-  document.getElementsByTagName('head')[0].innerHTML = el.getElementsByTagName('head')[0].innerHTML
-  return
-
-processAjaxData = (response, urlPath) ->
-  document.getElementById('content').innerHTML = response.html
-  document.title = response.pageTitle
-  window.history.pushState {
-    'html': response.html
-    'pageTitle': response.pageTitle
-  }, '', urlPath
-  return
-
 document.addEventListener 'keydown', (event) ->
   switch blurstate
     when 0
