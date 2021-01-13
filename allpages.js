@@ -1,22 +1,3 @@
-var el = document.createElement( 'html' );
-function changepage(targeturl){
-	window.history.pushState("", "TechAdvancedCyborg's Website", targeturl);
-	 $.get(targeturl, function( data ) {
-	el.innerHTML = data;
-       });
-	document.getElementsByTagName("body")[0].innerHTML = el.getElementsByTagName("body")[0].innerHTML
-	document.getElementsByTagName("head")[0].innerHTML = el.getElementsByTagName("head")[0].innerHTML
-}
-
-
-function processAjaxData(response, urlPath){
-     document.getElementById("content").innerHTML = response.html;
-     document.title = response.pageTitle;
-     window.history.pushState({"html":response.html,"pageTitle":response.pageTitle},"", urlPath);
- }
-
-
-
 /* User Variables */
 /*
 let drag = 1.25;
