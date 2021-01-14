@@ -1,14 +1,2 @@
 User-agent: *
-Disallow: /404/
-Disallow: /assets/
-Disallow: /matrix/
-Disallow: /node_modules/
-Disallow: /picotorrent-demo/
-Disallow: /snake/
-Disallow: /stats/
-Disallow: /storage/
-Disallow: /tools/
-Disallow: /TTACT's Schedule Viewer/
-Disallow: /typing/
-Disallow: /weather/
-Allow: /
+Allow: *
