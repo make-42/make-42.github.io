@@ -110,7 +110,6 @@ setInterval(function() {
     }
 }, 200);
 //On Page Finish Loading
-$(document).ready(function() {
     //Start Animation
     setTimeout(function() {
         document.getElementsByClassName("typing-text")[0].style.width = "100%";
@@ -118,7 +117,6 @@ $(document).ready(function() {
     setTimeout(function() {
         document.getElementsByClassName("typing-text")[0].style.color = getComputedStyle(document.body).getPropertyValue('--text-color-light');
     }, 2000);
-});
 
 // Gnome Easter Egg
 var state = 0;

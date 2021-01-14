@@ -116,17 +116,15 @@ setInterval (->
   return
 ), 200
 #On Page Finish Loading
-$(document).ready ->
-  #Start Animation
-  setTimeout (->
-    document.getElementsByClassName('typing-text')[0].style.width = '100%'
-    return
-  ), 1000
-  setTimeout (->
-    document.getElementsByClassName('typing-text')[0].style.color = getComputedStyle(document.body).getPropertyValue('--text-color-light')
-    return
-  ), 2000
+#Start Animation
+setTimeout (->
+  document.getElementsByClassName('typing-text')[0].style.width = '100%'
   return
+), 1000
+setTimeout (->
+  document.getElementsByClassName('typing-text')[0].style.color = getComputedStyle(document.body).getPropertyValue('--text-color-light')
+  return
+), 2000
 # Gnome Easter Egg
 state = 0
 audio = new Audio('./assets/audio/gnome.webm')
