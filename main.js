@@ -112,7 +112,7 @@ setInterval(function() {
 //On Page Finish Loading
     //Start Animation
     setTimeout(function() {
-        document.getElementsByClassName("typing-text")[0].style.width = "100%";
+        document.getElementsByClassName("typing-text")[0].style.width = "98.7%";
     }, 1000);
     setTimeout(function() {
         document.getElementsByClassName("typing-text")[0].style.color = getComputedStyle(document.body).getPropertyValue('--text-color-light');

@@ -118,7 +118,7 @@ setInterval (->
 #On Page Finish Loading
 #Start Animation
 setTimeout (->
-  document.getElementsByClassName('typing-text')[0].style.width = '100%'
+  document.getElementsByClassName('typing-text')[0].style.width = '98.7%'
   return
 ), 1000
 setTimeout (->

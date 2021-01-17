@@ -78,19 +78,19 @@ body {
   color:var(--text-color-light);
 }
 #titles-information {
-    top: 15.1%;
+    top: 18.1%;
     height: 1%;
     left: 35px;
     animation: titles-load-1 3s ease;
 }
 #titles-projects {
-    top: 15.1%;
+    top: 18.1%;
     height: 21%;
     left: 21px;
     animation: titles-load-2 3s ease;
 }
 #titles-nekovault {
-    top: 35%;
+    top: 39%;
     height: 15%;
     left: 35px;
     animation: titles-load-4 3s ease;
@@ -103,7 +103,7 @@ body {
     animation: titles-load-3 3s ease;
 }
 #titles-contact {
-    top: 15.1%;
+    top: 18.1%;
     height: 60%;
     left: 7px;
     animation: titles-load-5 3s ease;
@@ -250,6 +250,10 @@ h2 {
 }
 
 /* Menubar */
+.menubar-container {
+    box-shadow: black 2px 2px 10px inset;
+    border-radius: 2vw;
+}
 .menubar {
     font-family: "JetBrains Mono";
     font-size: 40px;
@@ -264,25 +268,25 @@ h2 {
 }
 
 .menubutton-bottom-left{
-  border-radius: 0vw 0vw 0vw 20px;
+  //border-radius: 0vw 0vw 0vw 20px;
 }
 .menubutton-top-left{
   //border-radius: 2vw 0vw 0vw 0vw;
 }
 .menubutton-mid{
-  border-radius: 0vw 0vw 0vw 0vw;
+  //border-radius: 0vw 0vw 0vw 0vw;
 }
 .menubutton-top-right{
   //border-radius: 0vw 2vw 0vw 0vw;
 }
 .menubutton-bottom-right{
-  border-radius: 0vw 0vw 20px 0vw;
+  //border-radius: 0vw 0vw 20px 0vw;
 }
 .menubutton {
     color: inherit;
     text-decoration: none;
     width: 35%;
-    border: var(--text-color-light) solid 1px;
+    padding: 10px 0px 10px 0px;
     transition: width 1s ease, border-radius 1s ease;
 }
 
@@ -440,6 +444,7 @@ h2 {
 /* Set Typing Text Effect Styling */
 .typing-text {
     padding-top: 1.3vw;
+    padding-left: 1.3vw;
     text-align: left;
     font-size: 2.5vw;
     background: var(--bg-color-clear);
@@ -447,6 +452,7 @@ h2 {
     border-radius: 2vw;
     width: 0vw;
     color: transparent;
+    box-shadow: black 2px 2px 10px inset;
     transition: width 1s ease, color 1s ease;
 }
 
