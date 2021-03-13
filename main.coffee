@@ -42,7 +42,7 @@ updatetypingeffect = ->
   else
     #Set text in page
     document.getElementsByClassName('typing-text')[0].children[slice - 1].className = 'typing-text-char-remove'
-    setInterval deletetypingchars, 100, document.getElementsByClassName('typing-text')[0].children[slice - 1]
+    setInterval deletetypingchars, 200, document.getElementsByClassName('typing-text')[0].children[slice - 1]
     slice += 0 - 1
   #Reverse When At End of String
   if slice > sitetitle.length - 1
