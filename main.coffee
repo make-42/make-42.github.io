@@ -2,22 +2,25 @@
 fpstext = 20
 fpscursor = 1
 sitetitles = [
-  'cd ~/Apps/NekoVault'
-  'firefox techadvancedcyborg.github.io'
-  'echo Converting caffeine to code...'
-  'cd ~/Apps/TTACT-s-Anime-Player-Revamped'
-  'echo Why did the chicken cross the road?'
-  'echo “Fix the cause, not the symptom.” – Steve Maguire'
-  'echo “Talk is cheap. Show me the code.” ― Linus Torvalds'
-  'echo Justice for George Floyd.'
-  'echo “I can\'t breathe...” ― George Floyd'
-  'ping 1.1.1.1'
+  '> cd ~/Apps/NekoVault'
+  '> firefox techadvancedcyborg.github.io'
+  '> echo Converting caffeine to code...'
+  '> cd ~/Apps/TTACT-s-Anime-Player-Revamped'
+  '> echo Why did the chicken cross the road?'
+  '> echo “Fix the cause, not the symptom.” – Steve Maguire'
+  '> echo “Talk is cheap. Show me the code.” ― Linus Torvalds'
+  '> ping 1.1.1.1'
 ]
 #System Variables
 slice = 0
 typing = true
 sitetitle = sitetitles[Math.round(window.crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296 * (sitetitles.length - 1))]
 cursorstate = true
+
+deletetypingchars = (elem) ->
+  elem.remove()
+  return
+
 #Text Rendering Loop
 
 updatetypingeffect = ->
@@ -28,18 +31,21 @@ updatetypingeffect = ->
   #Type
   if typing
     #Set text in page
-    document.getElementsByClassName('typing-text')[0].innerHTML = '> ' + sitetitle.slice(0, slice) + cursor
-    #Set title text
-    document.getElementsByTagName('title')[0].innerHTML = '> ' + sitetitle.slice(0, slice) + cursor
+    char = document.createElement('div')
+    charc = sitetitle[slice]
+    if charc == ' '
+      charc = '&nbsp;'
+    char.innerHTML = charc
+    char.className = 'typing-text-char'
+    document.getElementsByClassName('typing-text')[0].append char
     slice++
   else
     #Set text in page
-    document.getElementsByClassName('typing-text')[0].innerHTML = '> ' + sitetitle.slice(0, slice) + cursor
-    #Set title text
-    document.getElementsByTagName('title')[0].innerHTML = '> ' + sitetitle.slice(0, slice) + cursor
+    document.getElementsByClassName('typing-text')[0].children[slice - 1].className = 'typing-text-char-remove'
+    setInterval deletetypingchars, 100, document.getElementsByClassName('typing-text')[0].children[slice - 1]
     slice += 0 - 1
   #Reverse When At End of String
-  if slice > sitetitle.length
+  if slice > sitetitle.length - 1
     typing = false
   #Reverse When At Start of String
   if slice < 1

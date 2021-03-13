@@ -456,6 +456,22 @@ h2 {
     transition: width 1s ease, color 1s ease;
 }
 
+.typing-text-char {
+  display:inline-block;
+  overflow: hidden;
+  animation-name: typing-text-char-load;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+.typing-text-char-remove {
+  display:inline-block;
+  overflow: hidden;
+  animation-name: typing-text-char-unload;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
 .img-center {
     display: block;
     margin-left: auto;
@@ -757,6 +773,24 @@ h2 {
 }
 
 /* Animation */
+@keyframes typing-text-char-load {
+  0% {
+      text-indent: -2.5vw;
+  }
+  100% {
+      text-indent: 0;
+  }
+}
+
+@keyframes typing-text-char-unload {
+  0% {
+      text-indent: 0;
+  }
+  100% {
+      text-indent: -2.5vw;
+  }
+}
+
 
 @keyframes loadletterindicator{
     0% {
