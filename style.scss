@@ -775,7 +775,7 @@ h2 {
 /* Animation */
 @keyframes typing-text-char-load {
   0% {
-      text-indent: -2.5vw;
+      text-indent: -100%;
   }
   100% {
       text-indent: 0;
@@ -787,7 +787,7 @@ h2 {
       text-indent: 0;
   }
   100% {
-      text-indent: -2.5vw;
+      text-indent: -100%;
   }
 }
 
