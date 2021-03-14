@@ -12,6 +12,7 @@ sitetitles = [
   [
     '>&nbsp;'
     'firefox&nbsp;'
+    '-new-tab&nbsp;'
     'techadvancedcyborg.'
     'github.'
     'io'
