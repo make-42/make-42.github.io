@@ -1,0 +1,23 @@
+@font-face {
+ font-family: "Batang";
+ src: url("./BATANG.ttf") format("ttf");
+}
+.e{
+  font-size:40px;
+  color: #ffffff;
+  transition:font-size 1s ease;
+}
+.time{
+  display:flex;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+  font-family: "Batang";
+}
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:#000000;
+  height:96vh;
+}
