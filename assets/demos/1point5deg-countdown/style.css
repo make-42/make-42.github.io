@@ -4,6 +4,13 @@
   color: #e2b714;
   transition:font-size 1s ease;
 }
+.text {
+  position: absolute;
+  font-size:40px;
+  color: #e2b714;
+  font-family: "Source Code Pro";
+  padding: 20px;
+}
 .time{
   display:flex;
   width:100%;
