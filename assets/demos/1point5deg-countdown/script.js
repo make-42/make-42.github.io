@@ -9,7 +9,7 @@ function getTimeRemaining(endtime){
     var seconds = Math.floor( (total/1000) % 60 );
   var minutes = Math.floor( (total/1000/60) % 60 );
   var hours = Math.floor( (total/(1000*60*60)) % 24 );
-  var days = Math.floor( total/(1000*60*60*24) );
+  var days = Math.floor( total/(1000*60*60*24));
   }
 
 
@@ -23,7 +23,7 @@ function getTimeRemaining(endtime){
 }
 setInterval(function(){
 var timeremaining = getTimeRemaining("Monday, 27 December 2027, 12:00:00");
-document.getElementsByClassName("days")[0].innerHTML = ('0' +time:remaining.days).slice(-2)+":";
+document.getElementsByClassName("days")[0].innerHTML = (timeremaining.days)+":";
   document.getElementsByClassName("hours")[0].innerHTML = ('0' +timeremaining.hours).slice(-2)+":";
   document.getElementsByClassName("minutes")[0].innerHTML = ('0' +timeremaining.minutes).slice(-2)+":";
   document.getElementsByClassName("seconds")[0].innerHTML = ('0' +timeremaining.seconds).slice(-2);
