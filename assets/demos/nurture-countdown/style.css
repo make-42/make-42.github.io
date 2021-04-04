@@ -7,12 +7,29 @@
   color: #ffffff;
   transition:font-size 1s ease;
 }
+
+.text{
+  position: absolute;
+  top: 30%;
+  font-size: 15px;
+  mix-blend-mode: difference;
+  color:#FFFFFF;
+}
+
+canvas#b {
+  position: absolute;
+  width: 100vw; height: 100vh;
+image-rendering: pixelated;
+  background:black
+}
 .time{
   display:flex;
   width:100%;
   align-items: center;
   justify-content: center;
   font-family: "Batang";
+  mix-blend-mode: difference;
+  color:#FFFFFF;
 }
 body{
   display:flex;
