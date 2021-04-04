@@ -59,3 +59,25 @@ document.getElementsByClassName("days")[0].innerHTML = ('0' +timeremaining.days)
     document.getElementsByClassName("seconds")[0].style.fontSize=(40*a)+"px";
   }
 },100);
+
+var strokecolor = "white"
+var strokecounter = 0;
+
+setInterval(function(){
+  var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+  ctx.strokeStyle = strokecolor;
+  ctx.lineTo(Math.random()*400,Math.random()*225);
+    ctx.stroke();
+  strokecounter++;
+  if (strokecounter > 1000){
+    strokecounter = 0;
+    ctx.beginPath();
+    if (strokecolor == "white"){
+      strokecolor = "black"
+      document.getElementsByTagName("canvas")[0].style.background = "white";
+    } else {
+      strokecolor = "white"
+      document.getElementsByTagName("canvas")[0].style.background = "black";
+    }
+  }
+},100)
