@@ -66,8 +66,21 @@ document.getElementsByClassName("days")[0].innerHTML = ('0' +timeremaining.days)
   }
 },100);
 
-var strokecolor = "white"
+setInterval(function(){
+  if (canvaswidth == window.innerWidth/2){
+    return;
+  }
+  if (canvasheight == window.innerHeight/2){
+    return;
+  }
+  canvaswidth=window.innerWidth/2;
+  canvasheight=window.innerHeight/2;
+  document.getElementsByTagName("canvas")[0].width = canvaswidth;
+  document.getElementsByTagName("canvas")[0].height = canvasheight;
+},1000)
 
+
+var strokecolor = "white"
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
   ctx.strokeStyle = strokecolor;
