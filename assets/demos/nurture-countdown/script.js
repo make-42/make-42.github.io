@@ -67,7 +67,6 @@ document.getElementsByClassName("days")[0].innerHTML = ('0' +timeremaining.days)
 },100);
 
 var strokecolor = "white"
-var strokecounter = 0;
 
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
@@ -75,10 +74,8 @@ setInterval(function(){
   linex = linex+(Math.random()*canvaswidth-(linex))
   liney = liney+(Math.random()*canvasheight-(liney))
   ctx.lineTo(linex,liney);
-    ctx.stroke();
-  strokecounter++;
-  if (strokecounter > 1000){
-    strokecounter = 0;
+  ctx.stroke();
+  if (Math.floor(Math.random() * 200) == 0){
     ctx.beginPath();
     if (strokecolor == "white"){
       strokecolor = "black"
