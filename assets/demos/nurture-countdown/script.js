@@ -66,7 +66,7 @@ var strokecounter = 0;
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
   ctx.strokeStyle = strokecolor;
-  ctx.lineTo(Math.random()*800,Math.random()*450);
+  ctx.lineTo(0-200+Math.random()*1200,0-200+Math.random()*850);
     ctx.stroke();
   strokecounter++;
   if (strokecounter > 1000){
