@@ -89,6 +89,8 @@ setInterval(function(){
   ctx.lineTo(linex,liney);
   ctx.stroke();
   if (Math.floor(Math.random() * 200) == 0){
+    ctx.closePath();
+    ctx.clearRect(0, 0, canvaswidth, canvasheight);
     ctx.beginPath();
     if (strokecolor == "white"){
       strokecolor = "black"
