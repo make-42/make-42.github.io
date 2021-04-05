@@ -73,7 +73,7 @@ setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
   ctx.strokeStyle = strokecolor;
   linex = linex+(Math.random()*canvaswidth-(linex))
-  liney = liney+(Math.random()*canvaswidth-(liney))
+  liney = liney+(Math.random()*canvasheight-(liney))
   ctx.lineTo(linex,liney);
     ctx.stroke();
   strokecounter++;
