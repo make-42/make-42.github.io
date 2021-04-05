@@ -1,3 +1,9 @@
+var linex = 0;
+var liney = 0;
+var canvaswidth = 800;
+var canvasheight = 450;
+
+
 function getTimeRemaining(endtime){
   const total = Date.parse(endtime) - Date.parse(new Date());
   if(total < 0){
@@ -66,7 +72,9 @@ var strokecounter = 0;
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
   ctx.strokeStyle = strokecolor;
-  ctx.lineTo(0-200+Math.random()*1200,0-200+Math.random()*850);
+  linex = linex+(Math.random()*canvaswidth-(linex))
+  liney = liney+(Math.random()*canvaswidth-(liney))
+  ctx.lineTo(linex,liney);
     ctx.stroke();
   strokecounter++;
   if (strokecounter > 1000){

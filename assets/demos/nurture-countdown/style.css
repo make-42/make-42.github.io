@@ -6,6 +6,7 @@
   font-size:40px;
   color: #ffffff;
   transition:font-size 1s ease;
+  font-family: "Batang";
 }
 
 .text{
@@ -14,6 +15,7 @@
   font-size: 15px;
   mix-blend-mode: difference;
   color:#FFFFFF;
+  font-family: "Batang";
 }
 
 canvas#b {
