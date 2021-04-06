@@ -3,9 +3,12 @@ var liney = 0;
 var canvaswidth = 800;
 var canvasheight = 450;
 
+function addMinutes(date, minutes) {
+    return new Date(date.getTime() + minutes*60000);
+}
 
 function getTimeRemaining(endtime){
-  const total = Date.parse(endtime) - Date.parse(new Date());
+  const total = Date.parse(endtime) - Date.parse(addMinutes(new Date(),new Date().getTimezoneOffset()));
   if(total < 0){
     var seconds = 0;
     var minutes = 0;
@@ -28,7 +31,7 @@ function getTimeRemaining(endtime){
   };
 }
 setInterval(function(){
-var timeremaining = getTimeRemaining("23 April 2021 19:00:00");
+var timeremaining = getTimeRemaining("23 April 2021 17:00:00");
 document.getElementsByClassName("days")[0].innerHTML = ('0' +timeremaining.days).slice(-2)+":";
   document.getElementsByClassName("hours")[0].innerHTML = ('0' +timeremaining.hours).slice(-2)+":";
   document.getElementsByClassName("minutes")[0].innerHTML = ('0' +timeremaining.minutes).slice(-2)+":";
