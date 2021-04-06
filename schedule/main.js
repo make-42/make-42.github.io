@@ -35,6 +35,7 @@ function updatecurrentevent(){
           .getWeekNumber()-1)
       .toString()
   ]
+  document.getElementsByClassName("mdc-top-app-bar__title")[0].innerHTML = "Schedule Viewer, Week "+week;
   day = scheduledata["schedule"][week][(new Date().getDay()-1)]
   day.forEach(function(scheduleelement) {
     if (currenttimestamp >= parseInt(scheduleelement["start"])){
