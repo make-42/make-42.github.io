@@ -103,4 +103,4 @@ setInterval(function(){
       document.getElementsByTagName("canvas")[0].style.background = "black";
     }
   }
-},100)
+},53.7)
