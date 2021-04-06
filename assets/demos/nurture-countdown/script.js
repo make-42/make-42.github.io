@@ -1,7 +1,11 @@
+var noisescale = 1000;
+
+
 var linex = 0;
 var liney = 0;
 var canvaswidth = 800;
 var canvasheight = 450;
+
 
 function addMinutes(date, minutes) {
     return new Date(date.getTime() + minutes*60000);
@@ -84,11 +88,12 @@ setInterval(function(){
 
 
 var strokecolor = "white"
+noise.seed(Math.random());
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
   ctx.strokeStyle = strokecolor;
-  linex = linex+(Math.random()*canvaswidth/2)-linex/2
-  liney = liney+(Math.random()*canvasheight/2)-liney/2
+  linex = linex+((noise.simplex2(new Date().getTime()/noisescale, 0)+1)/2*canvaswidth/2)-linex/2
+  liney = liney+((noise.simplex2(0, new Date().getTime()/noisescale)+1)/2*canvasheight/2)-liney/2
   ctx.lineTo(linex,liney);
   ctx.stroke();
   if (Math.floor(Math.random() * 200) == 0){
