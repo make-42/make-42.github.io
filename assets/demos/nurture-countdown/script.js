@@ -84,8 +84,8 @@ var strokecolor = "white"
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
   ctx.strokeStyle = strokecolor;
-  linex = linex+(Math.random()*canvaswidth-(linex))
-  liney = liney+(Math.random()*canvasheight-(liney))
+  linex = linex+(Math.random()*canvaswidth/2)-linex/2
+  liney = liney+(Math.random()*canvasheight/2)-liney/2
   ctx.lineTo(linex,liney);
   ctx.stroke();
   if (Math.floor(Math.random() * 200) == 0){
