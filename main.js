@@ -1,7 +1,7 @@
 // Set Variables For Typing Effect
 var fpstext = 2;
 var fpscursor = 1;
-var sitetitles = [[">&nbsp;","cd&nbsp;","~/","Apps/","NekoVault/"], [">&nbsp;","firefox&nbsp;","-new-tab&nbsp;","techadvancedcyborg.","github.","io"], [">&nbsp;","echo&nbsp;","Converting&nbsp;","caffeine&nbsp;","to&nbsp;","code..."], [">&nbsp;","cd&nbsp;","~/","Apps/","TTACT-s","-Anime","-Player","-Revamped/"], [">&nbsp;","echo&nbsp;","Why&nbsp;","did&nbsp;","the&nbsp;","chicken&nbsp;","cross&nbsp;","the&nbsp;","road?"], [">&nbsp;","echo&nbsp;","\“Fix&nbsp;","the&nbsp;","cause,&nbsp;","not&nbsp;","the&nbsp;","symptom.\”&nbsp;","–&nbsp;","Steve&nbsp;","Maguire"], [">&nbsp;","echo&nbsp;","\“Talk&nbsp;","is&nbsp;","cheap.&nbsp;","Show&nbsp;","me&nbsp;","the&nbsp;","code.\”&nbsp;","―&nbsp;","Linus&nbsp;","Torvalds"],[">&nbsp;","ping&nbsp;","1.","1.","1.","1"]]
+var sitetitles = [[">&nbsp;","cd&nbsp;","~/","Apps/","NekoVault/"], [">&nbsp;","firefox&nbsp;","-new-tab&nbsp;","techadvancedcyborg.","github.","io"], [">&nbsp;","echo&nbsp;","Converting&nbsp;","caffeine&nbsp;","to&nbsp;","code..."], [">&nbsp;","cd&nbsp;","~/","Apps/","TTACT-s","-Anime","-Player","-Revamped/"], [">&nbsp;","echo&nbsp;","Why&nbsp;","did&nbsp;","the&nbsp;","chicken&nbsp;","cross&nbsp;","the&nbsp;","road?"], [">&nbsp;","echo&nbsp;","Fix&nbsp;","the&nbsp;","cause,&nbsp;","not&nbsp;","the&nbsp;","symptom.&nbsp;","–&nbsp;","Steve&nbsp;","Maguire"], [">&nbsp;","echo&nbsp;","Talk&nbsp;","is&nbsp;","cheap.&nbsp;","Show&nbsp;","me&nbsp;","the&nbsp;","code.&nbsp;","―&nbsp;","Linus&nbsp;","Torvalds"],[">&nbsp;","ping&nbsp;","1.","1.","1.","1"]]
 //System Variables
 var slice = 0;
 var typing = true;
