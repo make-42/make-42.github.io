@@ -71,3 +71,23 @@ color: var(--color-5);
 font-family: "JetBrains Mono";
 font-size: 15px;
 }
+
+.text-color-1{
+  color: var(--color-1);
+}
+
+.text-color-2{
+  color: var(--color-2);
+}
+
+.text-color-3{
+  color: var(--color-3);
+}
+
+.text-color-4{
+  color: var(--color-4);
+}
+
+.text-color-5{
+  color: var(--color-5);
+}

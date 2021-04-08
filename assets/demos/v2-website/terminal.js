@@ -11,9 +11,10 @@ const listofpages = "home   blog   demos"
 
 var currentpage = "home"
 
+
 function print(printContent){
   i = 0;
-  document.getElementsByClassName("terminal-text")[0].innerHTML+=printContent.replaceAll(" ","&nbsp;").replaceAll("\n","<br>")
+  document.getElementsByClassName("terminal-text")[0].innerHTML+=printContent.replaceAll(" ","&nbsp;").replaceAll("\n","<br>").replaceAll("&actualspace;"," ")
 }
 
 function bootsequence(){
@@ -21,14 +22,24 @@ function bootsequence(){
   print("v"+version+"\n\nType \"help\" for a list of commands.\n\n")
 }
 
+function colorize(inputText,color){
+  return "<span&actualspace;class=\"text-color-"+color+"\">"+inputText+"</span>"
+}
+
 function parse(query){
     args = query.split(" ");
     switch (args[0]){
       case "help":
-        print("Commands:\n    - help: display this message\n    - ls: list pages\n    - cd [page]: enter page\n")
+        print("Commands:\n    - help: display this message\n    - ls: list pages\n    - cd [page]: enter page\n    - lscolors: show all colors\n")
         break;
       case "ls":
           print(listofpages+"\n")
+        break;
+      case "cd":
+            print(listofpages+"\n")
+        break;
+      case "lscolors":
+            print("  "+colorize("████",1)+"  "+colorize("████",2)+"  "+colorize("████",3)+"  "+colorize("████",4)+"  "+colorize("████",5)+"\n")
         break;
       default:
         print("Error: Unknown command.\n");
