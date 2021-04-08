@@ -55,6 +55,7 @@ function parse(query){
 
 function main(){
   bootsequence()
+  document.getElementsByTagName("input")[0].focus()
 }
 
 
