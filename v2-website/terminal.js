@@ -17,7 +17,8 @@ const listofpages = "home   blog   demos"
 
 
 var currentpage = "home"
-
+var commandbuffer =[];
+var commandbufferindex = 0-1;
 
 function print(printContent) {
     i = 0;
@@ -36,6 +37,8 @@ function colorize(inputText, color) {
 }
 
 function parse(query) {
+    commandbuffer.push(query);
+    commandbufferindex = 0-1;
     args = query.split(" ");
     switch (args[0]) {
         case "help":
@@ -71,6 +74,10 @@ function parse(query) {
     print("\n");
 }
 
+function setinputvalue(stringtoset){
+    document.getElementsByTagName("input")[0].value = stringtoset
+}
+
 function main() {
     bootsequence()
     document.getElementsByTagName("input")[0].focus()
@@ -84,5 +91,27 @@ document.getElementsByTagName("input")[0].addEventListener("keyup", function(eve
         parse(document.getElementsByTagName("input")[0].value)
         document.getElementsByTagName("input")[0].value = "";
     }
+    if (event.keyCode === 38) {
+        if (commandbufferindex == 0-1){
+          commandbufferindex = commandbuffer.length-1;
+        } else {
+          if (commandbufferindex > 0){
+          commandbufferindex--;
+        }}
+        if (commandbufferindex != 0-1){
+        setinputvalue(commandbuffer[commandbufferindex])
+      }
+    }
+    if (event.keyCode === 40) {
+      if (commandbufferindex == 0-1){
+        commandbufferindex = commandbuffer.length-1;
+      } else {
+        if (commandbufferindex < commandbuffer.length-1){
+        commandbufferindex++;
+      }}
+      if (commandbufferindex != 0-1){
+      setinputvalue(commandbuffer[commandbufferindex])
+    }
+  }
 })
 main()
