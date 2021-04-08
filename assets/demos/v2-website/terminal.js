@@ -30,7 +30,7 @@ function parse(query){
     args = query.split(" ");
     switch (args[0]){
       case "help":
-        print("Commands:\n    - help: display this message\n    - ls: list pages\n    - cd [page]: enter page\n    - lscolors: show all colors\n")
+        print("Commands:\n    - help: display this message\n    - ls: list pages\n    - cd [page]: enter page\n    - lscolors: show all colors\n    - screenfetch: get system information\n")
         break;
       case "ls":
           print(listofpages+"\n")
@@ -41,6 +41,12 @@ function parse(query){
       case "lscolors":
             print("  "+colorize("████",1)+"  "+colorize("████",2)+"  "+colorize("████",3)+"  "+colorize("████",4)+"  "+colorize("████",5)+"\n")
         break;
+      case "screenfetch":
+            print("User-Agent: "+window.navigator.userAgent+"\n")
+            print("OS: "+window.navigator.platform+"\n")
+            print("CPU: "+window.navigator.hardwareConcurrency+" cores\n")
+            print("RAM: "+navigator.deviceMemory+" GB\n")
+      break;
       default:
         print("Error: Unknown command.\n");
     }
