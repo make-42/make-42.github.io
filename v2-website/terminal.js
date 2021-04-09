@@ -36,6 +36,16 @@ function colorize(inputText, color) {
     return "<span&actualspace;class=\"text-color-" + color + "\">" + inputText + "</span>"
 }
 
+function changepalette(paletteIndex){
+  currentPalette = palettes[paletteIndex]
+  let root = document.documentElement;
+  root.style.setProperty('--color-1', currentPalette[0]);
+  root.style.setProperty('--color-2', currentPalette[1]);
+  root.style.setProperty('--color-3', currentPalette[2]);
+  root.style.setProperty('--color-4', currentPalette[3]);
+  root.style.setProperty('--color-5', currentPalette[4]);
+}
+
 function parse(query) {
     commandbuffer.push(query);
     commandbufferindex = 0-1;
@@ -54,13 +64,8 @@ function parse(query) {
             print("  " + colorize("████", 1) + "  " + colorize("████", 2) + "  " + colorize("████", 3) + "  " + colorize("████", 4) + "  " + colorize("████", 5) + "\n")
             break;
         case "chpalette":
-            currentPalette = palettes[parseInt(args[1])]
-            let root = document.documentElement;
-            root.style.setProperty('--color-1', currentPalette[0]);
-            root.style.setProperty('--color-2', currentPalette[1]);
-            root.style.setProperty('--color-3', currentPalette[2]);
-            root.style.setProperty('--color-4', currentPalette[3]);
-            root.style.setProperty('--color-5', currentPalette[4]);
+            changepalette(parseInt(args[1]))
+            window.localStorage.setItem("palette",parseInt(args[1]))
             break;
         case "screenfetch":
             print("User-Agent: " + window.navigator.userAgent + "\n")
@@ -80,6 +85,10 @@ function setinputvalue(stringtoset){
 
 function main() {
     bootsequence()
+    if (window.localStorage.getItem("palette") == null){
+      window.localStorage.setItem("palette",6)
+    }
+    changepalette(window.localStorage.getItem("palette"))
     document.getElementsByTagName("input")[0].focus()
 }
 
