@@ -109,3 +109,14 @@ setInterval(function(){
     }
   }
 },53.7)
+
+function tickercycle(){
+document.getElementsByClassName("title-ticker")[0].style = "text-indent: -4000px;";
+setTimeout(function(){
+document.getElementsByClassName("title-ticker")[0].style = "text-indent: 1200px;";
+},10000)
+}
+
+
+tickercycle();
+setInterval(tickercycle,20000)

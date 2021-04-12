@@ -22,7 +22,7 @@ canvas#b {
   position: absolute;
   width: 100vw; height: 100vh;
 image-rendering: pixelated;
-  background:black
+  background:black;
 }
 .time{
   display:flex;
@@ -38,5 +38,21 @@ body{
   align-items: center;
   justify-content: center;
   background:#000000;
-  height:96vh;
+  height:100vh;
+  margin:0;
+}
+
+.title-ticker {
+  position:absolute;
+  bottom:0px;
+  height:50px;
+  width: 100vw;
+  font-size: 40px;
+  mix-blend-mode: difference;
+  color:#FFFFFF;
+  font-family: "Batang";
+  overflow:hidden;
+  background: transparent;
+  text-indent: 1200px;
+  transition: text-indent 10s linear;
 }
