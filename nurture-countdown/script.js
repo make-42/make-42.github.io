@@ -12,7 +12,7 @@ function addMinutes(date, minutes) {
 }
 
 function getTimeRemaining(endtime){
-  const total = Date.parse(endtime) - Date.parse(addMinutes(new Date(),new Date().getTimezoneOffset()));
+  const total = Date.parse(endtime)
   if(total < 0){
     var seconds = 0;
     var minutes = 0;
@@ -35,7 +35,7 @@ function getTimeRemaining(endtime){
   };
 }
 setInterval(function(){
-var timeremaining = getTimeRemaining("24 April 2021 04:00:00");
+var timeremaining = getTimeRemaining("23 April 2021 00:00:00");
 document.getElementsByClassName("days")[0].innerHTML = ('0' +timeremaining.days).slice(-2)+":";
   document.getElementsByClassName("hours")[0].innerHTML = ('0' +timeremaining.hours).slice(-2)+":";
   document.getElementsByClassName("minutes")[0].innerHTML = ('0' +timeremaining.minutes).slice(-2)+":";
