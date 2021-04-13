@@ -53,6 +53,6 @@ body{
   font-family: "Batang";
   overflow:hidden;
   background: transparent;
-  text-indent: 1200px;
+  text-indent: 100vw;
   transition: text-indent 10s linear;
 }

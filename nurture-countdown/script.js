@@ -113,7 +113,7 @@ setInterval(function(){
 function tickercycle(){
 document.getElementsByClassName("title-ticker")[0].style = "text-indent: -4000px;";
 setTimeout(function(){
-document.getElementsByClassName("title-ticker")[0].style = "text-indent: 1200px;";
+document.getElementsByClassName("title-ticker")[0].style = "text-indent: 100vw;";
 },10000)
 }
 
