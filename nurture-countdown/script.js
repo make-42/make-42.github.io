@@ -92,8 +92,9 @@ noise.seed(Math.random());
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
   ctx.strokeStyle = strokecolor;
-  linex = linex+((noise.simplex2(new Date().getTime()/noisescale, 0)+1)/2*canvaswidth/2)-linex/2
-  liney = liney+((noise.simplex2(0, new Date().getTime()/noisescale)+1)/2*canvasheight/2)-liney/2
+  sinnoise = noise.simplex2((new Date().getTime()+10000)/noisescale/10, 0)*360
+  linex = canvaswidth/2+(noise.simplex2(new Date().getTime()/noisescale, 0)*canvaswidth/1.5)*Math.sin(sinnoise * Math.PI / 180);
+  liney = canvasheight/2+(noise.simplex2(0, new Date().getTime()/noisescale)*canvasheight/1.5)*Math.cos(sinnoise * Math.PI / 180);
   ctx.lineTo(linex,liney);
   ctx.stroke();
   if (Math.floor(Math.random() * 200) == 0){
