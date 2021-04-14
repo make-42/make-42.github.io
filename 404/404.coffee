@@ -131,7 +131,7 @@ $(document).ready ->
           konamistate = 0
       when 9
         if event.keyCode == 65
-          window.location.href = 'https://techadvancedcyborg.github.io/snake/'
+          window.location.href = '/snake/'
         else
           konamistate = 0
     return
