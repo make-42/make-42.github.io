@@ -1,4 +1,5 @@
-const version = "0.01"
+/* jshint esversion:6 */
+const version = "0.01";
 
 
 
@@ -10,34 +11,32 @@ const palettes = [
     ["#133C55", "#386FA4", "#59A5D8", "#84D2F6", "#91E5F6"],
     ["#412234", "#6D466B", "#B49FCC", "#EAD7D7", "#FFFFFF"],
     ["#827081", "#AEA3B0", "#E3D0D8", "#C6D2ED", "#E7E6F7"]
-]
-const listofpages = "home   blog   demos"
+];
+const listofpages = "home   blog   demos";
 
 
 
 
-var currentpage = "home"
+var currentpage = "home";
 var commandbuffer =[];
 var commandbufferindex = 0-1;
 
 function print(printContent) {
     i = 0;
-    document.getElementsByClassName("terminal-text")[0].innerHTML += printContent.replaceAll(" ", "&nbsp;")
-        .replaceAll("\n", "<br>")
-        .replaceAll("&actualspace;", " ")
+    document.getElementsByClassName("terminal-text")[0].innerHTML += printContent.replaceAll(" ", "&nbsp;").replaceAll("\n", "<br>").replaceAll("&actualspace;", " ");
 }
 
 function bootsequence() {
-    print(" _______  _______          _______  _______\n|       ||       |        |       ||       |\n|   _   ||_     _|        |   _   ||  _____|\n|  | |  |  |   |          |  | |  || |_____ \n|  |_|  |  |   |          |  |_|  ||_____  |\n|       |  |   |   _____  |       | _____| |\n|_______|  |___|  |_____| |_______||_______|\n")
-    print("v" + version + "\n\nType \"help\" for a list of commands.\n\n")
+    print(" _______  _______          _______  _______\n|       ||       |        |       ||       |\n|   _   ||_     _|        |   _   ||  _____|\n|  | |  |  |   |          |  | |  || |_____ \n|  |_|  |  |   |          |  |_|  ||_____  |\n|       |  |   |   _____  |       | _____| |\n|_______|  |___|  |_____| |_______||_______|\n");
+    print("v" + version + "\n\nType \"help\" for a list of commands.\n\n");
 }
 
 function colorize(inputText, color) {
-    return "<span&actualspace;class=\"text-color-" + color + "\">" + inputText + "</span>"
+    return "<span&actualspace;class=\"text-color-" + color + "\">" + inputText + "</span>";
 }
 
 function changepalette(paletteIndex){
-  currentPalette = palettes[paletteIndex]
+  currentPalette = palettes[paletteIndex];
   let root = document.documentElement;
   root.style.setProperty('--color-1', currentPalette[0]);
   root.style.setProperty('--color-2', currentPalette[1]);
@@ -52,26 +51,26 @@ function parse(query) {
     args = query.split(" ");
     switch (args[0]) {
         case "help":
-            print("Commands:\n    - help: display this message\n    - ls: list pages\n    - cd [page]: enter page\n    - lscolors: show all colors\n    - screenfetch: get system information\n    - chpalette [0-6]: change color palette\n")
+            print("Commands:\n    - help: display this message\n    - ls: list pages\n    - cd [page]: enter page\n    - lscolors: show all colors\n    - screenfetch: get system information\n    - chpalette [0-6]: change color palette\n");
             break;
         case "ls":
-            print(listofpages + "\n")
+            print(listofpages + "\n");
             break;
         case "cd":
-            print(listofpages + "\n")
+            print(listofpages + "\n");
             break;
         case "lscolors":
-            print("  " + colorize("████", 1) + "  " + colorize("████", 2) + "  " + colorize("████", 3) + "  " + colorize("████", 4) + "  " + colorize("████", 5) + "\n")
+            print("  " + colorize("████", 1) + "  " + colorize("████", 2) + "  " + colorize("████", 3) + "  " + colorize("████", 4) + "  " + colorize("████", 5) + "\n");
             break;
         case "chpalette":
-            changepalette(parseInt(args[1]))
-            window.localStorage.setItem("palette",parseInt(args[1]))
+            changepalette(parseInt(args[1]));
+            window.localStorage.setItem("palette",parseInt(args[1]));
             break;
         case "screenfetch":
-            print("User-Agent: " + window.navigator.userAgent + "\n")
-            print("OS: " + window.navigator.platform + "\n")
-            print("CPU: " + window.navigator.hardwareConcurrency + " cores\n")
-            print("RAM: " + navigator.deviceMemory + " GB\n")
+            print("User-Agent: " + window.navigator.userAgent + "\n");
+            print("OS: " + window.navigator.platform + "\n");
+            print("CPU: " + window.navigator.hardwareConcurrency + " cores\n");
+            print("RAM: " + navigator.deviceMemory + " GB\n");
             break;
         default:
             print("Error: Unknown command.\n");
@@ -80,24 +79,24 @@ function parse(query) {
 }
 
 function setinputvalue(stringtoset){
-    document.getElementsByTagName("input")[0].value = stringtoset
+    document.getElementsByTagName("input")[0].value = stringtoset;
 }
 
 function main() {
-    bootsequence()
+    bootsequence();
     if (window.localStorage.getItem("palette") == null){
-      window.localStorage.setItem("palette",6)
+      window.localStorage.setItem("palette",6);
     }
-    changepalette(window.localStorage.getItem("palette"))
-    document.getElementsByTagName("input")[0].focus()
+    changepalette(window.localStorage.getItem("palette"));
+    document.getElementsByTagName("input")[0].focus();
 }
 
 
 document.getElementsByTagName("input")[0].addEventListener("keyup", function(event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
-        print("> " + document.getElementsByTagName("input")[0].value + "\n")
-        parse(document.getElementsByTagName("input")[0].value)
+        print("> " + document.getElementsByTagName("input")[0].value + "\n");
+        parse(document.getElementsByTagName("input")[0].value);
         document.getElementsByTagName("input")[0].value = "";
     }
     if (event.keyCode === 38) {
@@ -108,7 +107,7 @@ document.getElementsByTagName("input")[0].addEventListener("keyup", function(eve
           commandbufferindex--;
         }}
         if (commandbufferindex != 0-1){
-        setinputvalue(commandbuffer[commandbufferindex])
+        setinputvalue(commandbuffer[commandbufferindex]);
       }
     }
     if (event.keyCode === 40) {
@@ -119,8 +118,8 @@ document.getElementsByTagName("input")[0].addEventListener("keyup", function(eve
         commandbufferindex++;
       }}
       if (commandbufferindex != 0-1){
-      setinputvalue(commandbuffer[commandbufferindex])
+      setinputvalue(commandbuffer[commandbufferindex]);
     }
   }
-})
-main()
+});
+main();
