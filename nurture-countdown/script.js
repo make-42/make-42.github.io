@@ -3,8 +3,8 @@ var noisescale = 1000;
 
 var linex = 0;
 var liney = 0;
-var canvaswidth = 800;
-var canvasheight = 450;
+var canvaswidth = 1600;
+var canvasheight = 900;
 
 
 function addMinutes(date, minutes) {
@@ -91,6 +91,7 @@ var strokecolor = "white"
 noise.seed(Math.random());
 setInterval(function(){
   var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+  ctx.lineWidth = 0.5;
   ctx.strokeStyle = strokecolor;
   sinnoise = noise.simplex2((new Date().getTime()+10000)/noisescale, 0)
   linex = canvaswidth/2+(noise.simplex2(new Date().getTime()/noisescale, 0)*noise.simplex2((new Date().getTime()+10000)/noisescale, 0)*canvaswidth/1.5)
