@@ -1,5 +1,5 @@
 var noisescale = 1000;
-
+var deltaframe = 20;
 
 var linex = 0;
 var liney = 0;
@@ -110,7 +110,7 @@ setInterval(function(){
       document.getElementsByTagName("canvas")[0].style.background = "black";
     }
   }
-},53.7)
+},deltaframe)
 
 function tickercycle(){
 document.getElementsByClassName("title-ticker")[0].style = "text-indent: -4000px;";
