@@ -12,8 +12,8 @@ omega2 = 0;
 theta2 = Math.random()*180*(Math.PI / 180);
 
 g = 9.81;
-drag = 1.00001;
-stepSize = 0.005;
+drag = 1.0001;
+stepSize = 0.0025;
 
 /* Canvas Params*/
 canvas_scale = 200;
@@ -120,6 +120,6 @@ function main(){
   update_RK4();
   update_canvas();
 }
-
-setInterval(main,framerate);
+setInterval(update_RK4,framerate/2);
+setInterval(update_canvas,framerate);
 setInterval(update_canvas_dimensions,1000);
