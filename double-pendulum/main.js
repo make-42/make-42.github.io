@@ -85,7 +85,7 @@ ctx.stroke();
 var ch = document.getElementById("canvas-history");
 var chctx = ch.getContext("2d");
 chctx.beginPath();
-chctx.arc(endofpendulum_x, endofpendulum_y, 4, 0, 4 * Math.PI, false);
+chctx.arc(endofpendulum_x, endofpendulum_y, 1, 0, 4 * Math.PI, false);
 chctx.fillStyle = 'black';
 chctx.fill();
 chctx.stroke();
