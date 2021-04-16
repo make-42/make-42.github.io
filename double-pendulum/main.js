@@ -7,9 +7,9 @@ l2 = 0.75;
 m2 = 0.75;
 
 omega1 = 0;
-theta1 = 90*(Math.PI / 180);
+theta1 = 89*(Math.PI / 180);
 omega2 = 0;
-theta2 = 45*(Math.PI / 180);
+theta2 = 67*(Math.PI / 180);
 
 g = 9.81;
 drag = 1.00001;
