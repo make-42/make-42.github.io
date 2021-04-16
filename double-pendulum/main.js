@@ -15,11 +15,11 @@ g = 9.81;
 stepSize = 0.01;
 
 /* Canvas Params*/
-canvas_width = 300;
-canvas_height = 300;
+canvas_width = 900;
+canvas_height = 900;
 center_x = canvas_width/2;
 center_y = canvas_height/2;
-canvas_scale = 75;
+canvas_scale = 200;
 
 function update_RK4() {
 // potential energy
