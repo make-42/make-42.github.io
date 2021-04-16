@@ -20,6 +20,7 @@ canvas_height = 900;
 center_x = canvas_width/2;
 center_y = canvas_height/2;
 canvas_scale = 200;
+framerate = 20
 
 function update_RK4() {
 // potential energy
@@ -89,4 +90,4 @@ function main(){
   update_canvas();
 }
 
-setInterval(main,50);
+setInterval(main,framerate);
