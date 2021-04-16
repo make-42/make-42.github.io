@@ -81,7 +81,7 @@ ctx.moveTo(center_x, center_y);
 new_line_x = center_x+Math.sin(theta1)*l1*canvas_scale
 new_line_y = center_y+Math.cos(theta1)*l1*canvas_scale
 ctx.lineTo(new_line_x, new_line_y);
-ctx.lineTo(new_line_x+Math.sin(theta2)*l1*canvas_scale, new_line_y+Math.cos(theta2)*l1*canvas_scale);
+ctx.lineTo(new_line_x+Math.sin(theta2)*l2*canvas_scale, new_line_y+Math.cos(theta2)*l2*canvas_scale);
 ctx.stroke();
 }
 
