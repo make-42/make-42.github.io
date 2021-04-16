@@ -12,6 +12,7 @@ omega2 = 0;
 theta2 = 45*(Math.PI / 180);
 
 g = 9.81;
+drag = 1.00001;
 stepSize = 0.01;
 
 /* Canvas Params*/
@@ -24,13 +25,13 @@ framerate = 20
 
 function update_RK4() {
 // potential energy
-var potential = -(m1 + m2) * g * l1 * Math.cos(theta1) - m2 * g * l2 * Math.cos(theta2);
+//var potential = -(m1 + m2) * g * l1 * Math.cos(theta1) - m2 * g * l2 * Math.cos(theta2);
 
 // Kinetic energy
-var kinetic = 0.5 * m1 * l1 * l1 * omega1 * omega1 + 0.5 * m2 * ((l1 * l1 * omega1 * omega1) + (l2 * l2 * omega2 * omega2) + 2 * l1 * l2 * omega1 * omega2 * Math.cos(theta1 - theta2));
+//var kinetic = 0.5 * m1 * l1 * l1 * omega1 * omega1 + 0.5 * m2 * ((l1 * l1 * omega1 * omega1) + (l2 * l2 * omega2 * omega2) + 2 * l1 * l2 * omega1 * omega2 * Math.cos(theta1 - theta2));
 
 //displaying the kinetic, potential and total energy of the system.
-console.log(kinetic + "  " + potential + "  " + (kinetic + potential));
+//console.log(kinetic + "  " + potential + "  " + (kinetic + potential));
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 // THE NEXT 16 VARIABLES ARE THE k's of Runge-Kutta for the 4 ODEs
@@ -67,9 +68,9 @@ var omega2New = omega2 + (stepSize / 6.0) * (dOmega2_1 + 2 * dOmega2_2 + 2 * dOm
 
 // updating variables
 theta1 = theta1New;
-omega1 = omega1New;
+omega1 = omega1New/drag;
 theta2 = theta2New;
-omega2 = omega2New;
+omega2 = omega2New/drag;
 }
 
 function update_canvas(){
