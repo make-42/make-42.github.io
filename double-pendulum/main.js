@@ -13,11 +13,11 @@ theta2 = Math.random()*90*(Math.PI / 180);
 
 g = 9.81;
 drag = 1.00001;
-stepSize = 0.01;
+stepSize = 0.005;
 
 /* Canvas Params*/
 canvas_scale = 200;
-framerate = 20;
+framerate = 10;
 
 function update_RK4() {
 // potential energy
