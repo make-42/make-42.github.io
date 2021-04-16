@@ -1,8 +1,20 @@
 <html>
-	<head></head>
-	<body>
+	<head><style>
+	body{
+		position: relative;
+	}
+	#canvas-history{
+		position: absolute;
+		top:0;
+		left:0;
+	}
+
+	</style></head>
+	<body style="margin:0;">
 		<canvas id="canvas" width="900" height="900">
 			</canvas>
+			<canvas id="canvas-history" width="900" height="900">
+				</canvas>
 		<script src="main.js"></script>
 	</body>
 </html>

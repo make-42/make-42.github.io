@@ -16,12 +16,8 @@ drag = 1.00001;
 stepSize = 0.01;
 
 /* Canvas Params*/
-canvas_width = 900;
-canvas_height = 900;
-center_x = canvas_width/2;
-center_y = canvas_height/2;
 canvas_scale = 200;
-framerate = 20
+framerate = 20;
 
 function update_RK4() {
 // potential energy
@@ -79,16 +75,51 @@ var ctx = c.getContext("2d");
 ctx.clearRect(0, 0, canvas_width, canvas_height);
   ctx.beginPath();
 ctx.moveTo(center_x, center_y);
-new_line_x = center_x+Math.sin(theta1)*l1*canvas_scale
-new_line_y = center_y+Math.cos(theta1)*l1*canvas_scale
+new_line_x = center_x+Math.sin(theta1)*l1*canvas_scale;
+new_line_y = center_y+Math.cos(theta1)*l1*canvas_scale;
+endofpendulum_x = new_line_x+Math.sin(theta2)*l2*canvas_scale;
+endofpendulum_y = new_line_y+Math.cos(theta2)*l2*canvas_scale;
 ctx.lineTo(new_line_x, new_line_y);
-ctx.lineTo(new_line_x+Math.sin(theta2)*l2*canvas_scale, new_line_y+Math.cos(theta2)*l2*canvas_scale);
+ctx.lineTo(endofpendulum_x, endofpendulum_y);
 ctx.stroke();
+var ch = document.getElementById("canvas-history");
+var chctx = ch.getContext("2d");
+chctx.beginPath();
+chctx.arc(endofpendulum_x, endofpendulum_y, 4, 0, 4 * Math.PI, false);
+chctx.fillStyle = 'black';
+chctx.fill();
+chctx.stroke();
 }
 
+function update_canvas_dimensions(){
+  if (canvas_width==window.innerWidth){
+    return;
+  }
+  if (canvas_height==window.innerHeight){
+    return;
+  }
+  var c = document.getElementById("canvas");
+  var ch = document.getElementById("canvas-history");
+  canvas_width=window.innerWidth;
+  canvas_height=window.innerHeight;
+  center_x = canvas_width/2;
+  center_y = canvas_height/2;
+  c.width = canvas_width;
+  c.height = canvas_height;
+  ch.width = canvas_width;
+  ch.height = canvas_height;
+}
+var canvas_width = 0;
+var canvas_height = 0;
+var center_x = 0;
+var center_y = 0;
+var endofpendulum_x = 0;
+var endofpendulum_y = 0;
+update_canvas_dimensions();
 function main(){
   update_RK4();
   update_canvas();
 }
 
 setInterval(main,framerate);
+setInterval(update_canvas_dimensions,1000);
