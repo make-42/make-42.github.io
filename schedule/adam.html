@@ -13,7 +13,7 @@ Date.prototype.getWeekNumber = function() {
     var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
     return Math.ceil((((d - yearStart) / 86400000) + 1) / 7)
 };
-document.getElementsByTagName("div")[0].innerHTML=(new Date().getWeekNumber()%2 == 1) ? "Cette semaine tu es en presenciel." : "Cette semaine tu n'es pas en presenciel.";
+document.getElementsByTagName("div")[0].innerHTML=(new Date().getWeekNumber()%2 == 1) ? "Cette semaine tu es en presenciel.<br>La semaine prochaine tu ne sera pas en présenticiel." : "Cette semaine tu n'es pas en presenciel.<br>La semaine prochaine tu sera en présenticiel.";
 </script>
 </body>
 </html>
