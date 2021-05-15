@@ -1,0 +1,19 @@
+<html>
+<head>
+<style></style>
+</head>
+<body>
+<div></div>
+
+<script>
+Date.prototype.getWeekNumber = function() {
+    var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+    var dayNum = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+    var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    return Math.ceil((((d - yearStart) / 86400000) + 1) / 7)
+};
+document.getElementsByTagName("div")[0].innerHTML=(new Date().getWeekNumber()%2 == 1) ? "Cette semaine tu es en presenciel." : "Cette semaine tu n'es pas en presenciel.";
+</script>
+</body>
+</html>
