@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+        body {
+            font-family: "JetBrains Mono";
+        }
+
+        #calc-body {
+            background: black;
+            width: 567px;
+            height: 680px;
+            position: absolute;
+            top: calc((100vh - 680px) / 2);
+            left: calc((100vw - 567px) /2);
+            border-radius: 20px;
+        }
+
+        .button {
+            font-size: 48px;
+            width: 99px;
+            height: 99px;
+            background: #C4C4C4;
+            border-radius: 20px;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 99px;
+        }
+
+        #result-display {
+            font-size: 48px;
+            transition: font-size 0.3s ease;
+            background: #C4C4C4;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 543px;
+            height: 99px;
+            border-radius: 20px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 99px;
+        }
+
+        #c-button {
+            background: #FFC555;
+        }
+
+        .equal-button {
+            background: #FFC555;
+        }
+
+        #equal-button-1 {
+            width: 210px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calc-body">
+        <div id="result-display"></div>
+        <div class="button" id="c-button">C</div>
+        <div class="button" id="sqrt-button">√</div>
+        <div class="button" id="invert-button">+/-</div>
+        <div class="button" id="div-button">/</div>
+        <div class="button" id="leftpar-button">(</div>
+        <div class="button" id="7-button">7</div>
+        <div class="button" id="8-button">8</div>
+        <div class="button" id="9-button">9</div>
+        <div class="button" id="mult-button">x</div>
+        <div class="button" id="rightpar-button">)</div>
+        <div class="button" id="4-button">4</div>
+        <div class="button" id="5-button">5</div>
+        <div class="button" id="6-button">6</div>
+        <div class="button" id="sub-button">-</div>
+        <div class="button" id="pow-button">^</div>
+        <div class="button" id="1-button">1</div>
+        <div class="button" id="2-button">2</div>
+        <div class="button" id="3-button">3</div>
+        <div class="button" id="add-button">+</div>
+        <div class="button" id="pi-button">π</div>
+        <div class="button" id="0-button">0</div>
+        <div class="button" id="dot-button">.</div>
+        <div class="button" id="del-button">DEL</div>
+        <div class="button equal-button" id="equal-button-1">=</div>
+    </div>
+</body>
+<script type="text/javascript">
+    buffer = "";
+    defx = 123;
+    defy = 12;
+    buttonlist = ["C", "√", "0-", "/", "(", "7", "8", "9", "*", ")", "4", "5", "6", "-", "^", "1", "2", "3", "+", "π", "0", ".", "DEL", "="];
+
+    function buttonsaction(buttonindex) {
+        buttonactionname = buttonlist[buttonindex];
+        try {
+            if (buttonactionname == "C") {
+                buffer = "";
+            } else if (buttonactionname == "0-") {
+                buffer = buttonactionname + buffer
+            } else if (buttonactionname == "DEL") {
+                buffer = buffer.slice(0, -1)
+            } else if (buttonactionname == "=") {
+                buffer = buffer.replaceAll("√", "Math.sqrt").replaceAll("π", "Math.PI").replaceAll("^", "**");
+                buffer = String(eval(buffer));
+            } else {
+                buffer += buttonactionname;
+            }
+            document.getElementById("result-display").innerHTML = buffer;
+        } catch {
+            document.getElementById("result-display").innerHTML = "ERROR";
+        }
+        document.getElementById("result-display").style.fontSize = Math.min(68, 48 * (17 / document.getElementById("result-display").innerHTML.length)) + "px";
+    }
+    for (i = 0; i < 24; i++) {
+        document.getElementsByClassName("button")[i].style.top = defx + 111 * Math.floor(i / 5) + "px";
+        document.getElementsByClassName("button")[i].style.left = defy + 111 * (i % 5) + "px";
+    }
+    document.getElementsByClassName("button")[0].onclick = function() {
+        buttonsaction(0)
+    };
+    document.getElementsByClassName("button")[1].onclick = function() {
+        buttonsaction(1)
+    };
+    document.getElementsByClassName("button")[2].onclick = function() {
+        buttonsaction(2)
+    };
+    document.getElementsByClassName("button")[3].onclick = function() {
+        buttonsaction(3)
+    };
+    document.getElementsByClassName("button")[4].onclick = function() {
+        buttonsaction(4)
+    };
+    document.getElementsByClassName("button")[5].onclick = function() {
+        buttonsaction(5)
+    };
+    document.getElementsByClassName("button")[6].onclick = function() {
+        buttonsaction(6)
+    };
+    document.getElementsByClassName("button")[7].onclick = function() {
+        buttonsaction(7)
+    };
+    document.getElementsByClassName("button")[8].onclick = function() {
+        buttonsaction(8)
+    };
+    document.getElementsByClassName("button")[9].onclick = function() {
+        buttonsaction(9)
+    };
+    document.getElementsByClassName("button")[10].onclick = function() {
+        buttonsaction(10)
+    };
+    document.getElementsByClassName("button")[11].onclick = function() {
+        buttonsaction(11)
+    };
+    document.getElementsByClassName("button")[12].onclick = function() {
+        buttonsaction(12)
+    };
+    document.getElementsByClassName("button")[13].onclick = function() {
+        buttonsaction(13)
+    };
+    document.getElementsByClassName("button")[14].onclick = function() {
+        buttonsaction(14)
+    };
+    document.getElementsByClassName("button")[15].onclick = function() {
+        buttonsaction(15)
+    };
+    document.getElementsByClassName("button")[16].onclick = function() {
+        buttonsaction(16)
+    };
+    document.getElementsByClassName("button")[17].onclick = function() {
+        buttonsaction(17)
+    };
+    document.getElementsByClassName("button")[18].onclick = function() {
+        buttonsaction(18)
+    };
+    document.getElementsByClassName("button")[19].onclick = function() {
+        buttonsaction(19)
+    };
+    document.getElementsByClassName("button")[20].onclick = function() {
+        buttonsaction(20)
+    };
+    document.getElementsByClassName("button")[21].onclick = function() {
+        buttonsaction(21)
+    };
+    document.getElementsByClassName("button")[22].onclick = function() {
+        buttonsaction(22)
+    };
+    document.getElementsByClassName("button")[23].onclick = function() {
+        buttonsaction(23)
+    };
+</script>
+
+</html>
