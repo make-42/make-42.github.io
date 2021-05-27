@@ -64,6 +64,15 @@ body {
   background: white;
   transition: width 1s ease, height 1s ease, background 1s ease, box-shadow 1s ease;
 }
+
+.progressbar-text {
+position:absolute;
+font-size:10px;
+width:100%;
+text-align:center;
+transition: font-size 1s ease;
+}
+
 .schedule-element {
     position: relative;
     background: var(--mdc-theme-primary);
