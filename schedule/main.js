@@ -54,13 +54,13 @@ function updateprogressbar(){
   updatecurrentevent()
   currenttimestamp = (new Date().getHours()*60)+(new Date().getMinutes())+(new Date().getSeconds()/60)
   if (currentevent["name"] != "NULLEVENT"){
-    document.getElementsByClassName("progressbar")[0].style.height = "10px";
-    document.getElementsByClassName("progressbar-progress")[0].style.height = "10px";
+    document.getElementsByClassName("progressbar")[0].style.height = "15px";
+    document.getElementsByClassName("progressbar-progress")[0].style.height = "15px";
     document.getElementsByClassName("progressbar-progress")[0].style.width = ((currenttimestamp-parseInt(currentevent["start"]))/(parseInt(currentevent["end"])-parseInt(currentevent["start"])))*100+"vw";
     document.getElementsByClassName("progressbar-progress")[0].style.background = currentevent["color"];
-    document.getElementsByClassName("progressbar-progress")[0].style.boxShadow = currentevent["color"] + " 1px 1px 10px";
+    document.getElementsByClassName("progressbar-progress")[0].style.boxShadow = currentevent["color"] + " 1px 1px 15px";
 	document.getElementsByClassName("progressbar-text")[0].innerHTML = Math.round(((currenttimestamp-parseInt(currentevent["start"]))/(parseInt(currentevent["end"])-parseInt(currentevent["start"])))*1000)/10+"%";
-	document.getElementsByClassName("progressbar-text")[0].style.fontSize = "10px";
+	document.getElementsByClassName("progressbar-text")[0].style.fontSize = "15px";
   } else{
     document.getElementsByClassName("progressbar")[0].style.height = "";
     document.getElementsByClassName("progressbar-progress")[0].style.height = "";
