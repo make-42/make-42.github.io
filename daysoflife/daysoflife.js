@@ -5,6 +5,7 @@ function weeksBetween(d1, d2) {
     return Math.round((d2 - d1) / (7 * 24 * 60 * 60 * 1000));
 }
 
+
 weekcount=Math.ceil(targetyears*52.1429);
 currdate=dob;
 
@@ -13,7 +14,14 @@ function load() {
 
     for (i=0; i < weekcount; i++) {
         var div=document.createElement("div");
-        div.className="week"
+        div.className="week";
+        div.ariaLabel=(new Date(dob+(7 * 24 * 60 * 60 * 1000)*i)).toISOString()
+        div.onclick = function(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var elementMouseIsOver = document.elementFromPoint(x, y);
+        alert(elementMouseIsOver.ariaLabel)
+        }
         document.getElementsByClassName("grid")[0].appendChild(div);
     }
 }
