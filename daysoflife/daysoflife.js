@@ -1,125 +1,33 @@
-/* jshint esversion:6 */
-const version = "0.01";
+targetyears = 88;
+dob = Date.parse("2/12/2007");
 
-
-
-const palettes = [
-    ["#001B2E", "#294C60", "#ADB6C4", "#FFEFD3", "#FFC49B"],
-    ["#08605F", "#177E89", "#598381", "#8E936D", "#A2AD59"],
-    ["#2F1847", "#624763", "#C62E65", "#F9B3D1", "#FAE3E3"],
-    ["#472D30", "#723D46", "#E26D5C", "#FFE1A8", "#C9CBA3"],
-    ["#133C55", "#386FA4", "#59A5D8", "#84D2F6", "#91E5F6"],
-    ["#412234", "#6D466B", "#B49FCC", "#EAD7D7", "#FFFFFF"],
-    ["#827081", "#AEA3B0", "#E3D0D8", "#C6D2ED", "#E7E6F7"]
-];
-const listofpages = "home   blog   demos";
-
-
-
-
-var currentpage = "home";
-var commandbuffer =[];
-var commandbufferindex = 0-1;
-
-function print(printContent) {
-    i = 0;
-    document.getElementsByClassName("terminal-text")[0].innerHTML += printContent.replaceAll(" ", "&nbsp;").replaceAll("\n", "<br>").replaceAll("&actualspace;", " ");
-}
-
-function bootsequence() {
-    print(" _______  _______          _______  _______\n|       ||       |        |       ||       |\n|   _   ||_     _|        |   _   ||  _____|\n|  | |  |  |   |          |  | |  || |_____ \n|  |_|  |  |   |          |  |_|  ||_____  |\n|       |  |   |   _____  |       | _____| |\n|_______|  |___|  |_____| |_______||_______|\n");
-    print("v" + version + "\n\nType \"help\" for a list of commands.\n\n");
-}
-
-function colorize(inputText, color) {
-    return "<span&actualspace;class=\"text-color-" + color + "\">" + inputText + "</span>";
-}
-
-function changepalette(paletteIndex){
-  currentPalette = palettes[paletteIndex];
-  let root = document.documentElement;
-  root.style.setProperty('--color-1', currentPalette[0]);
-  root.style.setProperty('--color-2', currentPalette[1]);
-  root.style.setProperty('--color-3', currentPalette[2]);
-  root.style.setProperty('--color-4', currentPalette[3]);
-  root.style.setProperty('--color-5', currentPalette[4]);
-}
-
-function parse(query) {
-    commandbuffer.push(query);
-    commandbufferindex = 0-1;
-    args = query.split(" ");
-    switch (args[0]) {
-        case "help":
-            print("Commands:\n    - help: display this message\n    - ls: list pages\n    - cd [page]: enter page\n    - lscolors: show all colors\n    - screenfetch: get system information\n    - chpalette [0-6]: change color palette\n");
-            break;
-        case "ls":
-            print(listofpages + "\n");
-            break;
-        case "cd":
-            print(listofpages + "\n");
-            break;
-        case "lscolors":
-            print("  " + colorize("████", 1) + "  " + colorize("████", 2) + "  " + colorize("████", 3) + "  " + colorize("████", 4) + "  " + colorize("████", 5) + "\n");
-            break;
-        case "chpalette":
-            changepalette(parseInt(args[1]));
-            window.localStorage.setItem("palette",parseInt(args[1]));
-            break;
-        case "screenfetch":
-            print("User-Agent: " + window.navigator.userAgent + "\n");
-            print("OS: " + window.navigator.platform + "\n");
-            print("CPU: " + window.navigator.hardwareConcurrency + " cores\n");
-            print("RAM: " + navigator.deviceMemory + " GB\n");
-            break;
-        default:
-            print("Error: Unknown command.\n");
-    }
-    print("\n");
-}
-
-function setinputvalue(stringtoset){
-    document.getElementsByTagName("input")[0].value = stringtoset;
-}
-
-function main() {
-    bootsequence();
-    if (window.localStorage.getItem("palette") == null){
-      window.localStorage.setItem("palette",6);
-    }
-    changepalette(window.localStorage.getItem("palette"));
-    document.getElementsByTagName("input")[0].focus();
+function weeksBetween(d1, d2) {
+    return Math.round((d2 - d1) / (7 * 24 * 60 * 60 * 1000));
 }
 
 
-document.getElementsByTagName("input")[0].addEventListener("keyup", function(event) {
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-        print("> " + document.getElementsByTagName("input")[0].value + "\n");
-        parse(document.getElementsByTagName("input")[0].value);
-        document.getElementsByTagName("input")[0].value = "";
-    }
-    if (event.keyCode === 38) {
-        if (commandbufferindex == 0-1){
-          commandbufferindex = commandbuffer.length-1;
-        } else {
-          if (commandbufferindex > 0){
-          commandbufferindex--;
-        }}
-        if (commandbufferindex != 0-1){
-        setinputvalue(commandbuffer[commandbufferindex]);
-      }
-    }
-    if (event.keyCode === 40) {
-      if (commandbufferindex == 0-1){
-        commandbufferindex = commandbuffer.length-1;
-      } else {
-        if (commandbufferindex < commandbuffer.length-1){
-        commandbufferindex++;
-      }}
-      if (commandbufferindex != 0-1){
-      setinputvalue(commandbuffer[commandbufferindex]);
-    }
-  }
-});
-main();
+
+weekcount = Math.ceil(targetyears*52.1429);
+currdate = dob;
+
+function load(){
+  var i;
+for (i = 0; i < weekcount; i++) {
+  var div = document.createElement("div");
+  div.className = "week"
+  document.getElementsByClassName("grid")[0].appendChild(div);
+}
+weekspassed = weeksBetween(dob, new Date());
+i = 0;
+  intervalforanim = setInterval(function(){
+  if (i <= weekspassed){
+  document.getElementsByClassName("grid")[0].children[i].className += " passed";
+  document.getElementsByClassName("grid")[0].children[i].style = "animation: flipdot 0.05s linear;";
+} else{
+   clearInterval(intervalforanim);
+}
+  i++;
+},10);
+}
+
+load();

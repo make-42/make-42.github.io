@@ -1,94 +1,35 @@
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("./assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"), url("./assets/fonts/JetBrainsMono-Regular.woff") format("woff")
-}
-
-:root {
-    --color-0: black;
-    --color-1: #E7E6F7;
-    --color-2: #E3D0D8;
-    --color-3: #AEA3B0;
-    --color-4: #827081;
-    --color-5: #C6D2ED;
-}
-
-/* width */
-::-webkit-scrollbar {
-    width: 2px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--color-0);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--color-5);
-}
-
 body {
     margin: 0px;
-}
-
-.terminal-body {
-    width: 100%;
-    height: calc(100vh - 30px);
-    background: var(--color-0);
-}
-
-.terminal-text {
-    font-family: "JetBrains Mono";
-    font-size: 15px;
-    color: var(--color-5);
-    padding: 10px;
-    height: calc(100vh - 30px);
-    overflow: scroll;
-}
-
-input {
-    position: absolute;
-    bottom: 0px;
-    width: calc(100% - 15px);
-    height: 30px;
-    left: 15px;
-    background: transparent;
-    color: var(--color-5);
-    font-family: "JetBrains Mono";
-    font-size: 15px;
-    border: transparent;
-    outline: none;
-}
-
-.under-input {
-    position: absolute;
-    bottom: 0px;
-    text-indent: 2px;
-    line-height: 30px;
-    width: 100%;
-    height: 30px;
     background: black;
-    color: var(--color-5);
-    font-family: "JetBrains Mono";
-    font-size: 15px;
+}
+.grid{
+display: flex;
+flex-wrap: wrap;
 }
 
-.text-color-1 {
-    color: var(--color-1);
+.week {
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #1f1f1f; /* #e0e0e0 */
+}
+.week.passed {
+    background: white;
 }
 
-.text-color-2 {
-    color: var(--color-2);
-}
-
-.text-color-3 {
-    color: var(--color-3);
-}
-
-.text-color-4 {
-    color: var(--color-4);
-}
-
-.text-color-5 {
-    color: var(--color-5);
+@keyframes flipdot {
+  0%{
+    transform: rotateX(0deg) rotateY(0deg);
+    background: #1f1f1f;
+  }
+  50%{
+    transform: rotateX(90deg) rotateY(90deg);
+    background: #1f1f1f;
+  }
+  50.01%{
+    background: white;
+  }
+  100%{transform: rotateX(0deg) rotateY(0deg);}
 }
