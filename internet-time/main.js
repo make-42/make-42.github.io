@@ -26,4 +26,4 @@ setInterval(function(){
 
       document.getElementsByClassName("rolling-number")[i].style = "transform: translateY(-"+String(120*parseInt(currtimestring[i].replaceAll("@","10").replaceAll(".","11")))+"px);";
   }
-},100)
+},500)
