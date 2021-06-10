@@ -3,7 +3,7 @@
 body {
     margin: 0px;
     background: black;
-    position: re
+    overflow: hidden;
 }
 .time{
   color:white;
@@ -14,4 +14,49 @@ body {
   transform: translateY(-50%) translateX(-50%);
   left: 50%;
   font-family: 'Fira Mono', monospace;
+}
+
+.rolling-number{
+  position: absolute;
+  top:-60px;
+  transition: transform 0.1s linear;
+}
+.mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 60%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.rolling-number-0{
+  left:-225px;
+}
+.rolling-number-1{
+  left:-175px;
+}
+.rolling-number-2{
+  left:-125px;
+}
+.rolling-number-3{
+  left:-75px;
+}
+.rolling-number-4{
+  left:-25px;
+}
+.rolling-number-5{
+  left:25px;
+}
+.rolling-number-6{
+  left:75px;
+}
+.rolling-number-7{
+  left:125px;
+}
+.rolling-number-8{
+  left:175px;
+}
+.rolling-number-9{
+  left:225px;
 }
