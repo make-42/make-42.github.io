@@ -19,7 +19,7 @@ body {
 .rolling-number{
   position: absolute;
   top:-60px;
-  transition: transform 0.1s linear;
+  transition: transform 0.4s ease-in;
 }
 .mask{
   position: absolute;
