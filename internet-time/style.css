@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+body {
+    margin: 0px;
+    background: black;
+    position: re
+}
+.time{
+  color:white;
+  text-align: center;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+  font-family: 'Fira Mono', monospace;
+}
