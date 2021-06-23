@@ -5,11 +5,12 @@ noise.seed(Math.random());
 /* Canvas Params*/
 canvas_scale = 200;
 framerate = 10;
-spacing = 40;
-linewidth = 10;
-linelength = 5;
-noisescale = 0.1628125;
-timescale = 0.005;
+spacing = 50;
+linewidth = 3;
+lineres = 8
+linelength = 4;
+noisescale = 0.05628125;
+timescale = 0.0002;
 hslscale = 10;
 var starttime = + new Date();
 function update_canvas(){
@@ -19,16 +20,18 @@ ctx.clearRect(0, 0, canvas_width, canvas_height);
 var currtime = + new Date();
 for (let i = 0; i < Math.floor(canvas_width/spacing); i++) {
   for (let j = 0; j < Math.floor(canvas_height/spacing); j++) {
-    x = noise.perlin2(i*noisescale,currtime*timescale*noisescale);
-    y = noise.perlin2(j*noisescale,currtime*timescale*noisescale+100000000);
-    for (let w = 0; w < linelength*2; w++) {
+    inoise = i+noise.perlin2(i*noisescale,8556970.645)*0.1;
+    jnoise = j+noise.perlin2(j*noisescale,0.6859)*0.1;
+    x = noise.perlin2(inoise*noisescale,currtime*timescale);
+    y = noise.perlin2(jnoise*noisescale,currtime*timescale+100000000);
+    for (let w = 0; w < linelength*lineres; w++) {
     ctx.beginPath();
-    posx = i*spacing+x*linelength*w+spacing/2
-    posy = j*spacing+y*linelength*w+spacing/2
+    posx = inoise*spacing+x*linelength*w+spacing/2
+    posy = jnoise*spacing+y*linelength*w+spacing/2
     leng = Math.sqrt(Math.pow(posx,2)+Math.pow(posy,2))
     lengfromcent =  Math.sqrt(Math.pow(x*linelength*w,2)+Math.pow(y*linelength*w,2))
-    ctx.fillStyle = 'hsla('+(((currtime-starttime)/hslscale)+leng)+'deg,100%,60%,'+lengfromcent*4+'%)';
-    ctx.arc(posx,posy,linewidth,0,2*Math.PI);
+    ctx.fillStyle = 'hsla('+((((currtime-starttime)/hslscale)+leng)+x+y)+'deg,70%,60%,'+lengfromcent*2+'%)';
+    ctx.arc(posx,posy,linewidth*(w/(linelength*lineres)),0,2*Math.PI);
     ctx.fill();
   }
 
