@@ -13,17 +13,16 @@ function itime(){
 
 
 var i;
-for (i = 0; i < 10; i++) {
+for (i = 0; i < 8; i++) {
   var newDiv = document.createElement("div");
   newDiv.className = "rolling-number rolling-number-"+String(i);
-  newDiv.innerHTML = "0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>@<br>.";
+  newDiv.innerHTML = "0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>:";
   document.getElementsByClassName("time")[0].appendChild(newDiv);
 }
 
 setInterval(function(){
-  var currtimestring = "@"+(Math.round(itime() * 10000) / 10000).toFixed(4).padStart(9, '0');
-  for (i = 0; i < 10; i++) {
-
-      document.getElementsByClassName("rolling-number")[i].style = "transform: translateY(-"+String(120*parseInt(currtimestring[i].replaceAll("@","10").replaceAll(".","11")))+"px);";
+  var currtimestring = (new Date()).toTimeString().slice(0,8);
+  for (i = 0; i < 8; i++) {
+      document.getElementsByClassName("rolling-number")[i].style = "transform: translateY(-"+String(120*parseInt(currtimestring[i].replaceAll(":","10")))+"px);";
   }
 },300)
