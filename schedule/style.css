@@ -1,118 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 body {
     margin: 0;
     background: url(./assets/noise-strong.png);
     font-family: 'Ubuntu', sans-serif;
 }
-#toast-notification{
-position: absolute;
-width: 100%;
-top:-43.5px;
-transition: top 0.5s ease;
-background: white;
-padding: 12px;
+
+#toast-notification {
+    position: absolute;
+    width: 100%;
+    top: -43.5px;
+    transition: top 0.5s ease;
+    background: white;
+    padding: 12px;
 }
+
 #header {
-    display:flex;
+    display: flex;
     justify-content: flex-end;
-    background: rgba(0,0,0,0.03);
+    background: rgba(0, 0, 0, 0.03);
 }
-#header-icon-image{
+
+#header-icon-image {
     height: 16px;
-padding: 12px;
+    padding: 12px;
 }
-#header-title{
+
+#header-title {
     width: 100%;
     text-align: left;
     padding: 12px;
 }
-#schedule-file-link{
-    color:black;
+
+#schedule-file-link {
+    color: black;
 }
 
-.week-control-button{
+.week-control-button {
     padding: 10px 12px 10px 12px;
     margin: 2px 0px 2px 0px;
-    border: solid 1px rgba(0,0,0,0.33);
+    border: solid 1px rgba(0, 0, 0, 0.33);
 }
-#week-back-button{
+
+#week-back-button {
     border-radius: 8px 0px 0px 8px;
 }
-#week-upload-button{
+
+#week-upload-button {
     border-radius: 0px 8px 8px 0px;
 }
-#week-count{
+
+#week-count {
     transition: text-decoration 150ms ease;
 }
 
-#schedule-table{
-    background: rgba(0,0,0,0.03);
+#schedule-table {
+    background: rgba(0, 0, 0, 0.03);
     margin: 32px;
     border-radius: 8px;
 }
 
-#schedule-weekday-name-list{
+#schedule-weekday-name-list {
     display: flex;
 }
-.schedule-weekday-name{
+
+.schedule-weekday-name {
     width: 100%;
     text-align: center;
     margin: 4px;
     border-radius: 8px;
     transition: text-decoration 150ms ease;
 }
-#schedule-days{
+
+#schedule-days {
     display: flex;
 }
 
-.schedule-day{
+.schedule-day {
     position: relative;
     width: 100%;
     text-align: center;
-    background: rgba(0,0,0,0.03);
+    background: rgba(0, 0, 0, 0.03);
     margin: 4px;
     border-radius: 8px;
 }
 
-.schedule-event{
+.schedule-event {
     text-align: center;
-    border: dashed 1px rgba(0,0,0,0.33);
+    border: dashed 1px rgba(0, 0, 0, 0.33);
     border-radius: 8px;
     margin: 10px;
     animation: loadIn 150ms ease;
 }
 
-.schedule-event-destroy{
+.schedule-event-destroy {
     opacity: 0;
     animation: loadOut 150ms ease;
 }
 
-.schedule-event-name{
-    padding:4px;
+.schedule-event-name {
+    padding: 4px;
 }
 
-.schedule-event-time{
-    padding:4px;
+.schedule-event-time {
+    padding: 4px;
 }
 
 @keyframes loadIn {
-    0%{
-        opacity:0;
+    0% {
+        opacity: 0;
         transform: translateY(10px);
     }
-    100%{
-        opacity:1;
+
+    100% {
+        opacity: 1;
         transform: translateY(0px);
     }
 
 }
+
 @keyframes loadOut {
-    0%{
-        opacity:1;
+    0% {
+        opacity: 1;
         transform: translateY(0px);
     }
-    100%{
-        opacity:0;
+
+    100% {
+        opacity: 0;
         transform: translateY(10px);
     }
 

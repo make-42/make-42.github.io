@@ -1,0 +1,388 @@
+{
+  "weeks": {
+    "startDate": "2021-08-30T00:00:00.000Z",
+    "weekTypeString": "ABABABABCCABABABCCABABABACCBABABABCCABABABABA",
+    "_comment": "End of 2020 is 53rd week of 2021."
+  },
+  "schedule": {
+    "A": [
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "Mathematics",
+          "room": "209"
+        },
+        {
+          "start": "09:25",
+          "end": "10:20",
+          "name": "French",
+          "room": "220"
+        },
+        {
+          "start": "10:35",
+          "end": "12:25",
+          "name": "Phys. Ed.",
+          "room": "GYMASIUM"
+        },
+        {
+          "start": "12:25",
+          "end": "13:40",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "13:40",
+          "end": "14:35",
+          "name": "Comput. Science",
+          "room": "220"
+        },
+        {
+          "start": "14:35",
+          "end": "15:30",
+          "name": "Spanish",
+          "room": "320"
+        },
+        {
+          "start": "15:45",
+          "end": "16:40",
+          "name": "French",
+          "room": "220"
+        }
+      ],
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "Religion",
+          "room": "Auditorium"
+        },
+        {
+          "start": "09:25",
+          "end": "10:20",
+          "name": "Moral and Civic Ed.",
+          "room": "220"
+        },
+        {
+          "start": "10:35",
+          "end": "11:30",
+          "name": "English",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "13:40",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "13:40",
+          "end": "14:35",
+          "name": "History & Geog.",
+          "room": "220"
+        },
+        {
+          "start": "14:35",
+          "end": "15:30",
+          "name": "Spanish",
+          "room": "320"
+        },
+        {
+          "start": "15:45",
+          "end": "16:40",
+          "name": "English",
+          "room": "220"
+        },
+        {
+          "start": "16:40",
+          "end": "17:35",
+          "name": "Econo. Soc.",
+          "room": "220"
+        }
+      ],
+      [
+        {
+          "start": "08:10",
+          "end": "09:05",
+          "name": "Class Meeting",
+          "room": "220"
+        },
+        {
+          "start": "09:05",
+          "end": "10:00",
+          "name": "Mathematics",
+          "room": "220"
+        },
+        {
+          "start": "10:35",
+          "end": "11:30",
+          "name": "Econo. Soc.",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "12:25",
+          "name": "History & Geog.",
+          "room": "220"
+        }
+      ],
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "Spanish",
+          "room": "220"
+        },
+        {
+          "start": "09:25",
+          "end": "11:30",
+          "name": "Mathematics",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "13:40",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "13:40",
+          "end": "14:35",
+          "name": "Comput. Science",
+          "room": "220"
+        },
+        {
+          "start": "14:35",
+          "end": "17:35",
+          "name": "Exams",
+          "room": "320"
+        }
+      ],
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "Physics",
+          "room": "220"
+        },
+        {
+          "start": "09:25",
+          "end": "11:30",
+          "name": "French",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "12:45",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "12:45",
+          "end": "13:40",
+          "name": "English",
+          "room": "220"
+        },
+        {
+          "start": "13:40",
+          "end": "16:40",
+          "name": "TP",
+          "room": "Lab Sc./Phys."
+        }
+      ],
+      [],
+      []
+    ],
+    "B": [
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "French",
+          "room": "220"
+        },
+        {
+          "start": "09:25",
+          "end": "10:20",
+          "name": "Mathematics",
+          "room": "209"
+        },
+        {
+          "start": "10:35",
+          "end": "12:25",
+          "name": "Phys. Ed.",
+          "room": "GYMASIUM"
+        },
+        {
+          "start": "12:25",
+          "end": "13:40",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "13:40",
+          "end": "14:35",
+          "name": "History & Geog.",
+          "room": "320"
+        },
+        {
+          "start": "14:35",
+          "end": "15:30",
+          "name": "Spanish",
+          "room": "320"
+        },
+        {
+          "start": "15:45",
+          "end": "16:40",
+          "name": "French",
+          "room": "220"
+        }
+      ],
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "Religion",
+          "room": "Auditorium"
+        },
+        {
+          "start": "09:25",
+          "end": "10:20",
+          "name": "History & Geog.",
+          "room": "127"
+        },
+        {
+          "start": "10:35",
+          "end": "11:30",
+          "name": "English",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "13:40",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "13:40",
+          "end": "14:35",
+          "name": "History & Geog.",
+          "room": "220"
+        },
+        {
+          "start": "14:35",
+          "end": "15:30",
+          "name": "Spanish",
+          "room": "320"
+        },
+        {
+          "start": "15:45",
+          "end": "16:40",
+          "name": "English",
+          "room": "220"
+        }
+      ],
+      [
+        {
+          "start": "08:10",
+          "end": "09:05",
+          "name": "Class Meeting",
+          "room": "220"
+        },
+        {
+          "start": "09:05",
+          "end": "10:00",
+          "name": "Mathematics",
+          "room": "220"
+        },
+        {
+          "start": "10:35",
+          "end": "11:30",
+          "name": "Econo. Soc.",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "12:25",
+          "name": "History & Geog.",
+          "room": "220"
+        }
+      ],
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "Physics",
+          "room": "220"
+        },
+        {
+          "start": "09:25",
+          "end": "11:30",
+          "name": "Mathematics",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "12:25",
+          "name": "English",
+          "room": "220"
+        },
+        {
+          "start": "12:25",
+          "end": "13:40",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "13:40",
+          "end": "14:35",
+          "name": "Comput. Science",
+          "room": "220"
+        },
+        {
+          "start": "14:35",
+          "end": "17:35",
+          "name": "Exams",
+          "room": "320"
+        }
+      ],
+      [
+        {
+          "start": "08:30",
+          "end": "09:25",
+          "name": "Physics",
+          "room": "220"
+        },
+        {
+          "start": "09:25",
+          "end": "11:30",
+          "name": "French",
+          "room": "220"
+        },
+        {
+          "start": "11:30",
+          "end": "13:40",
+          "name": "Lunch",
+          "room": "Cafeteria"
+        },
+        {
+          "start": "13:40",
+          "end": "16:40",
+          "name": "TP",
+          "room": "Lab Sc./Phys."
+        }
+      ],
+      [],
+      []
+    ],
+    "C": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  }
+}
