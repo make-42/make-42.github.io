@@ -1,154 +1,107 @@
-var currentevent;
+var scale = 60
+var eventDivPaddingOffset=10;
 
-Date.prototype.getWeekNumber = function() {
-    var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
-    var dayNum = d.getUTCDay() || 7;
-    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
-    var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-    return Math.ceil((((d - yearStart) / 86400000) + 1) / 7)
-};
 
-function onChange(event) {
-    var reader = new FileReader();
-    reader.onload = onReaderLoad;
-    reader.readAsText(event.target.files[0]);
-}
+var scheduleData;
+var weekNumber;
+var dayOfWeek;
+var realWeekNumber;
 
-function onReaderLoad(event) {
-    localStorage.setItem('schedule-data', event.target.result);
-}
-
-function loaddefault() {
-    $.get("306%20-%202020-2021.tschdl", function(data) {
-        localStorage.setItem('schedule-data', data);
-    })
-}
-
-function updatecurrentevent(){
-  foundevent = false;
-  currenttimestamp = (new Date().getHours()*60)+(new Date().getMinutes())
-  scheduledata = JSON.parse(localStorage.getItem("schedule-data"))
-  week = scheduledata["weeks"][(new Date()
-          .getFullYear())
-      .toString()
-  ][(new Date()
-          .getWeekNumber()-1)
-      .toString()
-  ]
-  document.getElementsByClassName("mdc-top-app-bar__title")[0].innerHTML = "Schedule Viewer, Week "+week;
-  day = scheduledata["schedule"][week][(new Date().getDay()-1)]
-  day.forEach(function(scheduleelement) {
-    if (currenttimestamp >= parseInt(scheduleelement["start"])){
-      if (currenttimestamp < parseInt(scheduleelement["end"])){
-       currentevent =  scheduleelement;
-       foundevent = true;
-    }}
-  })
-  if (!foundevent){
-      currentevent = {start: "0", end: "0", name:"NULLEVENT", place: "null", color: "#FFFFFF"}
-  }
-
-}
-
-function updateprogressbar(){
-  updatecurrentevent()
-  currenttimestamp = (new Date().getHours()*60)+(new Date().getMinutes())+(new Date().getSeconds()/60)
-  if (currentevent["name"] != "NULLEVENT"){
-    document.getElementsByClassName("progressbar")[0].style.height = "15px";
-    document.getElementsByClassName("progressbar-progress")[0].style.height = "15px";
-    document.getElementsByClassName("progressbar-progress")[0].style.width = ((currenttimestamp-parseInt(currentevent["start"]))/(parseInt(currentevent["end"])-parseInt(currentevent["start"])))*100+"vw";
-    document.getElementsByClassName("progressbar-progress")[0].style.background = currentevent["color"];
-    document.getElementsByClassName("progressbar-progress")[0].style.boxShadow = currentevent["color"] + " 1px 1px 15px";
-	document.getElementsByClassName("progressbar-text")[0].innerHTML = Math.round(((currenttimestamp-parseInt(currentevent["start"]))/(parseInt(currentevent["end"])-parseInt(currentevent["start"])))*1000)/10+"%";
-	document.getElementsByClassName("progressbar-text")[0].style.fontSize = "15px";
-  } else{
-    document.getElementsByClassName("progressbar")[0].style.height = "";
-    document.getElementsByClassName("progressbar-progress")[0].style.height = "";
-    document.getElementsByClassName("progressbar-progress")[0].style.width = "";
-    document.getElementsByClassName("progressbar-progress")[0].style.background = "";
-    document.getElementsByClassName("progressbar-progress")[0].style.boxShadow = "white 0px 0px 0px";
-	document.getElementsByClassName("progressbar-text")[0].style.fontSize = "0px";
-  }
-}
-
-function formattimestamps(timestamp) {
-    hours = Math.floor(timestamp / 60)
-    minutes = Math.round((timestamp / 60 - hours) * 60)
-    if (minutes < 10) {
-        minutes = "0" + minutes;
+function animateScheduleEventDestroy(){
+    scheduleEventElements = document.getElementsByClassName("schedule-event")
+    for (let i = 0; i < scheduleEventElements.length; i++) {
+        scheduleEventElements[i].className += " schedule-event-destroy";
     }
-    return hours + ":" + minutes
 }
 
-function updateclock() {
-    document.getElementsByClassName("clock")[0].innerHTML = (new Date())
-        .toLocaleString()
+function toastNotification(textToDisplay){
+    document.getElementById("toast-notification").innerHTML = textToDisplay;
+    document.getElementById("toast-notification").style.top = "0";
+    setTimeout(function(){document.getElementById("toast-notification").style = "";},1000);
 }
 
-function loadcalendar(selectedtab) {
-    scheduledata = JSON.parse(localStorage.getItem("schedule-data"))
-    week = scheduledata["weeks"][(new Date()
-            .getFullYear())
-        .toString()
-    ][(new Date()
-            .getWeekNumber()-1).toString()
-    ]
-    day = scheduledata["schedule"][week][selectedtab.id[selectedtab.id.length - 1] - 1]
-    if (day.length != 0) {
-        mintime = 10000;
-        day.forEach(function(scheduleelement) {
-            if (mintime > scheduleelement["start"]) {
-                mintime = scheduleelement["start"]
-            }
-        });
-        document.getElementsByClassName("schedule-content")[0].innerHTML = "";
-        day.forEach(function(scheduleelement) {
-            document.getElementsByClassName("schedule-content")[0].innerHTML;
-            var scheduleelementdiv = document.createElement("div");
-            var nameelementdiv = document.createElement("div");
-            var timeelementdiv = document.createElement("div");
-            var placeelementdiv = document.createElement("div");
-            nameelementdiv.className = "name-element";
-            timeelementdiv.className = "time-element";
-            placeelementdiv.className = "place-element";
-            scheduleelementdiv.className = "schedule-element";
-            scheduleelementdiv.style.background = scheduleelement["color"]
-            scheduleelementdiv.style.boxShadow = "1px 1px 10px " + scheduleelement["color"];
-            nameelementdiv.innerHTML = scheduleelement["name"]
-            timeelementdiv.innerHTML = formattimestamps(scheduleelement["start"]) + "&nbsp;-&nbsp;" + formattimestamps(scheduleelement["end"])
-            placeelementdiv.innerHTML = scheduleelement["place"]
-            scheduleelementdiv.appendChild(nameelementdiv)
-            scheduleelementdiv.appendChild(timeelementdiv)
-            scheduleelementdiv.appendChild(placeelementdiv)
-            document.getElementsByClassName("schedule-content")[0].appendChild(scheduleelementdiv);
-        })
+function toastCopyright(){
+    toastNotification("Copyright. Louis Dalibard. 2021. All rights reserved.")
+}
+
+function lastWeek(){
+    weekNumber--;
+    animateScheduleEventDestroy();
+    setTimeout(updateSchedule,150);
+}
+function nextWeek(){
+    weekNumber++;
+    animateScheduleEventDestroy();
+    setTimeout(updateSchedule,150);
+}
+
+function loadCurrentSchedule(){
+    scheduleData = JSON.parse(localStorage.getItem('schedule-file'));
+    weekNumber = 0;
+    var a = moment(scheduleData.weeks.startDate);
+    var b = moment();
+    var diffdays =b.diff(a, 'days');
+    dayOfWeek = diffdays % 7;
+    weekNumber = Math.floor(diffdays/7);
+    realWeekNumber = weekNumber;
+}
+
+function updateSchedule(){
+    document.getElementById("week-count").innerHTML = weekNumber;
+    if (weekNumber == realWeekNumber){
+        document.getElementById("week-count").style.textDecoration="underline dotted black";
     } else {
-        document.getElementsByClassName("schedule-content")[0].innerHTML = "";
+        document.getElementById("week-count").style.textDecoration="underline dotted transparent";
+    }
+    var weekType = scheduleData.weeks.weekTypeString[weekNumber];
+    var weekData = scheduleData.schedule[weekType];
+    for (let i = 0; i < weekData.length; i++) {
+        var dayData = weekData[i];
+        document.getElementById("schedule-days").children[i].innerHTML="";
+        for (let j = 0; j < dayData.length; j++) {
+            var eventData = dayData[j]
+            var eventStart = eventData.start.split(":")[0]*60+eventData.start.split(":")[1];
+            var eventEnd = eventData.end.split(":")[0]*60+eventData.end.split(":")[1];
+            var eventDuration = eventEnd-eventStart
+            const eventDiv = document.createElement("div");
+            const eventNameDiv = document.createElement("div");
+            eventNameDiv.innerHTML = eventData.name;
+            eventNameDiv.className = "schedule-event-name";
+            eventDiv.appendChild(eventNameDiv);
+            const eventTimeDiv = document.createElement("div");
+            eventTimeDiv.innerHTML = eventData.start + " - "+ eventData.end;
+            eventTimeDiv.className = "schedule-event-time";
+            eventDiv.appendChild(eventTimeDiv);
+            eventDiv.className = "schedule-event";
+            eventDiv.style = "height: "+String((eventDuration/scale)-eventDivPaddingOffset)+"px;" + "top: "+String(eventStart/scale)+"px;"
+            document.getElementById("schedule-days").children[i].appendChild(eventDiv);
+            if (i == dayOfWeek){
+                document.getElementsByClassName("schedule-weekday-name")[i].style.textDecoration="underline dotted black";
+            } else {
+                document.getElementsByClassName("schedule-weekday-name")[i].style.textDecoration="underline dotted transparent";
+            }
+        }
     }
 }
-$(document)
-    .ready(function() {
-        //mdc.ripple.MDCRipple.attachTo(document.querySelector('.rippleeffect'));
-        const tabBar = mdc.tabBar.MDCTabBar.attachTo(document.querySelector('.mdc-tab-bar'));
-        const tabs = document.querySelectorAll('.mdc-tab');
 
-        tabBar.listen('MDCTabBar:activated', function(event) {
-            let tab = tabs[event.detail.index];
-            loadcalendar(tab)
-        });
-        if (localStorage.getItem("schedule-data") == undefined) {
-            loaddefault();
-        }
-        tabBar.activateTab(new Date()
-            .getDay() - 1);
-        topappbar = new mdc.topAppBar.MDCTopAppBar(document.getElementsByClassName("mdc-top-app-bar")[0])
-        $(".add-button")
-            .on("click", function() {
-                $("input")
-                    .trigger("click");
-            });
-        document.getElementById("FileAttachment")
-            .addEventListener('change', onChange);
-        setInterval(updateclock, 500);
-        setInterval(updateprogressbar, 1000);
-    });
+function upload(){
+    document.getElementById('FileAttachment').click();
+}
+
+function loadTSCDFile(filetoload){
+   var reader = new FileReader();
+   reader.readAsText(filetoload,'UTF-8');
+   reader.onload = readerEvent => {
+      var content = readerEvent.target.result;
+        localStorage.setItem('schedule-file', content);
+        loadCurrentSchedule();
+   }
+}
+
+document.getElementById('FileAttachment').onchange = e => { 
+    var file = e.target.files[0]; 
+    loadTSCDFile(file);
+}
+
+loadCurrentSchedule();
+updateSchedule();

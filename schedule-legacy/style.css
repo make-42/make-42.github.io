@@ -1,0 +1,140 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0px;
+    position: relative;
+    scrollbar-width: none;
+}
+
+.upload {
+    top: -100px;
+    position: absolute;
+}
+
+.schedule-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mdc-tab-bar {
+    padding-top: 56px;
+}
+
+.name-element {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 15px;
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    animation-name: opacity-appear;
+    animation-duration: 0.2s;
+}
+
+.time-element {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 15px;
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    animation-name: opacity-appear;
+    animation-duration: 0.2s;
+}
+
+.place-element {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 15px;
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    animation-name: opacity-appear;
+    animation-duration: 0.2s;
+}
+
+.progressbar{
+  height: 0px;
+  background: #DFDFDF;
+  transition: height 1s ease;
+}
+.progressbar-progress{
+  height: 0px;
+  width: 100vw;
+  background: white;
+  transition: width 1s ease, height 1s ease, background 1s ease, box-shadow 1s ease;
+}
+
+.progressbar-text {
+position:absolute;
+font-size:10px;
+width:100%;
+text-align:center;
+transition: font-size 1s ease;
+}
+
+.schedule-element {
+    position: relative;
+    background: var(--mdc-theme-primary);
+    width: 25vw;
+    height: 25vw;
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 1px 1px 10px black;
+    animation-name: schedule-element-appear-big;
+    animation-duration: 0.2s;
+}
+
+@media (max-width: 1200px), ((hover: none) and (pointer: coarse)) {
+.schedule-element {
+    position: relative;
+    background: var(--mdc-theme-primary);
+    width: 50vw;
+    height: 50vw;
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 1px 1px 10px black;
+    animation-name: schedule-element-appear-small;
+    animation-duration: 0.2s;
+}
+}
+
+@keyframes opacity-appear {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes schedule-element-appear-big {
+    from {
+        height: 0vw;
+        width: 0vw;
+        margin-right: 25vw;
+        margin-bottom: 25vw;
+    }
+
+    to {
+        height: 25vw;
+        width: 25vw;
+        margin-right: 0vw;
+        margin-bottom: 0vw;
+    }
+}
+
+@keyframes schedule-element-appear-small {
+    from {
+        height: 0vw;
+        width: 0vw;
+        margin-right: 50vw;
+        margin-bottom: 50vw;
+    }
+
+    to {
+        height: 50vw;
+        width: 50vw;
+        margin-right: 0vw;
+        margin-bottom: 0vw;
+    }
+}
