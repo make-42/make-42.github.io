@@ -159,6 +159,10 @@ body {
     border-top: dashed 2px rgba(0, 0, 0, 0.33);
     animation: loadIn 150ms ease;
 }
+.dates-date-description{
+    margin-left: 50px;
+    color: #555;
+}
 
 @keyframes loadIn {
     0% {

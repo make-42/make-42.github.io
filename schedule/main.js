@@ -119,7 +119,11 @@ function updateDates(){
             dateDateDiv.innerHTML = formatDateForUse(itDateData.startDate)
         }
         dateDateDiv.className = "dates-date-date";
+        var dateContentDiv = document.createElement("div");
+        dateContentDiv.innerHTML = itDateData.description;
+        dateContentDiv.className = "dates-date-description";
         dateDiv.appendChild(dateTitleDiv);
+        dateDiv.appendChild(dateContentDiv);
         dateDiv.appendChild(dateDateDiv);
         if (moment(itDateData.startDate)-moment() > 0){
             if (!currdatepassed){
