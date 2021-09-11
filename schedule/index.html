@@ -18,7 +18,7 @@
         moment().format();
     </script>
     <input type="file" name="FileAttachment" id="FileAttachment" class="upload" style="display: none;"></input>
-
+    <input type="file" name="FileAttachmentDates" id="FileAttachmentDates" class="uploadDates" style="display: none;"></input>
     <meta charset="UTF-8">
 
 </head>
@@ -57,6 +57,16 @@
             <div class="schedule-day"></div>
             <div class="schedule-day"></div>
             <div class="schedule-day"></div>
+        </div>
+    </div>
+    <div id="dates-list">
+        <div id="dates-list-header">
+            <div id="dates-list-header-title">Important dates. <a id="schedule-file-link" href="./211.tscdate2">211 - Group 1.</a></div>
+            <div class="dates-control-button" id="dates-upload-button" onclick="uploadDatesList();"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
+            </svg></div>
+        </div>
+        <div id="dates-list-list">
         </div>
     </div>
     <script src="./main.js"></script>

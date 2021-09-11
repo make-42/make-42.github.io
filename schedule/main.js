@@ -7,6 +7,8 @@ var weekNumber;
 var dayOfWeek;
 var realWeekNumber;
 
+var datesData;
+
 function animateScheduleEventDestroy() {
     scheduleEventElements = document.getElementsByClassName("schedule-event")
     for (let i = 0; i < scheduleEventElements.length; i++) {
@@ -38,6 +40,10 @@ function nextWeek() {
     setTimeout(updateSchedule, 150);
 }
 
+function formatDateForUse(dateString){
+    return moment(dateString).format('MMMM D, YYYY');
+}
+
 function loadCurrentSchedule() {
     scheduleData = JSON.parse(localStorage.getItem('schedule-file'));
     weekNumber = 0;
@@ -47,6 +53,10 @@ function loadCurrentSchedule() {
     dayOfWeek = diffdays % 7;
     weekNumber = Math.floor(diffdays / 7);
     realWeekNumber = weekNumber;
+}
+
+function loadDates(){
+    datesData = JSON.parse(localStorage.getItem('dates-file'));
 }
 
 function updateSchedule() {
@@ -75,6 +85,10 @@ function updateSchedule() {
             eventTimeDiv.innerHTML = eventData.start + " - " + eventData.end;
             eventTimeDiv.className = "schedule-event-time";
             eventDiv.appendChild(eventTimeDiv);
+            const eventRoomDiv = document.createElement("div");
+            eventRoomDiv.innerHTML = eventData.room;
+            eventTimeDiv.className = "schedule-event-time";
+            eventDiv.appendChild(eventTimeDiv);
             eventDiv.className = "schedule-event";
             eventDiv.style = "height: " + String((eventDuration / scale) - eventDivPaddingOffset) + "px;" + "top: " + String(eventStart / scale) + "px;"
             document.getElementById("schedule-days").children[i].appendChild(eventDiv);
@@ -87,8 +101,44 @@ function updateSchedule() {
     }
 }
 
+function updateDates(){
+    datesDataList = datesData.dates;
+    document.getElementById("dates-list-list").innerHTML = "";
+    currdatepassed = false;
+    for (let i = 0; i < datesDataList.length; i++) {
+        var itDateData=datesDataList[i]
+        var dateDiv = document.createElement("div");
+        dateDiv.className = "dates-date";
+        var dateTitleDiv = document.createElement("div");
+        dateTitleDiv.innerHTML = itDateData.title;
+        dateTitleDiv.className = "dates-date-title";
+        var dateDateDiv = document.createElement("div");
+        if (itDateData.startDate != itDateData.endDate){
+        dateDateDiv.innerHTML = formatDateForUse(itDateData.startDate)+" - "+formatDateForUse(itDateData.endDate);
+        } else{
+            dateDateDiv.innerHTML = formatDateForUse(itDateData.startDate)
+        }
+        dateDateDiv.className = "dates-date-date";
+        dateDiv.appendChild(dateTitleDiv);
+        dateDiv.appendChild(dateDateDiv);
+        if (moment(itDateData.startDate)-moment() > 0){
+            if (!currdatepassed){
+                currdatepassed = true;
+                var seperatorDiv = document.createElement("div");
+                seperatorDiv.id = "dates-seperator";
+                seperatorDiv.innerHTML = "Current Date";
+                document.getElementById("dates-list-list").appendChild(seperatorDiv);
+            }
+        }
+        document.getElementById("dates-list-list").appendChild(dateDiv);
+}}
+
 function upload() {
     document.getElementById('FileAttachment').click();
+}
+
+function uploadDatesList() {
+    document.getElementById('FileAttachmentDates').click();
 }
 
 function loadTSCDFile(filetoload) {
@@ -98,6 +148,18 @@ function loadTSCDFile(filetoload) {
         var content = readerEvent.target.result;
         localStorage.setItem('schedule-file', content);
         loadCurrentSchedule();
+        updateSchedule();
+    }
+}
+
+function loadTSCDateFile(filetoload) {
+    var reader = new FileReader();
+    reader.readAsText(filetoload, 'UTF-8');
+    reader.onload = readerEvent => {
+        var content = readerEvent.target.result;
+        localStorage.setItem('dates-file', content);
+        loadDates();
+        updateDates();
     }
 }
 
@@ -106,5 +168,12 @@ document.getElementById('FileAttachment').onchange = e => {
     loadTSCDFile(file);
 }
 
+document.getElementById('FileAttachmentDates').onchange = e => {
+    var dateFile = e.target.files[0];
+    loadTSCDateFile(dateFile);
+}
+
 loadCurrentSchedule();
 updateSchedule();
+loadDates();
+updateDates();

@@ -1,0 +1,263 @@
+{
+  "dates":
+    [
+        {
+          "title" : "Year Presentation",
+          "startDate": "2021-09-09",
+          "endDate":"2021-09-09",
+          "description": "Presentation of the year"
+        },
+        {
+          "title" : "Parent-Teacher Meeting",
+          "startDate": "2021-09-13",
+          "endDate":"2021-09-13",
+          "description": "Parent-Teacher Meeting (18:30)"
+        },
+        {
+          "title" : "High Bac Entry Test",
+          "startDate": "2021-09-15",
+          "endDate":"2021-09-15",
+          "description": "High Bac Entry Test"
+        },
+        {
+          "title" : "Diagnostic Exams",
+          "startDate": "2021-09-13",
+          "endDate":"2021-09-18",
+          "description": "French: 2h, Mathematics: 1h"
+        },
+        {
+          "title" : "English Exams",
+          "startDate": "2021-09-20",
+          "endDate":"2021-09-25",
+          "description": "English Exams: 1h30"
+        },
+        {
+          "title" : "Spanish + Econo. Exams",
+          "startDate": "2021-09-27",
+          "endDate":"2021-10-02",
+          "description": "Spanish: 1h30, Econo.: 1h"
+        },
+        {
+          "title" : "Physics + History & Geography",
+          "startDate": "2021-10-04",
+          "endDate":"2021-10-09",
+          "description": "Physics: 1h30, History & Geography: 1h30"
+        },
+        {
+          "title" : "Start of Half-Trimester Report Generation Starts",
+          "startDate": "2021-10-11",
+          "endDate":"2021-10-11",
+          "description": "Start of Half-Trimester Report Generation Starts"
+        },
+        {
+          "title" : "French Exams",
+          "startDate": "2021-10-11",
+          "endDate":"2021-10-16",
+          "description": "French: 2h"
+        },
+        {
+          "title" : "Mathematics Exams",
+          "startDate": "2021-10-18",
+          "endDate":"2021-10-23",
+          "description": "Mathematics: 2h"
+        },
+        {
+          "title" : "All Saints Vacation",
+          "startDate": "2021-10-23",
+          "endDate":"2021-11-08",
+          "description": "Vacation!"
+        },
+        {
+          "title" : "Pedagogic Day (Day Off)",
+          "startDate": "2021-11-12",
+          "endDate":"2021-11-12",
+          "description": "Pedagogic Day (Day Off)"
+        },
+        {
+          "title" : "Science + Computer Science Exams",
+          "startDate": "2021-11-15",
+          "endDate":"2021-11-20",
+          "description": "Science: 1h30, Computer Science: 1h30"
+        },
+        {
+          "title" : "Spanish Exams",
+          "startDate": "2021-11-22",
+          "endDate":"2021-11-27",
+          "description": "Spanish: 1h30"
+        },
+        {
+          "title" : "First Trimester Grading Stops",
+          "startDate": "2021-11-30",
+          "endDate":"2021-11-30",
+          "description": "First Trimester Grading Stops"
+        },
+        {
+          "title" : "English + Econo. Exams",
+          "startDate": "2021-11-29",
+          "endDate":"2021-12-04",
+          "description": "English: 1h30, Econo.: 1h30"
+        },
+        {
+          "title" : "First Trimester Report Generation",
+          "startDate": "2021-12-01",
+          "endDate":"2021-12-07",
+          "description": "First Trimester Report Generation"
+        },
+        {
+          "title" : "Parent-Teacher Meeting",
+          "startDate": "2021-12-09",
+          "endDate":"2021-12-09",
+          "description": "Parent-Teacher Meeting (18:00)"
+        },
+        {
+          "title" : "Florence Class Trip",
+          "startDate": "2021-12-13",
+          "endDate":"2021-12-17",
+          "description": "Hopefully, our class will go to Florence, Italy"
+        },
+        {
+          "title" : "Christmas Vacation",
+          "startDate": "2021-12-17",
+          "endDate":"2022-01-03",
+          "description": "Vacation!"
+        },
+        {
+          "title" : "French Exams",
+          "startDate": "2022-01-03",
+          "endDate":"2022-01-08",
+          "description": "French: 2h"
+        },
+        {
+          "title" : "Mathematics Exams",
+          "startDate": "2022-01-10",
+          "endDate":"2022-01-15",
+          "description": "Mathematics: 2h"
+        },
+        {
+          "title" : "Computer Science + Science Exams",
+          "startDate": "2022-01-17",
+          "endDate":"2022-01-22",
+          "description": "Computer Science: 1h30, Science: 1h30"
+        },
+        {
+          "title" : "Orientation Informations",
+          "startDate": "2022-01-20",
+          "endDate":"2022-01-20",
+          "description": "Orientation Informations (19:30)"
+        },
+        {
+          "title" : "Q&A for Orientation",
+          "startDate": "2022-01-27",
+          "endDate":"2022-01-27",
+          "description": "Q&A for Orientation (14:30)"
+        },
+        {
+          "title" : "Optional Options Exams",
+          "startDate": "2022-01-24",
+          "endDate":"2022-01-29",
+          "description": "Optional Options Exams: 1h30"
+        },
+        {
+          "title" : "Grade Level Exams (French)",
+          "startDate": "2022-02-07",
+          "endDate":"2022-02-11",
+          "description": "Grade Level Exams (French): 3h"
+        },
+        {
+          "title" : "Grade Level Exams (Other)",
+          "startDate": "2022-02-14",
+          "endDate":"2022-02-18",
+          "description": "Grade Level Exams (Other)"
+        },
+        {
+          "title" : "Winter Vacation",
+          "startDate": "2022-02-18",
+          "endDate":"2022-03-07",
+          "description": "Vacation!"
+        },
+        {
+          "title" : "Second Trimester Grading Stops",
+          "startDate": "2022-03-10",
+          "endDate":"2022-03-10",
+          "description": "Second Trimester Grading Stops"
+        },
+        {
+          "title" : "Second Trimester Report Generation",
+          "startDate": "2022-03-12",
+          "endDate":"2022-03-14",
+          "description": "Second Trimester Report Generation"
+        },
+        {
+          "title" : "Mathematics Exams",
+          "startDate": "2022-03-14",
+          "endDate":"2022-03-19",
+          "description": "Mathematics: 1h30"
+        },
+        {
+          "title" : "Informations for Eloquance Competition",
+          "startDate": "2022-03-22",
+          "endDate":"2022-03-22",
+          "description": "Informations for Eloquance Competition"
+        },
+        {
+          "title" : "English Exams",
+          "startDate": "2022-03-21",
+          "endDate":"2022-03-26",
+          "description": "English: 1h30"
+        },
+        {
+          "title" : "Spanish + Econo. Exams",
+          "startDate": "2022-03-28",
+          "endDate":"2022-04-02",
+          "description": "Spanish: 1h30, Econo.: 1h30"
+        },
+        {
+          "title" : "Physics + History & Geography Exams",
+          "startDate": "2022-04-04",
+          "endDate":"2022-04-09",
+          "description": "Mathematics: 1h30"
+        },
+        {
+          "title" : "French Exams",
+          "startDate": "2022-04-18",
+          "endDate":"2022-04-23",
+          "description": "French: 4h"
+        },
+        {
+          "title" : "Spring Vacation",
+          "startDate": "2022-04-22",
+          "endDate":"2022-05-09",
+          "description": "Vacation!"
+        },
+        {
+          "title" : "Mathematics Exams",
+          "startDate": "2022-05-09",
+          "endDate":"2022-05-14",
+          "description": "Mathematics: 2h"
+        },
+        {
+          "title" : "Science + Computer Science Exams",
+          "startDate": "2022-05-16",
+          "endDate":"2022-05-21",
+          "description": "Science: 1h30, Computer Science: 1h30"
+        },
+        {
+          "title" : "Third Trimester Grading Stops",
+          "startDate": "2022-05-28",
+          "endDate":"2022-05-28",
+          "description": "Third Trimester Grading Stops"
+        },
+        {
+          "title" : "Third Trimester Report Generation",
+          "startDate": "2022-05-28",
+          "endDate":"2022-06-05",
+          "description": "Third Trimester Report Generation"
+        },
+        {
+          "title" : "Eloquance Competition",
+          "startDate": "2022-06-02",
+          "endDate":"2022-06-02",
+          "description": "Eloquance Competition (13:30 - 17:00)"
+        }
+    ]
+}

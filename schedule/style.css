@@ -8,11 +8,13 @@ body {
 
 #toast-notification {
     position: absolute;
-    width: 100%;
-    top: -43.5px;
+    top: -45.5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     transition: top 0.5s ease;
     background: white;
-    padding: 12px;
+    padding: 12px 64px 12px 64px;
 }
 
 #header {
@@ -23,6 +25,9 @@ body {
 
 #header-icon-image {
     height: 16px;
+}
+
+#header-icon{
     padding: 12px;
 }
 
@@ -104,6 +109,55 @@ body {
 
 .schedule-event-time {
     padding: 4px;
+}
+
+
+#dates-list {
+    background: rgba(0, 0, 0, 0.03);
+    margin: 32px;
+    border-radius: 8px;
+}
+
+#dates-list-header {
+    display: flex;
+}
+
+#dates-list-header-title {
+    padding: 12px;
+}
+
+#dates-upload-button {
+    border-radius: 8px;
+}
+.dates-control-button {
+    padding: 10px 12px 10px 12px;
+    margin: 2px 2px 2px auto;
+    border: solid 1px rgba(0, 0, 0, 0.33);
+}
+#dates-list-list{
+    position: relative;
+    background: rgba(0, 0, 0, 0.03);
+    margin: 4px;
+    padding: 0.01px;
+    border-radius: 8px;
+}
+.dates-date{
+    padding: 12px;
+    border: dashed 1px rgba(0, 0, 0, 0.33);
+    border-radius: 8px;
+    display:flex;
+    margin:10px;
+    animation: loadIn 150ms ease;
+}
+.dates-date-date{
+    margin-left: auto;
+}
+#dates-seperator{
+    width: 98%;
+    height: 2px;
+    margin: 0px auto 25px auto;
+    border-top: dashed 2px rgba(0, 0, 0, 0.33);
+    animation: loadIn 150ms ease;
 }
 
 @keyframes loadIn {
