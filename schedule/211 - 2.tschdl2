@@ -34,7 +34,7 @@
         {
           "start": "13:40",
           "end": "14:35",
-          "name": "Comput. Science",
+          "name": "History",
           "room": "220"
         },
         {
@@ -60,8 +60,8 @@
         {
           "start": "09:25",
           "end": "10:20",
-          "name": "Moral and Civic Ed.",
-          "room": "220"
+          "name": "History & Geog.",
+          "room": "316"
         },
         {
           "start": "10:35",
@@ -71,32 +71,32 @@
         },
         {
           "start": "11:30",
-          "end": "13:40",
+          "end": "12:45",
           "name": "Lunch",
           "room": "Cafeteria"
         },
         {
+          "start": "12:45",
+          "end": "13:40",
+          "name": "Econo. Soc.",
+          "room": "220"
+        },
+        {
           "start": "13:40",
           "end": "14:35",
-          "name": "History & Geog.",
+          "name": "Physics",
           "room": "220"
         },
         {
           "start": "14:35",
           "end": "15:30",
           "name": "Spanish",
-          "room": "320"
+          "room": "220"
         },
         {
           "start": "15:45",
           "end": "16:40",
           "name": "English",
-          "room": "220"
-        },
-        {
-          "start": "16:40",
-          "end": "17:35",
-          "name": "Econo. Soc.",
           "room": "220"
         }
       ],
@@ -118,19 +118,13 @@
           "end": "11:30",
           "name": "Econo. Soc.",
           "room": "220"
-        },
-        {
-          "start": "11:30",
-          "end": "12:25",
-          "name": "History & Geog.",
-          "room": "220"
         }
       ],
       [
         {
-          "start": "08:30",
+          "start": "08:00",
           "end": "09:25",
-          "name": "Spanish",
+          "name": "Comput. Science",
           "room": "220"
         },
         {
@@ -148,7 +142,7 @@
         {
           "start": "13:40",
           "end": "14:35",
-          "name": "Comput. Science",
+          "name": "Spanish",
           "room": "220"
         },
         {
@@ -162,7 +156,7 @@
         {
           "start": "08:30",
           "end": "09:25",
-          "name": "Physics",
+          "name": "History & Geog.",
           "room": "220"
         },
         {
@@ -198,14 +192,14 @@
         {
           "start": "08:30",
           "end": "09:25",
-          "name": "French",
-          "room": "220"
+          "name": "Mathematics",
+          "room": "209"
         },
         {
           "start": "09:25",
           "end": "10:20",
-          "name": "Mathematics",
-          "room": "209"
+          "name": "French",
+          "room": "220"
         },
         {
           "start": "10:35",
@@ -248,8 +242,8 @@
         {
           "start": "09:25",
           "end": "10:20",
-          "name": "History & Geog.",
-          "room": "127"
+          "name": "Moral and Civic Ed.",
+          "room": "220"
         },
         {
           "start": "10:35",
@@ -266,7 +260,7 @@
         {
           "start": "13:40",
           "end": "14:35",
-          "name": "History & Geog.",
+          "name": "Physics",
           "room": "220"
         },
         {
@@ -310,9 +304,9 @@
       ],
       [
         {
-          "start": "08:30",
+          "start": "08:00",
           "end": "09:25",
-          "name": "Physics",
+          "name": "Comput. Science",
           "room": "220"
         },
         {
@@ -323,12 +317,6 @@
         },
         {
           "start": "11:30",
-          "end": "12:25",
-          "name": "English",
-          "room": "220"
-        },
-        {
-          "start": "12:25",
           "end": "13:40",
           "name": "Lunch",
           "room": "Cafeteria"
@@ -336,7 +324,7 @@
         {
           "start": "13:40",
           "end": "14:35",
-          "name": "Comput. Science",
+          "name": "Physics",
           "room": "220"
         },
         {
@@ -350,7 +338,7 @@
         {
           "start": "08:30",
           "end": "09:25",
-          "name": "Physics",
+          "name": "History & Geog.",
           "room": "220"
         },
         {
@@ -361,9 +349,15 @@
         },
         {
           "start": "11:30",
-          "end": "13:40",
+          "end": "12:45",
           "name": "Lunch",
           "room": "Cafeteria"
+        },
+        {
+          "start": "12:45",
+          "end": "13:40",
+          "name": "English",
+          "room": "220"
         },
         {
           "start": "13:40",
