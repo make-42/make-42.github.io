@@ -89,6 +89,7 @@ function updateSchedule() {
             eventRoomDiv.innerHTML = eventData.room;
             eventTimeDiv.className = "schedule-event-time";
             eventDiv.appendChild(eventTimeDiv);
+            eventDiv.appendChild(eventRoomDiv);
             eventDiv.className = "schedule-event";
             eventDiv.style = "height: " + String((eventDuration / scale) - eventDivPaddingOffset) + "px;" + "top: " + String(eventStart / scale) + "px;"
             document.getElementById("schedule-days").children[i].appendChild(eventDiv);
