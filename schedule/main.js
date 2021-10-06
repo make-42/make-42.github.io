@@ -1,6 +1,9 @@
 var scale = 60
 var eventDivPaddingOffset = 10;
 
+if (localStorage.getItem('dark-mode') == null){
+    localStorage.setItem('dark-mode',false);
+}
 
 var scheduleData;
 var weekNumber;
@@ -38,6 +41,37 @@ function nextWeek() {
     weekNumber++;
     animateScheduleEventDestroy();
     setTimeout(updateSchedule, 150);
+}
+
+function toggleDarkMode(){
+    if(localStorage.getItem('dark-mode') == "true"){
+        localStorage.setItem('dark-mode',false);
+        offDarkMode();
+        toastNotification("Retina burning action!")
+    } else{
+        localStorage.setItem('dark-mode',true);
+        onDarkMode();
+        toastNotification("Lights out!")
+    }
+}
+function onDarkMode(){
+    var root = document.documentElement;
+    root.style.setProperty('--main-bg-color', "black");
+    root.style.setProperty('--text-color', "white");
+    root.style.setProperty('--text-secondary-color', "#ababab");
+    root.style.setProperty('--border-color', "rgba(255, 255, 255, 0.33)");
+    root.style.setProperty('--semi-bg-color', "rgba(255, 255, 255, 0.03)");
+    document.getElementById("header-icon-image").style.filter = "invert(1)";
+
+}
+function offDarkMode(){
+    var root = document.documentElement;
+    root.style.setProperty('--main-bg-color', "white");
+        root.style.setProperty('--text-color', "black");
+        root.style.setProperty('--text-secondary-color', "#555");
+        root.style.setProperty('--border-color', "rgba(0, 0, 0, 0.33)");
+        root.style.setProperty('--semi-bg-color', "rgba(0, 0, 0, 0.03)");
+        document.getElementById("header-icon-image").style.filter = "invert(0)";
 }
 
 function formatDateForUse(dateString){
@@ -89,7 +123,6 @@ function updateSchedule() {
             eventRoomDiv.innerHTML = eventData.room;
             eventTimeDiv.className = "schedule-event-time";
             eventDiv.appendChild(eventTimeDiv);
-            eventDiv.appendChild(eventRoomDiv);
             eventDiv.className = "schedule-event";
             eventDiv.style = "height: " + String((eventDuration / scale) - eventDivPaddingOffset) + "px;" + "top: " + String(eventStart / scale) + "px;"
             document.getElementById("schedule-days").children[i].appendChild(eventDiv);
@@ -176,6 +209,12 @@ document.getElementById('FileAttachment').onchange = e => {
 document.getElementById('FileAttachmentDates').onchange = e => {
     var dateFile = e.target.files[0];
     loadTSCDateFile(dateFile);
+}
+
+if(localStorage.getItem('dark-mode') == "true"){
+    onDarkMode();
+} else{
+    offDarkMode();
 }
 
 loadCurrentSchedule();

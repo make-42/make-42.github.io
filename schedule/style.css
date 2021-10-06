@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+html {
+    --main-bg-color: white;
+    --text-color:black;
+    --text-secondary-color:#555;
+    --border-color: rgba(0, 0, 0, 0.33);
+    --semi-bg-color: rgba(0, 0, 0, 0.03);
+    background: var(--main-bg-color);
+    transition: color 1s ease, background 1s ease, border 1s ease;
+}
+
 body {
     margin: 0;
     background: url(./assets/noise-strong.png);
     font-family: 'Ubuntu', sans-serif;
+    color:var(--text-color);
 }
 
 #toast-notification {
@@ -12,15 +23,16 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    transition: top 0.5s ease;
-    background: white;
+    transition: top 0.5s ease, color 1s ease, background 1s ease;
+    background: var(--semi-bg-color);
     padding: 12px 64px 12px 64px;
+    border-radius: 8px;
 }
 
 #header {
     display: flex;
     justify-content: flex-end;
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--semi-bg-color);
 }
 
 #header-icon-image {
@@ -38,13 +50,20 @@ body {
 }
 
 #schedule-file-link {
-    color: black;
+    color: var(--text-color);
 }
 
 .week-control-button {
     padding: 10px 12px 10px 12px;
     margin: 2px 0px 2px 0px;
-    border: solid 1px rgba(0, 0, 0, 0.33);
+    border: solid 1px var(--border-color);
+}
+
+.night-mode-button {
+    padding: 10px 12px 10px 12px;
+    margin: 2px 20px 2px 0px;
+    border: solid 1px var(--border-color);
+    border-radius: 8px;
 }
 
 #week-back-button {
@@ -60,7 +79,7 @@ body {
 }
 
 #schedule-table {
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--semi-bg-color);
     margin: 32px;
     border-radius: 8px;
 }
@@ -85,14 +104,14 @@ body {
     position: relative;
     width: 100%;
     text-align: center;
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--semi-bg-color);
     margin: 4px;
     border-radius: 8px;
 }
 
 .schedule-event {
     text-align: center;
-    border: dashed 1px rgba(0, 0, 0, 0.33);
+    border: dashed 1px var(--border-color);
     border-radius: 8px;
     margin: 10px;
     animation: loadIn 150ms ease;
@@ -113,7 +132,7 @@ body {
 
 
 #dates-list {
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--semi-bg-color);
     margin: 32px;
     border-radius: 8px;
 }
@@ -132,18 +151,18 @@ body {
 .dates-control-button {
     padding: 10px 12px 10px 12px;
     margin: 2px 2px 2px auto;
-    border: solid 1px rgba(0, 0, 0, 0.33);
+    border: solid 1px var(--border-color);
 }
 #dates-list-list{
     position: relative;
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--semi-bg-color);
     margin: 4px;
     padding: 0.01px;
     border-radius: 8px;
 }
 .dates-date{
     padding: 12px;
-    border: dashed 1px rgba(0, 0, 0, 0.33);
+    border: dashed 1px var(--border-color);
     border-radius: 8px;
     display:flex;
     margin:10px;
@@ -156,12 +175,12 @@ body {
     width: 98%;
     height: 2px;
     margin: 0px auto 25px auto;
-    border-top: dashed 2px rgba(0, 0, 0, 0.33);
+    border-top: dashed 2px var(--border-color);
     animation: loadIn 150ms ease;
 }
 .dates-date-description{
     margin-left: 50px;
-    color: #555;
+    color: var(--text-secondary-color);
 }
 
 @keyframes loadIn {
